@@ -1,0 +1,56 @@
+Symbol range map extraction starting
+Processing 14 files
+startProcessing "com\DragonFerocity\expanded\ExpandedAesthetics.java" md5: a431f0897baf32c312cf8c912c943996
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\ExpandedAesthetics.java"
+
+startProcessing "com\DragonFerocity\expanded\Ref.java" md5: c43bc62fe50bb2bc7d1a1f4b7bb68fa2
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\Ref.java"
+
+startProcessing "com\DragonFerocity\expanded\blocks\BlockTutBlock.java" md5: 091a9f94c6b314e6a5ad5793bfe739bd
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\blocks\BlockTutBlock.java"
+
+startProcessing "com\DragonFerocity\expanded\blocks\CobblestoneChest.java" md5: 709ff68c0633bbb556a70c637fb736cf
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\blocks\CobblestoneChest.java"
+
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java" md5: 06bc86a270e2ff5ce3337713542c00bf
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java"
+
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java" md5: 0974a97a3430fce2f4ed4a466cf04711
+endProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java"
+
+startProcessing "com\DragonFerocity\expanded\blocks\ModChest.java" md5: fe9cccbe7de982d79e82c93c6bc3c37a
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\blocks\ModChest.java"
+
+startProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java" md5: b3328da970523fa4205b01b7edecf2a5
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java"
+
+startProcessing "com\DragonFerocity\expanded\items\ItemTutItem.java" md5: ff6b88e4b1ffd8cbc47895a1a5fcf4a8
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\items\ItemTutItem.java"
+
+startProcessing "com\DragonFerocity\expanded\items\ModItem.java" md5: d41ece411a9832e1bafeb700b56a842b
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\items\ModItem.java"
+
+startProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java" md5: f80b151403486b84ac3d544cb2f624ec
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java"
+
+startProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java" md5: f280868cae21f8980cfbc8b21d2d314b
+endProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java"
+
+startProcessing "com\DragonFerocity\expanded\proxy\CommonProxy.java" md5: 614f2bd11fd85c3aea45c58e3c0fcbf4
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\proxy\CommonProxy.java"
+
+startProcessing "com\DragonFerocity\expanded\proxy\IProxy.java" md5: 0f7862091188b26b9d74e1ff7112060d
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\proxy\IProxy.java"
+
