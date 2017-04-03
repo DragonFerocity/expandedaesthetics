@@ -20,15 +20,15 @@ startProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java" md5: 06bc86a2
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java"
 
-startProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java" md5: 0974a97a3430fce2f4ed4a466cf04711
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java" md5: ba5d400a56040d678ae5a8692c632a62
+Cache Hit!
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java"
 
 startProcessing "com\DragonFerocity\expanded\blocks\ModChest.java" md5: fe9cccbe7de982d79e82c93c6bc3c37a
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\blocks\ModChest.java"
 
-startProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java" md5: b3328da970523fa4205b01b7edecf2a5
-Cache Hit!
+startProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java" md5: fda18d9b1a355591d0741ccdf1dfc79d
 endProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java"
 
 startProcessing "com\DragonFerocity\expanded\items\ItemTutItem.java" md5: ff6b88e4b1ffd8cbc47895a1a5fcf4a8
@@ -39,11 +39,12 @@ startProcessing "com\DragonFerocity\expanded\items\ModItem.java" md5: d41ece411a
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\items\ModItem.java"
 
-startProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java" md5: f80b151403486b84ac3d544cb2f624ec
+startProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java" md5: 653f9f7b328a5e12ec0ef8d00026fb67
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java"
 
-startProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java" md5: f280868cae21f8980cfbc8b21d2d314b
+startProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java" md5: 3b86154510092a1c9995c9f5ddf386a3
+Cache Hit!
 endProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java"
 
 startProcessing "com\DragonFerocity\expanded\proxy\CommonProxy.java" md5: 614f2bd11fd85c3aea45c58e3c0fcbf4

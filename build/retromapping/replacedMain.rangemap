@@ -187,37 +187,68 @@ Class Start: com.DragonFerocity.expanded.blocks.ModBlock
 Class End  : com.DragonFerocity.expanded.blocks.ModBlock
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java"
 
-startProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java" md5: 0974a97a3430fce2f4ed4a466cf04711
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java" md5: ba5d400a56040d678ae5a8692c632a62
+Cache Hit!
 @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|8|42|com.DragonFerocity.expanded.blocks|package|com.DragonFerocity.expanded.blocks|(file)
 Class Start: com.DragonFerocity.expanded.blocks.ModBlockDoor
    @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1433|1445|ModBlockDoor|class|com.DragonFerocity.expanded.blocks.ModBlockDoor
    @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1454|1463|BlockDoor|class|net.minecraft.block.BlockDoor
+   @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1477|1483|String|class|java.lang.String
+   @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1477|1483|String|class|java.lang.String
+   @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1484|1493|blockName|field|com.DragonFerocity.expanded.blocks.ModBlockDoor|blockName|
    Method Start: ModBlockDoor(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1499|1509|materialIn|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|materialIn|0
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1518|1522|name|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|name|1
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1530|1538|hardness|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|hardness|2
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1546|1556|resistance|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|resistance|3
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1477|1489|ModBlockDoor|method|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1490|1498|Material|class|net.minecraft.block.material.Material
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1511|1517|String|class|java.lang.String
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1578|1588|materialIn|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|materialIn|0
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1668|1682|setCreativeTab|method|net.minecraft.block.Block|setCreativeTab|(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/block/Block;
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1683|1695|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1696|1711|BUILDING_BLOCKS|field|net.minecraft.creativetab.CreativeTabs|BUILDING_BLOCKS
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1722|1733|setHardness|method|net.minecraft.block.Block|setHardness|(F)Lnet/minecraft/block/Block;
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1734|1742|hardness|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|hardness|2
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1753|1766|setResistance|method|net.minecraft.block.Block|setResistance|(F)Lnet/minecraft/block/Block;
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1767|1777|resistance|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|resistance|3
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1788|1803|setHarvestLevel|method|net.minecraft.block.Block|setHarvestLevel|(Ljava/lang/String;I)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1529|1539|materialIn|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|materialIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1548|1552|name|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|name|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1560|1568|hardness|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|hardness|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1576|1586|resistance|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|resistance|3
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1507|1519|ModBlockDoor|method|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1520|1528|Material|class|net.minecraft.block.material.Material
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1541|1547|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1608|1618|materialIn|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|materialIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1698|1712|setCreativeTab|method|net.minecraft.block.Block|setCreativeTab|(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1713|1725|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1726|1741|BUILDING_BLOCKS|field|net.minecraft.creativetab.CreativeTabs|BUILDING_BLOCKS
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1752|1763|setHardness|method|net.minecraft.block.Block|setHardness|(F)Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1764|1772|hardness|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|hardness|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1783|1796|setResistance|method|net.minecraft.block.Block|setResistance|(F)Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1797|1807|resistance|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|resistance|3
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1818|1833|setHarvestLevel|method|net.minecraft.block.Block|setHarvestLevel|(Ljava/lang/String;I)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1857|1866|blockName|field|com.DragonFerocity.expanded.blocks.ModBlockDoor|blockName
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1869|1873|name|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|ModBlockDoor|(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V|name|1
    Method End: ModBlockDoor(Lnet/minecraft/block/material/Material;Ljava/lang/String;FF)V
-   Method Start: getItem()Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1837|1841|Item|class|net.minecraft.item.Item
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1842|1849|getItem|method|com.DragonFerocity.expanded.blocks.ModBlockDoor|getItem|()Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1881|1893|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1894|1903|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1906|1918|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
-      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1919|1930|ibGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibGlassDoor
-   Method End: getItem()Lnet/minecraft/item/Item;
+   Method Start: getItemDropped(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1939|1944|state|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1953|1957|rand|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;|rand|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1963|1970|fortune|param|com.DragonFerocity.expanded.blocks.ModBlockDoor|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;|fortune|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1887|1895|Override|class|java.lang.Override
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1907|1911|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1912|1926|getItemDropped|method|net.minecraft.block.Block|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1927|1938|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1946|1952|Random|class|java.util.Random
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1986|1992|System|class|java.lang.System
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1993|1996|out|field|java.lang.System|out
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|1997|2004|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2118|2128|getModItem|method|com.DragonFerocity.expanded.blocks.ModBlockDoor|getModItem|()Lnet/minecraft/item/Item;
+   Method End: getItemDropped(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;
+   Method Start: getModItem()Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2150|2154|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2155|2165|getModItem|method|com.DragonFerocity.expanded.blocks.ModBlockDoor|getModItem|()Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2182|2188|System|class|java.lang.System
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2189|2192|out|field|java.lang.System|out
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2193|2200|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2229|2241|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2242|2251|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2269|2278|blockName|field|com.DragonFerocity.expanded.blocks.ModBlockDoor|blockName
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2282|2294|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2295|2304|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2305|2314|blockName|field|com.DragonFerocity.expanded.blocks.ModBlockDoor|blockName
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2338|2347|blockName|field|com.DragonFerocity.expanded.blocks.ModBlockDoor|blockName
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2351|2363|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2364|2373|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2374|2383|blockName|field|com.DragonFerocity.expanded.blocks.ModBlockDoor|blockName
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2386|2398|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
+      @|com\DragonFerocity\expanded\blocks\ModBlockDoor.java|2399|2409|iGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|iGlassDoor
+   Method End: getModItem()Lnet/minecraft/item/Item;
 Class End  : com.DragonFerocity.expanded.blocks.ModBlockDoor
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java"
 
@@ -1058,147 +1089,177 @@ Class Start: com.DragonFerocity.expanded.blocks.ModChest
 Class End  : com.DragonFerocity.expanded.blocks.ModChest
 endProcessing "com\DragonFerocity\expanded\blocks\ModChest.java"
 
-startProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java" md5: b3328da970523fa4205b01b7edecf2a5
-Cache Hit!
+startProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java" md5: fda18d9b1a355591d0741ccdf1dfc79d
 @|com\DragonFerocity\expanded\handlers\BlockHandler.java|8|44|com.DragonFerocity.expanded.handlers|package|com.DragonFerocity.expanded.handlers|(file)
 Class Start: com.DragonFerocity.expanded.handlers.BlockHandler
    @|com\DragonFerocity\expanded\handlers\BlockHandler.java|807|819|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
    @|com\DragonFerocity\expanded\handlers\BlockHandler.java|838|843|Block|class|net.minecraft.block.Block
    @|com\DragonFerocity\expanded\handlers\BlockHandler.java|838|843|Block|class|net.minecraft.block.Block
    @|com\DragonFerocity\expanded\handlers\BlockHandler.java|844|852|tutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|tutBlock|
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|870|875|Block|class|net.minecraft.block.Block
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|870|875|Block|class|net.minecraft.block.Block
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|876|885|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor|
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|946|955|ItemBlock|class|net.minecraft.item.ItemBlock
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|946|955|ItemBlock|class|net.minecraft.item.ItemBlock
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|956|966|ibTutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibTutBlock|
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|984|993|ItemBlock|class|net.minecraft.item.ItemBlock
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|984|993|ItemBlock|class|net.minecraft.item.ItemBlock
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|994|1005|ibGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibGlassDoor|
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1072|1076|Item|class|net.minecraft.item.Item
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1072|1076|Item|class|net.minecraft.item.Item
-   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1077|1085|iTutItem|field|com.DragonFerocity.expanded.handlers.BlockHandler|iTutItem|
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|870|882|ModBlockDoor|class|com.DragonFerocity.expanded.blocks.ModBlockDoor
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|870|882|ModBlockDoor|class|com.DragonFerocity.expanded.blocks.ModBlockDoor
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|883|892|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor|
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|953|962|ItemBlock|class|net.minecraft.item.ItemBlock
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|953|962|ItemBlock|class|net.minecraft.item.ItemBlock
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|963|973|ibTutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibTutBlock|
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|991|1000|ItemBlock|class|net.minecraft.item.ItemBlock
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|991|1000|ItemBlock|class|net.minecraft.item.ItemBlock
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1001|1012|ibGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibGlassDoor|
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1079|1083|Item|class|net.minecraft.item.Item
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1079|1083|Item|class|net.minecraft.item.Item
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1084|1092|iTutItem|field|com.DragonFerocity.expanded.handlers.BlockHandler|iTutItem|
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1110|1114|Item|class|net.minecraft.item.Item
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1110|1114|Item|class|net.minecraft.item.Item
+   @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1115|1125|iGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|iGlassDoor|
    Method Start: init()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1144|1148|init|method|com.DragonFerocity.expanded.handlers.BlockHandler|init|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1157|1167|initBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|initBlocks|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1175|1189|initItemBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|initItemBlocks|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1197|1206|initItems|method|com.DragonFerocity.expanded.handlers.BlockHandler|initItems|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1215|1229|registerBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|registerBlocks|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1237|1250|registerItems|method|com.DragonFerocity.expanded.handlers.BlockHandler|registerItems|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1149|1153|init|method|com.DragonFerocity.expanded.handlers.BlockHandler|init|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1162|1172|initBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|initBlocks|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1180|1194|initItemBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|initItemBlocks|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1202|1211|initItems|method|com.DragonFerocity.expanded.handlers.BlockHandler|initItems|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1220|1234|registerBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|registerBlocks|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1242|1255|registerItems|method|com.DragonFerocity.expanded.handlers.BlockHandler|registerItems|()V
    Method End: init()V
    Method Start: initBlocks()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1282|1292|initBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|initBlocks|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1301|1309|tutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|tutBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1316|1329|BlockTutBlock|class|com.DragonFerocity.expanded.blocks.BlockTutBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1330|1338|Material|class|net.minecraft.block.material.Material
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1339|1343|ROCK|field|net.minecraft.block.material.Material|ROCK
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1358|1370|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1371|1386|BUILDING_BLOCKS|field|net.minecraft.creativetab.CreativeTabs|BUILDING_BLOCKS
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1416|1425|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1432|1444|ModBlockDoor|class|com.DragonFerocity.expanded.blocks.ModBlockDoor
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1445|1453|Material|class|net.minecraft.block.material.Material
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1454|1459|GLASS|field|net.minecraft.block.material.Material|GLASS
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1287|1297|initBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|initBlocks|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1306|1314|tutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|tutBlock
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1321|1334|BlockTutBlock|class|com.DragonFerocity.expanded.blocks.BlockTutBlock
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1335|1343|Material|class|net.minecraft.block.material.Material
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1344|1348|ROCK|field|net.minecraft.block.material.Material|ROCK
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1363|1375|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1376|1391|BUILDING_BLOCKS|field|net.minecraft.creativetab.CreativeTabs|BUILDING_BLOCKS
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1421|1430|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1437|1449|ModBlockDoor|class|com.DragonFerocity.expanded.blocks.ModBlockDoor
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1450|1458|Material|class|net.minecraft.block.material.Material
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1459|1463|ROCK|field|net.minecraft.block.material.Material|ROCK
    Method End: initBlocks()V
    Method Start: initItemBlocks()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1625|1639|initItemBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|initItemBlocks|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1648|1658|ibTutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibTutBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1662|1671|ItemBlock|class|net.minecraft.item.ItemBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1677|1686|ItemBlock|class|net.minecraft.item.ItemBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1687|1695|tutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|tutBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1702|1713|ibGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibGlassDoor
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1717|1726|ItemBlock|class|net.minecraft.item.ItemBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1732|1741|ItemBlock|class|net.minecraft.item.ItemBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1742|1751|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1629|1643|initItemBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|initItemBlocks|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1652|1662|ibTutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibTutBlock
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1666|1675|ItemBlock|class|net.minecraft.item.ItemBlock
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1681|1690|ItemBlock|class|net.minecraft.item.ItemBlock
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1691|1699|tutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|tutBlock
    Method End: initItemBlocks()V
    Method Start: initItems()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1853|1862|initItems|method|com.DragonFerocity.expanded.handlers.BlockHandler|initItems|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1871|1879|iTutItem|field|com.DragonFerocity.expanded.handlers.BlockHandler|iTutItem
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1886|1897|ItemTutItem|class|com.DragonFerocity.expanded.items.ItemTutItem
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1910|1922|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1923|1932|MATERIALS|field|net.minecraft.creativetab.CreativeTabs|MATERIALS
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1859|1868|initItems|method|com.DragonFerocity.expanded.handlers.BlockHandler|initItems|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1877|1885|iTutItem|field|com.DragonFerocity.expanded.handlers.BlockHandler|iTutItem
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1892|1903|ItemTutItem|class|com.DragonFerocity.expanded.items.ItemTutItem
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1916|1928|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1929|1938|MATERIALS|field|net.minecraft.creativetab.CreativeTabs|MATERIALS
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1945|1955|iGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|iGlassDoor
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1962|1973|ModItemDoor|class|com.DragonFerocity.expanded.items.ModItemDoor
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|1974|1983|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
    Method End: initItems()V
    Method Start: registerBlocks()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2010|2024|registerBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|registerBlocks|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2033|2041|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2042|2050|tutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|tutBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2052|2062|ibTutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibTutBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2082|2090|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2091|2100|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2102|2113|ibGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibGlassDoor
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2032|2046|registerBlocks|method|com.DragonFerocity.expanded.handlers.BlockHandler|registerBlocks|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2055|2063|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2064|2072|tutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|tutBlock
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2074|2084|ibTutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibTutBlock
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2104|2112|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2113|2122|glassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|glassDoor
    Method End: registerBlocks()V
    Method Start: registerItems()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2157|2170|registerItems|method|com.DragonFerocity.expanded.handlers.BlockHandler|registerItems|()V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2179|2187|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2188|2196|iTutItem|field|com.DragonFerocity.expanded.handlers.BlockHandler|iTutItem
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2166|2179|registerItems|method|com.DragonFerocity.expanded.handlers.BlockHandler|registerItems|()V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2188|2196|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2197|2205|iTutItem|field|com.DragonFerocity.expanded.handlers.BlockHandler|iTutItem
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2224|2232|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2233|2243|iGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|iGlassDoor
    Method End: registerItems()V
    Method Start: register(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2254|2259|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|block|0
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2271|2277|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|iBlock|1
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2286|2290|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|name|2
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2239|2247|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2248|2253|Block|class|net.minecraft.block.Block
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2261|2270|ItemBlock|class|net.minecraft.item.ItemBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2279|2285|String|class|java.lang.String
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2298|2306|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2307|2312|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|block|0
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2314|2320|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|iBlock|1
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2322|2326|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|name|2
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2328|2332|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|name|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2303|2308|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|block|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2320|2326|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|iBlock|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2335|2339|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|name|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2288|2296|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2297|2302|Block|class|net.minecraft.block.Block
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2310|2319|ItemBlock|class|net.minecraft.item.ItemBlock
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2328|2334|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2347|2355|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2356|2361|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|block|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2363|2369|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|iBlock|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2371|2375|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|name|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2377|2381|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V|name|2
    Method End: register(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;)V
+   Method Start: register(Lnet/minecraft/block/Block;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2426|2431|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;)V|block|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2440|2444|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;)V|name|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2411|2419|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2420|2425|Block|class|net.minecraft.block.Block
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2433|2439|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2452|2460|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2461|2466|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;)V|block|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2468|2472|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;)V|name|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2474|2478|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;)V|name|1
+   Method End: register(Lnet/minecraft/block/Block;Ljava/lang/String;)V
    Method Start: register(Lnet/minecraft/item/Item;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2376|2380|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|item|0
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2389|2393|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|name|1
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2362|2370|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2371|2375|Item|class|net.minecraft.item.Item
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2382|2388|String|class|java.lang.String
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2401|2409|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2410|2414|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|item|0
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2416|2420|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|name|1
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2422|2426|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|name|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2522|2526|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|item|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2535|2539|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|name|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2508|2516|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2517|2521|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2528|2534|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2547|2555|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2556|2560|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|item|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2562|2566|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|name|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2568|2572|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;)V|name|1
    Method End: register(Lnet/minecraft/item/Item;Ljava/lang/String;)V
    Method Start: register(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2471|2476|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|block|0
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2488|2494|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|iBlock|1
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2503|2507|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|name|2
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2516|2523|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|unlocal|3
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2456|2464|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2465|2470|Block|class|net.minecraft.block.Block
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2478|2487|ItemBlock|class|net.minecraft.item.ItemBlock
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2496|2502|String|class|java.lang.String
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2509|2515|String|class|java.lang.String
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2531|2536|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|block|0
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2537|2555|setUnlocalizedName|method|net.minecraft.block.Block|setUnlocalizedName|(Ljava/lang/String;)Lnet/minecraft/block/Block;
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2556|2563|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|unlocal|3
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2565|2580|setRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2581|2585|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|name|2
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2592|2598|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|iBlock|1
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2599|2617|setUnlocalizedName|method|net.minecraft.item.Item|setUnlocalizedName|(Ljava/lang/String;)Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2618|2625|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|unlocal|3
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2627|2642|setRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2643|2647|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|name|2
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2655|2667|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2668|2676|register|method|net.minecraftforge.fml.common.registry.GameRegistry|register|(Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2617|2622|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|block|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2634|2640|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|iBlock|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2649|2653|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|name|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2662|2669|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|unlocal|3
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2602|2610|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2611|2616|Block|class|net.minecraft.block.Block
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2624|2633|ItemBlock|class|net.minecraft.item.ItemBlock
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2642|2648|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2655|2661|String|class|java.lang.String
       @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2677|2682|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|block|0
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2689|2701|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2702|2710|register|method|net.minecraftforge.fml.common.registry.GameRegistry|register|(Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2711|2717|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|iBlock|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2683|2701|setUnlocalizedName|method|net.minecraft.block.Block|setUnlocalizedName|(Ljava/lang/String;)Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2702|2709|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|unlocal|3
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2711|2726|setRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2727|2731|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|name|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2738|2744|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|iBlock|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2745|2763|setUnlocalizedName|method|net.minecraft.item.Item|setUnlocalizedName|(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2764|2771|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|unlocal|3
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2773|2788|setRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2789|2793|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|name|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2801|2813|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2814|2822|register|method|net.minecraftforge.fml.common.registry.GameRegistry|register|(Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2823|2828|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|block|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2835|2847|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2848|2856|register|method|net.minecraftforge.fml.common.registry.GameRegistry|register|(Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2857|2863|iBlock|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V|iBlock|1
    Method End: register(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemBlock;Ljava/lang/String;Ljava/lang/String;)V
+   Method Start: register(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2907|2912|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V|block|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2921|2925|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V|name|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2934|2941|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V|unlocal|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2892|2900|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2901|2906|Block|class|net.minecraft.block.Block
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2914|2920|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2927|2933|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2949|2954|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V|block|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2955|2973|setUnlocalizedName|method|net.minecraft.block.Block|setUnlocalizedName|(Ljava/lang/String;)Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2974|2981|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V|unlocal|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2983|2998|setRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2999|3003|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V|name|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3011|3023|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3024|3032|register|method|net.minecraftforge.fml.common.registry.GameRegistry|register|(Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3033|3038|block|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V|block|0
+   Method End: register(Lnet/minecraft/block/Block;Ljava/lang/String;Ljava/lang/String;)V
    Method Start: register(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2760|2764|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|item|0
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2773|2777|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|name|1
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2786|2793|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|unlocal|2
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2746|2754|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2755|2759|Item|class|net.minecraft.item.Item
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2766|2772|String|class|java.lang.String
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2779|2785|String|class|java.lang.String
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2801|2805|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|item|0
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2806|2824|setUnlocalizedName|method|net.minecraft.item.Item|setUnlocalizedName|(Ljava/lang/String;)Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2825|2832|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|unlocal|2
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2834|2849|setRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2850|2854|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|name|1
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2862|2874|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2875|2883|register|method|net.minecraftforge.fml.common.registry.GameRegistry|register|(Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
-      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|2884|2888|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|item|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3081|3085|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|item|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3094|3098|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|name|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3107|3114|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|unlocal|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3067|3075|register|method|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3076|3080|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3087|3093|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3100|3106|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3122|3126|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|item|0
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3127|3145|setUnlocalizedName|method|net.minecraft.item.Item|setUnlocalizedName|(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3146|3153|unlocal|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|unlocal|2
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3155|3170|setRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3171|3175|name|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|name|1
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3183|3195|GameRegistry|class|net.minecraftforge.fml.common.registry.GameRegistry
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3196|3204|register|method|net.minecraftforge.fml.common.registry.GameRegistry|register|(Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
+      @|com\DragonFerocity\expanded\handlers\BlockHandler.java|3205|3209|item|param|com.DragonFerocity.expanded.handlers.BlockHandler|register|(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V|item|0
    Method End: register(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V
 Class End  : com.DragonFerocity.expanded.handlers.BlockHandler
 endProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java"
@@ -1251,7 +1312,7 @@ Class Start: com.DragonFerocity.expanded.items.ModItem
 Class End  : com.DragonFerocity.expanded.items.ModItem
 endProcessing "com\DragonFerocity\expanded\items\ModItem.java"
 
-startProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java" md5: f80b151403486b84ac3d544cb2f624ec
+startProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java" md5: 653f9f7b328a5e12ec0ef8d00026fb67
 Cache Hit!
 @|com\DragonFerocity\expanded\items\ModItemDoor.java|8|41|com.DragonFerocity.expanded.items|package|com.DragonFerocity.expanded.items|(file)
 Class Start: com.DragonFerocity.expanded.items.ModItemDoor
@@ -1265,24 +1326,17 @@ Class Start: com.DragonFerocity.expanded.items.ModItemDoor
       @|com\DragonFerocity\expanded\items\ModItemDoor.java|744|749|Block|class|net.minecraft.block.Block
       @|com\DragonFerocity\expanded\items\ModItemDoor.java|757|763|String|class|java.lang.String
       @|com\DragonFerocity\expanded\items\ModItemDoor.java|806|811|block|param|com.DragonFerocity.expanded.items.ModItemDoor|ModItemDoor|(Lnet/minecraft/block/Block;Ljava/lang/String;I)V|block|0
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|822|840|setUnlocalizedName|method|net.minecraft.item.Item|setUnlocalizedName|(Ljava/lang/String;)Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|841|844|Ref|class|com.DragonFerocity.expanded.Ref
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|845|850|MODID|field|com.DragonFerocity.expanded.Ref|MODID
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|859|863|name|param|com.DragonFerocity.expanded.items.ModItemDoor|ModItemDoor|(Lnet/minecraft/block/Block;Ljava/lang/String;I)V|name|1
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|884|899|setRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;)Lnet/minecraftforge/fml/common/registry/IForgeRegistryEntry;
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|900|903|Ref|class|com.DragonFerocity.expanded.Ref
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|904|909|MODID|field|com.DragonFerocity.expanded.Ref|MODID
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|918|922|name|param|com.DragonFerocity.expanded.items.ModItemDoor|ModItemDoor|(Lnet/minecraft/block/Block;Ljava/lang/String;I)V|name|1
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|943|957|setCreativeTab|method|net.minecraft.item.Item|setCreativeTab|(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|958|970|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|971|986|BUILDING_BLOCKS|field|net.minecraft.creativetab.CreativeTabs|BUILDING_BLOCKS
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|997|1012|setMaxStackSize|method|net.minecraft.item.Item|setMaxStackSize|(I)Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\items\ModItemDoor.java|1013|1022|stackSize|param|com.DragonFerocity.expanded.items.ModItemDoor|ModItemDoor|(Lnet/minecraft/block/Block;Ljava/lang/String;I)V|stackSize|2
+      @|com\DragonFerocity\expanded\items\ModItemDoor.java|947|961|setCreativeTab|method|net.minecraft.item.Item|setCreativeTab|(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\items\ModItemDoor.java|962|974|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
+      @|com\DragonFerocity\expanded\items\ModItemDoor.java|975|990|BUILDING_BLOCKS|field|net.minecraft.creativetab.CreativeTabs|BUILDING_BLOCKS
+      @|com\DragonFerocity\expanded\items\ModItemDoor.java|1001|1016|setMaxStackSize|method|net.minecraft.item.Item|setMaxStackSize|(I)Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\items\ModItemDoor.java|1017|1026|stackSize|param|com.DragonFerocity.expanded.items.ModItemDoor|ModItemDoor|(Lnet/minecraft/block/Block;Ljava/lang/String;I)V|stackSize|2
    Method End: ModItemDoor(Lnet/minecraft/block/Block;Ljava/lang/String;I)V
 Class End  : com.DragonFerocity.expanded.items.ModItemDoor
 endProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java"
 
-startProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java" md5: f280868cae21f8980cfbc8b21d2d314b
+startProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java" md5: 3b86154510092a1c9995c9f5ddf386a3
+Cache Hit!
 @|com\DragonFerocity\expanded\proxy\ClientProxy.java|8|41|com.DragonFerocity.expanded.proxy|package|com.DragonFerocity.expanded.proxy|(file)
 Class Start: com.DragonFerocity.expanded.proxy.ClientProxy
    @|com\DragonFerocity\expanded\proxy\ClientProxy.java|373|384|ClientProxy|class|com.DragonFerocity.expanded.proxy.ClientProxy
@@ -1301,43 +1355,43 @@ Class Start: com.DragonFerocity.expanded.proxy.ClientProxy
       @|com\DragonFerocity\expanded\proxy\ClientProxy.java|599|609|ibTutBlock|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibTutBlock
       @|com\DragonFerocity\expanded\proxy\ClientProxy.java|616|624|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;)V
       @|com\DragonFerocity\expanded\proxy\ClientProxy.java|625|637|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|638|649|ibGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|ibGlassDoor
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|638|648|iGlassDoor|field|com.DragonFerocity.expanded.handlers.BlockHandler|iGlassDoor
    Method End: registerRenders()V
    Method Start: register(Lnet/minecraft/item/Item;)V
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|687|691|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;)V|item|0
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|673|681|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;)V
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|682|686|Item|class|net.minecraft.item.Item
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|699|707|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|708|712|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;)V|item|0
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|686|690|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;)V|item|0
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|672|680|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;)V
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|681|685|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|698|706|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|707|711|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;)V|item|0
    Method End: register(Lnet/minecraft/item/Item;)V
    Method Start: register(Lnet/minecraft/item/Item;I)V
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|752|756|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|item|0
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|762|766|meta|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|meta|1
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|738|746|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|747|751|Item|class|net.minecraft.item.Item
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|774|782|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|783|787|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|item|0
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|789|793|meta|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|meta|1
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|795|799|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|item|0
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|800|815|getRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry|getRegistryName|()Lnet/minecraft/util/ResourceLocation;
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|818|826|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|751|755|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|item|0
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|761|765|meta|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|meta|1
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|737|745|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|746|750|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|773|781|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|782|786|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|item|0
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|788|792|meta|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|meta|1
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|794|798|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;I)V|item|0
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|799|814|getRegistryName|method|net.minecraftforge.fml.common.registry.IForgeRegistryEntry|getRegistryName|()Lnet/minecraft/util/ResourceLocation;
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|817|825|toString|method|java.lang.Object|toString|()Ljava/lang/String;
    Method End: register(Lnet/minecraft/item/Item;I)V
    Method Start: register(Lnet/minecraft/item/Item;ILjava/lang/String;)V
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|865|869|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|item|0
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|875|879|meta|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|meta|1
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|888|892|name|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|name|2
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|851|859|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|860|864|Item|class|net.minecraft.item.Item
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|881|887|String|class|java.lang.String
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|900|909|Minecraft|class|net.minecraft.client.Minecraft
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|910|922|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|925|938|getRenderItem|method|net.minecraft.client.Minecraft|getRenderItem|()Lnet/minecraft/client/renderer/RenderItem;
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|941|959|getItemModelMesher|method|net.minecraft.client.renderer.RenderItem|getItemModelMesher|()Lnet/minecraft/client/renderer/ItemModelMesher;
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|962|970|register|method|net.minecraft.client.renderer.ItemModelMesher|register|(Lnet/minecraft/item/Item;ILnet/minecraft/client/renderer/block/model/ModelResourceLocation;)V
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|971|975|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|item|0
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|977|981|meta|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|meta|1
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|987|1008|ModelResourceLocation|class|net.minecraft.client.renderer.block.model.ModelResourceLocation
-      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|1009|1013|name|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|name|2
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|864|868|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|item|0
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|874|878|meta|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|meta|1
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|887|891|name|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|name|2
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|850|858|register|method|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|859|863|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|880|886|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|899|908|Minecraft|class|net.minecraft.client.Minecraft
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|909|921|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|924|937|getRenderItem|method|net.minecraft.client.Minecraft|getRenderItem|()Lnet/minecraft/client/renderer/RenderItem;
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|940|958|getItemModelMesher|method|net.minecraft.client.renderer.RenderItem|getItemModelMesher|()Lnet/minecraft/client/renderer/ItemModelMesher;
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|961|969|register|method|net.minecraft.client.renderer.ItemModelMesher|register|(Lnet/minecraft/item/Item;ILnet/minecraft/client/renderer/block/model/ModelResourceLocation;)V
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|970|974|item|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|item|0
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|976|980|meta|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|meta|1
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|986|1007|ModelResourceLocation|class|net.minecraft.client.renderer.block.model.ModelResourceLocation
+      @|com\DragonFerocity\expanded\proxy\ClientProxy.java|1008|1012|name|param|com.DragonFerocity.expanded.proxy.ClientProxy|register|(Lnet/minecraft/item/Item;ILjava/lang/String;)V|name|2
    Method End: register(Lnet/minecraft/item/Item;ILjava/lang/String;)V
 Class End  : com.DragonFerocity.expanded.proxy.ClientProxy
 endProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java"

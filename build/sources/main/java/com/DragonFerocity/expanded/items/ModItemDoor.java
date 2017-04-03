@@ -23,8 +23,8 @@ public class ModItemDoor extends ItemDoor
     public ModItemDoor(Block block, String name, int stackSize)
     {
         super (block);
-        setUnlocalizedName(Ref.MODID + ":" + name + "_item");
-        setRegistryName(Ref.MODID + ":" + name + "_item");
+        //setUnlocalizedName(Ref.MODID + ":" + name + "_item");
+        //setRegistryName(Ref.MODID + ":" + name + "_item");
         setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         setMaxStackSize(stackSize);
     }

@@ -36,6 +36,8 @@ import net.minecraft.world.World;
 
 public class ModBlockDoor extends BlockDoor
 {
+    public String blockName;
+
     public ModBlockDoor(Material materialIn, String name, float hardness, float resistance)
     {
         super(materialIn);
@@ -45,10 +47,24 @@ public class ModBlockDoor extends BlockDoor
         setHardness(hardness);
         setResistance(resistance);
         setHarvestLevel("pickaxe", 0);
+        blockName = name;
     }
 
-    public Item getItem()
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == BlockHandler.glassDoor ? BlockHandler.ibGlassDoor : null;
+        System.out.println("INSIDE");
+        return /*state.getValue(HALF) == BlockDoor.EnumDoorHalf.UPPER ? Items.field_190931_a : */this.getModItem();
+    }
+
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
+    {
+        return new ItemStack(this.getItem());
+    }
+
+    private Item getModItem()
+    {
+        System.out.println("Blocks equal? " + (this == BlockHandler.glassDoor) + " : " + (this.blockName == BlockHandler.glassDoor.blockName));
+        return this.blockName == BlockHandler.glassDoor.blockName ? BlockHandler.iGlassDoor : null;
     }
 }

@@ -20,7 +20,7 @@ public class ClientProxy extends CommonProxy {
 
     //Register Blocks
     register(BlockHandler.ibTutBlock);
-    register(BlockHandler.ibGlassDoor);
+    register(BlockHandler.iGlassDoor);
   }
 
 

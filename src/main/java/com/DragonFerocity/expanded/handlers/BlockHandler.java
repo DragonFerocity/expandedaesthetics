@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockHandler {
   public static Block tutBlock;
-  public static Block glassDoor;
+  public static ModBlockDoor glassDoor;
   //public static Block cobblestoneChest;
 
   public static ItemBlock ibTutBlock;
@@ -28,7 +28,7 @@ public class BlockHandler {
   //public static ItemBlock ibCobblestoneChest;
 
   public static Item iTutItem;
-  //public static Item iGlassDoor;
+  public static Item iGlassDoor;
 
   public static void init() {
     initBlocks();
@@ -42,34 +42,39 @@ public class BlockHandler {
 
   private static void initBlocks() {
     tutBlock = new BlockTutBlock(Material.ROCK, "tut_block", CreativeTabs.BUILDING_BLOCKS, 5F, 15F, 3, "pickaxe");
-    glassDoor = new ModBlockDoor(Material.GLASS, "glass_door", 0.3F, 1.5F);
+    glassDoor = new ModBlockDoor(Material.ROCK, "glass_door", 0.3F, 1.5F);
     //cobblestoneChest = new CobblestoneChest(Material.ROCK, "cobblestone_chest", 2.5F, 12.5F, 1, "pickaxe");
   }
 
   private static void initItemBlocks() {
     ibTutBlock = (ItemBlock) new ItemBlock(tutBlock);
-    ibGlassDoor = (ItemBlock) new ItemBlock(glassDoor);
+    //ibGlassDoor = (ItemBlock) new ItemBlock(glassDoor);
     //ibCobblestoneChest = (ItemBlock) new ItemBlock(cobblestoneChest);
   }
 
   private static void initItems() {
     iTutItem = new ItemTutItem("tut_item", CreativeTabs.MATERIALS);
-    //iGlassDoor = new ModItemDoor(glassDoor);
+    iGlassDoor = new ModItemDoor(glassDoor, "glass_door", 64);
   }
 
 
   private static void registerBlocks() {
     register(tutBlock, ibTutBlock, "tut_block");
-    register(glassDoor, ibGlassDoor, "glass_door");
+    register(glassDoor, "glass_door");
   }
 
   private static void registerItems() {
     register(iTutItem, "tut_item");
+    register(iGlassDoor, "glass_door");
   }
 
 
   private static void register(Block block, ItemBlock iBlock, String name) {
     register(block, iBlock, name, name);
+  }
+
+  private static void register(Block block, String name) {
+    register(block, name, name);
   }
 
   private static void register(Item item, String name) {
@@ -83,6 +88,12 @@ public class BlockHandler {
 
     GameRegistry.register(block);
     GameRegistry.register(iBlock);
+  }
+
+  public static void register(Block block, String name, String unlocal) {
+    block.setUnlocalizedName(unlocal).setRegistryName(name);
+
+    GameRegistry.register(block);
   }
 
   public static void register(Item item, String name, String unlocal) {
