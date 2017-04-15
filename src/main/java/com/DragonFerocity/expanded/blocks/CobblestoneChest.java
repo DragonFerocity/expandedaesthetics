@@ -1,14 +1,6 @@
 package com.DragonFerocity.expanded.blocks;
 
-import java.util.Random;
-
-import net.minecraft.item.Item;
-import net.minecraft.client.Minecraft;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
-
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
 public class CobblestoneChest extends ModChest {
   public CobblestoneChest(Material mat, String name, float hardness, float resistance, int harvest, String tool) {

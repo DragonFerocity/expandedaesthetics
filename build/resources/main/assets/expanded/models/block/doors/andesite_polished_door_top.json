@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "expanded:blocks/doors/andesite_polished_door_lower",
+        "top": "expanded:blocks/doors/andesite_polished_door_upper"
+    }
+}

@@ -34,8 +34,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.ILockableContainer;
 import net.minecraft.world.World;
 
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-
 public class ModChest extends BlockContainer
 {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
@@ -171,15 +169,15 @@ public class ModChest extends BlockContainer
             worldIn.setBlockState(pos, state, 3);
         }
 
-        if (stack.hasDisplayName())
+        /*if (stack.hasDisplayName())
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            /*if (tileentity instanceof TileEntityChest)
+            if (tileentity instanceof TileEntityChest)
             {
                 ( (TileEntityChest) tileentity ).func_190575_a(stack.getDisplayName());
-            }*/
-        }
+            }
+        }*/
     }
 
     public IBlockState checkForSurroundingChests(World worldIn, BlockPos pos, IBlockState state)
@@ -403,7 +401,7 @@ public class ModChest extends BlockContainer
      */
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos p_189540_5_)
     {
-        super.neighborChanged(state, worldIn, pos, blockIn, p_189540_5_);
+        //super.neighborChanged(state, worldIn, pos, blockIn, p_189540_5_);
         TileEntity tileentity = worldIn.getTileEntity(pos);
 
         if (tileentity instanceof TileEntityChest)

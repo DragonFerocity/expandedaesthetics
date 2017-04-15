@@ -13,7 +13,7 @@ maxFps:120
 fboEnable:true
 difficulty:2
 fancyGraphics:true
-ao:2
+ao:0
 renderClouds:true
 resourcePacks:[]
 incompatibleResourcePacks:[]
@@ -29,7 +29,7 @@ fullscreen:true
 enableVsync:true
 useVbo:true
 hideServerAddress:false
-advancedItemTooltips:false
+advancedItemTooltips:true
 pauseOnLostFocus:true
 touchscreen:false
 overrideWidth:0

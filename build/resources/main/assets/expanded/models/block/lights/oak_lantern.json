@@ -1,0 +1,14 @@
+{
+    "parent": "expanded:block/lights/lantern",
+    "textures": {
+        "pole": "blocks/planks_oak",
+        "poletop": "blocks/planks_oak",
+        "polebottom": "blocks/planks_oak",
+        "side": "blocks/planks_oak",
+        "top": "blocks/planks_oak",
+        "bottom": "blocks/planks_oak",
+        "strutside": "blocks/planks_oak",
+        "light": "blocks/torch_on",
+        "lighttop": "blocks/torch_on"
+    }
+}

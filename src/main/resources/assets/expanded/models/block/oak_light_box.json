@@ -1,0 +1,11 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "expanded:blocks/lights/oak_light_box_top",
+        "up": "expanded:blocks/lights/oak_light_box_top",
+        "north": "expanded:blocks/lights/oak_light_box_side",
+        "east": "expanded:blocks/lights/oak_light_box_side",
+        "south": "expanded:blocks/lights/oak_light_box_side",
+        "west": "expanded:blocks/lights/oak_light_box_side"
+    }
+}
