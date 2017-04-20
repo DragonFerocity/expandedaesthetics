@@ -28,8 +28,7 @@ startProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java" md5: 4483c137
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java"
 
-startProcessing "com\DragonFerocity\expanded\blocks\ModBlockBed.java" md5: 92e009160b93095efb097c5193ea64ea
-Cache Hit!
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlockBed.java" md5: 5572553b441cc47da6d92360cf16e54a
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlockBed.java"
 
 startProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java" md5: 43426d7734d530f1c628d9bc21e5adee
@@ -61,6 +60,7 @@ Cache Hit!
 endProcessing "com\DragonFerocity\expanded\blocks\ModStairs.java"
 
 startProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java" md5: 2780f9a779a8255934fa5c431cd19f8b
+Cache Hit!
 endProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java"
 
 startProcessing "com\DragonFerocity\expanded\handlers\CraftingHandler.java" md5: a3116c58063c3b667cd20913d217c6c4
@@ -80,6 +80,7 @@ Cache Hit!
 endProcessing "com\DragonFerocity\expanded\items\ModItem.java"
 
 startProcessing "com\DragonFerocity\expanded\items\ModItemBed.java" md5: 47cb95a261202480ef9b2b32701cbc94
+Cache Hit!
 endProcessing "com\DragonFerocity\expanded\items\ModItemBed.java"
 
 startProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java" md5: 2e1755b0bf96e42109c9f7da18359c63

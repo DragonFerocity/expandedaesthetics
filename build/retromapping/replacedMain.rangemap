@@ -524,47 +524,544 @@ Class Start: com.DragonFerocity.expanded.blocks.ModBlock
 Class End  : com.DragonFerocity.expanded.blocks.ModBlock
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java"
 
-startProcessing "com\DragonFerocity\expanded\blocks\ModBlockBed.java" md5: 92e009160b93095efb097c5193ea64ea
-Cache Hit!
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlockBed.java" md5: 5572553b441cc47da6d92360cf16e54a
 @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8|42|com.DragonFerocity.expanded.blocks|package|com.DragonFerocity.expanded.blocks|(file)
 Class Start: com.DragonFerocity.expanded.blocks.ModBlockBed
-   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|419|430|ModBlockBed|class|com.DragonFerocity.expanded.blocks.ModBlockBed
-   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|439|447|BlockBed|class|net.minecraft.block.BlockBed
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1368|1379|ModBlockBed|class|com.DragonFerocity.expanded.blocks.ModBlockBed
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1388|1403|BlockHorizontal|class|net.minecraft.block.BlockHorizontal
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1443|1467|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1430|1442|PropertyEnum|class|net.minecraft.block.properties.PropertyEnum
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1430|1442|PropertyEnum|class|net.minecraft.block.properties.PropertyEnum
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1443|1467|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1469|1473|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART|
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1476|1488|PropertyEnum|class|net.minecraft.block.properties.PropertyEnum
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1490|1514|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1515|1521|create|method|net.minecraft.block.properties.PropertyEnum|create|(Ljava/lang/String;Ljava/lang/Class;)Lnet/minecraft/block/properties/PropertyEnum;
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1530|1554|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1587|1599|PropertyBool|class|net.minecraft.block.properties.PropertyBool
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1587|1599|PropertyBool|class|net.minecraft.block.properties.PropertyBool
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1600|1608|OCCUPIED|field|com.DragonFerocity.expanded.blocks.ModBlockBed|OCCUPIED|
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1611|1623|PropertyBool|class|net.minecraft.block.properties.PropertyBool
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1624|1630|create|method|net.minecraft.block.properties.PropertyBool|create|(Ljava/lang/String;)Lnet/minecraft/block/properties/PropertyBool;
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1671|1684|AxisAlignedBB|class|net.minecraft.util.math.AxisAlignedBB
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1671|1684|AxisAlignedBB|class|net.minecraft.util.math.AxisAlignedBB
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1685|1693|BED_AABB|field|com.DragonFerocity.expanded.blocks.ModBlockBed|BED_AABB|
+   @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1700|1713|AxisAlignedBB|class|net.minecraft.util.math.AxisAlignedBB
    Method Start: ModBlockBed(FFI)V
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|479|487|hardness|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|hardness|0
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|495|505|resistance|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|resistance|1
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|511|523|harvestLevel|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|harvestLevel|2
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|461|472|ModBlockBed|method|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|556|570|setCreativeTab|method|net.minecraft.block.Block|setCreativeTab|(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/block/Block;
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|571|583|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|584|599|BUILDING_BLOCKS|field|net.minecraft.creativetab.CreativeTabs|BUILDING_BLOCKS
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|610|621|setHardness|method|net.minecraft.block.Block|setHardness|(F)Lnet/minecraft/block/Block;
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|622|630|hardness|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|hardness|0
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|641|654|setResistance|method|net.minecraft.block.Block|setResistance|(F)Lnet/minecraft/block/Block;
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|655|665|resistance|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|resistance|1
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|676|691|setHarvestLevel|method|net.minecraft.block.Block|setHarvestLevel|(Ljava/lang/String;I)V
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|703|715|harvestLevel|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|harvestLevel|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1788|1796|hardness|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|hardness|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1804|1814|resistance|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|resistance|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1820|1832|harvestLevel|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|harvestLevel|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1770|1781|ModBlockBed|method|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1854|1862|Material|class|net.minecraft.block.material.Material
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1863|1868|CLOTH|field|net.minecraft.block.material.Material|CLOTH
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1879|1893|setCreativeTab|method|net.minecraft.block.Block|setCreativeTab|(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1894|1906|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1907|1922|BUILDING_BLOCKS|field|net.minecraft.creativetab.CreativeTabs|BUILDING_BLOCKS
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1933|1944|setHardness|method|net.minecraft.block.Block|setHardness|(F)Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1945|1953|hardness|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|hardness|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1964|1977|setResistance|method|net.minecraft.block.Block|setResistance|(F)Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1978|1988|resistance|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|resistance|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1999|2014|setHarvestLevel|method|net.minecraft.block.Block|setHarvestLevel|(Ljava/lang/String;I)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2026|2038|harvestLevel|param|com.DragonFerocity.expanded.blocks.ModBlockBed|ModBlockBed|(FFI)V|harvestLevel|2
    Method End: ModBlockBed(FFI)V
    Method Start: getItemDropped(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|786|791|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;|state|0
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|800|804|rand|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;|rand|1
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|810|817|fortune|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;|fortune|2
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|734|742|Override|class|java.lang.Override
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|754|758|Item|class|net.minecraft.item.Item
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|759|773|getItemDropped|method|net.minecraft.block.Block|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|774|785|IBlockState|class|net.minecraft.block.state.IBlockState
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|793|799|Random|class|java.util.Random
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|845|855|getModItem|method|com.DragonFerocity.expanded.blocks.ModBlockBed|getModItem|()Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2109|2114|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2123|2127|rand|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;|rand|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2133|2140|fortune|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;|fortune|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2057|2065|Override|class|java.lang.Override
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2077|2081|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2082|2096|getItemDropped|method|net.minecraft.block.Block|getItemDropped|(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2097|2108|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2116|2122|Random|class|java.util.Random
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2168|2178|getModItem|method|com.DragonFerocity.expanded.blocks.ModBlockBed|getModItem|()Lnet/minecraft/item/Item;
    Method End: getItemDropped(Lnet/minecraft/block/state/IBlockState;Ljava/util/Random;I)Lnet/minecraft/item/Item;
    Method Start: getModItem()Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|879|883|Item|class|net.minecraft.item.Item
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|884|894|getModItem|method|com.DragonFerocity.expanded.blocks.ModBlockBed|getModItem|()Lnet/minecraft/item/Item;
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|911|915|Item|class|net.minecraft.item.Item
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|954|966|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|967|985|dioritePolishedBed|field|com.DragonFerocity.expanded.handlers.BlockHandler|dioritePolishedBed
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1008|1020|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
-      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|1021|1040|iDioritePolishedBed|field|com.DragonFerocity.expanded.handlers.BlockHandler|iDioritePolishedBed
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2202|2206|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2207|2217|getModItem|method|com.DragonFerocity.expanded.blocks.ModBlockBed|getModItem|()Lnet/minecraft/item/Item;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2234|2238|Item|class|net.minecraft.item.Item
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2277|2289|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2290|2308|dioritePolishedBed|field|com.DragonFerocity.expanded.handlers.BlockHandler|dioritePolishedBed
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2331|2343|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2344|2363|iDioritePolishedBed|field|com.DragonFerocity.expanded.handlers.BlockHandler|iDioritePolishedBed
    Method End: getModItem()Lnet/minecraft/item/Item;
+   Method Start: onBlockActivated(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2440|2447|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2458|2461|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2475|2480|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2495|2503|playerIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|playerIn|3
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2514|2518|hand|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|hand|4
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2531|2539|heldItem|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|heldItem|5
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2547|2551|side|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|side|6
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2559|2563|hitX|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|hitX|7
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2571|2575|hitY|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|hitY|8
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2417|2433|onBlockActivated|method|net.minecraft.block.Block|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2434|2439|World|class|net.minecraft.world.World
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2449|2457|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2463|2474|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2482|2494|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2505|2513|EnumHand|class|net.minecraft.util.EnumHand
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2520|2530|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2595|2602|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2603|2611|isRemote|field|net.minecraft.world.World|isRemote
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2697|2702|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2703|2711|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2712|2716|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2721|2745|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2746|2750|HEAD|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|HEAD
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2782|2785|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2788|2791|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2792|2798|offset|method|net.minecraft.util.math.BlockPos|offset|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2800|2810|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2811|2816|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2817|2825|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2826|2832|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2852|2857|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2860|2867|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2868|2881|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2882|2885|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2909|2914|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|2915|2923|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3035|3042|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3043|3051|provider|field|net.minecraft.world.World|provider
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3052|3066|canRespawnHere|method|net.minecraft.world.WorldProvider|canRespawnHere|()Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3072|3079|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3080|3088|getBiome|method|net.minecraft.world.IBlockAccess|getBiome|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/world/biome/Biome;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3089|3092|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3097|3103|Biomes|class|net.minecraft.init.Biomes
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3104|3108|HELL|field|net.minecraft.init.Biomes|HELL
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3146|3153|Boolean|class|java.lang.Boolean
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3154|3159|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3160|3168|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3169|3177|OCCUPIED|field|com.DragonFerocity.expanded.blocks.ModBlockBed|OCCUPIED
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3180|3192|booleanValue|method|java.lang.Boolean|booleanValue|()Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3234|3246|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3267|3281|getPlayerInBed|method|com.DragonFerocity.expanded.blocks.ModBlockBed|getPlayerInBed|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/entity/player/EntityPlayer;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3282|3289|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3291|3294|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3578|3583|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3586|3591|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3592|3604|withProperty|method|net.minecraft.block.state.IBlockState|withProperty|(Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3605|3613|OCCUPIED|field|com.DragonFerocity.expanded.blocks.ModBlockBed|OCCUPIED
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3615|3622|Boolean|class|java.lang.Boolean
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3623|3630|valueOf|method|java.lang.Boolean|valueOf|(Z)Ljava/lang/Boolean;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3660|3667|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3668|3681|setBlockState|method|net.minecraft.world.World|setBlockState|(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3682|3685|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3687|3692|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3733|3757|EntityPlayer.SleepResult|class|net.minecraft.entity.player.EntityPlayer.SleepResult
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3785|3793|playerIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|playerIn|3
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3794|3802|trySleep|method|net.minecraft.entity.player.EntityPlayer|trySleep|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/entity/player/EntityPlayer$SleepResult;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3803|3806|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3858|3882|EntityPlayer.SleepResult|class|net.minecraft.entity.player.EntityPlayer.SleepResult
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3883|3885|OK|field|net.minecraft.entity.player.EntityPlayer.SleepResult|OK
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3925|3930|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3933|3938|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3939|3951|withProperty|method|net.minecraft.block.state.IBlockState|withProperty|(Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3952|3960|OCCUPIED|field|com.DragonFerocity.expanded.blocks.ModBlockBed|OCCUPIED
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3962|3969|Boolean|class|java.lang.Boolean
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|3970|3977|valueOf|method|java.lang.Boolean|valueOf|(Z)Ljava/lang/Boolean;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4006|4013|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4014|4027|setBlockState|method|net.minecraft.world.World|setBlockState|(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4028|4031|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4033|4038|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4186|4210|EntityPlayer.SleepResult|class|net.minecraft.entity.player.EntityPlayer.SleepResult
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4211|4227|NOT_POSSIBLE_NOW|field|net.minecraft.entity.player.EntityPlayer.SleepResult|NOT_POSSIBLE_NOW
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4461|4485|EntityPlayer.SleepResult|class|net.minecraft.entity.player.EntityPlayer.SleepResult
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4486|4494|NOT_SAFE|field|net.minecraft.entity.player.EntityPlayer.SleepResult|NOT_SAFE
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4728|4752|EntityPlayer.SleepResult|class|net.minecraft.entity.player.EntityPlayer.SleepResult
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|4753|4765|TOO_FAR_AWAY|field|net.minecraft.entity.player.EntityPlayer.SleepResult|TOO_FAR_AWAY
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5058|5065|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5066|5079|setBlockToAir|method|net.minecraft.world.World|setBlockToAir|(Lnet/minecraft/util/math/BlockPos;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5080|5083|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5102|5110|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5122|5125|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5126|5132|offset|method|net.minecraft.util.math.BlockPos|offset|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5135|5145|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5146|5151|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5152|5160|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5161|5167|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5170|5181|getOpposite|method|net.minecraft.util.EnumFacing|getOpposite|()Lnet/minecraft/util/EnumFacing;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5207|5214|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5215|5228|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5239|5247|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5297|5304|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5305|5318|setBlockToAir|method|net.minecraft.world.World|setBlockToAir|(Lnet/minecraft/util/math/BlockPos;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5365|5372|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5373|5385|newExplosion|method|net.minecraft.world.World|newExplosion|(Lnet/minecraft/entity/Entity;DDDFZZ)Lnet/minecraft/world/Explosion;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5387|5393|Entity|class|net.minecraft.entity.Entity
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5408|5411|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5412|5416|getX|method|net.minecraft.util.math.Vec3i|getX|()I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5435|5438|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5439|5443|getY|method|net.minecraft.util.math.Vec3i|getY|()I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5462|5465|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockActivated|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5466|5470|getZ|method|net.minecraft.util.math.Vec3i|getZ|()I
+   Method End: onBlockActivated(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;Lnet/minecraft/util/EnumFacing;FFF)Z
+   Method Start: getPlayerInBed(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/entity/player/EntityPlayer;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5620|5627|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getPlayerInBed|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/entity/player/EntityPlayer;|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5638|5641|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getPlayerInBed|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/entity/player/EntityPlayer;|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5565|5573|Nullable|class|javax.annotation.Nullable
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5586|5598|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5599|5613|getPlayerInBed|method|com.DragonFerocity.expanded.blocks.ModBlockBed|getPlayerInBed|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/entity/player/EntityPlayer;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5614|5619|World|class|net.minecraft.world.World
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5629|5637|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5662|5674|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5690|5697|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getPlayerInBed|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/entity/player/EntityPlayer;|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5698|5712|playerEntities|field|net.minecraft.world.World|playerEntities
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5753|5769|isPlayerSleeping|method|net.minecraft.entity.EntityLivingBase|isPlayerSleeping|()Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5788|5799|bedLocation|field|net.minecraft.entity.player.EntityPlayer|bedLocation
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5800|5806|equals|method|net.minecraft.util.math.Vec3i|equals|(Ljava/lang/Object;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5807|5810|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getPlayerInBed|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/entity/player/EntityPlayer;|pos|1
+   Method End: getPlayerInBed(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/entity/player/EntityPlayer;
+   Method Start: isFullCube(Lnet/minecraft/block/state/IBlockState;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5959|5964|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|isFullCube|(Lnet/minecraft/block/state/IBlockState;)Z|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5936|5946|isFullCube|method|net.minecraft.block.Block|isFullCube|(Lnet/minecraft/block/state/IBlockState;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|5947|5958|IBlockState|class|net.minecraft.block.state.IBlockState
+   Method End: isFullCube(Lnet/minecraft/block/state/IBlockState;)Z
+   Method Start: isOpaqueCube(Lnet/minecraft/block/state/IBlockState;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6150|6155|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|isOpaqueCube|(Lnet/minecraft/block/state/IBlockState;)Z|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6125|6137|isOpaqueCube|method|net.minecraft.block.Block|isOpaqueCube|(Lnet/minecraft/block/state/IBlockState;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6138|6149|IBlockState|class|net.minecraft.block.state.IBlockState
+   Method End: isOpaqueCube(Lnet/minecraft/block/state/IBlockState;)Z
+   Method Start: neighborChanged(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6510|6515|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6523|6530|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|worldIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6541|6544|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|pos|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6552|6559|blockIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|blockIn|3
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6570|6581|p_189540_5_|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|p_189540_5_|4
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6482|6497|neighborChanged|method|net.minecraft.block.Block|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6498|6509|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6517|6522|World|class|net.minecraft.world.World
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6532|6540|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6546|6551|Block|class|net.minecraft.block.Block
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6561|6569|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6597|6607|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6622|6632|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6633|6638|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6639|6647|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6648|6654|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6670|6675|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6676|6684|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6685|6689|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6694|6718|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6719|6723|HEAD|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|HEAD
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6751|6758|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|worldIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6759|6772|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6773|6776|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|pos|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6777|6783|offset|method|net.minecraft.util.math.BlockPos|offset|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6795|6806|getOpposite|method|net.minecraft.util.EnumFacing|getOpposite|()Lnet/minecraft/util/EnumFacing;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6811|6819|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6861|6868|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|worldIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6869|6882|setBlockToAir|method|net.minecraft.world.World|setBlockToAir|(Lnet/minecraft/util/math/BlockPos;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6883|6886|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|pos|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6930|6937|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|worldIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6938|6951|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6952|6955|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|pos|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6956|6962|offset|method|net.minecraft.util.math.BlockPos|offset|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|6976|6984|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7018|7025|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|worldIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7026|7039|setBlockToAir|method|net.minecraft.world.World|setBlockToAir|(Lnet/minecraft/util/math/BlockPos;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7040|7043|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|pos|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7064|7071|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|worldIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7072|7080|isRemote|field|net.minecraft.world.World|isRemote
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7117|7132|dropBlockAsItem|method|net.minecraft.block.Block|dropBlockAsItem|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7133|7140|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|worldIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7142|7145|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|pos|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7147|7152|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|neighborChanged|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V|state|0
+   Method End: neighborChanged(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos;)V
+   Method Start: getBoundingBox(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7241|7246|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getBoundingBox|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7261|7267|source|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getBoundingBox|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;|source|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7278|7281|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getBoundingBox|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;|pos|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7200|7213|AxisAlignedBB|class|net.minecraft.util.math.AxisAlignedBB
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7214|7228|getBoundingBox|method|net.minecraft.block.Block|getBoundingBox|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7229|7240|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7248|7260|IBlockAccess|class|net.minecraft.world.IBlockAccess
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7269|7277|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7304|7312|BED_AABB|field|com.DragonFerocity.expanded.blocks.ModBlockBed|BED_AABB
+   Method End: getBoundingBox(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;
+   Method Start: getSafeExitLocation(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7457|7464|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7475|7478|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7484|7489|tries|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|tries|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7326|7334|Nullable|class|javax.annotation.Nullable
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7422|7430|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7431|7450|getSafeExitLocation|method|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7451|7456|World|class|net.minecraft.world.World
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7466|7474|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7505|7515|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7530|7540|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7541|7548|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7549|7562|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7563|7566|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7568|7576|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7577|7583|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7602|7605|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7606|7610|getX|method|net.minecraft.util.math.Vec3i|getX|()I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7630|7633|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7634|7638|getY|method|net.minecraft.util.math.Vec3i|getY|()I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7658|7661|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7662|7666|getZ|method|net.minecraft.util.math.Vec3i|getZ|()I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7754|7769|getFrontOffsetX|method|net.minecraft.util.EnumFacing|getFrontOffsetX|()I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|7817|7832|getFrontOffsetZ|method|net.minecraft.util.EnumFacing|getFrontOffsetZ|()I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8051|8059|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8075|8083|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8121|8137|hasRoomForPlayer|method|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8138|8145|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8208|8213|tries|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|tries|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8344|8349|tries|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getSafeExitLocation|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;|tries|2
+   Method End: getSafeExitLocation(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;I)Lnet/minecraft/util/math/BlockPos;
+   Method Start: hasRoomForPlayer(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8496|8503|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8514|8517|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8473|8489|hasRoomForPlayer|method|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8490|8495|World|class|net.minecraft.world.World
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8505|8513|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8540|8547|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8548|8561|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8562|8565|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8566|8570|down|method|net.minecraft.util.math.BlockPos|down|()Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8574|8587|isFullyOpaque|method|net.minecraft.block.state.IBlockProperties|isFullyOpaque|()Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8594|8601|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8602|8615|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8616|8619|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8621|8632|getMaterial|method|net.minecraft.block.state.IBlockProperties|getMaterial|()Lnet/minecraft/block/material/Material;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8635|8642|isSolid|method|net.minecraft.block.material.Material|isSolid|()Z
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8649|8656|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8657|8670|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8671|8674|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|hasRoomForPlayer|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8675|8677|up|method|net.minecraft.util.math.BlockPos|up|()Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8681|8692|getMaterial|method|net.minecraft.block.state.IBlockProperties|getMaterial|()Lnet/minecraft/block/material/Material;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8695|8702|isSolid|method|net.minecraft.block.material.Material|isSolid|()Z
+   Method End: hasRoomForPlayer(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z
+   Method Start: dropBlockAsItemWithChance(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8841|8848|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8859|8862|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8876|8881|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8889|8895|chance|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|chance|3
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8901|8908|fortune|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|fortune|4
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8809|8834|dropBlockAsItemWithChance|method|net.minecraft.block.Block|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8835|8840|World|class|net.minecraft.world.World
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8850|8858|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8864|8875|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8928|8933|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8934|8942|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8943|8947|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8952|8976|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|8977|8981|FOOT|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|FOOT
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9011|9036|dropBlockAsItemWithChance|method|net.minecraft.block.Block|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9037|9044|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9046|9049|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9051|9056|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9058|9064|chance|param|com.DragonFerocity.expanded.blocks.ModBlockBed|dropBlockAsItemWithChance|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V|chance|3
+   Method End: dropBlockAsItemWithChance(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;FI)V
+   Method Start: getMobilityFlag(Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/block/material/EnumPushReaction;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9143|9148|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getMobilityFlag|(Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/block/material/EnumPushReaction;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9098|9114|EnumPushReaction|class|net.minecraft.block.material.EnumPushReaction
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9115|9130|getMobilityFlag|method|net.minecraft.block.Block|getMobilityFlag|(Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/block/material/EnumPushReaction;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9131|9142|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9171|9187|EnumPushReaction|class|net.minecraft.block.material.EnumPushReaction
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9188|9195|DESTROY|field|net.minecraft.block.material.EnumPushReaction|DESTROY
+   Method End: getMobilityFlag(Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/block/material/EnumPushReaction;
+   Method Start: getBlockLayer()Lnet/minecraft/util/BlockRenderLayer;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9215|9231|BlockRenderLayer|class|net.minecraft.util.BlockRenderLayer
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9232|9245|getBlockLayer|method|net.minecraft.block.Block|getBlockLayer|()Lnet/minecraft/util/BlockRenderLayer;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9269|9285|BlockRenderLayer|class|net.minecraft.util.BlockRenderLayer
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9286|9292|CUTOUT|field|net.minecraft.util.BlockRenderLayer|CUTOUT
+   Method End: getBlockLayer()Lnet/minecraft/util/BlockRenderLayer;
+   Method Start: getItem(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/item/ItemStack;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9336|9343|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getItem|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/item/ItemStack;|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9354|9357|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getItem|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/item/ItemStack;|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9371|9376|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getItem|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/item/ItemStack;|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9312|9321|ItemStack|class|net.minecraft.item.ItemStack
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9322|9329|getItem|method|net.minecraft.block.Block|getItem|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/item/ItemStack;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9330|9335|World|class|net.minecraft.world.World
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9345|9353|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9359|9370|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9403|9412|ItemStack|class|net.minecraft.item.ItemStack
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9413|9418|Items|class|net.minecraft.init.Items
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9419|9422|BED|field|net.minecraft.init.Items|BED
+   Method End: getItem(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Lnet/minecraft/item/ItemStack;
+   Method Start: onBlockHarvested(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9471|9478|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9489|9492|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9506|9511|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9526|9532|player|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|player|3
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9448|9464|onBlockHarvested|method|net.minecraft.block.Block|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9465|9470|World|class|net.minecraft.world.World
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9480|9488|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9494|9505|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9513|9525|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9552|9558|player|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|player|3
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9559|9571|capabilities|field|net.minecraft.entity.player.EntityPlayer|capabilities
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9572|9586|isCreativeMode|field|net.minecraft.entity.player.PlayerCapabilities|isCreativeMode
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9590|9595|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9596|9604|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9605|9609|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9614|9638|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9639|9643|HEAD|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|HEAD
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9667|9675|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9687|9690|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|pos|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9691|9697|offset|method|net.minecraft.util.math.BlockPos|offset|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9700|9710|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9711|9716|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|state|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9717|9725|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9726|9732|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9735|9746|getOpposite|method|net.minecraft.util.EnumFacing|getOpposite|()Lnet/minecraft/util/EnumFacing;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9768|9775|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9776|9789|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9800|9808|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9850|9857|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|onBlockHarvested|(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V|worldIn|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|9858|9871|setBlockToAir|method|net.minecraft.world.World|setBlockToAir|(Lnet/minecraft/util/math/BlockPos;)Z
+   Method End: onBlockHarvested(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/player/EntityPlayer;)V
+   Method Start: getStateFromMeta(I)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10041|10045|meta|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getStateFromMeta|(I)Lnet/minecraft/block/state/IBlockState;|meta|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10008|10019|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10020|10036|getStateFromMeta|method|net.minecraft.block.Block|getStateFromMeta|(I)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10061|10071|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10085|10095|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10096|10109|getHorizontal|method|net.minecraft.util.EnumFacing|getHorizontal|(I)Lnet/minecraft/util/EnumFacing;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10110|10114|meta|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getStateFromMeta|(I)Lnet/minecraft/block/state/IBlockState;|meta|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10133|10137|meta|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getStateFromMeta|(I)Lnet/minecraft/block/state/IBlockState;|meta|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10154|10169|getDefaultState|method|net.minecraft.block.Block|getDefaultState|()Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10172|10184|withProperty|method|net.minecraft.block.state.IBlockState|withProperty|(Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10185|10189|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10191|10215|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10216|10220|HEAD|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|HEAD
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10222|10234|withProperty|method|net.minecraft.block.state.IBlockState|withProperty|(Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10235|10241|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10255|10267|withProperty|method|net.minecraft.block.state.IBlockState|withProperty|(Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10268|10276|OCCUPIED|field|com.DragonFerocity.expanded.blocks.ModBlockBed|OCCUPIED
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10278|10285|Boolean|class|java.lang.Boolean
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10286|10293|valueOf|method|java.lang.Boolean|valueOf|(Z)Ljava/lang/Boolean;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10295|10299|meta|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getStateFromMeta|(I)Lnet/minecraft/block/state/IBlockState;|meta|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10318|10333|getDefaultState|method|net.minecraft.block.Block|getDefaultState|()Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10336|10348|withProperty|method|net.minecraft.block.state.IBlockState|withProperty|(Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10349|10353|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10355|10379|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10380|10384|FOOT|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|FOOT
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10386|10398|withProperty|method|net.minecraft.block.state.IBlockState|withProperty|(Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10399|10405|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+   Method End: getStateFromMeta(I)Lnet/minecraft/block/state/IBlockState;
+   Method Start: getActualState(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10651|10656|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10671|10678|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|worldIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10689|10692|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|pos|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10612|10623|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10624|10638|getActualState|method|net.minecraft.block.Block|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10639|10650|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10658|10670|IBlockAccess|class|net.minecraft.world.IBlockAccess
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10680|10688|BlockPos|class|net.minecraft.util.math.BlockPos
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10712|10717|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10718|10726|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10727|10731|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10736|10760|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10761|10765|FOOT|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|FOOT
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10789|10800|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10815|10822|worldIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|worldIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10823|10836|getBlockState|method|net.minecraft.world.IBlockAccess|getBlockState|(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10837|10840|pos|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|pos|2
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10841|10847|offset|method|net.minecraft.util.math.BlockPos|offset|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/math/BlockPos;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10849|10859|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10860|10865|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10866|10874|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10875|10881|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10915|10923|getBlock|method|net.minecraft.block.state.IBlockState|getBlock|()Lnet/minecraft/block/Block;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10965|10970|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10973|10978|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10979|10991|withProperty|method|net.minecraft.block.state.IBlockState|withProperty|(Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|10992|11000|OCCUPIED|field|com.DragonFerocity.expanded.blocks.ModBlockBed|OCCUPIED
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11014|11022|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11023|11031|OCCUPIED|field|com.DragonFerocity.expanded.blocks.ModBlockBed|OCCUPIED
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11075|11080|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getActualState|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;|state|0
+   Method End: getActualState(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/state/IBlockState;
+   Method Start: withRotation(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11290|11295|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withRotation|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11306|11309|rot|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withRotation|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;|rot|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11253|11264|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11265|11277|withRotation|method|net.minecraft.block.Block|withRotation|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11278|11289|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11297|11305|Rotation|class|net.minecraft.util.Rotation
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11332|11337|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withRotation|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11338|11350|withProperty|method|net.minecraft.block.state.IBlockState|withProperty|(Lnet/minecraft/block/properties/IProperty;Ljava/lang/Comparable;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11351|11357|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11359|11362|rot|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withRotation|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;|rot|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11363|11369|rotate|method|net.minecraft.util.Rotation|rotate|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/EnumFacing;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11371|11381|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11382|11387|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withRotation|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11388|11396|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11397|11403|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+   Method End: withRotation(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;
+   Method Start: withMirror(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11610|11615|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withMirror|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11624|11632|mirrorIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withMirror|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/state/IBlockState;|mirrorIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11575|11586|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11587|11597|withMirror|method|net.minecraft.block.Block|withMirror|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11598|11609|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11617|11623|Mirror|class|net.minecraft.util.Mirror
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11655|11660|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withMirror|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11661|11673|withRotation|method|net.minecraft.block.state.IBlockProperties|withRotation|(Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/state/IBlockState;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11674|11682|mirrorIn|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withMirror|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/state/IBlockState;|mirrorIn|1
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11683|11693|toRotation|method|net.minecraft.util.Mirror|toRotation|(Lnet/minecraft/util/EnumFacing;)Lnet/minecraft/util/Rotation;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11695|11705|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11706|11711|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|withMirror|(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/state/IBlockState;|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11712|11720|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11721|11727|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+   Method End: withMirror(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/state/IBlockState;
+   Method Start: getMetaFromState(Lnet/minecraft/block/state/IBlockState;)I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11861|11866|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getMetaFromState|(Lnet/minecraft/block/state/IBlockState;)I|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11832|11848|getMetaFromState|method|net.minecraft.block.Block|getMetaFromState|(Lnet/minecraft/block/state/IBlockState;)I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11849|11860|IBlockState|class|net.minecraft.block.state.IBlockState
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11911|11921|EnumFacing|class|net.minecraft.util.EnumFacing
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11922|11927|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getMetaFromState|(Lnet/minecraft/block/state/IBlockState;)I|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11928|11936|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11937|11943|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11946|11964|getHorizontalIndex|method|net.minecraft.util.EnumFacing|getHorizontalIndex|()I
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11981|11986|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getMetaFromState|(Lnet/minecraft/block/state/IBlockState;)I|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11987|11995|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|11996|12000|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12005|12029|ModBlockBed.EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12030|12034|HEAD|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|HEAD
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12085|12092|Boolean|class|java.lang.Boolean
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12093|12098|state|param|com.DragonFerocity.expanded.blocks.ModBlockBed|getMetaFromState|(Lnet/minecraft/block/state/IBlockState;)I|state|0
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12099|12107|getValue|method|net.minecraft.block.state.IBlockState|getValue|(Lnet/minecraft/block/properties/IProperty;)Ljava/lang/Comparable;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12108|12116|OCCUPIED|field|com.DragonFerocity.expanded.blocks.ModBlockBed|OCCUPIED
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12119|12131|booleanValue|method|java.lang.Boolean|booleanValue|()Z
+   Method End: getMetaFromState(Lnet/minecraft/block/state/IBlockState;)I
+   Method Start: createBlockState()Lnet/minecraft/block/state/BlockStateContainer;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12237|12256|BlockStateContainer|class|net.minecraft.block.state.BlockStateContainer
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12257|12273|createBlockState|method|net.minecraft.block.Block|createBlockState|()Lnet/minecraft/block/state/BlockStateContainer;
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12301|12320|BlockStateContainer|class|net.minecraft.block.state.BlockStateContainer
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12331|12340|IProperty|class|net.minecraft.block.properties.IProperty
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12344|12350|FACING|field|net.minecraft.block.BlockHorizontal|FACING
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12352|12356|PART|field|com.DragonFerocity.expanded.blocks.ModBlockBed|PART
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12358|12366|OCCUPIED|field|com.DragonFerocity.expanded.blocks.ModBlockBed|OCCUPIED
+   Method End: createBlockState()Lnet/minecraft/block/state/BlockStateContainer;
+   Enum Start: com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12400|12412|EnumPartType|class|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12424|12443|IStringSerializable|class|net.minecraft.util.IStringSerializable
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12458|12462|HEAD|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|HEAD
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12480|12484|FOOT|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|FOOT
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12517|12523|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12517|12523|String|class|java.lang.String
+      @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12524|12528|name|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|name|
+      Method Start: EnumPartType(Ljava/lang/String;)V
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12567|12571|name|param|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|EnumPartType|(Ljava/lang/String;)V|name|0
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12547|12559|EnumPartType|method|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|EnumPartType|(Ljava/lang/String;)V
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12560|12566|String|class|java.lang.String
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12600|12604|name|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|name
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12607|12611|name|param|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|EnumPartType|(Ljava/lang/String;)V|name|0
+      Method End: EnumPartType(Ljava/lang/String;)V
+      Method Start: toString()Ljava/lang/String;
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12639|12645|String|class|java.lang.String
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12646|12654|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12691|12695|name|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|name
+      Method End: toString()Ljava/lang/String;
+      Method Start: getName()Ljava/lang/String;
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12723|12729|String|class|java.lang.String
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12730|12737|getName|method|net.minecraft.util.IStringSerializable|getName|()Ljava/lang/String;
+         @|com\DragonFerocity\expanded\blocks\ModBlockBed.java|12774|12778|name|field|com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType|name
+      Method End: getName()Ljava/lang/String;
+   Enum End  : com.DragonFerocity.expanded.blocks.ModBlockBed.EnumPartType
 Class End  : com.DragonFerocity.expanded.blocks.ModBlockBed
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlockBed.java"
 
@@ -2664,6 +3161,7 @@ Class End  : com.DragonFerocity.expanded.blocks.ModStairs
 endProcessing "com\DragonFerocity\expanded\blocks\ModStairs.java"
 
 startProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java" md5: 2780f9a779a8255934fa5c431cd19f8b
+Cache Hit!
 @|com\DragonFerocity\expanded\handlers\BlockHandler.java|8|44|com.DragonFerocity.expanded.handlers|package|com.DragonFerocity.expanded.handlers|(file)
 Class Start: com.DragonFerocity.expanded.handlers.BlockHandler
    @|com\DragonFerocity\expanded\handlers\BlockHandler.java|668|680|BlockHandler|class|com.DragonFerocity.expanded.handlers.BlockHandler
@@ -3700,6 +4198,7 @@ Class End  : com.DragonFerocity.expanded.items.ModItem
 endProcessing "com\DragonFerocity\expanded\items\ModItem.java"
 
 startProcessing "com\DragonFerocity\expanded\items\ModItemBed.java" md5: 47cb95a261202480ef9b2b32701cbc94
+Cache Hit!
 @|com\DragonFerocity\expanded\items\ModItemBed.java|8|41|com.DragonFerocity.expanded.items|package|com.DragonFerocity.expanded.items|(file)
 Class Start: com.DragonFerocity.expanded.items.ModItemBed
    @|com\DragonFerocity\expanded\items\ModItemBed.java|803|813|ModItemBed|class|com.DragonFerocity.expanded.items.ModItemBed
