@@ -11,11 +11,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.init.Items;
 
 public class ModBlockDoor extends BlockDoor
 {
-    public String blockName;
-
     public ModBlockDoor(Material materialIn, String name, float hardness, float resistance, int harvestLevel)
     //Harvest Level: 3 = Diamond, 2 = Iron, 1 = Gold/Stone, 0 = Wood
     {
@@ -26,13 +25,12 @@ public class ModBlockDoor extends BlockDoor
         setHardness(hardness);
         setResistance(resistance);
         setHarvestLevel("pickaxe", harvestLevel);
-        blockName = name;
     }
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return /*state.getValue(HALF) == BlockDoor.EnumDoorHalf.UPPER ? Items.field_190931_a : */this.getModItem();
+        return /*state.getValue(HALF) == BlockDoor.EnumDoorHalf.UPPER ? Items.AIR : */this.getModItem();
     }
 
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)

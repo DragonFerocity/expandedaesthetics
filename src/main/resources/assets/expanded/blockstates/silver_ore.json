@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "expanded:ores/silver_ore" },
+        "inventory": { "model": "expanded:ores/silver_ore" }
+    }
+}

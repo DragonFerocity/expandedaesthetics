@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=up": { "model": "expanded:lights/diorite_polished_lamp" },
+        "facing=north": { "model": "expanded:lights/diorite_polished_lamp" },
+        "facing=east": { "model": "expanded:lights/diorite_polished_lamp" },
+        "facing=south": { "model": "expanded:lights/diorite_polished_lamp" },
+        "facing=west": { "model": "expanded:lights/diorite_polished_lamp" },
+        "inventory": { "model": "expanded:lights/diorite_polished_lamp" }
+    }
+}

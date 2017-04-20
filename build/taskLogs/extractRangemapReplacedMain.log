@@ -1,8 +1,12 @@
 Symbol range map extraction starting
-Processing 17 files
+Processing 25 files
 startProcessing "com\DragonFerocity\expanded\ExpandedAesthetics.java" md5: 3a1a44570284c67c82240eac51c17c92
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\ExpandedAesthetics.java"
+
+startProcessing "com\DragonFerocity\expanded\OreGen.java" md5: 785f35c2fd2c941600f8908d89e0abf8
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\OreGen.java"
 
 startProcessing "com\DragonFerocity\expanded\Ref.java" md5: c43bc62fe50bb2bc7d1a1f4b7bb68fa2
 Cache Hit!
@@ -16,13 +20,25 @@ startProcessing "com\DragonFerocity\expanded\blocks\CobblestoneChest.java" md5: 
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\blocks\CobblestoneChest.java"
 
-startProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java" md5: 4a80e37ee12a24788b588efa9d65040f
+startProcessing "com\DragonFerocity\expanded\blocks\ModAdvancedWorkbench.java" md5: 9cf2be0f8ccaa124c344a0613a2acb4b
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\blocks\ModAdvancedWorkbench.java"
+
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java" md5: 4483c137aad522f44adf3fc496fa99c1
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlock.java"
 
-startProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java" md5: cecdf1349ae4ab38b4fe2b36098a3ebb
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlockBed.java" md5: 92e009160b93095efb097c5193ea64ea
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\blocks\ModBlockBed.java"
+
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java" md5: 43426d7734d530f1c628d9bc21e5adee
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\blocks\ModBlockDoor.java"
+
+startProcessing "com\DragonFerocity\expanded\blocks\ModBlockGrandfatherClock.java" md5: 8dac5cb99a1e863e24314d7a11c69b1f
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\blocks\ModBlockGrandfatherClock.java"
 
 startProcessing "com\DragonFerocity\expanded\blocks\ModChest.java" md5: 752e9e47c3a7a28d1b3b08bb29817801
 Cache Hit!
@@ -36,21 +52,35 @@ startProcessing "com\DragonFerocity\expanded\blocks\ModLantern.java" md5: 605b38
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\blocks\ModLantern.java"
 
-startProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java" md5: 8f45c1255fbf95da8680079d0be55f81
+startProcessing "com\DragonFerocity\expanded\blocks\ModOre.java" md5: addcf661f5892b06c0872d86e9743ce0
 Cache Hit!
+endProcessing "com\DragonFerocity\expanded\blocks\ModOre.java"
+
+startProcessing "com\DragonFerocity\expanded\blocks\ModStairs.java" md5: 055c87ba93d23b81315f795c4851a97c
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\blocks\ModStairs.java"
+
+startProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java" md5: 2780f9a779a8255934fa5c431cd19f8b
 endProcessing "com\DragonFerocity\expanded\handlers\BlockHandler.java"
 
-startProcessing "com\DragonFerocity\expanded\handlers\CraftingHandler.java" md5: f1f76977cde710da7f2ead23fcbeec26
+startProcessing "com\DragonFerocity\expanded\handlers\CraftingHandler.java" md5: a3116c58063c3b667cd20913d217c6c4
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\handlers\CraftingHandler.java"
+
+startProcessing "com\DragonFerocity\expanded\inventory\ContainerAdvancedWorkbench.java" md5: 7487f0d4c45af3a04303fce544ebce6b
+Cache Hit!
+endProcessing "com\DragonFerocity\expanded\inventory\ContainerAdvancedWorkbench.java"
 
 startProcessing "com\DragonFerocity\expanded\items\ItemTutItem.java" md5: 9788da2d42a00c38229bc342b604f0ac
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\items\ItemTutItem.java"
 
-startProcessing "com\DragonFerocity\expanded\items\ModItem.java" md5: 4adefdd56a708cb0c252dfc68172d738
+startProcessing "com\DragonFerocity\expanded\items\ModItem.java" md5: c89a308778567abb3e10fac725e63d61
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\items\ModItem.java"
+
+startProcessing "com\DragonFerocity\expanded\items\ModItemBed.java" md5: 47cb95a261202480ef9b2b32701cbc94
+endProcessing "com\DragonFerocity\expanded\items\ModItemBed.java"
 
 startProcessing "com\DragonFerocity\expanded\items\ModItemDoor.java" md5: 2e1755b0bf96e42109c9f7da18359c63
 Cache Hit!
@@ -60,7 +90,7 @@ startProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java" md5: 9a2890
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\proxy\ClientProxy.java"
 
-startProcessing "com\DragonFerocity\expanded\proxy\CommonProxy.java" md5: 614f2bd11fd85c3aea45c58e3c0fcbf4
+startProcessing "com\DragonFerocity\expanded\proxy\CommonProxy.java" md5: c84f94347c319d72fbab246d701fd834
 Cache Hit!
 endProcessing "com\DragonFerocity\expanded\proxy\CommonProxy.java"
 
