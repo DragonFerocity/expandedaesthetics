@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "expanded:cactus/cut_cactus_block" }
+    }
+}

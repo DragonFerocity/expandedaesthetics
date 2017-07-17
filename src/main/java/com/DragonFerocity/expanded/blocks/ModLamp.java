@@ -1,16 +1,21 @@
 package com.DragonFerocity.expanded.blocks;
 
+import com.DragonFerocity.expanded.Ref;
+import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.google.common.base.Predicate;
 import java.util.Random;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockAir;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -19,12 +24,15 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 
 public class ModLamp extends Block {
+  
+  private double flameY = 5;
   
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", new Predicate<EnumFacing>()
 	{
@@ -34,29 +42,32 @@ public class ModLamp extends Block {
 	    }
 	});
 	protected static final AxisAlignedBB STANDING_AABB = new AxisAlignedBB(0.1875D, 0.0D, 0.1875D, 0.8125D, 2.0D, 0.8125D);
-
-  public ModLamp(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool, float light) {
+	public static final PropertyEnum<ModLamp.EnumLampHalf> HALF = PropertyEnum.<ModLamp.EnumLampHalf>create("half", ModLamp.EnumLampHalf.class);
+	
+  public ModLamp(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool, float light, double flamePos) {
     super(mat);
-    //setUnlocalizedName(name);
-    //setRegistryName(name);
+    setUnlocalizedName(Ref.MODID + ":" + name);
+    setRegistryName(Ref.MODID + ":" + name);
     setCreativeTab(tab);
     setHardness(hardness);
     setResistance(resistance);
     setHarvestLevel(tool, harvest);
     setLightLevel(light);
+    this.flameY = flamePos;
     this.setTickRandomly(true);
     this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));
   }
 
-  public ModLamp(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool, float light, int encouragement, int flamability) {
+  public ModLamp(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool, float light, int encouragement, int flamability, double flamePos) {
     super(mat);
-    //setUnlocalizedName(name);
-    //setRegistryName(name);
+    setUnlocalizedName(Ref.MODID + ":" + name);
+    setRegistryName(Ref.MODID + ":" + name);
     setCreativeTab(tab);
     setHardness(hardness);
     setResistance(resistance);
     setHarvestLevel(tool, harvest);
     setLightLevel(light);
+    this.flameY = flamePos;
     this.setTickRandomly(true);
     this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));
     //BlockFire.setFireInfo(this, encouragement, flamability);
@@ -92,15 +103,8 @@ public class ModLamp extends Block {
 
   private boolean canPlaceOn(World worldIn, BlockPos pos)
   {
-      if (worldIn.getBlockState(pos).isFullyOpaque())
-      {
-          return true;
-      }
-      else
-      {
-          Block block = worldIn.getBlockState(pos).getBlock();
-          return block instanceof BlockFence || block == Blocks.COBBLESTONE_WALL;
-      }
+      Block block = worldIn.getBlockState(pos).getBlock();
+      return !(block instanceof BlockFence || block == Blocks.COBBLESTONE_WALL || block instanceof BlockAir || block instanceof ModLamp || block instanceof BlockStairs);
   }
 
   public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
@@ -119,8 +123,15 @@ public class ModLamp extends Block {
   private boolean canPlaceAt(World worldIn, BlockPos pos, EnumFacing facing)
   {
       BlockPos blockpos = pos.offset(facing.getOpposite());
-      boolean flag = facing.getAxis().isHorizontal();
-      return flag && worldIn.isBlockNormalCube(blockpos, true) || facing.equals(EnumFacing.UP) && this.canPlaceOn(worldIn, blockpos);
+
+      if (facing.equals(EnumFacing.UP) && this.canPlaceOn(worldIn, blockpos))
+      {
+          return true;
+      }
+      else
+      {
+          return false;
+      }
   }
 
   /**
@@ -221,22 +232,20 @@ public class ModLamp extends Block {
   public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand)
   {
       EnumFacing enumfacing = (EnumFacing)stateIn.getValue(FACING);
-      double d0 = (double)pos.getX() + 0.5D;
-      double d1 = (double)pos.getY() + 1.9D;
-      double d2 = (double)pos.getZ() + 0.5D;
-      double d3 = 0.22D;
-      double d4 = 0.27D;
+      double x = (double)pos.getX() + 0.5D;
+      double y = (double)pos.getY() + flameY;
+      double z = (double)pos.getZ() + 0.5D;
 
       if (enumfacing.getAxis().isHorizontal())
       {
           EnumFacing enumfacing1 = enumfacing.getOpposite();
-          worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + 0.27D * (double)enumfacing1.getFrontOffsetX(), d1 + 0.22D, d2 + 0.27D * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 0.0D, 0.0D, new int[0]);
-          worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + 0.27D * (double)enumfacing1.getFrontOffsetX(), d1 + 0.22D, d2 + 0.27D * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 0.0D, 0.0D, new int[0]);
+          worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, x + 0.27D * (double)enumfacing1.getFrontOffsetX(), y + 0.22D, z + 0.27D * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 0.0D, 0.0D, new int[0]);
+          worldIn.spawnParticle(EnumParticleTypes.FLAME, x + 0.27D * (double)enumfacing1.getFrontOffsetX(), y + 0.22D, z + 0.27D * (double)enumfacing1.getFrontOffsetZ(), 0.0D, 0.0D, 0.0D, new int[0]);
       }
       else
       {
-          worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-          worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+          worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, x, y, z, 0.0D, 0.0D, 0.0D);
+          worldIn.spawnParticle(EnumParticleTypes.FLAME, x, y, z, 0.0D, 0.0D, 0.0D);
       }
   }
 
@@ -300,5 +309,21 @@ public class ModLamp extends Block {
   protected BlockStateContainer createBlockState()
   {
       return new BlockStateContainer(this, new IProperty[] {FACING});
+  }
+  
+  public static enum EnumLampHalf implements IStringSerializable
+  {
+      UPPER,
+      LOWER;
+
+      public String toString()
+      {
+          return this.getName();
+      }
+
+      public String getName()
+      {
+          return this == UPPER ? "upper" : "lower";
+      }
   }
 }

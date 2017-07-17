@@ -1,0 +1,8 @@
+{
+    "parent": "expanded:block/stairs/stairs_alternate",
+    "textures": {
+        "bottom": "expanded:blocks/cactus/cactus_cut_top",
+        "top": "expanded:blocks/cactus/cactus_cut_top",
+        "side": "expanded:blocks/cactus/cactus_cut_top"
+    }
+}

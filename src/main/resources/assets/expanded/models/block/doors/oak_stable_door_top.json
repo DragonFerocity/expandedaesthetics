@@ -1,0 +1,23 @@
+{
+    "parent": "block/cube",
+    "ambientocclusion": false,
+    "textures": {
+        "transparent": "expanded:blocks/transparent",
+        "particle": "expanded:blocks/transparent"
+    },
+    "elements": [
+        {
+            "name": "Cube",
+            "from": [ 0.0, 0.0, 0.0 ],
+            "to": [ 3.0, 16.0, 16.0 ],
+            "faces": {
+                "north": { "texture": "#transparent", "uv": [ 1.0, 0.0, 0.0, 16.0 ], "cullface": "north" },
+                "east": { "texture": "#transparent", "uv": [ 1.0, 0.0, 0.0, 16.0 ] },
+                "south": { "texture": "#transparent", "uv": [ 0.0, 4.0, 1.0, 11.0 ], "cullface": "south" },
+                "west": { "texture": "#transparent", "uv": [ 0.0, 0.0, 1.0, 16.0 ], "cullface": "west" },
+                "up": { "texture": "#transparent", "uv": [ 0.0, 0.0, 3.0, 1.0 ], "cullface": "up" },
+                "down": { "texture": "#transparent", "uv": [ 12.0, 0.0, 15.0, 1.0 ], "cullface": "down" }
+            }
+        }
+    ]
+}

@@ -6,25 +6,25 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
+import com.DragonFerocity.expanded.Ref;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
 
 public class ModOre extends Block
 {
-    public ModOre(float hardness, float resistance, int harvestLevel)
+    public ModOre(String name, float hardness, float resistance, int harvestLevel)
     {
         this(Material.ROCK.getMaterialMapColor());
         setHardness(hardness);
         setResistance(resistance);
         setHarvestLevel("pickaxe", harvestLevel);
+        setUnlocalizedName(Ref.MODID + ":" + name);
+        setRegistryName(Ref.MODID + ":" + name);
     }
 
     public ModOre(MapColor color)
@@ -38,8 +38,10 @@ public class ModOre extends Block
      */
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-    	if (this == BlockHandler.copperOre)
-        	return BlockHandler.ibCopperOre;
+      if (this == BlockHandler.copperOre)
+        return BlockHandler.ibCopperOre;
+      else if (this == BlockHandler.tinOre)
+        return BlockHandler.ibTinOre;
     	else if (this == BlockHandler.platinumOre)
         	return BlockHandler.ibPlatinumOre;
     	else if (this == BlockHandler.silverOre)
@@ -85,7 +87,7 @@ public class ModOre extends Block
     /**
      * Spawns this Block's drops into the World as EntityItems.
      */
-    public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune)
+    /*public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune)
     {
         super.dropBlockAsItemWithChance(worldIn, pos, state, chance, fortune);
 
@@ -100,7 +102,7 @@ public class ModOre extends Block
 
             this.dropXpOnBlockBreak(worldIn, pos, i);
         }
-    }
+    }*/
 
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
     {

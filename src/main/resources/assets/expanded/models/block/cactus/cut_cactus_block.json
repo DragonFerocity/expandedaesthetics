@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "north": "expanded:blocks/cactus/cactus_cut_side",
+        "east": "expanded:blocks/cactus/cactus_cut_side",
+        "south": "expanded:blocks/cactus/cactus_cut_side",
+        "west": "expanded:blocks/cactus/cactus_cut_side",
+        "down": "expanded:blocks/cactus/cactus_cut_top",
+        "up": "expanded:blocks/cactus/cactus_cut_top",
+        "particle": "expanded:blocks/cactus/cactus_cut_side"
+    }
+}

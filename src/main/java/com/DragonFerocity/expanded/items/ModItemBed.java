@@ -1,13 +1,23 @@
 package com.DragonFerocity.expanded.items;
 
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityBed;
+
+import com.DragonFerocity.expanded.Ref;
+import com.DragonFerocity.expanded.blocks.ModBlockBed;
+
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
+import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
@@ -17,19 +27,20 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-import com.DragonFerocity.expanded.blocks.ModBlockBed;
-import com.DragonFerocity.expanded.handlers.BlockHandler;
-
 public class ModItemBed extends Item
 {
     private final Block block;
     
-    public ModItemBed(Block block, int stackSize)
+    public ModItemBed(Block block, String name, int stackSize)
     {
+        super();
         this.setCreativeTab(CreativeTabs.DECORATIONS);
-        setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-        setMaxStackSize(stackSize);
+        this.setMaxStackSize(stackSize);
         this.block = block;
+        this.setHasSubtypes(false);
+        this.setMaxDamage(0);
+        setUnlocalizedName(Ref.MODID + ":" + name);
+        setRegistryName(Ref.MODID + ":" + name);
     }
 
     /**
@@ -68,9 +79,9 @@ public class ModItemBed extends Item
                 boolean flag2 = flag || playerIn.isAirBlock(worldIn);
                 boolean flag3 = flag1 || playerIn.isAirBlock(blockpos);
 
-                if (flag2 && flag3 && playerIn.getBlockState(worldIn.down()).isFullyOpaque() && playerIn.getBlockState(blockpos.down()).isFullyOpaque())
+                if (flag2 && flag3 && playerIn.getBlockState(worldIn.down()).isTopSolid() && playerIn.getBlockState(blockpos.down()).isTopSolid())
                 {
-                    IBlockState iblockstate2 = this.block.getDefaultState().withProperty(ModBlockBed.OCCUPIED, Boolean.valueOf(false)).withProperty(ModBlockBed.FACING, enumfacing).withProperty(ModBlockBed.PART,ModBlockBed.EnumPartType.FOOT);
+                    IBlockState iblockstate2 = this.block.getDefaultState().withProperty(ModBlockBed.OCCUPIED, Boolean.valueOf(false)).withProperty(BlockHorizontal.FACING, enumfacing).withProperty(ModBlockBed.PART,ModBlockBed.EnumPartType.FOOT);
                     playerIn.setBlockState(worldIn, iblockstate2, 10);
                     playerIn.setBlockState(blockpos, iblockstate2.withProperty(ModBlockBed.PART, ModBlockBed.EnumPartType.HEAD), 10);
                     playerIn.notifyNeighborsRespectDebug(worldIn, block, false);
@@ -90,5 +101,14 @@ public class ModItemBed extends Item
                 return EnumActionResult.FAIL;
             }
         }
+    }
+
+    /**
+     * Returns the unlocalized name of this item. This version accepts an ItemStack so different stacks can have
+     * different names based on their damage or NBT.
+     */
+    public String getUnlocalizedName(ItemStack stack)
+    {
+        return super.getUnlocalizedName();
     }
 }

@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=down": { "model": "expanded:dark_oak/dark_oak_lantern" },
+        "facing=north": { "model": "expanded:dark_oak/dark_oak_lantern" },
+        "facing=east": { "model": "expanded:dark_oak/dark_oak_lantern" },
+        "facing=south": { "model": "expanded:dark_oak/dark_oak_lantern" },
+        "facing=west": { "model": "expanded:dark_oak/dark_oak_lantern" }
+    }
+}

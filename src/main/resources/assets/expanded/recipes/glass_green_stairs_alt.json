@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "building_materials",
+  "pattern": [
+    "  #",
+    " # ",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stained_glass",
+      "data": 13
+    }
+  },
+  "result": {
+    "item": "expanded:glass_green_stairs_alt",
+    "count": 2
+  }
+}

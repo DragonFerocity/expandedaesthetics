@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=up": { "model": "expanded:cactus/cut_cactus_lamp" },
+        "facing=north": { "model": "expanded:cactus/cut_cactus_lamp" },
+        "facing=east": { "model": "expanded:cactus/cut_cactus_lamp" },
+        "facing=south": { "model": "expanded:cactus/cut_cactus_lamp" },
+        "facing=west": { "model": "expanded:cactus/cut_cactus_lamp" },
+        "inventory": { "model": "expanded:cactus/cut_cactus_lamp" }
+    }
+}

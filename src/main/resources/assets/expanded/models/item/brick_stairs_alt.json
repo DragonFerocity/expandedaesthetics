@@ -1,0 +1,8 @@
+{
+    "parent": "expanded:block/stairs/stairs_alternate",
+    "textures": {
+      "side": "blocks/brick",
+      "top": "blocks/brick",
+      "bottom": "blocks/brick"
+    }
+}

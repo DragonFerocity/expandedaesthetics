@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "expanded:glass/orange_lighted_glass_block" },
+        "inventory": { "model": "expanded:glass/orange_lighted_glass_block" }
+    }
+}

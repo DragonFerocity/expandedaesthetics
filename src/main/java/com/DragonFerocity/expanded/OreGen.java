@@ -7,7 +7,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
@@ -30,11 +30,12 @@ public class OreGen implements IWorldGenerator {
 	}
 	
 	private void generateSurface(World world, Random random, int x, int z) {
-		generateOre(BlockHandler.copperOre, world, random, x, z, 5, 12, 68, 1, 60, Blocks.STONE);
-		generateOre(BlockHandler.platinumOre, world, random, x, z, 2, 5, 5, 1, 30, Blocks.STONE);
-		generateOre(BlockHandler.silverOre, world, random, x, z, 3, 7, 36, 1, 50, Blocks.STONE);
-		generateOre(BlockHandler.mithrilOre, world, random, x, z, 2, 9, 15, 1, 35, Blocks.STONE);
-		generateOre(BlockHandler.titaniumOre, world, random, x, z, 3, 5, 10, 1, 18, Blocks.STONE);
+	  generateOre(BlockHandler.copperOre,    world, random, x, z, 5, 10, 53, 1, 120, Blocks.STONE);
+	  generateOre(BlockHandler.tinOre,       world, random, x, z, 3,  7, 47, 1, 120, Blocks.STONE);
+		generateOre(BlockHandler.platinumOre,  world, random, x, z, 2,  5,  8, 1, 30, Blocks.STONE);
+		generateOre(BlockHandler.silverOre,    world, random, x, z, 3,  7, 30, 1, 50, Blocks.STONE);
+		generateOre(BlockHandler.mithrilOre,   world, random, x, z, 2,  9, 12, 1, 35, Blocks.STONE);
+		generateOre(BlockHandler.titaniumOre,  world, random, x, z, 3,  5, 20, 1, 18, Blocks.STONE);
 	}
 	
 	private void generateNether(World world, Random random, int x, int z) {

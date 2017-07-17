@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blocks",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:bronze_ingot"
+    }
+  },
+  "result": {
+    "item": "expanded:bronze_block",
+    "count": 1
+  }
+}

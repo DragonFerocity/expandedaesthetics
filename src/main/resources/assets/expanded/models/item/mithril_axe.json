@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "expanded:items/tools/axe/mithril_axe"
+    }
+}

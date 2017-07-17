@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blocks",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:polished_obsidian"
+    }
+  },
+  "result": {
+    "item": "expanded:polished_obsidian_brick",
+    "count": 1
+  }
+}

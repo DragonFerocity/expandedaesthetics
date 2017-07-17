@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blocks",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:imperial_gold_ingot"
+    }
+  },
+  "result": {
+    "item": "expanded:imperial_gold_block",
+    "count": 1
+  }
+}

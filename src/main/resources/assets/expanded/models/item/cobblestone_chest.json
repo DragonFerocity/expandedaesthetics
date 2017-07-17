@@ -1,8 +1,5 @@
 {
     "parent": "builtin/entity",
-    "textures": {
-        "texture": "expanded:items/cobblestone_chest"
-    }
     "display": {
         "gui": {
             "rotation": [ 30, 45, 0 ],

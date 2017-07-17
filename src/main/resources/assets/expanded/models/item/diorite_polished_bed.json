@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "expanded:items/beds/diorite_polished_bed"
+        "layer0": "expanded:items/diorite/diorite_polished_bed"
     }
 }

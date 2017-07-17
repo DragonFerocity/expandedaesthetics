@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=down": { "model": "expanded:diorite/diorite_polished_lantern" },
+        "facing=north": { "model": "expanded:diorite/diorite_polished_lantern" },
+        "facing=east": { "model": "expanded:diorite/diorite_polished_lantern" },
+        "facing=south": { "model": "expanded:diorite/diorite_polished_lantern" },
+        "facing=west": { "model": "expanded:diorite/diorite_polished_lantern" }
+    }
+}

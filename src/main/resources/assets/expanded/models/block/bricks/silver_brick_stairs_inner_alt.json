@@ -1,0 +1,8 @@
+{
+    "parent": "expanded:block/stairs/stairs_alternate_inner",
+    "textures": {
+        "bottom": "expanded:blocks/bricks/silver_brick",
+        "top": "expanded:blocks/bricks/silver_brick",
+        "side": "expanded:blocks/bricks/silver_brick"
+    }
+}

@@ -2,6 +2,7 @@ package com.DragonFerocity.expanded.proxy;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
+import com.DragonFerocity.expanded.handlers.CraftingHandler;
 import com.DragonFerocity.expanded.OreGen;
 
 public class CommonProxy implements IProxy {
@@ -9,7 +10,8 @@ public class CommonProxy implements IProxy {
     //ItemHandler.init();
     //ItemHandler.register();
   
-    BlockHandler.init();
+    //BlockHandler.init();
+    //CraftingHandler.init();
     GameRegistry.registerWorldGenerator(new OreGen(), 0);
     //BlockHandler.register();
   }

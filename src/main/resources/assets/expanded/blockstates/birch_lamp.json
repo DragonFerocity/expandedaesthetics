@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=up": { "model": "expanded:birch/birch_lamp" },
+        "facing=north": { "model": "expanded:birch/birch_lamp" },
+        "facing=east": { "model": "expanded:birch/birch_lamp" },
+        "facing=south": { "model": "expanded:birch/birch_lamp" },
+        "facing=west": { "model": "expanded:birch/birch_lamp" },
+        "inventory": { "model": "expanded:birch/birch_lamp" }
+    }
+}

@@ -1,13 +1,16 @@
 package com.DragonFerocity.expanded.blocks;
 
+import com.DragonFerocity.expanded.Ref;
 import com.google.common.base.Predicate;
 import java.util.Random;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockAir;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
@@ -26,6 +29,8 @@ import net.minecraft.init.Blocks;
 
 public class ModLantern extends Block {
   
+  private double flameY = 5;
+  
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", new Predicate<EnumFacing>()
 	{
 	    public boolean apply(@Nullable EnumFacing p_apply_1_)
@@ -35,28 +40,30 @@ public class ModLantern extends Block {
 	});
 	protected static final AxisAlignedBB HANGING_AABB = new AxisAlignedBB(0.1875D, 0.0D, 0.1875D, 0.8125D, 1.0D, 0.8125D);
 
-  public ModLantern(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool, float light) {
+  public ModLantern(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool, float light, double flamePos) {
     super(mat);
-    //setUnlocalizedName(name);
-    //setRegistryName(name);
+    setUnlocalizedName(Ref.MODID + ":" + name);
+    setRegistryName(Ref.MODID + ":" + name);
     setCreativeTab(tab);
     setHardness(hardness);
     setResistance(resistance);
     setHarvestLevel(tool, harvest);
     setLightLevel(light);
+    this.flameY = flamePos;
     this.setTickRandomly(true);
     this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.DOWN));
   }
 
-  public ModLantern(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool, float light, int encouragement, int flamability) {
+  public ModLantern(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool, float light, int encouragement, int flamability, double flamePos) {
     super(mat);
-    //setUnlocalizedName(name);
-    //setRegistryName(name);
+    setUnlocalizedName(Ref.MODID + ":" + name);
+    setRegistryName(Ref.MODID + ":" + name);
     setCreativeTab(tab);
     setHardness(hardness);
     setResistance(resistance);
     setHarvestLevel(tool, harvest);
     setLightLevel(light);
+    this.flameY = flamePos;
     this.setTickRandomly(true);
     this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.DOWN));
     //BlockFire.setFireInfo(this, encouragement, flamability);
@@ -92,15 +99,8 @@ public class ModLantern extends Block {
 
   private boolean canPlaceOn(World worldIn, BlockPos pos)
   {
-      if (worldIn.getBlockState(pos).isFullyOpaque())
-      {
-          return true;
-      }
-      else
-      {
-          Block block = worldIn.getBlockState(pos).getBlock();
-          return block instanceof BlockFence || block == Blocks.COBBLESTONE_WALL;
-      }
+      Block block = worldIn.getBlockState(pos).getBlock();
+      return !(block == Blocks.COBBLESTONE_WALL || block instanceof BlockAir || block instanceof ModLantern);
   }
 
   public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
@@ -118,9 +118,16 @@ public class ModLantern extends Block {
 
   private boolean canPlaceAt(World worldIn, BlockPos pos, EnumFacing facing)
   {
-      BlockPos blockpos = pos.offset(facing.getOpposite());
-      boolean flag = facing.getAxis().isHorizontal();
-      return flag && worldIn.isBlockNormalCube(blockpos, true) || facing.equals(EnumFacing.DOWN) && this.canPlaceOn(worldIn, blockpos);
+    BlockPos blockpos = pos.offset(facing.getOpposite());
+
+    if (facing.equals(EnumFacing.DOWN) && this.canPlaceOn(worldIn, blockpos))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
   }
 
   /**
@@ -222,7 +229,7 @@ public class ModLantern extends Block {
   {
       EnumFacing enumfacing = (EnumFacing)stateIn.getValue(FACING);
       double d0 = (double)pos.getX() + 0.5D;
-      double d1 = (double)pos.getY() + 0.4D;
+      double d1 = (double)pos.getY() + flameY;
       double d2 = (double)pos.getZ() + 0.5D;
       double d3 = 0.22D;
       double d4 = 0.27D;

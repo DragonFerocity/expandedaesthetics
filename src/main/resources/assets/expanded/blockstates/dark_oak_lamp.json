@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=up": { "model": "expanded:dark_oak/dark_oak_lamp" },
+        "facing=north": { "model": "expanded:dark_oak/dark_oak_lamp" },
+        "facing=east": { "model": "expanded:dark_oak/dark_oak_lamp" },
+        "facing=south": { "model": "expanded:dark_oak/dark_oak_lamp" },
+        "facing=west": { "model": "expanded:dark_oak/dark_oak_lamp" },
+        "inventory": { "model": "expanded:dark_oak/dark_oak_lamp" }
+    }
+}

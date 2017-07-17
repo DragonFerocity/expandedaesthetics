@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "expanded:blocks/bricks/copper_brick",
+        "top": "expanded:blocks/bricks/copper_brick",
+        "side": "expanded:blocks/bricks/copper_brick"
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "parent": "block/cube",
+    "ambientocclusion": false,
+    "textures": {
+        "granite": "blocks/stone_granite_smooth",
+        "light": "blocks/torch_on",
+        "base": "blocks/hardened_clay_stained_black"
+    },
+    "elements": [
+        {
+            "name": "Cube",
+            "from": [ 10.0, 0.0, 4.0 ],
+            "to": [ 12.0, 16.0, 6.0 ],
+            "faces": {
+                "north": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "east": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "south": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "west": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "up": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+                "down": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 2.0 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.0, 4.0, 7.0 ],
+            "to": [ 9.0, 7.0, 9.0 ],
+            "faces": {
+                "north": { "texture": "#light", "uv": [ 7.0, 6.0, 9.0, 9.0 ] },
+                "east": { "texture": "#light", "uv": [ 7.0, 6.0, 9.0, 9.0 ] },
+                "south": { "texture": "#light", "uv": [ 7.0, 6.0, 9.0, 9.0 ] },
+                "west": { "texture": "#light", "uv": [ 7.0, 6.0, 9.0, 9.0 ] },
+                "up": { "texture": "#light", "uv": [ 7.0, 6.0, 9.0, 8.0 ] },
+                "down": { "texture": "#light", "uv": [ 0.0, 0.0, 2.0, 2.0 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 4.0, 0.0, 4.0 ],
+            "to": [ 6.0, 16.0, 6.0 ],
+            "faces": {
+                "north": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "east": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "south": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "west": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "up": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+                "down": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 2.0 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 4.0, 0.0, 10.0 ],
+            "to": [ 6.0, 16.0, 12.0 ],
+            "faces": {
+                "north": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "east": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "south": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "west": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "up": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+                "down": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 2.0 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 10.0, 0.0, 10.0 ],
+            "to": [ 12.0, 16.0, 12.0 ],
+            "faces": {
+                "north": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "east": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "south": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "west": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+                "up": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+                "down": { "texture": "#granite", "uv": [ 0.0, 0.0, 2.0, 2.0 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.0, 3.0, 5.0 ],
+            "to": [ 11.0, 5.0, 11.0 ],
+            "faces": {
+                "north": { "texture": "#base", "uv": [ 0.0, 0.0, 8.0, 2.0 ] },
+                "east": { "texture": "#base", "uv": [ 0.0, 0.0, 8.0, 2.0 ] },
+                "south": { "texture": "#base", "uv": [ 0.0, 0.0, 8.0, 2.0 ] },
+                "west": { "texture": "#base", "uv": [ 0.0, 0.0, 8.0, 2.0 ] },
+                "up": { "texture": "#base", "uv": [ 0.0, 0.0, 8.0, 8.0 ] },
+                "down": { "texture": "#base", "uv": [ 0.0, 0.0, 8.0, 8.0 ] }
+            }
+        }
+    ]
+}

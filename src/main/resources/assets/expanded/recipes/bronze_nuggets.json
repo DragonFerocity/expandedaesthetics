@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "expanded:copper_ore"
+    },
+    {
+        "item": "expanded:copper_ore"
+    },
+    {
+        "item": "expanded:copper_ore"
+    },
+    {
+        "item": "expanded:copper_ore"
+    },
+    {
+        "item": "expanded:copper_ore"
+    },
+    {
+        "item": "expanded:copper_ore"
+    },
+    {
+        "item": "expanded:copper_ore"
+    },
+    {
+        "item": "expanded:copper_ore"
+    },
+    {
+        "item": "expanded:tin_ore"
+    }
+  ],
+  "result": {
+    "item": "expanded:bronze_nuggets",
+    "count": 9
+  }
+}

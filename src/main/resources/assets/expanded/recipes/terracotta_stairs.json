@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "building_materials",
+  "pattern": [
+    "  #",
+    " ##",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:hardened_clay",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "expanded:terracotta_stairs",
+    "count": 4
+  }
+}

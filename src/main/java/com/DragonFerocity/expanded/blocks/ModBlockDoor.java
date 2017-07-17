@@ -1,5 +1,6 @@
 package com.DragonFerocity.expanded.blocks;
 
+import com.DragonFerocity.expanded.Ref;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
 
 import java.util.Random;
@@ -11,20 +12,19 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.init.Items;
 
 public class ModBlockDoor extends BlockDoor
 {
-    public ModBlockDoor(Material materialIn, String name, float hardness, float resistance, int harvestLevel)
+    public ModBlockDoor(Material materialIn, String name, float hardness, float resistance, int harvestLevel, String tool)
     //Harvest Level: 3 = Diamond, 2 = Iron, 1 = Gold/Stone, 0 = Wood
     {
         super(materialIn);
-        //setUnlocalizedName(name);
-        //setRegistryName(name);
-        setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+        setUnlocalizedName(name);
+        setUnlocalizedName(Ref.MODID + ":" + name);
+        setRegistryName(Ref.MODID + ":" + name);
         setHardness(hardness);
         setResistance(resistance);
-        setHarvestLevel("pickaxe", harvestLevel);
+        setHarvestLevel(tool, harvestLevel);
     }
 
     @Override
@@ -48,8 +48,20 @@ public class ModBlockDoor extends BlockDoor
           dropItem = BlockHandler.iCobblestoneDoor;
         else if (this == BlockHandler.andesitePolishedDoor)
           dropItem = BlockHandler.iAndesitePolishedDoor;
+        else if (this == BlockHandler.dioritePolishedDoor)
+          dropItem = BlockHandler.iDioritePolishedDoor;
+        else if (this == BlockHandler.granitePolishedDoor)
+          dropItem = BlockHandler.iGranitePolishedDoor;
+        else if (this == BlockHandler.hardenedClayDoor)
+          dropItem = BlockHandler.iHardenedClayDoor;
         else if (this == BlockHandler.brickDoor)
           dropItem = BlockHandler.iBrickDoor;
+        else if (this == BlockHandler.polishedObsidianDoor)
+          dropItem = BlockHandler.iPolishedObsidianDoor;
+        else if (this == BlockHandler.oakStableDoor)
+          dropItem = BlockHandler.iOakStableDoor;
+        else if (this == BlockHandler.birchStableDoor)
+          dropItem = BlockHandler.iBirchStableDoor;
 
         return dropItem;
     }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "building_materials",
+  "pattern": [
+    "  #",
+    " # ",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:cut_cactus_block",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "expanded:cut_cactus_stairs_alt",
+    "count": 2
+  }
+}

@@ -1,14 +1,19 @@
 package com.DragonFerocity.expanded.blocks;
 
 import javax.annotation.Nullable;
+
+import com.DragonFerocity.expanded.Ref;
+import com.DragonFerocity.expanded.entities.ModTileEntityChest;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockHorizontal;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -21,7 +26,6 @@ import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -33,6 +37,8 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.ILockableContainer;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModChest extends BlockContainer
 {
@@ -42,18 +48,17 @@ public class ModChest extends BlockContainer
     protected static final AxisAlignedBB WEST_CHEST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0625D, 0.9375D, 0.875D, 0.9375D);
     protected static final AxisAlignedBB EAST_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 1.0D, 0.875D, 0.9375D);
     protected static final AxisAlignedBB NOT_CONNECTED_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 0.9375D, 0.875D, 0.9375D);
-
     /** 0 : Normal chest, 1 : Trapped chest */
     public final ModChest.Type chestType;
 
-    protected ModChest(ModChest.Type chestTypeIn, Material materialIn, String name, float hardness, float resistance, int harvest, String tool)
+    public ModChest(ModChest.Type chestTypeIn, Material materialIn, String name, float hardness, float resistance, int harvest, String tool)
     {
         super(materialIn);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.chestType = chestTypeIn;
         this.setCreativeTab(CreativeTabs.DECORATIONS);
-        setUnlocalizedName(name);
-        setRegistryName(name);
+        setUnlocalizedName(Ref.MODID + ":" + name);
+        setRegistryName(Ref.MODID + ":" + name);
         setHardness(hardness);
         setResistance(resistance);
         setHarvestLevel(tool, harvest);
@@ -72,7 +77,8 @@ public class ModChest extends BlockContainer
         return false;
     }
 
-    public boolean func_190946_v(IBlockState p_190946_1_)
+    @SideOnly(Side.CLIENT)
+    public boolean hasCustomBreakingProgress(IBlockState state)
     {
         return true;
     }
@@ -88,7 +94,22 @@ public class ModChest extends BlockContainer
 
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
-        return source.getBlockState(pos.north()).getBlock() == this ? NORTH_CHEST_AABB : (source.getBlockState(pos.south()).getBlock() == this ? SOUTH_CHEST_AABB : (source.getBlockState(pos.west()).getBlock() == this ? WEST_CHEST_AABB : (source.getBlockState(pos.east()).getBlock() == this ? EAST_CHEST_AABB : NOT_CONNECTED_AABB)));
+        if (source.getBlockState(pos.north()).getBlock() == this)
+        {
+            return NORTH_CHEST_AABB;
+        }
+        else if (source.getBlockState(pos.south()).getBlock() == this)
+        {
+            return SOUTH_CHEST_AABB;
+        }
+        else if (source.getBlockState(pos.west()).getBlock() == this)
+        {
+            return WEST_CHEST_AABB;
+        }
+        else
+        {
+            return source.getBlockState(pos.east()).getBlock() == this ? EAST_CHEST_AABB : NOT_CONNECTED_AABB;
+        }
     }
 
     /**
@@ -114,7 +135,7 @@ public class ModChest extends BlockContainer
      * Called by ItemBlocks just before a block is actually set in the world, to allow for adjustments to the
      * IBlockstate
      */
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing());
     }
@@ -169,15 +190,15 @@ public class ModChest extends BlockContainer
             worldIn.setBlockState(pos, state, 3);
         }
 
-        /*if (stack.hasDisplayName())
+        if (stack.hasDisplayName())
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityChest)
+            if (tileentity instanceof ModTileEntityChest)
             {
-                ( (TileEntityChest) tileentity ).func_190575_a(stack.getDisplayName());
+                ((ModTileEntityChest)tileentity).setCustomName(stack.getDisplayName());
             }
-        }*/
+        }
     }
 
     public IBlockState checkForSurroundingChests(World worldIn, BlockPos pos, IBlockState state)
@@ -399,12 +420,12 @@ public class ModChest extends BlockContainer
      * change. Cases may include when redstone power is updated, cactus blocks popping off due to a neighboring solid
      * block, etc.
      */
-    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos p_189540_5_)
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
     {
-        //super.neighborChanged(state, worldIn, pos, blockIn, p_189540_5_);
+        super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
         TileEntity tileentity = worldIn.getTileEntity(pos);
 
-        if (tileentity instanceof TileEntityChest)
+        if (tileentity instanceof ModTileEntityChest)
         {
             tileentity.updateContainingBlockInfo();
         }
@@ -426,7 +447,10 @@ public class ModChest extends BlockContainer
         super.breakBlock(worldIn, pos, state);
     }
 
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing heldItem, float side, float hitX, float hitY)
+    /**
+     * Called when the block is right clicked by a player.
+     */
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
         if (worldIn.isRemote)
         {
@@ -439,7 +463,6 @@ public class ModChest extends BlockContainer
             if (ilockablecontainer != null)
             {
                 playerIn.displayGUIChest(ilockablecontainer);
-
                 playerIn.addStat(StatList.CHEST_OPENED);
             }
 
@@ -454,19 +477,19 @@ public class ModChest extends BlockContainer
     }
 
     @Nullable
-    public ILockableContainer getContainer(World p_189418_1_, BlockPos p_189418_2_, boolean p_189418_3_)
+    public ILockableContainer getContainer(World worldIn, BlockPos pos, boolean allowBlocking)
     {
-        TileEntity tileentity = p_189418_1_.getTileEntity(p_189418_2_);
+        TileEntity tileentity = worldIn.getTileEntity(pos);
 
-        if (!(tileentity instanceof TileEntityChest))
+        if (!(tileentity instanceof ModTileEntityChest))
         {
             return null;
         }
         else
         {
-            ILockableContainer ilockablecontainer = (TileEntityChest)tileentity;
+            ILockableContainer ilockablecontainer = (ModTileEntityChest)tileentity;
 
-            if (!p_189418_3_ && this.isBlocked(p_189418_1_, p_189418_2_))
+            if (!allowBlocking && this.isBlocked(worldIn, pos))
             {
                 return null;
             }
@@ -474,27 +497,27 @@ public class ModChest extends BlockContainer
             {
                 for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
                 {
-                    BlockPos blockpos = p_189418_2_.offset(enumfacing);
-                    Block block = p_189418_1_.getBlockState(blockpos).getBlock();
+                    BlockPos blockpos = pos.offset(enumfacing);
+                    Block block = worldIn.getBlockState(blockpos).getBlock();
 
                     if (block == this)
                     {
-                        if (this.isBlocked(p_189418_1_, blockpos))
+                        if (this.isBlocked(worldIn, blockpos))
                         {
                             return null;
                         }
 
-                        TileEntity tileentity1 = p_189418_1_.getTileEntity(blockpos);
+                        TileEntity tileentity1 = worldIn.getTileEntity(blockpos);
 
-                        if (tileentity1 instanceof TileEntityChest)
+                        if (tileentity1 instanceof ModTileEntityChest)
                         {
                             if (enumfacing != EnumFacing.WEST && enumfacing != EnumFacing.NORTH)
                             {
-                                ilockablecontainer = new InventoryLargeChest("container.chestDouble", ilockablecontainer, (TileEntityChest)tileentity1);
+                                ilockablecontainer = new InventoryLargeChest("container.chestDouble", ilockablecontainer, (ModTileEntityChest)tileentity1);
                             }
                             else
                             {
-                                ilockablecontainer = new InventoryLargeChest("container.chestDouble", (TileEntityChest)tileentity1, ilockablecontainer);
+                                ilockablecontainer = new InventoryLargeChest("container.chestDouble", (ModTileEntityChest)tileentity1, ilockablecontainer);
                             }
                         }
                     }
@@ -510,7 +533,7 @@ public class ModChest extends BlockContainer
      */
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
-        return new TileEntityChest();
+        return new ModTileEntityChest();
     }
 
     /**
@@ -532,9 +555,9 @@ public class ModChest extends BlockContainer
             int i = 0;
             TileEntity tileentity = blockAccess.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityChest)
+            if (tileentity instanceof ModTileEntityChest)
             {
-                i = ((TileEntityChest)tileentity).numPlayersUsing;
+                i = ((ModTileEntityChest)tileentity).numPlayersUsing;
             }
 
             return MathHelper.clamp(i, 0, 15);
@@ -553,7 +576,7 @@ public class ModChest extends BlockContainer
 
     private boolean isBelowSolidBlock(World worldIn, BlockPos pos)
     {
-        return worldIn.getBlockState(pos.up()).isNormalCube();
+        return worldIn.getBlockState(pos.up()).isSideSolid(worldIn, pos.up(), EnumFacing.DOWN);
     }
 
     private boolean isOcelotSittingOnChest(World worldIn, BlockPos pos)
@@ -627,8 +650,21 @@ public class ModChest extends BlockContainer
         return new BlockStateContainer(this, new IProperty[] {FACING});
     }
 
+    public BlockFaceShape getBlockFaceShape(IBlockAccess p_193383_1_, IBlockState p_193383_2_, BlockPos p_193383_3_, EnumFacing p_193383_4_)
+    {
+        return BlockFaceShape.UNDEFINED;
+    }
+
     public static enum Type
     {
-        COBBLESTONE;
+        COBBLESTONE,
+        POLISHED_DIORITE,
+        BIRCH;
+    }
+
+    /* ======================================== FORGE START =====================================*/
+    public boolean rotateBlock(World world, BlockPos pos, EnumFacing axis)
+    {
+        return !isDoubleChest(world, pos) && super.rotateBlock(world, pos, axis);
     }
 }

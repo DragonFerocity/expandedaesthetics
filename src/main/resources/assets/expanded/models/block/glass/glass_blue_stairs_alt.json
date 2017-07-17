@@ -1,0 +1,8 @@
+{
+    "parent": "expanded:block/stairs/stairs_alternate",
+    "textures": {
+        "bottom": "minecraft:blocks/glass_blue",
+        "top": "minecraft:blocks/glass_blue",
+        "side": "minecraft:blocks/glass_blue"
+    }
+}

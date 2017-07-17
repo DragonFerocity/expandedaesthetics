@@ -1,0 +1,56 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "bottom": "expanded:blocks/bricks/obsidian_brick",
+      "top": "expanded:blocks/bricks/obsidian_brick",
+      "side": "expanded:blocks/bricks/obsidian_brick"
+    },
+    "model": "stairs",
+    "uvlock": true
+  },
+  "variants": {
+    "inventory": {
+      "model": "stairs"
+    },
+    "facing": {
+      "north": {
+        "y": 270
+      },
+      "east": {
+        "y": 0
+      },
+      "south": {
+        "y": 90
+      },
+      "west": {
+        "y:": 180
+      }
+    },
+    "half": {
+      "bottom": {
+        "x": 0
+      },
+      "top": {
+        "x": 180
+      }
+    },
+    "shape": {
+      "straight": {
+
+      },
+      "outer_right": {
+
+      },
+      "outer_left": {
+
+      },
+      "inner_right": {
+
+      },
+      "inner_left": {
+
+      }
+    }
+  }
+}

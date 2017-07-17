@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "expanded:blocks/obsidian/polished_obsidian",
+        "top": "expanded:blocks/obsidian/polished_obsidian",
+        "side": "expanded:blocks/obsidian/polished_obsidian"
+    }
+}

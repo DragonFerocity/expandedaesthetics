@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=down": { "model": "expanded:cactus/cut_cactus_lantern" },
+        "facing=north": { "model": "expanded:cactus/cut_cactus_lantern" },
+        "facing=east": { "model": "expanded:cactus/cut_cactus_lantern" },
+        "facing=south": { "model": "expanded:cactus/cut_cactus_lantern" },
+        "facing=west": { "model": "expanded:cactus/cut_cactus_lantern" }
+    }
+}

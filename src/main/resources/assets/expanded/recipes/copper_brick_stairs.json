@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "building_materials",
+  "pattern": [
+    "  #",
+    " ##",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:copper_brick",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "expanded:copper_brick_stairs",
+    "count": 4
+  }
+}

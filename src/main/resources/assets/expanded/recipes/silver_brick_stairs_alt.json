@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "building_materials",
+  "pattern": [
+    "  #",
+    " # ",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:silver_brick",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "expanded:silver_brick_stairs_alt",
+    "count": 2
+  }
+}

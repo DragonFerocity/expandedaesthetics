@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "building_materials",
+  "pattern": [
+    "  #",
+    " # ",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:polished_obsidian",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "expanded:polished_obsidian_stairs_alt",
+    "count": 2
+  }
+}

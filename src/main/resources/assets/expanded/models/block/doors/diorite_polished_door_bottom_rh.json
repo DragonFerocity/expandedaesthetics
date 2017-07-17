@@ -1,8 +1,0 @@
-{
-    "parent": "block/door_bottom_rh",
-    "textures": {
-        "bottom": "blocks/stone_diorite_smooth",
-        "top": "blocks/stone_diorite_smooth",
-        "overlay": "expanded:blocks/doors/diorite_polished_overlay_bottom"
-    }
-}

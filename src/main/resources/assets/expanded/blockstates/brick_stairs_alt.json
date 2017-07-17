@@ -1,0 +1,47 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "bottom": "blocks/brick",
+      "top": "blocks/brick",
+      "side": "blocks/brick"
+    },
+    "model": "expanded:stairs/stairs_alternate",
+    "uvlock": true
+  },
+  "variants": {
+    "facing": {
+      "north": {
+        "y": 270
+      },
+      "east": {
+        "y": 0
+      },
+      "south": {
+        "y": 90
+      },
+      "west": {
+        "y:": 180
+      }
+    },
+    "half": {
+      "bottom": {
+        "x": 0
+      },
+      "top": {
+        "x": 180
+      }
+    },
+    "shape": {
+      "straight": {
+
+      },
+      "outer_right": {
+
+      },
+      "outer_left": {
+
+      }
+    }
+  }
+}

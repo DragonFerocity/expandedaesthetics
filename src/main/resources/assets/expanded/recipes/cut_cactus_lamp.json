@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cactus",
+  "pattern": [
+    "T",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:cut_cactus_block"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "expanded:cut_cactus_lamp",
+    "count": 1
+  }
+}

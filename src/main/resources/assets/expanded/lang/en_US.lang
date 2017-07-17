@@ -1,0 +1,194 @@
+tile.expanded:acacia_wood_stairs_alt.name=Acacia Wood Stairs (Alternate)
+
+tile.expanded:andesite_polished_door.name=Polished Andesite Door
+item.expanded:andesite_polished_door.name=Polished Andesite Door
+tile.expanded:andesite_polished_stairs.name=Polished Andesite Stairs
+tile.expanded:andesite_polished_stairs_alt.name=Polished Andesite Stairs (Alternate)
+
+tile.expanded:birch_stable_door.name=Wooden Stable Door
+item.expanded:birch_stable_door.name=Wooden Stable Door
+tile.expanded:birch_lamp.name=Birch Lamp
+tile.expanded:birch_lantern.name=Birch Lantern
+tile.expanded:birch_wood_stairs_alt.name=Birch Stairs (Alternate)
+
+tile.expanded:brick_door.name=Brick Door
+item.expanded:brick_door.name=Brick Door
+tile.expanded:brick_stairs_alt.name=Brick Stairs (Alternate)
+
+tile.expanded:cut_cactus_block.name=Cut Cactus
+item.expanded:cut_cactus_block.name=Cut Cactus
+tile.expanded:cut_cactus_stairs.name=Cut Cactus Stairs
+tile.expanded:cut_cactus_stairs_alt.name=Cut Cactus Stairs (Alternate)
+tile.expanded:cut_cactus_lamp.name=Cactus Lamp
+item.expanded:cut_cactus_lamp.name=Cactus Lamp
+tile.expanded:cut_cactus_lantern.name=Cactus Lantern
+item.expanded:cut_cactus_lantern.name=Cactus Lantern
+
+tile.expanded:cobblestone_door.name=Cobblestone Door
+item.expanded:cobblestone_door.name=Cobblestone Door
+tile.expanded:cobblestone_chest.name=Cobblestone Chest
+tile.expanded:cobblestone_stairs_alt.name=Cobblestone Stairs (Alternate)
+
+tile.expanded:dark_oak_lamp.name=Dark Oak Lamp
+tile.expanded:dark_oak_lantern.name=Dark Oak Lantern
+tile.expanded:dark_oak_bed.name=Dark Oak Bed
+item.expanded:dark_oak_bed.name=Dark Oak Bed
+tile.expanded:dark_oak_stairs_alt.name=Dark Oak Stairs (Alternate)
+
+tile.expanded:diorite_polished_door.name=Polished Diorite Door
+item.expanded:diorite_polished_door.name=Polished Diorite Door
+tile.expanded:diorite_polished_stairs.name=Polished Diorite Stairs
+tile.expanded:diorite_polished_stairs_alt.name=Polished Diorite Stairs (Alternate)
+tile.expanded:diorite_polished_lantern.name=Polished Diorite Lantern
+tile.expanded:diorite_polished_lamp.name=Polished Diorite Lamp
+tile.expanded:diorite_polished_bed.name=Polished Diorite Bed
+item.expanded:diorite_polished_bed.name=Polished Diorite Bed
+tile.expanded:diorite_polished_chest.name=Polished Diorite Chest
+
+tile.expanded:glass_door.name=Glass Door
+item.expanded:glass_door.name=Glass Door
+tile.expanded:glass_stairs.name=Glass Stairs
+tile.expanded:glass_stairs_alt.name=Glass Stairs (Alternate)
+tile.expanded:white_glass_stairs.name=White Glass Stairs
+tile.expanded:white_glass_stairs_alt.name=White Glass Stairs (Alternate)
+tile.expanded:orange_glass_stairs.name=Orange Glass Stairs
+tile.expanded:orange_glass_stairs_alt.name=Orange Glass Stairs (Alternate)
+tile.expanded:magenta_glass_stairs.name=Magenta Glass Stairs
+tile.expanded:magenta_glass_stairs_alt.name=Magenta Glass Stairs (Alternate)
+tile.expanded:light_blue_glass_stairs.name=Light Blue Glass Stairs
+tile.expanded:light_blue_glass_stairs_alt.name=Light Blue Glass Stairs (Alternate)
+tile.expanded:yellow_glass_stairs.name=Yellow Glass Stairs
+tile.expanded:yellow_glass_stairs_alt.name=Yellow Glass Stairs (Alternate)
+tile.expanded:lime_glass_stairs.name=Lime Glass Stairs
+tile.expanded:lime_glass_stairs_alt.name=Lime Glass Stairs (Alternate)
+tile.expanded:pink_glass_stairs.name=Pink Glass Stairs
+tile.expanded:pink_glass_stairs_alt.name=Pink Glass Stairs (Alternate)
+tile.expanded:gray_glass_stairs.name=Gray Glass Stairs
+tile.expanded:gray_glass_stairs_alt.name=Gray Glass Stairs (Alternate)
+tile.expanded:silver_glass_stairs.name=Silver Glass Stairs
+tile.expanded:silver_glass_stairs_alt.name=Silver Glass Stairs (Alternate)
+tile.expanded:cyan_glass_stairs.name=Cyan Glass Stairs
+tile.expanded:cyan_glass_stairs_alt.name=Cyan Glass Stairs (Alternate)
+tile.expanded:purple_glass_stairs.name=Purple Glass Stairs
+tile.expanded:purple_glass_stairs_alt.name=Purple Glass Stairs (Alternate)
+tile.expanded:blue_glass_stairs.name=Blue Glass Stairs
+tile.expanded:blue_glass_stairs_alt.name=Blue Glass Stairs (Alternate)
+tile.expanded:brown_glass_stairs.name=Brown Glass Stairs
+tile.expanded:brown_glass_stairs_alt.name=Brown Glass Stairs (Alternate)
+tile.expanded:green_glass_stairs.name=Green Glass Stairs
+tile.expanded:green_glass_stairs_alt.name=Green Glass Stairs (Alternate)
+tile.expanded:red_glass_stairs.name=Red Glass Stairs
+tile.expanded:red_glass_stairs_alt.name=Red Glass Stairs (Alternate)
+tile.expanded:black_glass_stairs.name=Black Glass Stairs
+tile.expanded:black_glass_stairs_alt.name=Black Glass Stairs (Alternate)
+
+tile.expanded:gold_brick.name=Gold Brick
+tile.expanded:gold_brick_stairs.name=Gold Brick Stairs
+tile.expanded:gold_brick_stairs_alt.name=Gold Brick Stairs (Alternate)
+
+tile.expanded:copper_brick.name=Copper Brick
+tile.expanded:copper_brick_stairs.name=Copper Brick Stairs
+tile.expanded:copper_brick_stairs_alt.name=Copper Brick Stairs (Alternate)
+
+tile.expanded:silver_brick.name=Silver Brick
+tile.expanded:silver_brick_stairs.name=Silver Brick Stairs
+tile.expanded:silver_brick_stairs_alt.name=Silver Brick Stairs (Alternate)
+
+tile.expanded:polished_obsidian_brick.name=Polished Obsidian Brick
+tile.expanded:polished_obsidian_brick_stairs.name=Polished Obsidian Brick Stairs
+tile.expanded:polished_obsidian_brick_stairs_alt.name=Polished Obsidian Brick Stairs (Alternate)
+
+tile.expanded:granite_polished_door.name=Polished Granite Door
+item.expanded:granite_polished_door.name=Polished Granite Door
+tile.expanded:granite_polished_stairs.name=Polished Granite Stairs
+tile.expanded:granite_polished_stairs_alt.name=Polished Granite Stairs (Alternate)
+
+tile.expanded:hardened_clay_door.name=Terracotta Door
+item.expanded:hardened_clay_door.name=Terracotta Door
+tile.expanded:terracotta_stairs.name=Terracotta Stairs
+tile.expanded:terracotta_stairs_alt.name=Terracotta Stairs (Alternate)
+
+tile.expanded:jungle_wood_stairs_alt.name=Jungle Wood Stairs (Alternate)
+
+tile.expanded:oak_stable_door.name=Wooden Stable Door
+item.expanded:oak_stable_door.name=Wooden Stable Door
+tile.expanded:oak_light_box.name=Oak Floor Lantern
+tile.expanded:oak_lantern.name=Oak Lantern
+tile.expanded:oak_lamp.name=Oak Lamp
+tile.expanded:oak_stairs_alt.name=Oak Stairs (Alternate)
+
+tile.expanded:polished_obsidian_door.name=Polished Obsidian Door
+item.expanded:polished_obsidian_door.name=Polished Obsidian Door
+tile.expanded:polished_obsidian.name=Polished Obsidian
+tile.expanded:polished_obsidian_stairs.name=Polished Obsidian Stairs
+tile.expanded:polished_obsidian_stairs_alt.name=Polished Obsidian Stairs (Alternate)
+
+tile.expanded:spruce_wood_stairs_alt.name=Spruce Stairs (Alternate)
+
+tile.expanded:copper_ore.name=Copper Ore
+item.expanded:copper_ore.name=Copper Ore
+tile.expanded:tin_ore.name=Tin Ore
+item.expanded:tin_ore.name=Tin Ore
+tile.expanded:platinum_ore.name=Platinum Ore
+item.expanded:platinum_ore.name=Platinum Ore
+tile.expanded:silver_ore.name=Silver Ore
+item.expanded:silver_ore.name=Silver Ore
+tile.expanded:mithril_ore.name=Mithril Ore
+item.expanded:mithril_ore.name=Mithril Ore
+tile.expanded:titanium_ore.name=Titanium Ore
+item.expanded:titanium_ore.name=Titanium Ore
+
+item.expanded:copper_ingot.name=Copper Ingot
+item.expanded:tin_ingot.name=Tin Ingot
+item.expanded:platinum_ingot.name=Platinum Ingot
+item.expanded:silver_ingot.name=Silver Ingot
+item.expanded:mithril_ingot.name=Mithril Ingot
+item.expanded:titanium_ingot.name=Titanium Ingot
+item.expanded:steel_ingot.name=Steel Ingot
+item.expanded:bronze_ingot.name=Bronze Ingot
+item.expanded:celestial_bronze_ingot.name=Celestial Bronze Ingot
+item.expanded:imperial_gold_ingot.name=Imperial Gold Ingot
+
+item.expanded:bronze_nuggets.name=Bronze Nuggets
+item.expanded:celestial_bronze_nuggets.name=Celestial Bronze Nuggets
+item.expanded:imperial_gold_nuggets.name=Imperial Gold Nuggets
+
+tile.expanded:copper_block.name=Copper Block
+tile.expanded:tin_block.name=Tin Block
+tile.expanded:bronze_block.name=Bronze Block
+tile.expanded:platinum_block.name=Platinum Block
+tile.expanded:silver_block.name=Silver Block
+tile.expanded:mithril_block.name=Mithril Block
+tile.expanded:titanium_block.name=Titanium Block
+tile.expanded:celestial_bronze_block.name=Celestial Bronze Block
+tile.expanded:imperial_gold_block.name=Imperial Gold Block
+tile.expanded:steel_block.name=Steel Block
+
+item.expanded:bronze_pickaxe.name=Bronze Pickaxe
+item.expanded:steel_pickaxe.name=Steel Pickaxe
+item.expanded:mithril_pickaxe.name=Mithril Pickaxe
+item.expanded:celestial_bronze_pickaxe.name=Celestial Bronze Pickaxe
+item.expanded:imperial_gold_pickaxe.name=Imperial Gold Pickaxe
+item.expanded:obsidian_pickaxe.name=Obsidian Pickaxe
+
+item.expanded:bronze_axe.name=Bronze Axe
+item.expanded:steel_axe.name=Steel Axe
+item.expanded:mithril_axe.name=Mithril Axe
+item.expanded:celestial_bronze_axe.name=Celestial Bronze Axe
+item.expanded:imperial_gold_axe=Imperial Gold Axe
+item.expanded:obsidian_axe=Obsidian Axe
+
+item.expanded:bronze_shovel.name=Bronze Shovel
+item.expanded:steel_shovel.name=Steel Shovel
+item.expanded:mithril_shovel.name=Mithril Shovel
+item.expanded:celestial_bronze_shovel.name=Celestial Bronze Shovel
+item.expanded:imperial_gold_shovel=Imperial Gold Shovel
+item.expanded:obsidian_shovel=Obsidian Shovel
+
+item.expanded:bronze_sword.name=Bronze Sword
+item.expanded:steel_sword.name=Steel Sword
+item.expanded:mithril_sword.name=Mithril Sword
+item.expanded:silver_sword.name=Silver Sword
+item.expanded:celestial_bronze_sword.name=Celestial Bronze Sword
+item.expanded:imperial_gold_sword.name=Imperial Gold Sword
+item.expanded:obsidian_sword.name=Obsidian Sword

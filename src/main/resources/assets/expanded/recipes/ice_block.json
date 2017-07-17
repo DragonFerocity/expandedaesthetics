@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "minecraft:water_bucket"
+    },
+    {
+        "item": "minecraft:snow"
+    },
+    {
+        "item": "minecraft:snow"
+    },
+    {
+        "item": "minecraft:snow"
+    },
+    {
+        "item": "minecraft:snow"
+    }
+  ],
+  "result": {
+    "item": "minecraft:ice"
+  }
+}

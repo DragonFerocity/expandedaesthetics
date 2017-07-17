@@ -1,0 +1,85 @@
+{
+    "parent": "block/cube",
+    "ambientocclusion": false,
+    "textures": {
+        "1": "expanded:blocks/doors/oak_stable_door_lower",
+        "particle": "expanded:blocks/doors/oak_stable_door_lower"
+    },
+    "elements": [
+        {
+            "name": "Cube",
+            "from": [ 0.0, 0.0, 0.0 ],
+            "to": [ 3.0, 16.0, 1.0 ],
+            "faces": {
+                "north": { "texture": "#1", "uv": [ 1.0, 0.0, 0.0, 16.0 ], "cullface": "north" },
+                "east": { "texture": "#1", "uv": [ 1.0, 0.0, 0.0, 16.0 ] },
+                "south": { "texture": "#1", "uv": [ 0.0, 4.0, 1.0, 11.0 ], "cullface": "south" },
+                "west": { "texture": "#1", "uv": [ 0.0, 0.0, 1.0, 16.0 ], "cullface": "west" },
+                "up": { "texture": "#1", "uv": [ 0.0, 0.0, 3.0, 1.0 ], "cullface": "up" },
+                "down": { "texture": "#1", "uv": [ 12.0, 0.0, 15.0, 1.0 ], "cullface": "down" }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 0.0, 0.0, 15.0 ],
+            "to": [ 3.0, 16.0, 16.0 ],
+            "faces": {
+                "north": { "texture": "#1", "uv": [ 15.0, 4.0, 16.0, 11.0 ], "cullface": "north" },
+                "east": { "texture": "#1", "uv": [ 16.0, 0.0, 15.0, 16.0 ] },
+                "south": { "texture": "#1", "uv": [ 15.0, 0.0, 16.0, 16.0 ], "cullface": "south" },
+                "west": { "texture": "#1", "uv": [ 15.0, 0.0, 16.0, 16.0 ], "cullface": "west" },
+                "up": { "texture": "#1", "uv": [ 0.0, 0.0, 3.0, 1.0 ], "cullface": "up" },
+                "down": { "texture": "#1", "uv": [ 12.0, 0.0, 15.0, 1.0 ], "cullface": "down" }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 0.0, 0.0, 1.0 ],
+            "to": [ 3.0, 1.0, 15.0 ],
+            "faces": {
+                "east": { "texture": "#1", "uv": [ 15.0, 15.0, 1.0, 16.0 ] },
+                "west": { "texture": "#1", "uv": [ 15.0, 15.0, -2.0, 16.0 ], "cullface": "west" },
+                "up": { "texture": "#1", "uv": [ 6.0, 15.0, 9.0, 16.0 ], "cullface": "up" },
+                "down": { "texture": "#1", "uv": [ 6.0, 1.0, 9.0, 15.0 ], "cullface": "down" }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 0.0, 15.0, 1.0 ],
+            "to": [ 3.0, 16.0, 15.0 ],
+            "faces": {
+                "east": { "texture": "#1", "uv": [ 15.0, 0.0, 1.0, 1.0 ] },
+                "west": { "texture": "#1", "uv": [ 15.0, 0.0, 1.0, 1.0 ], "cullface": "west" },
+                "up": { "texture": "#1", "uv": [ 0.0, 4.0, 0.0, 11.0 ], "cullface": "up" },
+                "down": { "texture": "#1", "uv": [ 0.0, 4.0, 1.0, 11.0 ], "cullface": "down" }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 1.0, 1.0, 1.0 ],
+            "to": [ 2.0, 15.0, 15.0 ],
+            "faces": {
+                "north": { "texture": "#1", "uv": [ 0.0, 0.0, 1.0, 14.0 ] },
+                "east": { "texture": "#1", "uv": [ 1.0, 1.0, 15.0, 15.0 ] },
+                "south": { "texture": "#1", "uv": [ 0.0, 0.0, 1.0, 14.0 ] },
+                "west": { "texture": "#1", "uv": [ 1.0, 1.0, 15.0, 15.0 ] },
+                "up": { "texture": "#1", "uv": [ 0.0, 0.0, 1.0, 14.0 ] },
+                "down": { "texture": "#1", "uv": [ 0.0, 0.0, 1.0, 14.0 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 0.25, -2.0, 7.0 ],
+            "to": [ 2.5, 18.0, 9.0 ],
+            "rotation": { "origin": [ 8.0, 8.0, 8.0 ], "axis": "x", "angle": 45.0 },
+            "faces": {
+                "north": { "texture": "#1", "uv": [ 0.0, 4.0, 1.0, 11.0 ] },
+                "east": { "texture": "#1", "uv": [ 0.0, 4.0, 1.0, 11.0 ] },
+                "south": { "texture": "#1", "uv": [ 15.0, 4.0, 16.0, 11.0 ] },
+                "west": { "texture": "#1", "uv": [ 0.0, 4.0, 1.0, 11.0 ] },
+                "up": { "texture": "#1", "uv": [ 0.0, 0.0, 2.0, 2.0 ] },
+                "down": { "texture": "#1", "uv": [ 0.0, 0.0, 3.0, 2.0 ] }
+            }
+        }
+    ]
+}
