@@ -16,6 +16,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.DragonFerocity.expanded.items.ModTool;
 import com.google.common.collect.Multimap;
 
@@ -60,9 +61,15 @@ public class ModSword extends ModItem {
    * Current implementations of this method in child classes do not use the entry argument beside ev. They just raise
    * the damage on the stack.
    */
+  @Override
   public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
   {
       stack.damageItem(1, attacker);
+      if (target.isEntityUndead()) {
+        if (this == BlockHandler.iSilverSword) {
+          target.attackEntityFrom(DamageSource.GENERIC, this.attackDamage * 2F);
+        }
+      }
       return true;
   }
   

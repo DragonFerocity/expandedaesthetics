@@ -3,6 +3,7 @@ package com.DragonFerocity.expanded.handlers;
 //import com.DragonFerocity.expanded.blocks.CobblestoneChest;
 //import com.DragonFerocity.expanded.blocks.ModChest;
 import com.DragonFerocity.expanded.blocks.*;
+import com.DragonFerocity.expanded.entities.ModTileEntityAlloyFurnace;
 import com.DragonFerocity.expanded.entities.ModTileEntityChest;
 import com.DragonFerocity.expanded.items.*;
 
@@ -15,11 +16,15 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.ArrayList;
 
 public class BlockHandler {
+  @Instance("ExpandedAesthetics")
+  public static BlockHandler instance;
+  
   //public static Block tutBlock;
   //public static ItemBlock ibTutBlock;
   //public static Item iTutItem;
@@ -46,6 +51,8 @@ public class BlockHandler {
   public static Item iBirchStableDoor;
   public static ModLamp birchLamp;
   public static ItemBlock ibBirchLamp;
+  public static ModLantern birchLantern;
+  public static ItemBlock ibBirchLantern;
   public static ModStairs birchStairsAlt;
   public static ItemBlock ibBirchStairsAlt;
   
@@ -403,6 +410,14 @@ public class BlockHandler {
   public static ModSpade iImperialGoldShovel;
   public static ModSpade iObsidianShovel;
   
+  //Hoe
+  public static ModHoe iBronzeHoe;
+  public static ModHoe iSteelHoe;
+  public static ModHoe iMithrilHoe;
+  public static ModHoe iCelestialBronzeHoe;
+  public static ModHoe iImperialGoldHoe;
+  public static ModHoe iObsidianHoe;
+  
   //Sword
   public static ModSword iBronzeSword;
   public static ModSword iSilverSword;
@@ -411,6 +426,10 @@ public class BlockHandler {
   public static ModSword iCelestialBronzeSword;
   public static ModSword iImperialGoldSword;
   public static ModSword iObsidianSword;
+  
+  //Alloy Furnace
+  public static ModAlloyFurnace alloyFurnace;
+  public static ItemBlock ibAlloyFurnace;
   
   //Other Vars
   public static ArrayList<ItemBlock> itemBlockList = new ArrayList<>();
@@ -431,6 +450,11 @@ public class BlockHandler {
   public static void initBlocks(RegistryEvent.Register<Block> event) {
     //tutBlock = new BlockTutBlock(Material.ROCK, "tut_block", CreativeTabs.BUILDING_BLOCKS, 5F, 15F, 3, "pickaxe");
 
+    //Alloy Furnace
+    alloyFurnace = createBlock(new ModAlloyFurnace(false, "alloy_furnace", CreativeTabs.BUILDING_BLOCKS, 3F, 40F, "pickaxe", 1), event);
+    ibAlloyFurnace = createItemBlock(new ItemBlock(alloyFurnace), alloyFurnace);
+    GameRegistry.registerTileEntity(ModTileEntityAlloyFurnace.class, "alloy_furnace_tile_entity");
+    
     //Acacia Wood
     acaciaWoodStairsAlt = createBlock(new ModStairs(Blocks.PLANKS, "acacia_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"), event);
     ibAcaciaWoodStairsAlt = createItemBlock(new ItemBlock(acaciaWoodStairsAlt), acaciaWoodStairsAlt);
@@ -452,6 +476,9 @@ public class BlockHandler {
     
     birchStairsAlt = createBlock(new ModStairs(Blocks.PLANKS, "birch_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"), event);
     ibBirchStairsAlt = createItemBlock(new ItemBlock(birchStairsAlt), birchStairsAlt);
+    
+    birchLantern = createBlock(new ModLantern(Material.WOOD, "birch_lantern", CreativeTabs.DECORATIONS, 1.0F, 3.5F, 1, "axe", 13/15F, 5, 20, 0.75D), event);
+    ibBirchLantern = createItemBlock(new ItemBlock(birchLantern), birchLantern);
     
     //Brick
     brickDoor = createBlock(new ModBlockDoor(Material.ROCK, "brick_door", 2.5F, 35F, 1, "pickaxe"), event);
@@ -894,6 +921,12 @@ public class BlockHandler {
     
     return block;
   }
+  
+  private static ModAlloyFurnace createBlock(ModAlloyFurnace block, RegistryEvent.Register<Block> event) {
+    event.getRegistry().register(block);
+    
+    return block;
+  }
 
   public static void initItems(RegistryEvent.Register<Item> event) {
     //iTutItem = new ItemTutItem("tut_item", CreativeTabs.MATERIALS);
@@ -974,6 +1007,14 @@ public class BlockHandler {
     iImperialGoldShovel = createItem(new ModSpade("imperial_gold_shovel", ModTool.ToolMaterial.IMPERIAL_GOLD), event);
     iObsidianShovel = createItem(new ModSpade("obsidian_shovel", ModTool.ToolMaterial.OBSIDIAN), event);
     
+    //Hoes
+    iBronzeHoe = createItem(new ModHoe("bronze_hoe", ModTool.ToolMaterial.BRONZE), event);
+    iSteelHoe = createItem(new ModHoe("steel_hoe", ModTool.ToolMaterial.STEEL), event);
+    iMithrilHoe = createItem(new ModHoe("mithril_hoe", ModTool.ToolMaterial.MITHRIL), event);
+    iCelestialBronzeHoe = createItem(new ModHoe("celestial_bronze_hoe", ModTool.ToolMaterial.CELESTIAL_BRONZE), event);
+    iImperialGoldHoe = createItem(new ModHoe("imperial_gold_hoe", ModTool.ToolMaterial.IMPERIAL_GOLD), event);
+    iObsidianHoe = createItem(new ModHoe("obsidian_hoe", ModTool.ToolMaterial.OBSIDIAN), event);
+    
     //Swords
     iBronzeSword = createItem(new ModSword("bronze_sword", ModTool.ToolMaterial.BRONZE), event);
     iSilverSword = createItem(new ModSword("silver_sword", ModTool.ToolMaterial.SILVER), event);
@@ -1025,6 +1066,12 @@ public class BlockHandler {
   }
   
   private static ModSword createItem(ModSword item, RegistryEvent.Register<Item> event) {
+    event.getRegistry().register(item);
+    
+    return item;
+  }
+  
+  private static ModHoe createItem(ModHoe item, RegistryEvent.Register<Item> event) {
     event.getRegistry().register(item);
     
     return item;
@@ -1111,6 +1158,14 @@ public class BlockHandler {
     register(iCelestialBronzeShovel);
     register(iImperialGoldShovel);
     register(iObsidianShovel);
+    
+    //Shovel
+    register(iBronzeHoe);
+    register(iSteelHoe);
+    register(iMithrilHoe);
+    register(iCelestialBronzeHoe);
+    register(iImperialGoldHoe);
+    register(iObsidianHoe);
     
     //Sword
     register(iBronzeSword);

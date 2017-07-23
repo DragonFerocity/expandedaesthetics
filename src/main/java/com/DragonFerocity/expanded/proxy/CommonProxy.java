@@ -1,8 +1,10 @@
 package com.DragonFerocity.expanded.proxy;
 
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.DragonFerocity.expanded.handlers.CraftingHandler;
+import com.DragonFerocity.expanded.handlers.GuiHandler;
 import com.DragonFerocity.expanded.OreGen;
 
 public class CommonProxy implements IProxy {
@@ -17,7 +19,8 @@ public class CommonProxy implements IProxy {
   }
 
   public void init() {
-  
+    System.out.println("COMMON PROXY =========================================================================================");
+    NetworkRegistry.INSTANCE.registerGuiHandler(BlockHandler.class, new GuiHandler());
   }
 
   public void postInit() {

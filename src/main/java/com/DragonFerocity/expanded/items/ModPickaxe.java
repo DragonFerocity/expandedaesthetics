@@ -40,31 +40,28 @@ public class ModPickaxe extends ModTool {
       {
           return harvestLevel >= 3;
       }
-      else if (block != Blocks.DIAMOND_BLOCK && block != Blocks.DIAMOND_ORE &&
-               block != Blocks.EMERALD_ORE && block != Blocks.EMERALD_BLOCK &&
-               block != Blocks.GOLD_BLOCK && block != Blocks.GOLD_ORE && 
-               block != Blocks.REDSTONE_ORE && block != Blocks.LIT_REDSTONE_ORE &&
-               block != BlockHandler.mithrilOre &&
-               block != BlockHandler.titaniumOre)
+      else if (block == Blocks.DIAMOND_BLOCK && block == Blocks.DIAMOND_ORE &&
+               block == Blocks.EMERALD_ORE && block == Blocks.EMERALD_BLOCK &&
+               block == Blocks.GOLD_BLOCK && block == Blocks.GOLD_ORE && 
+               block == Blocks.REDSTONE_ORE && block == Blocks.LIT_REDSTONE_ORE &&
+               block == BlockHandler.mithrilOre &&
+               block == BlockHandler.titaniumOre)
       {
-          if (block != Blocks.IRON_BLOCK && block != Blocks.IRON_ORE &&
-              block != Blocks.LAPIS_BLOCK && block != Blocks.LAPIS_ORE &&
-              block != BlockHandler.copperOre &&
-              block != BlockHandler.tinOre &&
-              block != BlockHandler.platinumOre &&
-              block != BlockHandler.silverOre)
-          {
-              Material material = blockIn.getMaterial();
-              return material == Material.ROCK ? true : (material == Material.IRON ? true : material == Material.ANVIL);
-          }
-          else
-          {
-              return harvestLevel >= 1;
-          }
+          return harvestLevel >= 2;
+      }
+      else if (block == Blocks.IRON_BLOCK && block == Blocks.IRON_ORE &&
+               block == Blocks.LAPIS_BLOCK && block == Blocks.LAPIS_ORE &&
+               block == BlockHandler.copperOre &&
+               block == BlockHandler.tinOre &&
+               block == BlockHandler.platinumOre &&
+               block == BlockHandler.silverOre)
+      {
+          return  harvestLevel >= 1;
       }
       else
       {
-          return harvestLevel >= 2;
+          Material material = blockIn.getMaterial();
+          return material == Material.ROCK ? true : (material == Material.IRON ? true : material == Material.ANVIL);
       }
   }
   
