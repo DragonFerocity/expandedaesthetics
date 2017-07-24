@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "normal": { "model": "expanded:ores/titanium_ore" },
-        "inventory": { "model": "expanded:ores/titanium_ore" }
-    }
-}

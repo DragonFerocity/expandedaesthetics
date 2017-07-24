@@ -1,9 +1,0 @@
-{
-    "variants": {
-        "facing=down": { "model": "expanded:lights/oak_lantern" },
-        "facing=north": { "model": "expanded:lights/oak_lantern" },
-        "facing=east": { "model": "expanded:lights/oak_lantern" },
-        "facing=south": { "model": "expanded:lights/oak_lantern" },
-        "facing=west": { "model": "expanded:lights/oak_lantern" }
-    }
-}

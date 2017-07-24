@@ -1,7 +1,0 @@
-{
-    "parent": "block/door_top_rh",
-    "textures": {
-        "bottom": "expanded:blocks/doors/cobblestone_door_lower",
-        "top": "expanded:blocks/doors/cobblestone_door_upper"
-    }
-}

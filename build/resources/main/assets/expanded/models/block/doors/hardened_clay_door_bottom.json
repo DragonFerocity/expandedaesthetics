@@ -1,7 +1,0 @@
-{
-    "parent": "block/door_bottom",
-    "textures": {
-        "bottom": "expanded:blocks/doors/hardened_clay_door_lower",
-        "top": "expanded:blocks/doors/hardened_clay_door_upper"
-    }
-}

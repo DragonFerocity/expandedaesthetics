@@ -1,8 +1,0 @@
-{
-    "parent": "expanded:block/stairs/stairs_alternate",
-    "textures": {
-        "bottom": "blocks/stone_diorite_smooth",
-        "top": "blocks/stone_diorite_smooth",
-        "side": "blocks/stone_diorite_smooth"
-    }
-}

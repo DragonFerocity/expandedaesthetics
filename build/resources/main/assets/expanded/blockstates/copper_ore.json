@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "normal": { "model": "expanded:ores/copper_ore" },
-        "inventory": { "model": "expanded:ores/copper_ore" }
-    }
-}
