@@ -22,11 +22,10 @@ public class GuiHandler implements IGuiHandler
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) 
     { 
         TileEntity tileEntity = world.getTileEntity(new BlockPos(x, y, z));
-        System.out.println("Server GUI ----------------------------------------------------------------------------");
 
         if (tileEntity != null)
         {
-            if (tileEntity instanceof ModTileEntityAlloyFurnace)
+            if (ID == BlockHandler.GUI_ENUM.ALLOY_FURNACE.ordinal())
             {
                 return new ModContainerAlloyFurnace(player.inventory, (ModTileEntityAlloyFurnace)tileEntity);
             }
@@ -39,11 +38,10 @@ public class GuiHandler implements IGuiHandler
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
     {
         TileEntity tileEntity = world.getTileEntity(new BlockPos(x, y, z));
-        System.out.println("Client GUI ----------------------------------------------------------------------------");
 
         if (tileEntity != null)
         {
-            if (tileEntity instanceof ModTileEntityAlloyFurnace)
+            if (ID == BlockHandler.GUI_ENUM.ALLOY_FURNACE.ordinal())
             {
                 return new ModGuiAlloyFurnace(player.inventory, (ModTileEntityAlloyFurnace)tileEntity);
             }

@@ -8,7 +8,7 @@ import com.DragonFerocity.expanded.handlers.GuiHandler;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
-public class ClientProxy extends CommonProxy {
+public class ClientProxy extends ServerProxy {
   public void init() {
     BlockHandler.registerRenders();
     //registerTileEntitySpecialRenderer(ModTileEntityChest.class);

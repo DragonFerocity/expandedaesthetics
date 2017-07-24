@@ -5,9 +5,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.DragonFerocity.expanded.handlers.CraftingHandler;
 import com.DragonFerocity.expanded.handlers.GuiHandler;
+import com.DragonFerocity.expanded.ExpandedAesthetics;
 import com.DragonFerocity.expanded.OreGen;
 
-public class CommonProxy implements IProxy {
+public class ServerProxy implements IProxy {
   public void preInit() {
     //ItemHandler.init();
     //ItemHandler.register();
@@ -16,11 +17,11 @@ public class CommonProxy implements IProxy {
     //CraftingHandler.init();
     GameRegistry.registerWorldGenerator(new OreGen(), 0);
     //BlockHandler.register();
+    //NetworkRegistry.INSTANCE.registerGuiHandler(ExpandedAesthetics.instance, new GuiHandler());
   }
 
   public void init() {
-    System.out.println("COMMON PROXY =========================================================================================");
-    NetworkRegistry.INSTANCE.registerGuiHandler(BlockHandler.class, new GuiHandler());
+    //NetworkRegistry.INSTANCE.registerGuiHandler(ExpandedAesthetics.instance, new GuiHandler());
   }
 
   public void postInit() {

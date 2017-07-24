@@ -2,6 +2,7 @@ package com.DragonFerocity.expanded.blocks;
 
 import java.util.Random;
 
+import com.DragonFerocity.expanded.ExpandedAesthetics;
 import com.DragonFerocity.expanded.Ref;
 import com.DragonFerocity.expanded.entities.ModTileEntityAlloyFurnace;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
@@ -155,7 +156,8 @@ public class ModAlloyFurnace extends BlockContainer {
 
           if (tileentity instanceof ModTileEntityAlloyFurnace)
           {
-              playerIn.displayGUIChest((ModTileEntityAlloyFurnace)tileentity);
+              //playerIn.displayGUIChest((ModTileEntityAlloyFurnace)tileentity);
+              playerIn.openGui((Object)ExpandedAesthetics.instance, BlockHandler.GUI_ENUM.ALLOY_FURNACE.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
               playerIn.addStat(StatList.FURNACE_INTERACTION);
           }
 
@@ -192,6 +194,7 @@ public class ModAlloyFurnace extends BlockContainer {
   /**
    * Returns a new instance of a block's tile entity class. Called on placing the block.
    */
+  @Override
   public TileEntity createNewTileEntity(World worldIn, int meta)
   {
       return new ModTileEntityAlloyFurnace();

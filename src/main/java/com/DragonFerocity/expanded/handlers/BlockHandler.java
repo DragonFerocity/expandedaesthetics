@@ -22,9 +22,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import java.util.ArrayList;
 
 public class BlockHandler {
-  @Instance("ExpandedAesthetics")
-  public static BlockHandler instance;
-  
   //public static Block tutBlock;
   //public static ItemBlock ibTutBlock;
   //public static Item iTutItem;
@@ -1191,6 +1188,11 @@ public class BlockHandler {
   
   public static void registerTileEntities() {
     GameRegistry.registerTileEntity(ModTileEntityChest.class, "mod_chests");
+  }
+  
+  public enum GUI_ENUM 
+  {
+      ALLOY_FURNACE;
   }
 
 }
