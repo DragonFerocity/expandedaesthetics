@@ -7,6 +7,7 @@ import com.DragonFerocity.expanded.Ref;
 import com.DragonFerocity.expanded.entities.ModTileEntityCampfire;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -34,7 +35,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ModCampfire extends BlockContainer {
+public class ModCampfire extends Block {
   public static final PropertyEnum<ModCampfire.EnumType> TYPE = PropertyEnum.<ModCampfire.EnumType>create("type", ModCampfire.EnumType.class);
   private final boolean isBurning;
   private static boolean keepInventory;
@@ -145,9 +146,15 @@ public class ModCampfire extends BlockContainer {
    * Returns a new instance of a block's tile entity class. Called on placing the block.
    */
   @Override
-  public TileEntity createNewTileEntity(World worldIn, int meta)
+  public TileEntity createTileEntity(World worldIn, IBlockState state)
   {
       return new ModTileEntityCampfire();
+  }
+  
+  @Override
+  public boolean hasTileEntity(IBlockState state)
+  {
+    return true;
   }
 
   /**
