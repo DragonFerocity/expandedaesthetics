@@ -789,6 +789,9 @@ public class BlockHandler {
     jungleWoodStairsAlt = createBlock(new ModStairs(Blocks.PLANKS, "jungle_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"), event);
     ibJungleWoodStairsAlt = createItemBlock(new ItemBlock(jungleWoodStairsAlt), jungleWoodStairsAlt);
     
+    jungleWoodCraftingTable = createBlock(new ModCraftingTable("jungle_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    ibJungleWoodCraftingTable = createItemBlock(new ItemBlock(jungleWoodCraftingTable), jungleWoodCraftingTable);
+    
     //Oak
     oakStableDoor = createBlock(new ModBlockDoor(Material.WOOD, "oak_stable_door", 1.9F, 5F, 0, "axe"), event);
     
@@ -1146,7 +1149,7 @@ public class BlockHandler {
     return block;
   }
   
-  public static void registerRenders() {
+  public static void registerItems() {
     //Andesite
     register(iAndesitePolishedDoor);
     //Birch

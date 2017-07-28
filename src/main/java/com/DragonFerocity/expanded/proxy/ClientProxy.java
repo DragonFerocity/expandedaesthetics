@@ -5,12 +5,14 @@ import com.DragonFerocity.expanded.entities.ModTileEntityChestRenderer;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.DragonFerocity.expanded.handlers.GuiHandler;
 
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 public class ClientProxy extends ServerProxy {
   public void init() {
-    BlockHandler.registerRenders();
+    BlockHandler.registerItems();
     //registerTileEntitySpecialRenderer(ModTileEntityChest.class);
     registerTileEntitySpecialRenderer(ModTileEntityChest.class);
   }
