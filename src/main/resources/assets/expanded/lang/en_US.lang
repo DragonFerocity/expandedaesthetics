@@ -1,15 +1,25 @@
+container.alloy_furnace=Alloy Furnace
+tile.expanded:alloy_furnace=Alloy Furnace
+alloy_furnace.name=Alloy Furnace
+
+container.campfire=Campfire
+tile.expanded:campfire=Campfire
+campfire.name=Campfire
+
 tile.expanded:acacia_wood_stairs_alt.name=Acacia Wood Stairs (Alternate)
+tile.expanded:acacia_wood_crafting_table.name=Acacia Wood Crafting Table
 
 tile.expanded:andesite_polished_door.name=Polished Andesite Door
 item.expanded:andesite_polished_door.name=Polished Andesite Door
 tile.expanded:andesite_polished_stairs.name=Polished Andesite Stairs
 tile.expanded:andesite_polished_stairs_alt.name=Polished Andesite Stairs (Alternate)
 
-tile.expanded:birch_stable_door.name=Wooden Stable Door
-item.expanded:birch_stable_door.name=Wooden Stable Door
+tile.expanded:birch_stable_door.name=Birch Stable Door
+item.expanded:birch_stable_door.name=Birch Stable Door
 tile.expanded:birch_lamp.name=Birch Lamp
 tile.expanded:birch_lantern.name=Birch Lantern
 tile.expanded:birch_wood_stairs_alt.name=Birch Stairs (Alternate)
+tile.expanded:birch_crafting_table.name=Birch Crafting Table
 
 tile.expanded:brick_door.name=Brick Door
 item.expanded:brick_door.name=Brick Door
@@ -34,6 +44,7 @@ tile.expanded:dark_oak_lantern.name=Dark Oak Lantern
 tile.expanded:dark_oak_bed.name=Dark Oak Bed
 item.expanded:dark_oak_bed.name=Dark Oak Bed
 tile.expanded:dark_oak_stairs_alt.name=Dark Oak Stairs (Alternate)
+tile.expanded:dark_oak_crafting_table.name=Dark Oak Crafting Table
 
 tile.expanded:diorite_polished_door.name=Polished Diorite Door
 item.expanded:diorite_polished_door.name=Polished Diorite Door
@@ -109,6 +120,7 @@ tile.expanded:terracotta_stairs.name=Terracotta Stairs
 tile.expanded:terracotta_stairs_alt.name=Terracotta Stairs (Alternate)
 
 tile.expanded:jungle_wood_stairs_alt.name=Jungle Wood Stairs (Alternate)
+tile.expanded:jungle_wood_crafting_table.name=Jungle Wood Crafting Table
 
 tile.expanded:oak_stable_door.name=Wooden Stable Door
 item.expanded:oak_stable_door.name=Wooden Stable Door
@@ -116,6 +128,7 @@ tile.expanded:oak_light_box.name=Oak Floor Lantern
 tile.expanded:oak_lantern.name=Oak Lantern
 tile.expanded:oak_lamp.name=Oak Lamp
 tile.expanded:oak_stairs_alt.name=Oak Stairs (Alternate)
+tile.expanded:oak_crafting_table.name=Oak Crafting Table
 
 tile.expanded:polished_obsidian_door.name=Polished Obsidian Door
 item.expanded:polished_obsidian_door.name=Polished Obsidian Door
@@ -124,6 +137,7 @@ tile.expanded:polished_obsidian_stairs.name=Polished Obsidian Stairs
 tile.expanded:polished_obsidian_stairs_alt.name=Polished Obsidian Stairs (Alternate)
 
 tile.expanded:spruce_wood_stairs_alt.name=Spruce Stairs (Alternate)
+tile.expanded:spruce_wood_crafting_table.name=Spruce Crafting Table
 
 tile.expanded:copper_ore.name=Copper Ore
 item.expanded:copper_ore.name=Copper Ore

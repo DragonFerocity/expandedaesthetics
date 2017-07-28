@@ -1,8 +1,8 @@
 package com.DragonFerocity.expanded.entities;
 
-import com.DragonFerocity.expanded.ModAlloyFurnaceRecipes;
-import com.DragonFerocity.expanded.blocks.ModAlloyFurnace;
-import com.DragonFerocity.expanded.inventory.ModContainerAlloyFurnace;
+import com.DragonFerocity.expanded.ModCampfireRecipes;
+import com.DragonFerocity.expanded.blocks.ModCampfire;
+import com.DragonFerocity.expanded.inventory.ModContainerCampfire;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -34,9 +34,9 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITickable, ISidedInventory {
+public class ModTileEntityCampfire extends TileEntityLockable implements ITickable, ISidedInventory {
   private static final int[] SLOTS_TOP = new int[] {0};
-  private static final int[] SLOTS_BOTTOM = new int[] {3, 1};
+  private static final int[] SLOTS_BOTTOM = new int[] {2, 1};
   private static final int[] SLOTS_SIDES = new int[] {1};
   /** The ItemStacks that hold the items currently being used in the furnace */
   private NonNullList<ItemStack> furnaceItemStacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
@@ -127,7 +127,7 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
   @Override
   public String getName()
   {
-      return this.hasCustomName() ? this.furnaceCustomName : "container.alloy_furnace";
+      return this.hasCustomName() ? this.furnaceCustomName : "container.campfire";
   }
   
   /**
@@ -224,7 +224,7 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
       {
           ItemStack itemstack = this.furnaceItemStacks.get(1);
   
-          if (this.isBurning() || !itemstack.isEmpty() && !((ItemStack)this.furnaceItemStacks.get(0)).isEmpty())
+          if (this.isBurning() || !itemstack.isEmpty()) // && !((ItemStack)this.furnaceItemStacks.get(0)).isEmpty()
           {
               if (!this.isBurning() && this.canSmelt())
               {
@@ -274,7 +274,7 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
           if (flag != this.isBurning())
           {
               flag1 = true;
-              ModAlloyFurnace.setState(this.isBurning(), this.world, this.pos);
+              ModCampfire.setState(this.isBurning(), this.world, this.pos);
           }
       }
   
@@ -294,20 +294,20 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
    */
   private boolean canSmelt()
   {
-      if (((ItemStack)this.furnaceItemStacks.get(0)).isEmpty())
+      /*if (((ItemStack)this.furnaceItemStacks.get(0)).isEmpty())
       {
           return false;
       }
       else
-      {
-          ItemStack itemstack = ModAlloyFurnaceRecipes.instance().getSmeltingResult(this.furnaceItemStacks.get(0), this.furnaceItemStacks.get(3));
+      {*/
+          ItemStack itemstack = ModCampfireRecipes.instance().getSmeltingResult(this.furnaceItemStacks.get(0));
   
-          if (itemstack.isEmpty())
+          /*if (itemstack.isEmpty())
           {
               return false;
           }
           else
-          {
+          {*/
               ItemStack itemstack1 = this.furnaceItemStacks.get(2);
   
               if (itemstack1.isEmpty())
@@ -326,8 +326,8 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
               {
                   return itemstack1.getCount() + itemstack.getCount() <= itemstack.getMaxStackSize(); // Forge fix: make furnace respect stack sizes in furnace recipes
               }
-          }
-      }
+          //}
+      //}
   }
   
   /**
@@ -337,9 +337,8 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
   {
       if (this.canSmelt())
       {
-          ItemStack itemstackInput1 = this.furnaceItemStacks.get(0);
-          ItemStack itemstackInput2 = this.furnaceItemStacks.get(3);
-          ItemStack itemstack1 = ModAlloyFurnaceRecipes.instance().getSmeltingResult(itemstackInput1, itemstackInput2);
+          ItemStack itemstack = this.furnaceItemStacks.get(0);
+          ItemStack itemstack1 = ModCampfireRecipes.instance().getSmeltingResult(itemstack);
           ItemStack itemstack2 = this.furnaceItemStacks.get(2);
   
           if (itemstack2.isEmpty())
@@ -351,15 +350,12 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
               itemstack2.grow(itemstack1.getCount());
           }
   
-          if (((itemstackInput1.getItem() == Item.getItemFromBlock(Blocks.SPONGE) && itemstackInput1.getMetadata() == 1) ||
-              (itemstackInput2.getItem() == Item.getItemFromBlock(Blocks.SPONGE) && itemstackInput2.getMetadata() == 1)) && 
-              !((ItemStack)this.furnaceItemStacks.get(1)).isEmpty() && ((ItemStack)this.furnaceItemStacks.get(1)).getItem() == Items.BUCKET)
+          if (itemstack.getItem() == Item.getItemFromBlock(Blocks.SPONGE) && itemstack.getMetadata() == 1 && !((ItemStack)this.furnaceItemStacks.get(1)).isEmpty() && ((ItemStack)this.furnaceItemStacks.get(1)).getItem() == Items.BUCKET)
           {
               this.furnaceItemStacks.set(1, new ItemStack(Items.WATER_BUCKET));
           }
   
-          itemstackInput1.shrink(1);
-          itemstackInput2.shrink(1);
+          itemstack.shrink(1);
       }
   }
   
@@ -376,79 +372,79 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
       else
       {
           Item item = stack.getItem();
-          if (!item.getRegistryName().getResourceDomain().equals("minecraft"))
+          /*if (!item.getRegistryName().getResourceDomain().equals("minecraft"))
           {
               int burnTime = net.minecraftforge.fml.common.registry.GameRegistry.getFuelValue(stack);
               if (burnTime != 0) return burnTime;
-          }
+          }*/
   
           if (item == Item.getItemFromBlock(Blocks.WOODEN_SLAB))
           {
-              return 150;
+              return 225;
           }
           else if (item == Item.getItemFromBlock(Blocks.WOOL))
           {
-              return 100;
+              return 150;
           }
           else if (item == Item.getItemFromBlock(Blocks.CARPET))
           {
-              return 67;
+              return 100;
           }
           else if (item == Item.getItemFromBlock(Blocks.LADDER))
           {
-              return 300;
+              return 450;
           }
           else if (item == Item.getItemFromBlock(Blocks.WOODEN_BUTTON))
           {
-              return 100;
+              return 150;
           }
           else if (Block.getBlockFromItem(item).getDefaultState().getMaterial() == Material.WOOD)
           {
-              return 300;
+              return 450;
           }
           else if (item == Item.getItemFromBlock(Blocks.COAL_BLOCK))
           {
-              return 16000;
+              return 24000;
           }
           else if (item instanceof ItemTool && "WOOD".equals(((ItemTool)item).getToolMaterialName()))
           {
-              return 200;
+              return 300;
           }
           else if (item instanceof ItemSword && "WOOD".equals(((ItemSword)item).getToolMaterialName()))
           {
-              return 200;
+              return 300;
           }
           else if (item instanceof ItemHoe && "WOOD".equals(((ItemHoe)item).getMaterialName()))
           {
-              return 200;
+              return 300;
           }
           else if (item == Items.STICK)
           {
-              return 100;
+              return 150;
           }
           else if (item != Items.BOW && item != Items.FISHING_ROD)
           {
               if (item == Items.SIGN)
               {
-                  return 200;
+                  return 300;
               }
               else if (item == Items.COAL)
               {
-                  return 1600;
+                  return 2400;
               }
               else if (item == Items.LAVA_BUCKET)
               {
-                  return 20000;
+                  return 30000;
               }
               else if (item != Item.getItemFromBlock(Blocks.SAPLING) && item != Items.BOWL)
               {
                   if (item == Items.BLAZE_ROD)
                   {
-                      return 2400;
+                      return 3600;
                   }
                   else if (item instanceof ItemDoor && item != Items.IRON_DOOR)
                   {
-                      return 200;
+                      return 300;
                   }
                   else
                   {
@@ -457,12 +453,12 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
               }
               else
               {
-                  return 100;
+                  return 150;
               }
           }
           else
           {
-              return 300;
+              return 450;
           }
       }
   }
@@ -563,13 +559,13 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
   @Override
   public String getGuiID()
   {
-      return "expanded:alloy_furnace";
+      return "expanded:campfire";
   }
 
   @Override
   public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn)
   {
-      return new ModContainerAlloyFurnace(playerInventory, this);
+      return new ModContainerCampfire(playerInventory, this);
   }
 
   @Override

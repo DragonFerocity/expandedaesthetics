@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "expanded:spruce/spruce_wood_crafting_table" }
+    }
+}

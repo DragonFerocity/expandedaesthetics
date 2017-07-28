@@ -3,6 +3,7 @@ package com.DragonFerocity.expanded;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.google.common.collect.Maps;
 
 import net.minecraft.block.Block;
@@ -31,27 +32,27 @@ public class ModAlloyFurnaceRecipes {
 
   private ModAlloyFurnaceRecipes()
   {
-      this.addSmeltingRecipeForBlock(Blocks.IRON_ORE, Blocks.AIR, new ItemStack(Items.IRON_INGOT), 0.7F);
-      this.addSmeltingRecipeForBlock(Blocks.GOLD_ORE, Blocks.AIR, new ItemStack(Items.GOLD_INGOT), 1.0F);
-      this.addSmeltingRecipeForBlock(Blocks.DIAMOND_ORE, Blocks.AIR, new ItemStack(Items.DIAMOND), 1.0F);
-      this.addSmeltingRecipeForBlock(Blocks.SAND, Blocks.AIR, new ItemStack(Blocks.GLASS), 0.1F);
-      this.addSmelting(Items.PORKCHOP, Items.AIR, new ItemStack(Items.COOKED_PORKCHOP), 0.35F);
-      this.addSmelting(Items.BEEF, Items.AIR, new ItemStack(Items.COOKED_BEEF), 0.35F);
-      this.addSmelting(Items.CHICKEN, Items.AIR, new ItemStack(Items.COOKED_CHICKEN), 0.35F);
-      this.addSmelting(Items.RABBIT, Items.AIR, new ItemStack(Items.COOKED_RABBIT), 0.35F);
-      this.addSmelting(Items.MUTTON, Items.AIR, new ItemStack(Items.COOKED_MUTTON), 0.35F);
-      this.addSmeltingRecipeForBlock(Blocks.COBBLESTONE, Blocks.AIR, new ItemStack(Blocks.STONE), 0.1F);
+      this.addSmeltingRecipe(Blocks.IRON_ORE, Blocks.AIR, new ItemStack(Items.IRON_INGOT), 0.7F);
+      this.addSmeltingRecipe(Blocks.GOLD_ORE, Blocks.AIR, new ItemStack(Items.GOLD_INGOT), 1.0F);
+      this.addSmeltingRecipe(Blocks.DIAMOND_ORE, Blocks.AIR, new ItemStack(Items.DIAMOND), 1.0F);
+      this.addSmeltingRecipe(Blocks.SAND, Blocks.AIR, new ItemStack(Blocks.GLASS), 0.1F);
+      this.addSmeltingRecipe(Items.PORKCHOP, Items.AIR, new ItemStack(Items.COOKED_PORKCHOP), 0.35F);
+      this.addSmeltingRecipe(Items.BEEF, Items.AIR, new ItemStack(Items.COOKED_BEEF), 0.35F);
+      this.addSmeltingRecipe(Items.CHICKEN, Items.AIR, new ItemStack(Items.COOKED_CHICKEN), 0.35F);
+      this.addSmeltingRecipe(Items.RABBIT, Items.AIR, new ItemStack(Items.COOKED_RABBIT), 0.35F);
+      this.addSmeltingRecipe(Items.MUTTON, Items.AIR, new ItemStack(Items.COOKED_MUTTON), 0.35F);
+      this.addSmeltingRecipe(Blocks.COBBLESTONE, Blocks.AIR, new ItemStack(Blocks.STONE), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.STONEBRICK, 1, BlockStoneBrick.DEFAULT_META), new ItemStack(Blocks.AIR, 1), new ItemStack(Blocks.STONEBRICK, 1, BlockStoneBrick.CRACKED_META), 0.1F);
-      this.addSmelting(Items.CLAY_BALL, Items.AIR, new ItemStack(Items.BRICK), 0.3F);
-      this.addSmeltingRecipeForBlock(Blocks.CLAY, Blocks.AIR, new ItemStack(Blocks.HARDENED_CLAY), 0.35F);
-      this.addSmeltingRecipeForBlock(Blocks.CACTUS, Blocks.AIR, new ItemStack(Items.DYE, 1, EnumDyeColor.GREEN.getDyeDamage()), 0.2F);
-      this.addSmeltingRecipeForBlock(Blocks.LOG, Blocks.AIR, new ItemStack(Items.COAL, 1, 1), 0.15F);
-      this.addSmeltingRecipeForBlock(Blocks.LOG2, Blocks.AIR, new ItemStack(Items.COAL, 1, 1), 0.15F);
-      this.addSmeltingRecipeForBlock(Blocks.EMERALD_ORE, Blocks.AIR, new ItemStack(Items.EMERALD), 1.0F);
-      this.addSmelting(Items.POTATO, Items.AIR, new ItemStack(Items.BAKED_POTATO), 0.35F);
-      this.addSmeltingRecipeForBlock(Blocks.NETHERRACK, Blocks.AIR, new ItemStack(Items.NETHERBRICK), 0.1F);
+      this.addSmeltingRecipe(Items.CLAY_BALL, Items.AIR, new ItemStack(Items.BRICK), 0.3F);
+      this.addSmeltingRecipe(Blocks.CLAY, Blocks.AIR, new ItemStack(Blocks.HARDENED_CLAY), 0.35F);
+      this.addSmeltingRecipe(Blocks.CACTUS, Blocks.AIR, new ItemStack(Items.DYE, 1, EnumDyeColor.GREEN.getDyeDamage()), 0.2F);
+      this.addSmeltingRecipe(Blocks.LOG, Blocks.AIR, new ItemStack(Items.COAL, 1, 1), 0.15F);
+      this.addSmeltingRecipe(Blocks.LOG2, Blocks.AIR, new ItemStack(Items.COAL, 1, 1), 0.15F);
+      this.addSmeltingRecipe(Blocks.EMERALD_ORE, Blocks.AIR, new ItemStack(Items.EMERALD), 1.0F);
+      this.addSmeltingRecipe(Items.POTATO, Items.AIR, new ItemStack(Items.BAKED_POTATO), 0.35F);
+      this.addSmeltingRecipe(Blocks.NETHERRACK, Blocks.AIR, new ItemStack(Items.NETHERBRICK), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.SPONGE, 1, 1), new ItemStack(Blocks.AIR, 1), new ItemStack(Blocks.SPONGE, 1, 0), 0.15F);
-      this.addSmelting(Items.CHORUS_FRUIT, Items.AIR, new ItemStack(Items.CHORUS_FRUIT_POPPED), 0.1F);
+      this.addSmeltingRecipe(Items.CHORUS_FRUIT, Items.AIR, new ItemStack(Items.CHORUS_FRUIT_POPPED), 0.1F);
 
       for (ItemFishFood.FishType itemfishfood$fishtype : ItemFishFood.FishType.values())
       {
@@ -61,34 +62,34 @@ public class ModAlloyFurnaceRecipes {
           }
       }
 
-      this.addSmeltingRecipeForBlock(Blocks.COAL_ORE, Blocks.AIR, new ItemStack(Items.COAL), 0.1F);
-      this.addSmeltingRecipeForBlock(Blocks.REDSTONE_ORE, Blocks.AIR, new ItemStack(Items.REDSTONE), 0.7F);
-      this.addSmeltingRecipeForBlock(Blocks.LAPIS_ORE, Blocks.AIR, new ItemStack(Items.DYE, 1, EnumDyeColor.BLUE.getDyeDamage()), 0.2F);
-      this.addSmeltingRecipeForBlock(Blocks.QUARTZ_ORE, Blocks.AIR, new ItemStack(Items.QUARTZ), 0.2F);
-      this.addSmelting(Items.CHAINMAIL_HELMET, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.CHAINMAIL_CHESTPLATE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.CHAINMAIL_LEGGINGS, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.CHAINMAIL_BOOTS, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_PICKAXE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_SHOVEL, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_AXE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_HOE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_SWORD, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_HELMET, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_CHESTPLATE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_LEGGINGS, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_BOOTS, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.IRON_HORSE_ARMOR, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_PICKAXE, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_SHOVEL, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_AXE, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_HOE, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_SWORD, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_HELMET, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_CHESTPLATE, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_LEGGINGS, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_BOOTS, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
-      this.addSmelting(Items.GOLDEN_HORSE_ARMOR, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Blocks.COAL_ORE, Blocks.AIR, new ItemStack(Items.COAL), 0.1F);
+      this.addSmeltingRecipe(Blocks.REDSTONE_ORE, Blocks.AIR, new ItemStack(Items.REDSTONE), 0.7F);
+      this.addSmeltingRecipe(Blocks.LAPIS_ORE, Blocks.AIR, new ItemStack(Items.DYE, 1, EnumDyeColor.BLUE.getDyeDamage()), 0.2F);
+      this.addSmeltingRecipe(Blocks.QUARTZ_ORE, Blocks.AIR, new ItemStack(Items.QUARTZ), 0.2F);
+      this.addSmeltingRecipe(Items.CHAINMAIL_HELMET, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.CHAINMAIL_CHESTPLATE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.CHAINMAIL_LEGGINGS, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.CHAINMAIL_BOOTS, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_PICKAXE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_SHOVEL, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_AXE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_HOE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_SWORD, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_HELMET, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_CHESTPLATE, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_LEGGINGS, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_BOOTS, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.IRON_HORSE_ARMOR, Items.AIR, new ItemStack(Items.IRON_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_PICKAXE, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_SHOVEL, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_AXE, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_HOE, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_SWORD, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_HELMET, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_CHESTPLATE, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_LEGGINGS, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_BOOTS, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+      this.addSmeltingRecipe(Items.GOLDEN_HORSE_ARMOR, Items.AIR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.WHITE.getMetadata()), new ItemStack(Blocks.AIR, 1), new ItemStack(Blocks.WHITE_GLAZED_TERRACOTTA), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.ORANGE.getMetadata()), new ItemStack(Blocks.AIR, 1), new ItemStack(Blocks.ORANGE_GLAZED_TERRACOTTA), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.MAGENTA.getMetadata()), new ItemStack(Blocks.AIR, 1), new ItemStack(Blocks.MAGENTA_GLAZED_TERRACOTTA), 0.1F);
@@ -105,20 +106,23 @@ public class ModAlloyFurnaceRecipes {
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.GREEN.getMetadata()), new ItemStack(Blocks.AIR, 1), new ItemStack(Blocks.GREEN_GLAZED_TERRACOTTA), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.RED.getMetadata()), new ItemStack(Blocks.AIR, 1), new ItemStack(Blocks.RED_GLAZED_TERRACOTTA), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.BLACK.getMetadata()), new ItemStack(Blocks.AIR, 1), new ItemStack(Blocks.BLACK_GLAZED_TERRACOTTA), 0.1F);
+      
+      this.addSmeltingRecipe(BlockHandler.ibMithrilOre, Items.AIR, new ItemStack(BlockHandler.iMithrilIngot), 1.3F);
+      this.addSmeltingRecipe(Items.IRON_INGOT, Items.QUARTZ, new ItemStack(BlockHandler.iSteelIngot), 0.5F);
   }
 
   /**
    * Adds a smelting recipe, where the input item is an instance of Block.
    */
-  public void addSmeltingRecipeForBlock(Block input1, Block input2, ItemStack stack, float experience)
+  public void addSmeltingRecipe(Block input1, Block input2, ItemStack stack, float experience)
   {
-      this.addSmelting(Item.getItemFromBlock(input1), Item.getItemFromBlock(input2), stack, experience);
+      this.addSmeltingRecipe(Item.getItemFromBlock(input1), Item.getItemFromBlock(input2), stack, experience);
   }
 
   /**
    * Adds a smelting recipe using an Item as the input item.
    */
-  public void addSmelting(Item input1, Item input2, ItemStack stack, float experience)
+  public void addSmeltingRecipe(Item input1, Item input2, ItemStack stack, float experience)
   {
       this.addSmeltingRecipe(new ItemStack(input1, 1, 32767), new ItemStack(input2, 1, 32767), stack, experience);
   }

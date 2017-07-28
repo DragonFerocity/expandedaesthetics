@@ -1,7 +1,7 @@
 package com.DragonFerocity.expanded.inventory;
 
-import com.DragonFerocity.expanded.ModAlloyFurnaceRecipes;
-import com.DragonFerocity.expanded.entities.ModTileEntityAlloyFurnace;
+import com.DragonFerocity.expanded.ModCampfireRecipes;
+import com.DragonFerocity.expanded.entities.ModTileEntityCampfire;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -15,20 +15,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ModContainerAlloyFurnace extends Container {
-  private final IInventory tileAlloyFurnace;
+public class ModContainerCampfire extends Container {
+  private final IInventory tileCampfire;
   private int cookTime;
   private int totalCookTime;
-  private int furnaceBurnTime;
+  private int campfireBurnTime;
   private int currentItemBurnTime;
 
-  public ModContainerAlloyFurnace(InventoryPlayer playerInventory, IInventory alloyFurnaceInventory)
+  public ModContainerCampfire(InventoryPlayer playerInventory, IInventory campfireInventory)
   {
-    this.tileAlloyFurnace = alloyFurnaceInventory;
-    this.addSlotToContainer(new Slot(alloyFurnaceInventory, 0, 38, 17));
-    this.addSlotToContainer(new SlotFurnaceFuel(alloyFurnaceInventory, 1, 56, 53));
-    this.addSlotToContainer(new SlotFurnaceOutput(playerInventory.player, alloyFurnaceInventory, 2, 116, 35));
-    this.addSlotToContainer(new Slot(alloyFurnaceInventory, 3, 74, 17));
+    this.tileCampfire = campfireInventory;
+    this.addSlotToContainer(new Slot(campfireInventory, 0, 56, 17));
+    this.addSlotToContainer(new SlotFurnaceFuel(campfireInventory, 1, 56, 53));
+    this.addSlotToContainer(new SlotFurnaceOutput(playerInventory.player, campfireInventory, 2, 116, 35));
 
     for (int i = 0; i < 3; ++i)
     {
@@ -47,7 +46,7 @@ public class ModContainerAlloyFurnace extends Container {
 public void addListener(IContainerListener listener)
 {
     super.addListener(listener);
-    listener.sendAllWindowProperties(this, this.tileAlloyFurnace);
+    listener.sendAllWindowProperties(this, this.tileCampfire);
 }
 
 /**
@@ -61,37 +60,37 @@ public void detectAndSendChanges()
     {
         IContainerListener icontainerlistener = this.listeners.get(i);
 
-        if (this.cookTime != this.tileAlloyFurnace.getField(2))
+        if (this.cookTime != this.tileCampfire.getField(2))
         {
-            icontainerlistener.sendWindowProperty(this, 2, this.tileAlloyFurnace.getField(2));
+            icontainerlistener.sendWindowProperty(this, 2, this.tileCampfire.getField(2));
         }
 
-        if (this.furnaceBurnTime != this.tileAlloyFurnace.getField(0))
+        if (this.campfireBurnTime != this.tileCampfire.getField(0))
         {
-            icontainerlistener.sendWindowProperty(this, 0, this.tileAlloyFurnace.getField(0));
+            icontainerlistener.sendWindowProperty(this, 0, this.tileCampfire.getField(0));
         }
 
-        if (this.currentItemBurnTime != this.tileAlloyFurnace.getField(1))
+        if (this.currentItemBurnTime != this.tileCampfire.getField(1))
         {
-            icontainerlistener.sendWindowProperty(this, 1, this.tileAlloyFurnace.getField(1));
+            icontainerlistener.sendWindowProperty(this, 1, this.tileCampfire.getField(1));
         }
 
-        if (this.totalCookTime != this.tileAlloyFurnace.getField(3))
+        if (this.totalCookTime != this.tileCampfire.getField(3))
         {
-            icontainerlistener.sendWindowProperty(this, 3, this.tileAlloyFurnace.getField(3));
+            icontainerlistener.sendWindowProperty(this, 3, this.tileCampfire.getField(3));
         }
     }
 
-    this.cookTime = this.tileAlloyFurnace.getField(2);
-    this.furnaceBurnTime = this.tileAlloyFurnace.getField(0);
-    this.currentItemBurnTime = this.tileAlloyFurnace.getField(1);
-    this.totalCookTime = this.tileAlloyFurnace.getField(3);
+    this.cookTime = this.tileCampfire.getField(2);
+    this.campfireBurnTime = this.tileCampfire.getField(0);
+    this.currentItemBurnTime = this.tileCampfire.getField(1);
+    this.totalCookTime = this.tileCampfire.getField(3);
 }
 
 @SideOnly(Side.CLIENT)
 public void updateProgressBar(int id, int data)
 {
-    this.tileAlloyFurnace.setField(id, data);
+    this.tileCampfire.setField(id, data);
 }
 
 /**
@@ -99,7 +98,7 @@ public void updateProgressBar(int id, int data)
  */
 public boolean canInteractWith(EntityPlayer playerIn)
 {
-    return this.tileAlloyFurnace.isUsableByPlayer(playerIn);
+    return this.tileCampfire.isUsableByPlayer(playerIn);
 }
 
 /**
@@ -110,10 +109,6 @@ public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
 {
     ItemStack itemstack = ItemStack.EMPTY;
     Slot slot = this.inventorySlots.get(index);
-    
-    Slot inputSlot = this.inventorySlots.get(0);
-    if (inputSlot.getStack().isEmpty())
-      inputSlot = this.inventorySlots.get(3);
 
     if (slot != null && slot.getHasStack())
     {
@@ -122,42 +117,42 @@ public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
 
         if (index == 2)
         {
-            if (!this.mergeItemStack(itemstack1, 4, 40, true))
+            if (!this.mergeItemStack(itemstack1, 3, 39, true))
             {
                 return ItemStack.EMPTY;
             }
 
             slot.onSlotChange(itemstack1, itemstack);
         }
-        else if (index != 1 && index != 0 && index != 3)
+        else if (index != 1 && index != 0)
         {
-            if (ModTileEntityAlloyFurnace.isItemFuel(itemstack1))
+            if (!ModCampfireRecipes.instance().getSmeltingResult(itemstack1).isEmpty())
+            {
+                if (!this.mergeItemStack(itemstack1, 0, 1, false))
+                {
+                    return ItemStack.EMPTY;
+                }
+            }
+            else if (ModTileEntityCampfire.isItemFuel(itemstack1))
             {
                 if (!this.mergeItemStack(itemstack1, 1, 2, false))
                 {
                     return ItemStack.EMPTY;
                 }
             }
-            else if (!ModAlloyFurnaceRecipes.instance().getSmeltingResult(itemstack1, inputSlot.getStack()).isEmpty())
+            else if (index >= 3 && index < 30)
             {
-                if (!this.mergeItemStack(itemstack1, 0, 1, false) && !this.mergeItemStack(itemstack1, 3, 4, false))
+                if (!this.mergeItemStack(itemstack1, 30, 39, false))
                 {
                     return ItemStack.EMPTY;
                 }
             }
-            else if (index >= 4 && index < 31)
-            {
-                if (!this.mergeItemStack(itemstack1, 31, 40, false))
-                {
-                    return ItemStack.EMPTY;
-                }
-            }
-            else if (index >= 31 && index < 40 && !this.mergeItemStack(itemstack1, 4, 31, false))
+            else if (index >= 30 && index < 39 && !this.mergeItemStack(itemstack1, 3, 30, false))
             {
                 return ItemStack.EMPTY;
             }
         }
-        else if (!this.mergeItemStack(itemstack1, 4, 31, false))
+        else if (!this.mergeItemStack(itemstack1, 3, 39, false))
         {
             return ItemStack.EMPTY;
         }

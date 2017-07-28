@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "expanded:dark_oak/dark_oak_crafting_table" }
+    }
+}

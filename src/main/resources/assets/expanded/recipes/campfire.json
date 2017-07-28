@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "PP"
+  ],
+  "key": {
+    "S": [
+      {
+        "item": "minecraft:stick"
+      }
+    ],
+    "P": [
+      {
+        "item": "minecraft:stick"
+      }
+    ]
+  },
+  "result": {
+    "item": "expanded:acacia_wood_crafting_table"
+  }
+}

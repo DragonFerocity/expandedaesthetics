@@ -1,10 +1,16 @@
 package com.DragonFerocity.expanded.handlers;
 
+import com.DragonFerocity.expanded.blocks.ModCraftingTable;
 import com.DragonFerocity.expanded.entities.ModTileEntityAlloyFurnace;
+import com.DragonFerocity.expanded.entities.ModTileEntityCampfire;
 import com.DragonFerocity.expanded.gui.ModGuiAlloyFurnace;
+import com.DragonFerocity.expanded.gui.ModGuiCampfire;
 import com.DragonFerocity.expanded.inventory.ModContainerAlloyFurnace;
+import com.DragonFerocity.expanded.inventory.ModContainerCampfire;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockWorkbench;
+import net.minecraft.client.gui.inventory.GuiCrafting;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.tileentity.TileEntity;
@@ -25,10 +31,18 @@ public class GuiHandler implements IGuiHandler
 
         if (tileEntity != null)
         {
-            if (ID == BlockHandler.GUI_ENUM.ALLOY_FURNACE.ordinal())
-            {
-                return new ModContainerAlloyFurnace(player.inventory, (ModTileEntityAlloyFurnace)tileEntity);
-            }
+          if (ID == BlockHandler.GUI_ENUM.ALLOY_FURNACE.ordinal())
+          {
+              return new ModContainerAlloyFurnace(player.inventory, (ModTileEntityAlloyFurnace)tileEntity);
+          }
+          else if (ID == BlockHandler.GUI_ENUM.CRAFTING_TABLE.ordinal())
+          {
+              return new ModCraftingTable.InterfaceCraftingTable(world, new BlockPos(x, y, z));
+          }
+          else if (ID == BlockHandler.GUI_ENUM.CAMPFIRE.ordinal())
+          {
+              return new ModContainerCampfire(player.inventory, (ModTileEntityCampfire)tileEntity);
+          }
         }
 
         return null;
@@ -41,10 +55,18 @@ public class GuiHandler implements IGuiHandler
 
         if (tileEntity != null)
         {
-            if (ID == BlockHandler.GUI_ENUM.ALLOY_FURNACE.ordinal())
-            {
-                return new ModGuiAlloyFurnace(player.inventory, (ModTileEntityAlloyFurnace)tileEntity);
-            }
+          if (ID == BlockHandler.GUI_ENUM.ALLOY_FURNACE.ordinal())
+          {
+              return new ModGuiAlloyFurnace(player.inventory, (ModTileEntityAlloyFurnace)tileEntity);
+          }
+          else if (ID == BlockHandler.GUI_ENUM.CRAFTING_TABLE.ordinal())
+          {
+              return new GuiCrafting(player.inventory, world, new BlockPos(x, y, z));
+          }
+          else if (ID == BlockHandler.GUI_ENUM.CAMPFIRE.ordinal())
+          {
+              return new ModGuiCampfire(player.inventory, (ModTileEntityCampfire)tileEntity);
+          }
         }
         return null;
     }

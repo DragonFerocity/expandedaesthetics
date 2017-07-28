@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:planks",
+        "data": 3
+      }
+    ]
+  },
+  "result": {
+    "item": "expanded:jungle_wood_crafting_table"
+  }
+}

@@ -4,20 +4,25 @@ package com.DragonFerocity.expanded.handlers;
 //import com.DragonFerocity.expanded.blocks.ModChest;
 import com.DragonFerocity.expanded.blocks.*;
 import com.DragonFerocity.expanded.entities.ModTileEntityAlloyFurnace;
+import com.DragonFerocity.expanded.entities.ModTileEntityCampfire;
 import com.DragonFerocity.expanded.entities.ModTileEntityChest;
 import com.DragonFerocity.expanded.items.*;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.registries.IForgeRegistryModifiable;
 
 import java.util.ArrayList;
 
@@ -34,6 +39,8 @@ public class BlockHandler {
   public static ItemBlock ibAcaciaWoodLamp;
   public static ModStairs acaciaWoodStairsAlt;
   public static ItemBlock ibAcaciaWoodStairsAlt;
+  public static ModCraftingTable acaciaWoodCraftingTable;
+  public static ItemBlock ibAcaciaWoodCraftingTable;
   
   //Andesite Items
   public static ModBlockDoor andesitePolishedDoor;
@@ -52,6 +59,8 @@ public class BlockHandler {
   public static ItemBlock ibBirchLantern;
   public static ModStairs birchStairsAlt;
   public static ItemBlock ibBirchStairsAlt;
+  public static ModCraftingTable birchCraftingTable;
+  public static ItemBlock ibBirchCraftingTable;
   
   //Brick Items
   public static ModBlockDoor brickDoor;
@@ -118,6 +127,8 @@ public class BlockHandler {
   public static ModItemBed iDarkOakBed;
   public static ModStairs darkOakStairsAlt;
   public static ItemBlock ibDarkOakStairsAlt;
+  public static ModCraftingTable darkOakCraftingTable;
+  public static ItemBlock ibDarkOakCraftingTable;
   
   //Diorite Items
   public static ModBlockDoor dioritePolishedDoor;
@@ -289,6 +300,8 @@ public class BlockHandler {
   //Jungle Wood Item
   public static ModStairs jungleWoodStairsAlt;
   public static ItemBlock ibJungleWoodStairsAlt;
+  public static ModCraftingTable jungleWoodCraftingTable;
+  public static ItemBlock ibJungleWoodCraftingTable;
   
   //Hardened Clay Items
   //Regualr Clay
@@ -312,6 +325,8 @@ public class BlockHandler {
   public static ItemBlock ibOakStairsAlt;
   public static ModBlockDoor oakStableDoor;
   public static Item iOakStableDoor;
+  public static ModCraftingTable oakCraftingTable;
+  public static ItemBlock ibOakCraftingTable;
   
   //Obsidian Items
   public static ModBlock polishedObsidianBlock;
@@ -326,6 +341,8 @@ public class BlockHandler {
   //Spruce Wood Items
   public static ModStairs spruceWoodStairsAlt;
   public static ItemBlock ibSpruceWoodStairsAlt;
+  public static ModCraftingTable spruceWoodCraftingTable;
+  public static ItemBlock ibSpruceWoodCraftingTable;
   
   //Ores
   //Progression: Copper < Tin < Gold < Platinum < Cold Iron < Silver < Iron < Titanium < Steel < Mithril < Celestial Bronze/Imperial Gold < Diamond < Obsidian
@@ -333,6 +350,7 @@ public class BlockHandler {
   public static ModOre copperOre;
   public static ItemBlock ibCopperOre;
   public static Item iCopperIngot;
+  public static Item iCopperNuggets;
   public static ModOre tinOre;
   public static ItemBlock ibTinOre;
   public static Item iTinIngot;
@@ -427,6 +445,14 @@ public class BlockHandler {
   //Alloy Furnace
   public static ModAlloyFurnace alloyFurnace;
   public static ItemBlock ibAlloyFurnace;
+  public static ModAlloyFurnace litAlloyFurnace;
+  public static ItemBlock ibLitAlloyFurnace;
+  
+  //Campfire
+  public static ModCampfire campfire;
+  public static ItemBlock ibCampfire;
+  public static ModCampfire litCampfire;
+  public static ItemBlock ibLitCampfire;
   
   //Other Vars
   public static ArrayList<ItemBlock> itemBlockList = new ArrayList<>();
@@ -450,11 +476,28 @@ public class BlockHandler {
     //Alloy Furnace
     alloyFurnace = createBlock(new ModAlloyFurnace(false, "alloy_furnace", CreativeTabs.BUILDING_BLOCKS, 3F, 40F, "pickaxe", 1), event);
     ibAlloyFurnace = createItemBlock(new ItemBlock(alloyFurnace), alloyFurnace);
+    
+    litAlloyFurnace = createBlock(new ModAlloyFurnace(true, "lit_alloy_furnace", CreativeTabs.BUILDING_BLOCKS, 3F, 40F, "pickaxe", 1), event);
+    ibLitAlloyFurnace = createItemBlock(new ItemBlock(litAlloyFurnace), litAlloyFurnace);
+    
     GameRegistry.registerTileEntity(ModTileEntityAlloyFurnace.class, "alloy_furnace_tile_entity");
+    
+    //Campfire
+    //Oak
+    campfire = createBlock(new ModCampfire(false, "campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0), event);
+    ibCampfire = createItemBlock(new ItemBlock(campfire), campfire);
+
+    litCampfire = createBlock(new ModCampfire(true, "lit_campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0), event);
+    ibLitCampfire = createItemBlock(new ItemBlock(litCampfire), litCampfire);
+    
+    GameRegistry.registerTileEntity(ModTileEntityCampfire.class, "campfire_tile_entity");
     
     //Acacia Wood
     acaciaWoodStairsAlt = createBlock(new ModStairs(Blocks.PLANKS, "acacia_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"), event);
     ibAcaciaWoodStairsAlt = createItemBlock(new ItemBlock(acaciaWoodStairsAlt), acaciaWoodStairsAlt);
+    
+    acaciaWoodCraftingTable = createBlock(new ModCraftingTable("acacia_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    ibAcaciaWoodCraftingTable = createItemBlock(new ItemBlock(acaciaWoodCraftingTable), acaciaWoodCraftingTable);
     
     //Andesite
     andesitePolishedDoor = createBlock(new ModBlockDoor(Material.ROCK, "andesite_polished_door", 2.5F, 35F, 1, "pickaxe"), event);
@@ -476,6 +519,9 @@ public class BlockHandler {
     
     birchLantern = createBlock(new ModLantern(Material.WOOD, "birch_lantern", CreativeTabs.DECORATIONS, 1.0F, 3.5F, 1, "axe", 13/15F, 5, 20, 0.75D), event);
     ibBirchLantern = createItemBlock(new ItemBlock(birchLantern), birchLantern);
+    
+    birchCraftingTable = createBlock(new ModCraftingTable("birch_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    ibBirchCraftingTable = createItemBlock(new ItemBlock(birchCraftingTable), birchCraftingTable);
     
     //Brick
     brickDoor = createBlock(new ModBlockDoor(Material.ROCK, "brick_door", 2.5F, 35F, 1, "pickaxe"), event);
@@ -519,6 +565,9 @@ public class BlockHandler {
     
     darkOakStairsAlt = createBlock(new ModStairs(Blocks.PLANKS, "dark_oak_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.7F, 3F, 0, "axe"), event);
     ibDarkOakStairsAlt = createItemBlock(new ItemBlock(darkOakStairsAlt), darkOakStairsAlt);
+    
+    darkOakCraftingTable = createBlock(new ModCraftingTable("dark_oak_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    ibDarkOakCraftingTable = createItemBlock(new ItemBlock(darkOakCraftingTable), darkOakCraftingTable);
     
     //Diorite
     dioritePolishedDoor = createBlock(new ModBlockDoor(Material.ROCK, "diorite_polished_door", 2.5F, 35F, 1, "pickaxe"), event);
@@ -755,6 +804,9 @@ public class BlockHandler {
     oakStairsAlt = createBlock(new ModStairs(Blocks.PLANKS, "oak_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.4F, 2F, 0, "axe"), event);
     ibOakStairsAlt = createItemBlock(new ItemBlock(oakStairsAlt), oakStairsAlt);
     
+    oakCraftingTable = createBlock(new ModCraftingTable("oak_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    ibOakCraftingTable = createItemBlock(new ItemBlock(oakCraftingTable), oakCraftingTable);
+    
     //Obsidian
     polishedObsidianBlock = createBlock(new ModBlock(Material.ROCK, "polished_obsidian", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"), event);
     ibPolishedObsidianBlock = createItemBlock(new ItemBlock(polishedObsidianBlock), polishedObsidianBlock);
@@ -768,15 +820,17 @@ public class BlockHandler {
     ibPolishedObsidianStairsAlt = createItemBlock(new ItemBlock(polishedObsidianStairsAlt), polishedObsidianStairsAlt);
     
     //Spruce Wood
-
     spruceWoodStairsAlt = createBlock(new ModStairs(Blocks.PLANKS, "spruce_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"), event);
     ibSpruceWoodStairsAlt = createItemBlock(new ItemBlock(spruceWoodStairsAlt), spruceWoodStairsAlt);
+    
+    spruceWoodCraftingTable = createBlock(new ModCraftingTable("spruce_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    ibSpruceWoodCraftingTable = createItemBlock(new ItemBlock(spruceWoodCraftingTable), spruceWoodCraftingTable);
     
     //Advanced Workbench
     //advancedWorkbench = new ModAdvancedWorkbench(Material.WOOD);
     
     //Ores
-    copperOre = createBlock(new ModOre("copper_ore", 2F, 12F, 1), event);
+    copperOre = createBlock(new ModOre("copper_ore", 2F, 12F, 0), event);
     ibCopperOre = createItemBlock(new ItemBlock(copperOre), copperOre);
     
     tinOre = createBlock(new ModOre("tin_ore", 2.1F, 13F, 1), event);
@@ -920,6 +974,18 @@ public class BlockHandler {
   }
   
   private static ModAlloyFurnace createBlock(ModAlloyFurnace block, RegistryEvent.Register<Block> event) {
+    event.getRegistry().register(block);
+    
+    return block;
+  }
+  
+  private static ModCraftingTable createBlock(ModCraftingTable block, RegistryEvent.Register<Block> event) {
+    event.getRegistry().register(block);
+    
+    return block;
+  }
+  
+  private static ModCampfire createBlock(ModCampfire block, RegistryEvent.Register<Block> event) {
     event.getRegistry().register(block);
     
     return block;
@@ -1189,10 +1255,19 @@ public class BlockHandler {
   public static void registerTileEntities() {
     GameRegistry.registerTileEntity(ModTileEntityChest.class, "mod_chests");
   }
-  
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+  public static void removeRegisteredItems(RegistryEvent.Register<IRecipe> event) {
+    ResourceLocation craftingTable = new ResourceLocation("minecraft:crafting_table");
+    
+    IForgeRegistryModifiable<IRecipe> modRegistry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+    modRegistry.remove(craftingTable);
+  }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
   public enum GUI_ENUM 
   {
-      ALLOY_FURNACE;
+    ALLOY_FURNACE,
+    CRAFTING_TABLE,
+    CAMPFIRE;
   }
 
 }

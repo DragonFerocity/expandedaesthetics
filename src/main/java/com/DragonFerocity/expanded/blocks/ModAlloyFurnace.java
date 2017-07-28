@@ -109,9 +109,9 @@ public class ModAlloyFurnace extends BlockContainer {
       if (this.isBurning)
       {
           EnumFacing enumfacing = (EnumFacing)stateIn.getValue(FACING);
-          double d0 = (double)pos.getX() + 0.5D;
-          double d1 = (double)pos.getY() + rand.nextDouble() * 6.0D / 16.0D;
-          double d2 = (double)pos.getZ() + 0.5D;
+          double xx = (double)pos.getX() + 0.5D;
+          double yy = (double)pos.getY() + rand.nextDouble() * 6.0D / 16.0D;
+          double zz = (double)pos.getZ() + 0.5D;
           double d3 = 0.52D;
           double d4 = rand.nextDouble() * 0.6D - 0.3D;
 
@@ -123,20 +123,20 @@ public class ModAlloyFurnace extends BlockContainer {
           switch (enumfacing)
           {
               case WEST:
-                  worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 - 0.52D, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
-                  worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 - 0.52D, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
+                  worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xx - 0.52D, yy, zz + d4, 0.0D, 0.0D, 0.0D);
+                  worldIn.spawnParticle(EnumParticleTypes.FLAME, xx - 0.52D, yy, zz + d4, 0.0D, 0.0D, 0.0D);
                   break;
               case EAST:
-                  worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + 0.52D, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
-                  worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + 0.52D, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
+                  worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xx + 0.52D, yy, zz + d4, 0.0D, 0.0D, 0.0D);
+                  worldIn.spawnParticle(EnumParticleTypes.FLAME, xx + 0.52D, yy, zz + d4, 0.0D, 0.0D, 0.0D);
                   break;
               case NORTH:
-                  worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 - 0.52D, 0.0D, 0.0D, 0.0D);
-                  worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + d4, d1, d2 - 0.52D, 0.0D, 0.0D, 0.0D);
+                  worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xx + d4, yy, zz - 0.52D, 0.0D, 0.0D, 0.0D);
+                  worldIn.spawnParticle(EnumParticleTypes.FLAME, xx + d4, yy, zz - 0.52D, 0.0D, 0.0D, 0.0D);
                   break;
               case SOUTH:
-                  worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 + 0.52D, 0.0D, 0.0D, 0.0D);
-                  worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + d4, d1, d2 + 0.52D, 0.0D, 0.0D, 0.0D);
+                  worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xx + d4, yy, zz + 0.52D, 0.0D, 0.0D, 0.0D);
+                  worldIn.spawnParticle(EnumParticleTypes.FLAME, xx + d4, yy, zz + 0.52D, 0.0D, 0.0D, 0.0D);
           }
       }
   }
@@ -156,7 +156,6 @@ public class ModAlloyFurnace extends BlockContainer {
 
           if (tileentity instanceof ModTileEntityAlloyFurnace)
           {
-              //playerIn.displayGUIChest((ModTileEntityAlloyFurnace)tileentity);
               playerIn.openGui((Object)ExpandedAesthetics.instance, BlockHandler.GUI_ENUM.ALLOY_FURNACE.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
               playerIn.addStat(StatList.FURNACE_INTERACTION);
           }
@@ -173,13 +172,13 @@ public class ModAlloyFurnace extends BlockContainer {
 
       if (active)
       {
-          worldIn.setBlockState(pos, Blocks.LIT_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-          worldIn.setBlockState(pos, Blocks.LIT_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+          worldIn.setBlockState(pos, BlockHandler.litAlloyFurnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+          worldIn.setBlockState(pos, BlockHandler.litAlloyFurnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
       }
       else
       {
-          worldIn.setBlockState(pos, Blocks.FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-          worldIn.setBlockState(pos, Blocks.FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+          worldIn.setBlockState(pos, BlockHandler.alloyFurnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+          worldIn.setBlockState(pos, BlockHandler.alloyFurnace.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
       }
 
       keepInventory = false;

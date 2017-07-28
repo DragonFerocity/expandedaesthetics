@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "expanded:campfire" },
+        "facing=south": { "model": "expanded:campfire", "y": 180 },
+        "facing=west":  { "model": "expanded:campfire", "y": 270 },
+        "facing=east":  { "model": "expanded:campfire", "y": 90 }
+    }
+}
