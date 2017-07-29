@@ -30,4 +30,9 @@ public class RegistryHandler {
   {
       BlockHandler.removeRegisteredItems(event);
   }
+  
+  @SubscribeEvent
+  public static void registerModels(ModelRegistryEvent event) {
+    BlockHandler.registerModels();
+  }
 }

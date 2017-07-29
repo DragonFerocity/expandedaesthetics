@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "cactus",
+  "group": "building_materials",
   "pattern": [
     "  #",
     " ##",
@@ -8,7 +8,8 @@
   ],
   "key": {
     "#": {
-      "item": "expanded:polished_obsidian_brick"
+      "item": "expanded:polished_obsidian_brick",
+      "data": 0
     }
   },
   "result": {

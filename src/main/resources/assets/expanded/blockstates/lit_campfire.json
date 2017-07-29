@@ -1,8 +1,77 @@
 {
-    "variants": {
-        "facing=north": { "model": "expanded:campfire" },
-        "facing=south": { "model": "expanded:campfire", "y": 180 },
-        "facing=west":  { "model": "expanded:campfire", "y": 270 },
-        "facing=east":  { "model": "expanded:campfire", "y": 90 }
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "ring": "blocks/planks_oak",
+      "logs": "blocks/log_oak",
+      "logs_end": "blocks/log_oak_top",
+      "particle": "blocks/log_oak"
+    },
+    "model": "expanded:lit_campfire",
+    "uvlock": true
+  },
+  "variants": {
+    "normal": {
+      "model": "expanded:lit_campfire"
+    },
+    "inventory": [{
+      "y": 0
+    }],
+    "type": {
+      "oak": {
+        "model": "expanded:lit_campfire",
+        "textures": {
+          "ring": "blocks/planks_oak",
+          "logs": "blocks/log_oak",
+          "logs_end": "blocks/log_oak_top",
+          "particle": "blocks/log_oak"
+        }
+      },
+      "acacia": {
+        "model": "expanded:lit_campfire",
+        "textures": {
+          "ring": "blocks/planks_acacia",
+          "logs": "blocks/log_acacia",
+          "logs_end": "blocks/log_acacia_top",
+          "particle": "blocks/log_acacia"
+        }
+      },
+      "birch": {
+        "model": "expanded:lit_campfire",
+        "textures": {
+          "ring": "blocks/planks_birch",
+          "logs": "blocks/log_birch",
+          "logs_end": "blocks/log_birch_top",
+          "particle": "blocks/log_birch"
+        }
+      },
+      "dark_oak": {
+        "model": "expanded:lit_campfire",
+        "textures": {
+          "ring": "blocks/planks_big_oak",
+          "logs": "blocks/log_big_oak",
+          "logs_end": "blocks/log_big_oak_top",
+          "particle": "blocks/log_big_oak"
+        }
+      },
+      "jungle": {
+        "model": "expanded:lit_campfire",
+        "textures": {
+          "ring": "blocks/planks_jungle",
+          "logs": "blocks/log_jungle",
+          "logs_end": "blocks/log_jungle_top",
+          "particle": "blocks/log_jungle"
+        }
+      },
+      "spruce": {
+        "model": "expanded:lit_campfire",
+        "textures": {
+          "ring": "blocks/planks_spruce",
+          "logs": "blocks/log_spruce",
+          "logs_end": "blocks/log_spruce_top",
+          "particle": "blocks/log_spruce"
+        }
+      }
     }
+  }
 }

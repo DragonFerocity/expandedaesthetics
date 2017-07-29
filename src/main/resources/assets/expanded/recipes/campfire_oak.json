@@ -12,11 +12,13 @@
     ],
     "P": [
       {
-        "item": "minecraft:stick"
+        "item": "minecraft:log",
+        "data": 0
       }
     ]
   },
   "result": {
-    "item": "expanded:acacia_wood_crafting_table"
+    "item": "expanded:campfire",
+    "data": 0
   }
 }

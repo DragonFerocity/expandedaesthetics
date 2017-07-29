@@ -12,9 +12,8 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 public class ClientProxy extends ServerProxy {
   public void init() {
-    BlockHandler.registerItems();
     //registerTileEntitySpecialRenderer(ModTileEntityChest.class);
-    registerTileEntitySpecialRenderer(ModTileEntityChest.class);
+    //registerTileEntitySpecialRenderer(ModTileEntityChest.class);
   }
   
   public static <T extends ModTileEntityChest> void registerTileEntitySpecialRenderer(Class<T> type)

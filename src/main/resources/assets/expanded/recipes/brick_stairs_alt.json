@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "stairs",
+  "group": "building_materials",
   "pattern": [
     "  #",
     " # ",
