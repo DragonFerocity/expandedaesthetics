@@ -21,6 +21,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
@@ -38,7 +39,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModCampfire extends Block {
   public static final PropertyEnum<ModCampfire.EnumType> TYPE = PropertyEnum.<ModCampfire.EnumType>create("type", ModCampfire.EnumType.class);
   private final boolean isBurning;
-  private static boolean keepInventory;
+  protected static boolean keepInventory;
 
   public ModCampfire(boolean isBurning, String name, CreativeTabs tab, float hardness, float resistance, String tool, int harvest)
   {
@@ -219,7 +220,7 @@ public class ModCampfire extends Block {
 
   public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
   {
-      return new ItemStack(BlockHandler.alloyFurnace);
+      return new ItemStack(Item.getItemFromBlock(this));
   }
 
   /**
@@ -236,7 +237,7 @@ public class ModCampfire extends Block {
    */
   public IBlockState getStateFromMeta(int meta)
   {
-      return this.getDefaultState().withProperty(TYPE, EnumType.OAK);
+      return this.getDefaultState().withProperty(TYPE, EnumType.META_LOOKUP[meta]);
   }
 
   /**

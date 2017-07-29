@@ -1,12 +1,6 @@
 {
     "parent": "block/cube",
     "ambientocclusion": false,
-    "textures": {
-        "ring": "blocks/planks_oak",
-        "logs": "blocks/log_oak",
-        "logs_end": "blocks/log_oak_top",
-        "particle": "blocks/planks_oak"
-    },
     "elements": [
         {
             "name": "Cube",

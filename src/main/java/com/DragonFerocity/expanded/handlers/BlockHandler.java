@@ -455,7 +455,17 @@ public class BlockHandler {
   public static ItemBlock ibCampfire;
   public static ModCampfire litCampfire;
   public static ItemBlock ibLitCampfire;
-
+  
+  /*public static ModCampfire oakCampfire;
+  public static ItemBlock ibOakCampfire;
+  public static ModCampfire litOakCampfire;
+  public static ItemBlock ibOakLitCampfire;
+  
+  public static ModCampfire acaciaCampfire;
+  public static ItemBlock ibAcaciaCampfire;
+  public static ModCampfire litAcaciaCampfire;
+  public static ItemBlock ibAcaciaLitCampfire;*/
+  
   // Other Vars
   public static ArrayList<ItemBlock> itemBlockList = new ArrayList<>();
 
@@ -489,10 +499,16 @@ public class BlockHandler {
     // Campfire
     // Oak
     campfire = createBlock(new ModCampfire(false, "campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0), event);
-    ibCampfire = createItemBlockWithoutAddingToList(new ItemBlock(campfire), campfire);
-
     litCampfire = createBlock(new ModCampfire(true, "lit_campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0), event);
+    ibCampfire = createItemBlockWithoutAddingToList(new ItemBlock(campfire), campfire);
     ibLitCampfire = createItemBlockWithoutAddingToList(new ItemBlock(litCampfire), litCampfire);
+    
+    GameRegistry.registerTileEntity(ModTileEntityCampfire.class, "campfire_tile_entity");
+    
+    /*acaciaCampfire = createBlock(new ModCampfire(false, "acacia_campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0, 4), event);
+    litAcaciaCampfire = createBlock(new ModCampfire(true, "lit_acacia_campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0, 4), event);
+    ibAcaciaCampfire = createItemBlockWithoutAddingToList(new ItemBlock(acaciaCampfire), acaciaCampfire);
+    ibAcaciaLitCampfire = createItemBlockWithoutAddingToList(new ItemBlock(litAcaciaCampfire), litAcaciaCampfire);*/
 
     // Acacia Wood
     acaciaWoodStairsAlt = createBlock(
@@ -1356,16 +1372,16 @@ public class BlockHandler {
     //Campfire
     register(ibCampfire, 0, "oak");
     register(ibLitCampfire, 0, "oak");
-    register(ibCampfire, 1, "spruce");
+    register(ibCampfire, 4, "acacia");
+    register(ibLitCampfire, 4, "acacia");
+    /*register(ibCampfire, 1, "spruce");
     register(ibLitCampfire, 1, "spruce");
     register(ibCampfire, 2, "birch");
     register(ibLitCampfire, 2, "birch");
     register(ibCampfire, 3, "jungle");
     register(ibLitCampfire, 3, "jungle");
-    register(ibCampfire, 4, "acacia");
-    register(ibLitCampfire, 4, "acacia");
     register(ibCampfire, 5, "dark_oak");
-    register(ibLitCampfire, 5, "dark_oak");
+    register(ibLitCampfire, 5, "dark_oak");*/
 
     // Ingots
     register(iCopperIngot);
@@ -1442,10 +1458,10 @@ public class BlockHandler {
   }
   /////////////////////////////////////////////////////////////////////////////////////////////////////
   public static void removeRegisteredItems(RegistryEvent.Register<IRecipe> event) {
-  ResourceLocation craftingTable = new ResourceLocation("minecraft:crafting_table");
-  
-  IForgeRegistryModifiable<IRecipe> modRegistry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
-  modRegistry.remove(craftingTable);
+    ResourceLocation craftingTable = new ResourceLocation("minecraft:crafting_table");
+    
+    IForgeRegistryModifiable<IRecipe> modRegistry = (IForgeRegistryModifiable<IRecipe>) event.getRegistry();
+    modRegistry.remove(craftingTable);
   }
   /////////////////////////////////////////////////////////////////////////////////////////////////////
   public enum GUI_ENUM {
