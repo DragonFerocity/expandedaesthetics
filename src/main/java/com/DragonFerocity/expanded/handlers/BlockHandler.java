@@ -1374,14 +1374,14 @@ public class BlockHandler {
     register(ibLitCampfire, 0, "oak");
     register(ibCampfire, 4, "acacia");
     register(ibLitCampfire, 4, "acacia");
-    /*register(ibCampfire, 1, "spruce");
+    register(ibCampfire, 1, "spruce");
     register(ibLitCampfire, 1, "spruce");
     register(ibCampfire, 2, "birch");
     register(ibLitCampfire, 2, "birch");
     register(ibCampfire, 3, "jungle");
     register(ibLitCampfire, 3, "jungle");
     register(ibCampfire, 5, "dark_oak");
-    register(ibLitCampfire, 5, "dark_oak");*/
+    register(ibLitCampfire, 5, "dark_oak");
 
     // Ingots
     register(iCopperIngot);
@@ -1450,7 +1450,7 @@ public class BlockHandler {
     register(item, meta, "normal");
   }
   private static void register(Item item, int meta, String metaName) {
-    ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName().toString(), metaName));
+    ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName().toString(), metaName));
   }
 
   public static void registerTileEntities() {

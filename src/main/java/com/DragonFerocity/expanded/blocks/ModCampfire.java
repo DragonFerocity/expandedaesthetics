@@ -8,8 +8,7 @@ import com.DragonFerocity.expanded.entities.ModTileEntityCampfire;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.material.MapColor;
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -29,7 +28,6 @@ import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -37,14 +35,14 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModCampfire extends Block {
-  public static final PropertyEnum<ModCampfire.EnumType> TYPE = PropertyEnum.<ModCampfire.EnumType>create("type", ModCampfire.EnumType.class);
+  public static final PropertyEnum<BlockPlanks.EnumType> TYPE = PropertyEnum.<BlockPlanks.EnumType>create("type", BlockPlanks.EnumType.class);
   private final boolean isBurning;
   protected static boolean keepInventory;
 
   public ModCampfire(boolean isBurning, String name, CreativeTabs tab, float hardness, float resistance, String tool, int harvest)
   {
-      super(Material.IRON);
-      this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumType.OAK));
+      super(Material.WOOD);
+      this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, BlockPlanks.EnumType.OAK));
       this.isBurning = isBurning;
       setUnlocalizedName(Ref.MODID + ":" + name);
       setRegistryName(Ref.MODID + ":" + name);
@@ -235,95 +233,26 @@ public class ModCampfire extends Block {
   /**
    * Convert the given metadata into a BlockState for this Block
    */
+  @Override
   public IBlockState getStateFromMeta(int meta)
   {
-      return this.getDefaultState().withProperty(TYPE, EnumType.META_LOOKUP[meta]);
+    IBlockState b = this.getDefaultState().withProperty(TYPE, BlockPlanks.EnumType.values()[meta]);
+    return b;
   }
 
   /**
    * Convert the BlockState into the correct metadata value
    */
+  @Override
   public int getMetaFromState(IBlockState state)
   {
-      return ((EnumType)state.getValue(TYPE)).getIndex();
+    int a = ((BlockPlanks.EnumType)state.getValue(TYPE)).getMetadata();
+    return a;
   }
-
+  
+  @Override
   protected BlockStateContainer createBlockState()
   {
       return new BlockStateContainer(this, new IProperty[] {TYPE});
-  }
-  
-  public static enum EnumType implements IStringSerializable
-  {
-    OAK(0, "oak", MapColor.WOOD),
-    SPRUCE(1, "spruce", MapColor.OBSIDIAN),
-    BIRCH(2, "birch", MapColor.SAND),
-    JUNGLE(3, "jungle", MapColor.DIRT),
-    ACACIA(4, "acacia", MapColor.ADOBE),
-    DARK_OAK(5, "dark_oak", "big_oak", MapColor.BROWN);
-  
-    private static final ModCampfire.EnumType[] META_LOOKUP = new ModCampfire.EnumType[values().length];
-    private final int meta;
-    private final String name;
-    private final String unlocalizedName;
-    /** The color that represents this entry on a map. */
-    private final MapColor mapColor;
-
-    private EnumType(int metaIn, String nameIn, MapColor mapColorIn)
-    {
-        this(metaIn, nameIn, nameIn, mapColorIn);
-    }
-
-    private EnumType(int metaIn, String nameIn, String unlocalizedNameIn, MapColor mapColorIn)
-    {
-        this.meta = metaIn;
-        this.name = nameIn;
-        this.unlocalizedName = unlocalizedNameIn;
-        this.mapColor = mapColorIn;
-    }
-
-    public int getIndex()
-    {
-        return this.meta;
-    }
-
-    /**
-     * The color which represents this entry on a map.
-     */
-    public MapColor getMapColor()
-    {
-        return this.mapColor;
-    }
-
-    public String toString()
-    {
-        return this.name;
-    }
-
-    public static ModCampfire.EnumType byMetadata(int meta)
-    {
-        if (meta < 0 || meta >= META_LOOKUP.length)
-        {
-            meta = 0;
-        }
-
-        return META_LOOKUP[meta];
-    }
-
-    public String getName()
-    {
-        return this.name;
-    }
-
-    public String getUnlocalizedName()
-    {
-        return this.unlocalizedName;
-    }
-    
-    static {
-      for (ModCampfire.EnumType modcampfire$enumtype : values()) {
-        META_LOOKUP[modcampfire$enumtype.getIndex()] = modcampfire$enumtype;
-      }
-    }
   }
 }

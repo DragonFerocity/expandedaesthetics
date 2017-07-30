@@ -11,15 +11,12 @@
     "uvlock": true
   },
   "variants": {
-    "normal": {
-      "model": "expanded:campfire"
-    },
+    "normal": [{
+    }],
     "inventory": [{
-      "y": 0
     }],
     "type": {
       "oak": {
-        "model": "expanded:campfire",
         "textures": {
           "ring": "blocks/planks_oak",
           "logs": "blocks/log_oak",
@@ -28,7 +25,6 @@
         }
       },
       "acacia": {
-        "model": "expanded:campfire",
         "textures": {
           "ring": "blocks/planks_acacia",
           "logs": "blocks/log_acacia",
@@ -37,7 +33,6 @@
         }
       },
       "birch": {
-        "model": "expanded:campfire",
         "textures": {
           "ring": "blocks/planks_birch",
           "logs": "blocks/log_birch",
@@ -46,7 +41,6 @@
         }
       },
       "dark_oak": {
-        "model": "expanded:campfire",
         "textures": {
           "ring": "blocks/planks_big_oak",
           "logs": "blocks/log_big_oak",
@@ -55,7 +49,6 @@
         }
       },
       "jungle": {
-        "model": "expanded:campfire",
         "textures": {
           "ring": "blocks/planks_jungle",
           "logs": "blocks/log_jungle",
@@ -64,7 +57,6 @@
         }
       },
       "spruce": {
-        "model": "expanded:campfire",
         "textures": {
           "ring": "blocks/planks_spruce",
           "logs": "blocks/log_spruce",

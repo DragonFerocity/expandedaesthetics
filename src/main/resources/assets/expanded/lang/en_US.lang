@@ -2,10 +2,6 @@ container.alloy_furnace=Alloy Furnace
 tile.expanded:alloy_furnace=Alloy Furnace
 alloy_furnace.name=Alloy Furnace
 
-container.campfire=Campfire
-tile.expanded:campfire=Campfire
-campfire.name=Campfire
-
 tile.expanded:acacia_wood_stairs_alt.name=Acacia Wood Stairs (Alternate)
 tile.expanded:acacia_wood_crafting_table.name=Acacia Wood Crafting Table
 
