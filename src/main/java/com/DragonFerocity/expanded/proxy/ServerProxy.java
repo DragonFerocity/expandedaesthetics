@@ -10,13 +10,7 @@ import com.DragonFerocity.expanded.OreGen;
 
 public class ServerProxy implements IProxy {
   public void preInit() {
-    //ItemHandler.init();
-    //ItemHandler.register();
-  
-    //BlockHandler.init();
-    //CraftingHandler.init();
     GameRegistry.registerWorldGenerator(new OreGen(), 0);
-    //BlockHandler.register();
     //NetworkRegistry.INSTANCE.registerGuiHandler(ExpandedAesthetics.instance, new GuiHandler());
   }
 

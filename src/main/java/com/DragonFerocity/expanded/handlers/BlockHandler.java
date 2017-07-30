@@ -14,13 +14,11 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistryModifiable;
 
@@ -468,6 +466,7 @@ public class BlockHandler {
   
   // Other Vars
   public static ArrayList<ItemBlock> itemBlockList = new ArrayList<>();
+  public static ArrayList<Block> blockList = new ArrayList<>();
 
   // public static void init(RegistryEvent.Register event) {
   // initBlocks(event);
@@ -486,21 +485,19 @@ public class BlockHandler {
     // CreativeTabs.BUILDING_BLOCKS, 5F, 15F, 3, "pickaxe");
 
     // Alloy Furnace
-    alloyFurnace = createBlock(
-        new ModAlloyFurnace(false, "alloy_furnace", CreativeTabs.BUILDING_BLOCKS, 3F, 40F, "pickaxe", 1), event);
+    blockList.add(alloyFurnace = new ModAlloyFurnace(false, "alloy_furnace", CreativeTabs.BUILDING_BLOCKS, 3F, 40F, "pickaxe", 1));
     ibAlloyFurnace = createItemBlock(new ItemBlock(alloyFurnace), alloyFurnace);
 
-    litAlloyFurnace = createBlock(
-        new ModAlloyFurnace(true, "lit_alloy_furnace", CreativeTabs.BUILDING_BLOCKS, 3F, 40F, "pickaxe", 1), event);
+    blockList.add(litAlloyFurnace = new ModAlloyFurnace(true, "lit_alloy_furnace", CreativeTabs.BUILDING_BLOCKS, 3F, 40F, "pickaxe", 1));
     ibLitAlloyFurnace = createItemBlock(new ItemBlock(litAlloyFurnace), litAlloyFurnace);
 
     GameRegistry.registerTileEntity(ModTileEntityAlloyFurnace.class, "alloy_furnace_tile_entity");
 
     // Campfire
     // Oak
-    campfire = createBlock(new ModCampfire(false, "campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0), event);
-    litCampfire = createBlock(new ModCampfire(true, "lit_campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0), event);
+    blockList.add(campfire = new ModCampfire(false, "campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0));
     ibCampfire = createItemBlockWithoutAddingToList(new ItemBlock(campfire), campfire);
+    blockList.add(litCampfire = new ModCampfire(true, "lit_campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0));
     ibLitCampfire = createItemBlockWithoutAddingToList(new ItemBlock(litCampfire), litCampfire);
     
     GameRegistry.registerTileEntity(ModTileEntityCampfire.class, "campfire_tile_entity");
@@ -510,667 +507,453 @@ public class BlockHandler {
     ibAcaciaCampfire = createItemBlockWithoutAddingToList(new ItemBlock(acaciaCampfire), acaciaCampfire);
     ibAcaciaLitCampfire = createItemBlockWithoutAddingToList(new ItemBlock(litAcaciaCampfire), litAcaciaCampfire);*/
 
-    // Acacia Wood
-    acaciaWoodStairsAlt = createBlock(
-        new ModStairs(Blocks.PLANKS, "acacia_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"),
-        event);
+ // Acacia Wood
+    blockList.add(acaciaWoodStairsAlt = new ModStairs(Blocks.PLANKS, "acacia_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"));
     ibAcaciaWoodStairsAlt = createItemBlock(new ItemBlock(acaciaWoodStairsAlt), acaciaWoodStairsAlt);
 
-    acaciaWoodCraftingTable = createBlock(
-        new ModCraftingTable("acacia_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    blockList.add(acaciaWoodCraftingTable = new ModCraftingTable("acacia_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"));
     ibAcaciaWoodCraftingTable = createItemBlock(new ItemBlock(acaciaWoodCraftingTable), acaciaWoodCraftingTable);
 
     // Andesite
-    andesitePolishedDoor = createBlock(
-        new ModBlockDoor(Material.ROCK, "andesite_polished_door", 2.5F, 35F, 1, "pickaxe"), event);
+    blockList.add(andesitePolishedDoor = new ModBlockDoor(Material.ROCK, "andesite_polished_door", 2.5F, 35F, 1, "pickaxe"));
 
-    andesitePolishedStairs = createBlock(
-        new ModStairs(Blocks.STONE, "andesite_polished_stairs", CreativeTabs.BUILDING_BLOCKS, 3.0F, 38F, 1, "pickaxe"),
-        event);
+    blockList.add(andesitePolishedStairs = new ModStairs(Blocks.STONE, "andesite_polished_stairs", CreativeTabs.BUILDING_BLOCKS, 3.0F, 38F, 1, "pickaxe"));
     ibAndesitePolishedStairs = createItemBlock(new ItemBlock(andesitePolishedStairs), andesitePolishedStairs);
 
-    andesitePolishedStairsAlt = createBlock(new ModStairs(Blocks.STONE, "andesite_polished_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 2.0F, 30F, 1, "pickaxe"), event);
+    blockList.add(andesitePolishedStairsAlt = new ModStairs(Blocks.STONE, "andesite_polished_stairs_alt",CreativeTabs.BUILDING_BLOCKS, 2.0F, 30F, 1, "pickaxe"));
     ibAndesitePolishedStairsAlt = createItemBlock(new ItemBlock(andesitePolishedStairsAlt), andesitePolishedStairsAlt);
 
     // Birch
-    birchStableDoor = createBlock(new ModBlockDoor(Material.WOOD, "birch_stable_door", 1.9F, 5F, 0, "pickaxe"), event);
+    blockList.add(birchStableDoor = new ModBlockDoor(Material.WOOD, "birch_stable_door", 1.9F, 5F, 0, "pickaxe"));
 
-    birchLamp = createBlock(
-        new ModLamp(Material.WOOD, "birch_lamp", CreativeTabs.DECORATIONS, 1.2F, 4F, 0, "axe", 14 / 15F, 1.8D), event);
+    blockList.add(birchLamp = new ModLamp(Material.WOOD, "birch_lamp", CreativeTabs.DECORATIONS, 1.2F, 4F, 0, "axe", 14 / 15F, 1.8D));
     ibBirchLamp = createItemBlock(new ItemBlock(birchLamp), birchLamp);
 
-    birchStairsAlt = createBlock(
-        new ModStairs(Blocks.PLANKS, "birch_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"), event);
+    blockList.add(birchStairsAlt = new ModStairs(Blocks.PLANKS, "birch_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"));
     ibBirchStairsAlt = createItemBlock(new ItemBlock(birchStairsAlt), birchStairsAlt);
 
-    birchLantern = createBlock(new ModLantern(Material.WOOD, "birch_lantern", CreativeTabs.DECORATIONS, 1.0F, 3.5F, 1,
-        "axe", 13 / 15F, 5, 20, 0.75D), event);
+    blockList.add(birchLantern = new ModLantern(Material.WOOD, "birch_lantern", CreativeTabs.DECORATIONS, 1.0F, 3.5F, 1,"axe", 13 / 15F, 5, 20, 0.75D));
     ibBirchLantern = createItemBlock(new ItemBlock(birchLantern), birchLantern);
 
-    birchCraftingTable = createBlock(
-        new ModCraftingTable("birch_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    blockList.add(birchCraftingTable = new ModCraftingTable("birch_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"));
     ibBirchCraftingTable = createItemBlock(new ItemBlock(birchCraftingTable), birchCraftingTable);
 
     // Brick
-    brickDoor = createBlock(new ModBlockDoor(Material.ROCK, "brick_door", 2.5F, 35F, 1, "pickaxe"), event);
-
-    brickStairsAlt = createBlock(
-        new ModStairs(Blocks.STONE, "brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 30F, 1, "pickaxe"), event);
+    blockList.add(brickDoor = new ModBlockDoor(Material.ROCK, "brick_door", 2.5F, 35F, 1, "pickaxe"));
+    blockList.add(brickStairsAlt = new ModStairs(Blocks.STONE, "brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 30F, 1, "pickaxe"));
     ibBrickStairsAlt = createItemBlock(new ItemBlock(brickStairsAlt), brickStairsAlt);
-
     // Cactus
-    cutCactusBlock = createBlock(
-        new ModBlock(Material.WOOD, "cut_cactus_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 2F, 0, "axe"), event);
+    blockList.add(cutCactusBlock = new ModBlock(Material.WOOD, "cut_cactus_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 2F, 0, "axe"));
     ibCutCactusBlock = createItemBlock(new ItemBlock(cutCactusBlock), cutCactusBlock);
 
-    cutCactusStairs = createBlock(
-        new ModStairs(Blocks.DIRT, "cut_cactus_stairs", CreativeTabs.BUILDING_BLOCKS, 0.3F, 1.7F, 0, "axe"), event);
+    blockList.add(cutCactusStairs = new ModStairs(Blocks.DIRT, "cut_cactus_stairs", CreativeTabs.BUILDING_BLOCKS, 0.3F, 1.7F, 0, "axe"));
     ibCutCactusStairs = createItemBlock(new ItemBlock(cutCactusStairs), cutCactusStairs);
 
-    cutCactusStairsAlt = createBlock(
-        new ModStairs(Blocks.DIRT, "cut_cactus_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1.3F, 0, "axe"), event);
+    blockList.add(cutCactusStairsAlt = new ModStairs(Blocks.DIRT, "cut_cactus_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1.3F, 0, "axe"));
     ibCutCactusStairsAlt = createItemBlock(new ItemBlock(cutCactusStairsAlt), cutCactusStairsAlt);
 
-    cutCactusLamp = createBlock(
-        new ModLamp(Material.WOOD, "cut_cactus_lamp", CreativeTabs.DECORATIONS, 0.5F, 2.1F, 1, "axe", 14 / 15F, 1.6D),
-        event);
+    blockList.add(cutCactusLamp = new ModLamp(Material.WOOD, "cut_cactus_lamp", CreativeTabs.DECORATIONS, 0.5F, 2.1F, 1, "axe", 14 / 15F, 1.6D));
     ibCutCactusLamp = createItemBlock(new ItemBlock(cutCactusLamp), cutCactusLamp);
 
-    cutCactusLantern = createBlock(new ModLantern(Material.WOOD, "cut_cactus_lantern", CreativeTabs.DECORATIONS, 0.25F,
-        1.5F, 1, "axe", 13 / 15F, 5, 20, 0.75D), event);
+    blockList.add(cutCactusLantern = new ModLantern(Material.WOOD, "cut_cactus_lantern", CreativeTabs.DECORATIONS, 0.25F, 1.5F, 1, "axe", 13 / 15F, 5, 20, 0.75D));
     ibCutCactusLantern = createItemBlock(new ItemBlock(cutCactusLantern), cutCactusLantern);
 
     // Cobblestone
-    cobblestoneDoor = createBlock(new ModBlockDoor(Material.ROCK, "cobblestone_door", 2F, 30F, 1, "pickaxe"), event);
+    blockList.add(cobblestoneDoor = new ModBlockDoor(Material.ROCK, "cobblestone_door", 2F, 30F, 1, "pickaxe"));
 
-    //cobblestoneChest = createBlock(
-    //    new ModChest(ModChest.Type.COBBLESTONE, Material.ROCK, "cobblestone_chest", 2.5F, 12.5F, 1, "pickaxe"), event);
+    //blockList.add(cobblestoneChest = new ModChest(ModChest.Type.COBBLESTONE, Material.ROCK, "cobblestone_chest", 2.5F, 12.5F, 1, "pickaxe"));
     //ibCobblestoneChest = createItemBlock(new ItemBlock(cobblestoneChest), cobblestoneChest);
 
-    cobblestoneStairsAlt = createBlock(
-        new ModStairs(Blocks.STONE, "cobblestone_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 30F, 1, "pickaxe"),
-        event);
+    blockList.add(cobblestoneStairsAlt = new ModStairs(Blocks.STONE, "cobblestone_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 30F, 1, "pickaxe"));
     ibCobblestoneStairsAlt = createItemBlock(new ItemBlock(cobblestoneStairsAlt), cobblestoneStairsAlt);
 
     // Dark Oak
-    darkOakLamp = createBlock(
-        new ModLamp(Material.WOOD, "dark_oak_lamp", CreativeTabs.DECORATIONS, 1.2F, 4F, 0, "axe", 14 / 15F, 1.8D),
-        event);
+    blockList.add(darkOakLamp = new ModLamp(Material.WOOD, "dark_oak_lamp", CreativeTabs.DECORATIONS, 1.2F, 4F, 0, "axe", 14 / 15F, 1.8D));
     ibDarkOakLamp = createItemBlock(new ItemBlock(darkOakLamp), darkOakLamp);
 
-    darkOakLantern = createBlock(new ModLantern(Material.WOOD, "dark_oak_lantern", CreativeTabs.DECORATIONS, 1F, 4F, 0,
-        "axe", 13 / 15F, 5, 20, 0.7D), event);
+    blockList.add(darkOakLantern = new ModLantern(Material.WOOD, "dark_oak_lantern", CreativeTabs.DECORATIONS, 1F, 4F, 0, "axe", 13 / 15F, 5, 20, 0.7D));
     ibDarkOakLantern = createItemBlock(new ItemBlock(darkOakLantern), darkOakLantern);
 
-    darkOakBed = createBlock(new ModBlockBed("dark_oak_bed", 2F, 8F, 0, "axe"), event);
+    blockList.add(darkOakBed = new ModBlockBed("dark_oak_bed", 2F, 8F, 0, "axe"));
 
-    darkOakStairsAlt = createBlock(
-        new ModStairs(Blocks.PLANKS, "dark_oak_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.7F, 3F, 0, "axe"), event);
+    blockList.add(darkOakStairsAlt = new ModStairs(Blocks.PLANKS, "dark_oak_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.7F, 3F, 0, "axe"));
     ibDarkOakStairsAlt = createItemBlock(new ItemBlock(darkOakStairsAlt), darkOakStairsAlt);
 
-    darkOakCraftingTable = createBlock(
-        new ModCraftingTable("dark_oak_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    blockList.add(darkOakCraftingTable = new ModCraftingTable("dark_oak_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"));
     ibDarkOakCraftingTable = createItemBlock(new ItemBlock(darkOakCraftingTable), darkOakCraftingTable);
 
     // Diorite
-    dioritePolishedDoor = createBlock(new ModBlockDoor(Material.ROCK, "diorite_polished_door", 2.5F, 35F, 1, "pickaxe"),
-        event);
+    blockList.add(dioritePolishedDoor = new ModBlockDoor(Material.ROCK, "diorite_polished_door", 2.5F, 35F, 1, "pickaxe"));
 
-    dioritePolishedStairs = createBlock(
-        new ModStairs(Blocks.STONE, "diorite_polished_stairs", CreativeTabs.BUILDING_BLOCKS, 2.5F, 35F, 1, "pickaxe"),
-        event);
+    blockList.add(dioritePolishedStairs = new ModStairs(Blocks.STONE, "diorite_polished_stairs", CreativeTabs.BUILDING_BLOCKS, 2.5F, 35F, 1, "pickaxe"));
     ibDioritePolishedStairs = createItemBlock(new ItemBlock(dioritePolishedStairs), dioritePolishedStairs);
 
-    dioritePolishedStairsAlt = createBlock(
-        new ModStairs(Blocks.STONE, "diorite_polished_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2F, 25F, 1, "pickaxe"),
-        event);
+    blockList.add(dioritePolishedStairsAlt = new ModStairs(Blocks.STONE, "diorite_polished_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2F, 25F, 1, "pickaxe"));
     ibDioritePolishedStairsAlt = createItemBlock(new ItemBlock(dioritePolishedStairsAlt), dioritePolishedStairsAlt);
 
-    dioritePolishedLantern = createBlock(new ModLantern(Material.ROCK, "diorite_polished_lantern",
-        CreativeTabs.DECORATIONS, 2F, 18F, 1, "pickaxe", 13 / 15F, 5, 20, 0.6D), event);
+    blockList.add(dioritePolishedLantern = new ModLantern(Material.ROCK, "diorite_polished_lantern", CreativeTabs.DECORATIONS, 2F, 18F, 1, "pickaxe", 13 / 15F, 5, 20, 0.6D));
     ibDioritePolishedLantern = createItemBlock(new ItemBlock(dioritePolishedLantern), dioritePolishedLantern);
 
-    dioritePolishedLamp = createBlock(new ModLamp(Material.ROCK, "diorite_polished_lamp", CreativeTabs.DECORATIONS, 2F,
-        30F, 1, "pickaxe", 14 / 15F, 1.9D), event);
+    blockList.add(dioritePolishedLamp = new ModLamp(Material.ROCK, "diorite_polished_lamp", CreativeTabs.DECORATIONS, 2F, 30F, 1, "pickaxe", 14 / 15F, 1.9D));
     ibDioritePolishedLamp = createItemBlock(new ItemBlock(dioritePolishedLamp), dioritePolishedLamp);
 
-    dioritePolishedBed = createBlock(new ModBlockBed("diorite_polished_bed", 3F, 40F, 1, "pickaxe"), event);
+    blockList.add(dioritePolishedBed = new ModBlockBed("diorite_polished_bed", 3F, 40F, 1, "pickaxe"));
 
-    //dioritePolishedChest = createBlock(
-    //    new ModChest(ModChest.Type.POLISHED_DIORITE, Material.ROCK, "diorite_polished_chest", 4F, 40F, 1, "pickaxe"),
-    //    event);
+    //blockList.add(dioritePolishedChest = new ModChest(ModChest.Type.POLISHED_DIORITE, Material.ROCK, "diorite_polished_chest", 4F, 40F, 1, "pickaxe"));
     //ibDioritePolishedChest = createItemBlock(new ItemBlock(dioritePolishedChest), dioritePolishedChest);
 
     // Glass
     // Regular
-    glassDoor = createBlock(new ModBlockDoor(Material.GLASS, "glass_door", 0.3F, 1.5F, 0, "pickaxe"), event);
+    blockList.add(glassDoor = new ModBlockDoor(Material.GLASS, "glass_door", 0.3F, 1.5F, 0, "pickaxe"));
 
-    glassStairs = createBlock(
-        new ModStairs(Blocks.GLASS, "glass_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"), event);
+    blockList.add(glassStairs = new ModStairs(Blocks.GLASS, "glass_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibGlassStairs = createItemBlock(new ItemBlock(glassStairs), glassStairs);
 
-    glassStairsAlt = createBlock(
-        new ModStairs(Blocks.GLASS, "glass_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(glassStairsAlt = new ModStairs(Blocks.GLASS, "glass_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibGlassStairsAlt = createItemBlock(new ItemBlock(glassStairsAlt), glassStairsAlt);
 
     // White
-    whiteGlassStairs = createBlock(
-        new ModStairs(Blocks.GLASS, "glass_white_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"), event);
+    blockList.add(whiteGlassStairs = new ModStairs(Blocks.GLASS, "glass_white_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibWhiteGlassStairs = createItemBlock(new ItemBlock(whiteGlassStairs), whiteGlassStairs);
 
-    whiteGlassStairsAlt = createBlock(
-        new ModStairs(Blocks.GLASS, "glass_white_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"),
-        event);
+    blockList.add(whiteGlassStairsAlt = new ModStairs(Blocks.GLASS, "glass_white_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibWhiteGlassStairsAlt = createItemBlock(new ItemBlock(whiteGlassStairsAlt), whiteGlassStairsAlt);
 
     // Orange
-    orangeGlassStairs = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_orange_stairs",
-        CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"), event);
+    blockList.add(orangeGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_orange_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibOrangeGlassStairs = createItemBlock(new ItemBlock(orangeGlassStairs), orangeGlassStairs);
 
-    orangeGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_orange_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(orangeGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_orange_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibOrangeGlassStairsAlt = createItemBlock(new ItemBlock(orangeGlassStairsAlt), orangeGlassStairsAlt);
 
     // Magenta
-    magentaGlassStairs = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_magenta_stairs",
-        CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"), event);
+    blockList.add(magentaGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_magenta_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibMagentaGlassStairs = createItemBlock(new ItemBlock(magentaGlassStairs), magentaGlassStairs);
 
-    magentaGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_magenta_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(magentaGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_magenta_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibMagentaGlassStairsAlt = createItemBlock(new ItemBlock(magentaGlassStairsAlt), magentaGlassStairsAlt);
 
     // Light Blue
-    lightBlueGlassStairs = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_light_blue_stairs",
-        CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"), event);
+    blockList.add(lightBlueGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_light_blue_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibLightBlueGlassStairs = createItemBlock(new ItemBlock(lightBlueGlassStairs), lightBlueGlassStairs);
 
-    lightBlueGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_light_blue_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(lightBlueGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_light_blue_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibLightBlueGlassStairsAlt = createItemBlock(new ItemBlock(lightBlueGlassStairsAlt), lightBlueGlassStairsAlt);
 
     // Yellow
-    yellowGlassStairs = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_yellow_stairs",
-        CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"), event);
+    blockList.add(yellowGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_yellow_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibYellowGlassStairs = createItemBlock(new ItemBlock(yellowGlassStairs), yellowGlassStairs);
 
-    yellowGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_yellow_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(yellowGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_yellow_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibYellowGlassStairsAlt = createItemBlock(new ItemBlock(yellowGlassStairsAlt), yellowGlassStairsAlt);
 
     // Lime
-    limeGlassStairs = createBlock(
-        new ModStairs(Blocks.STAINED_GLASS, "glass_lime_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"),
-        event);
+    blockList.add(limeGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_lime_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibLimeGlassStairs = createItemBlock(new ItemBlock(limeGlassStairs), limeGlassStairs);
 
-    limeGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_lime_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(limeGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_lime_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibLimeGlassStairsAlt = createItemBlock(new ItemBlock(limeGlassStairsAlt), limeGlassStairsAlt);
 
     // Pink
-    pinkGlassStairs = createBlock(
-        new ModStairs(Blocks.STAINED_GLASS, "glass_pink_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"),
-        event);
+    blockList.add(pinkGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_pink_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibPinkGlassStairs = createItemBlock(new ItemBlock(pinkGlassStairs), pinkGlassStairs);
 
-    pinkGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_pink_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(pinkGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_pink_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibPinkGlassStairsAlt = createItemBlock(new ItemBlock(pinkGlassStairsAlt), pinkGlassStairsAlt);
 
     // Gray
-    grayGlassStairs = createBlock(
-        new ModStairs(Blocks.STAINED_GLASS, "glass_gray_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"),
-        event);
+    blockList.add(grayGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_gray_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibGrayGlassStairs = createItemBlock(new ItemBlock(grayGlassStairs), grayGlassStairs);
 
-    grayGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_gray_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(grayGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_gray_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibGrayGlassStairsAlt = createItemBlock(new ItemBlock(grayGlassStairsAlt), grayGlassStairsAlt);
 
     // Silver
-    silverGlassStairs = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_silver_stairs",
-        CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"), event);
+    blockList.add(silverGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_silver_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibSilverGlassStairs = createItemBlock(new ItemBlock(silverGlassStairs), silverGlassStairs);
 
-    silverGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_silver_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(silverGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_silver_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibSilverGlassStairsAlt = createItemBlock(new ItemBlock(silverGlassStairsAlt), silverGlassStairsAlt);
 
     // Cyan
-    cyanGlassStairs = createBlock(
-        new ModStairs(Blocks.STAINED_GLASS, "glass_cyan_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"),
-        event);
+    blockList.add(cyanGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_cyan_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibCyanGlassStairs = createItemBlock(new ItemBlock(cyanGlassStairs), cyanGlassStairs);
 
-    cyanGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_cyan_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(cyanGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_cyan_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibCyanGlassStairsAlt = createItemBlock(new ItemBlock(cyanGlassStairsAlt), cyanGlassStairsAlt);
 
     // Purple
-    purpleGlassStairs = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_purple_stairs",
-        CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"), event);
+    blockList.add(purpleGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_purple_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibPurpleGlassStairs = createItemBlock(new ItemBlock(purpleGlassStairs), purpleGlassStairs);
 
-    purpleGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_purple_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(purpleGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_purple_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibPurpleGlassStairsAlt = createItemBlock(new ItemBlock(purpleGlassStairsAlt), purpleGlassStairsAlt);
 
     // Blue
-    blueGlassStairs = createBlock(
-        new ModStairs(Blocks.STAINED_GLASS, "glass_blue_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"),
-        event);
+    blockList.add(blueGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_blue_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibBlueGlassStairs = createItemBlock(new ItemBlock(blueGlassStairs), blueGlassStairs);
 
-    blueGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_blue_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(blueGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_blue_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibBlueGlassStairsAlt = createItemBlock(new ItemBlock(blueGlassStairsAlt), blueGlassStairsAlt);
 
     // Brown
-    brownGlassStairs = createBlock(
-        new ModStairs(Blocks.STAINED_GLASS, "glass_brown_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"),
-        event);
+    blockList.add(brownGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_brown_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibBrownGlassStairs = createItemBlock(new ItemBlock(brownGlassStairs), brownGlassStairs);
 
-    brownGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_brown_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(brownGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_brown_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibBrownGlassStairsAlt = createItemBlock(new ItemBlock(brownGlassStairsAlt), brownGlassStairsAlt);
 
     // Green
-    greenGlassStairs = createBlock(
-        new ModStairs(Blocks.STAINED_GLASS, "glass_green_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"),
-        event);
+    blockList.add(greenGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_green_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibGreenGlassStairs = createItemBlock(new ItemBlock(greenGlassStairs), greenGlassStairs);
 
-    greenGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_green_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(greenGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_green_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibGreenGlassStairsAlt = createItemBlock(new ItemBlock(greenGlassStairsAlt), greenGlassStairsAlt);
 
     // Red
-    redGlassStairs = createBlock(
-        new ModStairs(Blocks.STAINED_GLASS, "glass_red_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"),
-        event);
+    blockList.add(redGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_red_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibRedGlassStairs = createItemBlock(new ItemBlock(redGlassStairs), redGlassStairs);
 
-    redGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_red_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(redGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_red_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibRedGlassStairsAlt = createItemBlock(new ItemBlock(redGlassStairsAlt), redGlassStairsAlt);
 
     // Black
-    blackGlassStairs = createBlock(
-        new ModStairs(Blocks.STAINED_GLASS, "glass_black_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"),
-        event);
+    blockList.add(blackGlassStairs = new ModStairs(Blocks.STAINED_GLASS, "glass_black_stairs", CreativeTabs.BUILDING_BLOCKS, 0.6F, 2F, 0, "pickaxe"));
     ibBlackGlassStairs = createItemBlock(new ItemBlock(blackGlassStairs), blackGlassStairs);
 
-    blackGlassStairsAlt = createBlock(new ModStairs(Blocks.STAINED_GLASS, "glass_black_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"), event);
+    blockList.add(blackGlassStairsAlt = new ModStairs(Blocks.STAINED_GLASS, "glass_black_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
     ibBlackGlassStairsAlt = createItemBlock(new ItemBlock(blackGlassStairsAlt), blackGlassStairsAlt);
 
     // Lighted
-    blackLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "black_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(blackLightedGlassBlock = new ModBlock(Material.GLASS, "black_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibBlackLightedGlassBlock = createItemBlock(new ItemBlock(blackLightedGlassBlock), blackLightedGlassBlock);
 
-    blueLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "blue_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(blueLightedGlassBlock = new ModBlock(Material.GLASS, "blue_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibBlueLightedGlassBlock = createItemBlock(new ItemBlock(blueLightedGlassBlock), blueLightedGlassBlock);
 
-    brownLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "brown_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(brownLightedGlassBlock = new ModBlock(Material.GLASS, "brown_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibBrownLightedGlassBlock = createItemBlock(new ItemBlock(brownLightedGlassBlock), brownLightedGlassBlock);
 
-    cyanLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "cyan_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(cyanLightedGlassBlock = new ModBlock(Material.GLASS, "cyan_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibCyanLightedGlassBlock = createItemBlock(new ItemBlock(cyanLightedGlassBlock), cyanLightedGlassBlock);
 
-    grayLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "gray_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(grayLightedGlassBlock = new ModBlock(Material.GLASS, "gray_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibGrayLightedGlassBlock = createItemBlock(new ItemBlock(grayLightedGlassBlock), grayLightedGlassBlock);
 
-    greenLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "green_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(greenLightedGlassBlock = new ModBlock(Material.GLASS, "green_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibGreenLightedGlassBlock = createItemBlock(new ItemBlock(greenLightedGlassBlock), greenLightedGlassBlock);
 
-    lightBlueLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "light_blue_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
-    ibLightBlueLightedGlassBlock = createItemBlock(new ItemBlock(lightBlueLightedGlassBlock),
-        lightBlueLightedGlassBlock);
+    blockList.add(lightBlueLightedGlassBlock = new ModBlock(Material.GLASS, "light_blue_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
+    ibLightBlueLightedGlassBlock = createItemBlock(new ItemBlock(lightBlueLightedGlassBlock), lightBlueLightedGlassBlock);
 
-    limeLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "lime_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(limeLightedGlassBlock = new ModBlock(Material.GLASS, "lime_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibLimeLightedGlassBlock = createItemBlock(new ItemBlock(limeLightedGlassBlock), limeLightedGlassBlock);
 
-    magentaLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "magenta_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(magentaLightedGlassBlock = new ModBlock(Material.GLASS, "magenta_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibMagentaLightedGlassBlock = createItemBlock(new ItemBlock(magentaLightedGlassBlock), magentaLightedGlassBlock);
 
-    orangeLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "orange_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(orangeLightedGlassBlock = new ModBlock(Material.GLASS, "orange_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibOrangeLightedGlassBlock = createItemBlock(new ItemBlock(orangeLightedGlassBlock), orangeLightedGlassBlock);
 
-    pinkLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "pink_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(pinkLightedGlassBlock = new ModBlock(Material.GLASS, "pink_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibPinkLightedGlassBlock = createItemBlock(new ItemBlock(pinkLightedGlassBlock), pinkLightedGlassBlock);
 
-    purpleLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "purple_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(purpleLightedGlassBlock = new ModBlock(Material.GLASS, "purple_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibPurpleLightedGlassBlock = createItemBlock(new ItemBlock(purpleLightedGlassBlock), purpleLightedGlassBlock);
 
-    redLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "red_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(redLightedGlassBlock = new ModBlock(Material.GLASS, "red_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibRedLightedGlassBlock = createItemBlock(new ItemBlock(redLightedGlassBlock), redLightedGlassBlock);
 
-    silverLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "silver_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(silverLightedGlassBlock = new ModBlock(Material.GLASS, "silver_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibSilverLightedGlassBlock = createItemBlock(new ItemBlock(silverLightedGlassBlock), silverLightedGlassBlock);
 
-    whiteLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "white_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(whiteLightedGlassBlock = new ModBlock(Material.GLASS, "white_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibWhiteLightedGlassBlock = createItemBlock(new ItemBlock(whiteLightedGlassBlock), whiteLightedGlassBlock);
 
-    yellowLightedGlassBlock = createBlock(new ModBlock(Material.GLASS, "yellow_lighted_glass_block",
-        CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F), event);
+    blockList.add(yellowLightedGlassBlock = new ModBlock(Material.GLASS, "yellow_lighted_glass_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe", 14 / 15F));
     ibYellowLightedGlassBlock = createItemBlock(new ItemBlock(yellowLightedGlassBlock), yellowLightedGlassBlock);
 
     // Granite
-    granitePolishedDoor = createBlock(new ModBlockDoor(Material.ROCK, "granite_polished_door", 2.5F, 35F, 1, "pickaxe"),
-        event);
+    blockList.add(granitePolishedDoor = new ModBlockDoor(Material.ROCK, "granite_polished_door", 2.5F, 35F, 1, "pickaxe"));
 
-    granitePolishedLamp = createBlock(new ModLamp(Material.ROCK, "granite_polished_lamp", CreativeTabs.DECORATIONS, 2F,
-        30F, 1, "pickaxe", 14 / 15F, 1.82D), event);
+    blockList.add(granitePolishedLamp = new ModLamp(Material.ROCK, "granite_polished_lamp", CreativeTabs.DECORATIONS, 2F, 30F, 1, "pickaxe", 14 / 15F, 1.82D));
     ibGranitePolishedLamp = createItemBlock(new ItemBlock(granitePolishedLamp), granitePolishedLamp);
 
-    granitePolishedLantern = createBlock(new ModLantern(Material.ROCK, "granite_polished_lantern",
-        CreativeTabs.DECORATIONS, 2F, 18F, 1, "pickaxe", 13 / 15F, 5, 20, 0.5D), event);
+    blockList.add(granitePolishedLantern = new ModLantern(Material.ROCK, "granite_polished_lantern", CreativeTabs.DECORATIONS, 2F, 18F, 1, "pickaxe", 13 / 15F, 5, 20, 0.5D));
     ibGranitePolishedLantern = createItemBlock(new ItemBlock(granitePolishedLantern), granitePolishedLantern);
 
-    granitePolishedStairs = createBlock(
-        new ModStairs(Blocks.STONE, "granite_polished_stairs", CreativeTabs.BUILDING_BLOCKS, 2.5F, 32F, 1, "pickaxe"),
-        event);
+    blockList.add(granitePolishedStairs = new ModStairs(Blocks.STONE, "granite_polished_stairs", CreativeTabs.BUILDING_BLOCKS, 2.5F, 32F, 1, "pickaxe"));
     ibGranitePolishedStairs = createItemBlock(new ItemBlock(granitePolishedStairs), granitePolishedStairs);
 
-    granitePolishedStairsAlt = createBlock(new ModStairs(Blocks.STONE, "granite_polished_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 1.7F, 26F, 1, "pickaxe"), event);
+    blockList.add(granitePolishedStairsAlt = new ModStairs(Blocks.STONE, "granite_polished_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.7F, 26F, 1, "pickaxe"));
     ibGranitePolishedStairsAlt = createItemBlock(new ItemBlock(granitePolishedStairsAlt), granitePolishedStairsAlt);
 
     // Hardened Clay
     // Regular
-    hardenedClayDoor = createBlock(new ModBlockDoor(Material.CLAY, "hardened_clay_door", 2F, 21F, 0, "pickaxe"), event);
+    blockList.add(hardenedClayDoor = new ModBlockDoor(Material.CLAY, "hardened_clay_door", 2F, 21F, 0, "pickaxe"));
 
-    terracottaStairs = createBlock(
-        new ModStairs(Blocks.HARDENED_CLAY, "terracotta_stairs", CreativeTabs.BUILDING_BLOCKS, 2.2F, 21F, 0, "pickaxe"),
-        event);
+    blockList.add(terracottaStairs = new ModStairs(Blocks.HARDENED_CLAY, "terracotta_stairs", CreativeTabs.BUILDING_BLOCKS, 2.2F, 21F, 0, "pickaxe"));
     ibTerracottaStairs = createItemBlock(new ItemBlock(terracottaStairs), terracottaStairs);
 
-    terracottaStairsAlt = createBlock(new ModStairs(Blocks.HARDENED_CLAY, "terracotta_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 1.5F, 16F, 0, "pickaxe"), event);
+    blockList.add(terracottaStairsAlt = new ModStairs(Blocks.HARDENED_CLAY, "terracotta_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 16F, 0, "pickaxe"));
     ibTerracottaStairsAlt = createItemBlock(new ItemBlock(terracottaStairsAlt), terracottaStairsAlt);
 
     // Jungle Wood
-    jungleWoodStairsAlt = createBlock(
-        new ModStairs(Blocks.PLANKS, "jungle_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"),
-        event);
+    blockList.add(jungleWoodStairsAlt = new ModStairs(Blocks.PLANKS, "jungle_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"));
     ibJungleWoodStairsAlt = createItemBlock(new ItemBlock(jungleWoodStairsAlt), jungleWoodStairsAlt);
 
-    jungleWoodCraftingTable = createBlock(
-        new ModCraftingTable("jungle_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    blockList.add(jungleWoodCraftingTable = new ModCraftingTable("jungle_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"));
     ibJungleWoodCraftingTable = createItemBlock(new ItemBlock(jungleWoodCraftingTable), jungleWoodCraftingTable);
 
     // Oak
-    oakStableDoor = createBlock(new ModBlockDoor(Material.WOOD, "oak_stable_door", 1.9F, 5F, 0, "axe"), event);
+    blockList.add(oakStableDoor = new ModBlockDoor(Material.WOOD, "oak_stable_door", 1.9F, 5F, 0, "axe"));
 
-    oakLightBox = createBlock(
-        new ModBlock(Material.WOOD, "oak_light_box", CreativeTabs.DECORATIONS, 2F, 6F, 0, "axe", 12 / 15F, 5, 20),
-        event);
+    blockList.add(oakLightBox = new ModBlock(Material.WOOD, "oak_light_box", CreativeTabs.DECORATIONS, 2F, 6F, 0, "axe", 12 / 15F, 5, 20));
     ibOakLightBox = createItemBlock(new ItemBlock(oakLightBox), oakLightBox);
 
-    oakLantern = createBlock(
-        new ModLantern(Material.WOOD, "oak_lantern", CreativeTabs.DECORATIONS, 1F, 4F, 0, "axe", 13 / 15F, 5, 20, 0.4D),
-        event);
+    blockList.add(oakLantern = new ModLantern(Material.WOOD, "oak_lantern", CreativeTabs.DECORATIONS, 1F, 4F, 0, "axe", 13 / 15F, 5, 20, 0.4D));
     ibOakLantern = createItemBlock(new ItemBlock(oakLantern), oakLantern);
 
-    oakLamp = createBlock(
-        new ModLamp(Material.WOOD, "oak_lamp", CreativeTabs.DECORATIONS, 1.2F, 4F, 0, "axe", 14 / 15F, 5, 20, 1.9D),
-        event);
+    blockList.add(oakLamp = new ModLamp(Material.WOOD, "oak_lamp", CreativeTabs.DECORATIONS, 1.2F, 4F, 0, "axe", 14 / 15F, 5, 20, 1.9D));
     ibOakLamp = createItemBlock(new ItemBlock(oakLamp), oakLamp);
 
-    oakStairsAlt = createBlock(
-        new ModStairs(Blocks.PLANKS, "oak_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.4F, 2F, 0, "axe"), event);
+    blockList.add(oakStairsAlt = new ModStairs(Blocks.PLANKS, "oak_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.4F, 2F, 0, "axe"));
     ibOakStairsAlt = createItemBlock(new ItemBlock(oakStairsAlt), oakStairsAlt);
 
-    oakCraftingTable = createBlock(
-        new ModCraftingTable("oak_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    blockList.add(oakCraftingTable = new ModCraftingTable("oak_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"));
     ibOakCraftingTable = createItemBlock(new ItemBlock(oakCraftingTable), oakCraftingTable);
 
     // Obsidian
-    polishedObsidianBlock = createBlock(
-        new ModBlock(Material.ROCK, "polished_obsidian", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"),
-        event);
+    blockList.add(polishedObsidianBlock = new ModBlock(Material.ROCK, "polished_obsidian", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibPolishedObsidianBlock = createItemBlock(new ItemBlock(polishedObsidianBlock), polishedObsidianBlock);
 
-    polishedObsidianDoor = createBlock(
-        new ModBlockDoor(Material.ROCK, "polished_obsidian_door", 45F, 5300F, 3, "pickaxe"), event);
+    blockList.add(polishedObsidianDoor = new ModBlockDoor(Material.ROCK, "polished_obsidian_door", 45F, 5300F, 3, "pickaxe"));
 
-    polishedObsidianStairs = createBlock(new ModStairs(Blocks.OBSIDIAN, "polished_obsidian_stairs",
-        CreativeTabs.BUILDING_BLOCKS, 48F, 5500F, 3, "pickaxe"), event);
+    blockList.add(polishedObsidianStairs = new ModStairs(Blocks.OBSIDIAN, "polished_obsidian_stairs", CreativeTabs.BUILDING_BLOCKS, 48F, 5500F, 3, "pickaxe"));
     ibPolishedObsidianStairs = createItemBlock(new ItemBlock(polishedObsidianStairs), polishedObsidianStairs);
 
-    polishedObsidianStairsAlt = createBlock(new ModStairs(Blocks.OBSIDIAN, "polished_obsidian_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 40F, 5000F, 3, "pickaxe"), event);
+    blockList.add(polishedObsidianStairsAlt = new ModStairs(Blocks.OBSIDIAN, "polished_obsidian_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 40F, 5000F, 3, "pickaxe"));
     ibPolishedObsidianStairsAlt = createItemBlock(new ItemBlock(polishedObsidianStairsAlt), polishedObsidianStairsAlt);
 
     // Spruce Wood
-    spruceWoodStairsAlt = createBlock(
-        new ModStairs(Blocks.PLANKS, "spruce_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"),
-        event);
+    blockList.add(spruceWoodStairsAlt = new ModStairs(Blocks.PLANKS, "spruce_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"));
     ibSpruceWoodStairsAlt = createItemBlock(new ItemBlock(spruceWoodStairsAlt), spruceWoodStairsAlt);
 
-    spruceWoodCraftingTable = createBlock(
-        new ModCraftingTable("spruce_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"), event);
+    blockList.add(spruceWoodCraftingTable = new ModCraftingTable("spruce_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"));
     ibSpruceWoodCraftingTable = createItemBlock(new ItemBlock(spruceWoodCraftingTable), spruceWoodCraftingTable);
 
     // Advanced Workbench
     // advancedWorkbench = new ModAdvancedWorkbench(Material.WOOD);
 
     // Ores
-    copperOre = createBlock(new ModOre("copper_ore", 2F, 12F, 0), event);
+    blockList.add(copperOre = new ModOre("copper_ore", 2F, 12F, 0));
     ibCopperOre = createItemBlock(new ItemBlock(copperOre), copperOre);
 
-    tinOre = createBlock(new ModOre("tin_ore", 2.1F, 13F, 1), event);
+    blockList.add(tinOre = new ModOre("tin_ore", 2.1F, 13F, 1));
     ibTinOre = createItemBlock(new ItemBlock(tinOre), tinOre);
 
-    platinumOre = createBlock(new ModOre("platinum_ore", 2.5F, 14F, 1), event);
+    blockList.add(platinumOre = new ModOre("platinum_ore", 2.5F, 14F, 1));
     ibPlatinumOre = createItemBlock(new ItemBlock(platinumOre), platinumOre);
 
-    silverOre = createBlock(new ModOre("silver_ore", 3F, 15F, 1), event);
+    blockList.add(silverOre = new ModOre("silver_ore", 3F, 15F, 1));
     ibSilverOre = createItemBlock(new ItemBlock(silverOre), silverOre);
 
-    mithrilOre = createBlock(new ModOre("mithril_ore", 4F, 16F, 2), event);
+    blockList.add(mithrilOre = new ModOre("mithril_ore", 4F, 16F, 2));
     ibMithrilOre = createItemBlock(new ItemBlock(mithrilOre), mithrilOre);
 
-    titaniumOre = createBlock(new ModOre("titanium_ore", 5F, 20F, 2), event);
+    blockList.add(titaniumOre = new ModOre("titanium_ore", 5F, 20F, 2));
     ibTitaniumOre = createItemBlock(new ItemBlock(titaniumOre), titaniumOre);
 
     // Ore Blocks
-    copperBlock = createBlock(
-        new ModBlock(Material.IRON, "copper_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"), event);
+    blockList.add(copperBlock = new ModBlock(Material.IRON, "copper_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"));
     ibCopperBlock = createItemBlock(new ItemBlock(copperBlock), copperBlock);
 
-    tinBlock = createBlock(
-        new ModBlock(Material.IRON, "tin_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"), event);
+    blockList.add(tinBlock = new ModBlock(Material.IRON, "tin_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"));
     ibTinBlock = createItemBlock(new ItemBlock(tinBlock), tinBlock);
 
-    bronzeBlock = createBlock(
-        new ModBlock(Material.IRON, "bronze_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"), event);
+    blockList.add(bronzeBlock = new ModBlock(Material.IRON, "bronze_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"));
     ibBronzeBlock = createItemBlock(new ItemBlock(bronzeBlock), bronzeBlock);
 
-    platinumBlock = createBlock(
-        new ModBlock(Material.IRON, "platinum_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"), event);
+    blockList.add(platinumBlock = new ModBlock(Material.IRON, "platinum_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"));
     ibPlatinumBlock = createItemBlock(new ItemBlock(platinumBlock), platinumBlock);
 
-    silverBlock = createBlock(
-        new ModBlock(Material.IRON, "silver_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"), event);
+    blockList.add(silverBlock = new ModBlock(Material.IRON, "silver_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"));
     ibSilverBlock = createItemBlock(new ItemBlock(silverBlock), silverBlock);
 
-    mithrilBlock = createBlock(
-        new ModBlock(Material.IRON, "mithril_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"), event);
+    blockList.add(mithrilBlock = new ModBlock(Material.IRON, "mithril_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"));
     ibMithrilBlock = createItemBlock(new ItemBlock(mithrilBlock), mithrilBlock);
 
-    titaniumBlock = createBlock(
-        new ModBlock(Material.IRON, "titanium_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"), event);
+    blockList.add(titaniumBlock = new ModBlock(Material.IRON, "titanium_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"));
     ibTitaniumBlock = createItemBlock(new ItemBlock(titaniumBlock), titaniumBlock);
 
-    celestialBronzeBlock = createBlock(new ModBlock(Material.IRON, "celestial_bronze_block",
-        CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe", 5 / 15F), event);
+    blockList.add(celestialBronzeBlock = new ModBlock(Material.IRON, "celestial_bronze_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe", 5 / 15F));
     ibCelestialBronzeBlock = createItemBlock(new ItemBlock(celestialBronzeBlock), celestialBronzeBlock);
 
-    imperialGoldBlock = createBlock(new ModBlock(Material.IRON, "imperial_gold_block", CreativeTabs.BUILDING_BLOCKS, 2F,
-        12F, 1, "pickaxe", 7 / 15F), event);
+    blockList.add(imperialGoldBlock = new ModBlock(Material.IRON, "imperial_gold_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe", 7 / 15F));
     ibImperialGoldBlock = createItemBlock(new ItemBlock(imperialGoldBlock), imperialGoldBlock);
 
-    steelBlock = createBlock(
-        new ModBlock(Material.IRON, "steel_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"), event);
+    blockList.add(steelBlock = new ModBlock(Material.IRON, "steel_block", CreativeTabs.BUILDING_BLOCKS, 2F, 12F, 1, "pickaxe"));
     ibSteelBlock = createItemBlock(new ItemBlock(steelBlock), steelBlock);
 
     // Metal Bricks
     // Gold
-    goldBrick = createBlock(
-        new ModBlock(Material.ROCK, "gold_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"), event);
+    blockList.add(goldBrick = new ModBlock(Material.ROCK, "gold_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibGoldBrick = createItemBlock(new ItemBlock(goldBrick), goldBrick);
 
-    goldBrickStairs = createBlock(
-        new ModStairs(Blocks.GOLD_BLOCK, "gold_brick_stairs", CreativeTabs.BUILDING_BLOCKS, 2.8F, 27F, 1, "pickaxe"),
-        event);
+    blockList.add(goldBrickStairs = new ModStairs(Blocks.GOLD_BLOCK, "gold_brick_stairs", CreativeTabs.BUILDING_BLOCKS, 2.8F, 27F, 1, "pickaxe"));
     ibGoldBrickStairs = createItemBlock(new ItemBlock(goldBrickStairs), goldBrickStairs);
 
-    goldBrickStairsAlt = createBlock(new ModStairs(Blocks.GOLD_BLOCK, "gold_brick_stairs_alt",
-        CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"), event);
+    blockList.add(goldBrickStairsAlt = new ModStairs(Blocks.GOLD_BLOCK, "gold_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"));
     ibGoldBrickStairsAlt = createItemBlock(new ItemBlock(goldBrickStairsAlt), goldBrickStairsAlt);
     // Copper
-    copperBrick = createBlock(
-        new ModBlock(Material.ROCK, "copper_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"), event);
+    blockList.add(copperBrick = new ModBlock(Material.ROCK, "copper_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibCopperBrick = createItemBlock(new ItemBlock(copperBrick), copperBrick);
 
-    copperBrickStairs = createBlock(
-        new ModStairs(copperBlock, "copper_brick_stairs", CreativeTabs.BUILDING_BLOCKS, 2.8F, 27F, 1, "pickaxe"),
-        event);
+    blockList.add(copperBrickStairs = new ModStairs(copperBlock, "copper_brick_stairs", CreativeTabs.BUILDING_BLOCKS, 2.8F, 27F, 1, "pickaxe"));
     ibCopperBrickStairs = createItemBlock(new ItemBlock(copperBrickStairs), copperBrickStairs);
 
-    copperBrickStairsAlt = createBlock(
-        new ModStairs(copperBlock, "copper_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"),
-        event);
+    blockList.add(copperBrickStairsAlt = new ModStairs(copperBlock, "copper_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"));
     ibCopperBrickStairsAlt = createItemBlock(new ItemBlock(copperBrickStairsAlt), copperBrickStairsAlt);
     // Silver
-    silverBrick = createBlock(
-        new ModBlock(Material.ROCK, "silver_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"), event);
+    blockList.add(silverBrick = new ModBlock(Material.ROCK, "silver_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibSilverBrick = createItemBlock(new ItemBlock(silverBrick), silverBrick);
 
-    silverBrickStairs = createBlock(
-        new ModStairs(silverBlock, "silver_brick_stairs", CreativeTabs.BUILDING_BLOCKS, 2.8F, 27F, 1, "pickaxe"),
-        event);
+    blockList.add(silverBrickStairs = new ModStairs(silverBlock, "silver_brick_stairs", CreativeTabs.BUILDING_BLOCKS, 2.8F, 27F, 1, "pickaxe"));
     ibSilverBrickStairs = createItemBlock(new ItemBlock(silverBrickStairs), silverBrickStairs);
 
-    silverBrickStairsAlt = createBlock(
-        new ModStairs(silverBlock, "silver_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"),
-        event);
+    blockList.add(silverBrickStairsAlt = new ModStairs(silverBlock, "silver_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"));
     ibSilverBrickStairsAlt = createItemBlock(new ItemBlock(silverBrickStairsAlt), silverBrickStairsAlt);
     // Obsidian
-    polishedObsidianBrick = createBlock(
-        new ModBlock(Material.ROCK, "polished_obsidian_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"),
-        event);
+    blockList.add(polishedObsidianBrick = new ModBlock(Material.ROCK, "polished_obsidian_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibPolishedObsidianBrick = createItemBlock(new ItemBlock(polishedObsidianBrick), polishedObsidianBrick);
 
-    polishedObsidianBrickStairs = createBlock(new ModStairs(polishedObsidianBlock, "polished_obsidian_brick_stairs",
-        CreativeTabs.BUILDING_BLOCKS, 2.8F, 27F, 1, "pickaxe"), event);
-    ibPolishedObsidianBrickStairs = createItemBlock(new ItemBlock(polishedObsidianBrickStairs),
-        polishedObsidianBrickStairs);
+    blockList.add(polishedObsidianBrickStairs = new ModStairs(polishedObsidianBlock, "polished_obsidian_brick_stairs", CreativeTabs.BUILDING_BLOCKS, 2.8F, 27F, 1, "pickaxe"));
+    ibPolishedObsidianBrickStairs = createItemBlock(new ItemBlock(polishedObsidianBrickStairs), polishedObsidianBrickStairs);
 
-    polishedObsidianBrickStairsAlt = createBlock(new ModStairs(polishedObsidianBlock,
-        "polished_obsidian_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"), event);
-    ibPolishedObsidianBrickStairsAlt = createItemBlock(new ItemBlock(polishedObsidianBrickStairsAlt),
-        polishedObsidianBrickStairsAlt);
+    blockList.add(polishedObsidianBrickStairsAlt = new ModStairs(polishedObsidianBlock, "polished_obsidian_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"));
+    ibPolishedObsidianBrickStairsAlt = createItemBlock(new ItemBlock(polishedObsidianBrickStairsAlt), polishedObsidianBrickStairsAlt);
+    
+    ///////////////////////////////////////////
+    //Register Blocks
+    for(Block block : blockList) {
+      event.getRegistry().register(block);
+    }
   }
-
+  
   private static ItemBlock createItemBlock(ItemBlock iBlock, Block block) {
     iBlock.setRegistryName(block.getRegistryName()).setUnlocalizedName(block.getUnlocalizedName());
     itemBlockList.add(iBlock);
 
     return iBlock;
   }
+
   private static ItemBlock createItemBlockWithoutAddingToList(ItemBlock iBlock, Block block) {
     iBlock.setRegistryName(block.getRegistryName()).setUnlocalizedName(block.getUnlocalizedName());
     itemBlockList.add(iBlock);
 
     return iBlock;
   }
-
-  private static ModBlock createBlock(ModBlock block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModOre createBlock(ModOre block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModBlockDoor createBlock(ModBlockDoor block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModStairs createBlock(ModStairs block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModLamp createBlock(ModLamp block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModLantern createBlock(ModLantern block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModChest createBlock(ModChest block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModBlockBed createBlock(ModBlockBed block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModAlloyFurnace createBlock(ModAlloyFurnace block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModCraftingTable createBlock(ModCraftingTable block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
-
-  private static ModCampfire createBlock(ModCampfire block, RegistryEvent.Register<Block> event) {
-    event.getRegistry().register(block);
-
-    return block;
-  }
+  /////////////////////////////////////////////////////////////////////////////////////////////
 
   public static void initItems(RegistryEvent.Register<Item> event) {
     // iTutItem = new ItemTutItem("tut_item", CreativeTabs.MATERIALS);
@@ -1370,18 +1153,18 @@ public class BlockHandler {
     //////////////////
     
     //Campfire
-    register(ibCampfire, 0, "oak");
-    register(ibLitCampfire, 0, "oak");
-    register(ibCampfire, 4, "acacia");
-    register(ibLitCampfire, 4, "acacia");
-    register(ibCampfire, 1, "spruce");
-    register(ibLitCampfire, 1, "spruce");
-    register(ibCampfire, 2, "birch");
-    register(ibLitCampfire, 2, "birch");
-    register(ibCampfire, 3, "jungle");
-    register(ibLitCampfire, 3, "jungle");
-    register(ibCampfire, 5, "dark_oak");
-    register(ibLitCampfire, 5, "dark_oak");
+    registerVariant(ibCampfire, 0, "oak");
+    registerVariant(ibLitCampfire, 0, "oak");
+    registerVariant(ibCampfire, 4, "acacia");
+    registerVariant(ibLitCampfire, 4, "acacia");
+    registerVariant(ibCampfire, 1, "spruce");
+    registerVariant(ibLitCampfire, 1, "spruce");
+    registerVariant(ibCampfire, 2, "birch");
+    registerVariant(ibLitCampfire, 2, "birch");
+    registerVariant(ibCampfire, 3, "jungle");
+    registerVariant(ibLitCampfire, 3, "jungle");
+    registerVariant(ibCampfire, 5, "dark_oak");
+    registerVariant(ibLitCampfire, 5, "dark_oak");
 
     // Ingots
     register(iCopperIngot);
@@ -1447,10 +1230,16 @@ public class BlockHandler {
   }
 
   private static void register(Item item, int meta) {
-    register(item, meta, "normal");
+    registerVariant(item, meta, "normal");
   }
-  private static void register(Item item, int meta, String metaName) {
-    ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName().toString(), metaName));
+  private static void registerVariant(Item item, int meta, String metaName) {
+    register(item, meta, metaName, item.getRegistryName().toString());
+  }
+  private static void register(Item item, int meta, String metaName, String resourceLocation) {
+    ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(resourceLocation, metaName));
+  }
+  private static void register(Item item, int meta, String resourceLocation) {
+    ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(resourceLocation));
   }
 
   public static void registerTileEntities() {

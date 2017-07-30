@@ -1,18 +1,24 @@
 {
   "forge_marker": 1,
   "defaults": {
+    "model": "expanded:campfire",
     "textures": {
       "ring": "blocks/planks_acacia",
       "logs": "blocks/log_acacia",
       "logs_end": "blocks/log_acacia_top",
       "particle": "blocks/log_acacia"
     },
-    "model": "expanded:campfire",
     "uvlock": true
   },
   "variants": {
-    "normal": {
-      "model": "expanded:campfire"
-    }
+    "normal": [{
+      "model": "expanded:campfire",
+      "textures": {
+        "ring": "blocks/planks_acacia",
+        "logs": "blocks/log_acacia",
+        "logs_end": "blocks/log_acacia_top",
+        "particle": "blocks/log_acacia"
+      }
+    }],
   }
 }

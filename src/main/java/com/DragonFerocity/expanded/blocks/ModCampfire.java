@@ -161,17 +161,18 @@ public class ModCampfire extends Block {
    */
   public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack)
   {
-      //worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
+    //worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
+    worldIn.setBlockState(pos, state.withProperty(TYPE, state.getValue(TYPE)), 3);
 
-      if (stack.hasDisplayName())
-      {
-          TileEntity tileentity = worldIn.getTileEntity(pos);
+    if (stack.hasDisplayName())
+    {
+        TileEntity tileentity = worldIn.getTileEntity(pos);
 
-          if (tileentity instanceof ModTileEntityCampfire)
-          {
-              ((ModTileEntityCampfire)tileentity).setCustomInventoryName(stack.getDisplayName());
-          }
-      }
+        if (tileentity instanceof ModTileEntityCampfire)
+        {
+            ((ModTileEntityCampfire)tileentity).setCustomInventoryName(stack.getDisplayName());
+        }
+    }
   }
 
   /**
@@ -203,7 +204,7 @@ public class ModCampfire extends Block {
           }
       }
 
-      super.breakBlock(worldIn, pos, state);
+      super.breakBlock(worldIn, pos, state.withProperty(TYPE, state.getValue(TYPE)));
   }
 
   public boolean hasComparatorInputOverride(IBlockState state)
@@ -236,8 +237,7 @@ public class ModCampfire extends Block {
   @Override
   public IBlockState getStateFromMeta(int meta)
   {
-    IBlockState b = this.getDefaultState().withProperty(TYPE, BlockPlanks.EnumType.values()[meta]);
-    return b;
+    return this.getDefaultState().withProperty(TYPE, BlockPlanks.EnumType.values()[meta]);
   }
 
   /**
@@ -246,8 +246,7 @@ public class ModCampfire extends Block {
   @Override
   public int getMetaFromState(IBlockState state)
   {
-    int a = ((BlockPlanks.EnumType)state.getValue(TYPE)).getMetadata();
-    return a;
+    return ((BlockPlanks.EnumType)state.getValue(TYPE)).getMetadata();
   }
   
   @Override

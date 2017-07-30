@@ -56,14 +56,14 @@
         },
         {
             "name": "Cube",
-            "from": [ 2.0, 0.0, 3.0 ],
+            "from": [ 1.0, 0.0, 3.0 ],
             "to": [ 14.0, 3.0, 6.0 ],
             "faces": {
                 "north": { "texture": "#logs", "uv": [ 2.0, 3.0, 14.0, 6.0 ] },
                 "east": { "texture": "#logs_end", "uv": [ 5.0, 5.0, 11.0, 11.0 ] },
                 "south": { "texture": "#logs", "uv": [ 4.0, 7.0, 16.0, 10.0 ] },
                 "west": { "texture": "#logs_end", "uv": [ 5.0, 5.0, 11.0, 11.0 ] },
-                "up": { "texture": "#logs", "uv": [ 2.0, 8.0, 14.0, 11.0 ] },
+                "up": { "texture": "#logs", "uv": [ 16.0, 8.0, 4.0, 11.0 ] },
                 "down": { "texture": "#logs", "uv": [ 2.0, 2.0, 14.0, 5.0 ] }
             }
         },
@@ -76,7 +76,7 @@
                 "north": { "texture": "#logs", "uv": [ 2.0, 3.0, 13.0, 6.0 ] },
                 "east": { "texture": "#logs_end", "uv": [ 5.0, 5.0, 11.0, 11.0 ] },
                 "south": { "texture": "#logs", "uv": [ 4.0, 7.0, 15.0, 10.0 ] },
-                "west": { "texture": "#logs_end", "uv": [ 5.0, 5.0, 11.0, 11.0 ] },
+                "west": { "texture": "#logs", "uv": [ 0.0, 0.0, 3.0, 3.0 ] },
                 "up": { "texture": "#logs", "uv": [ 2.0, 8.0, 13.0, 11.0 ] },
                 "down": { "texture": "#logs", "uv": [ 2.0, 2.0, 13.0, 5.0 ] }
             }
@@ -101,11 +101,11 @@
             "to": [ 12.0, 6.0, 12.0 ],
             "rotation": { "origin": [ 8.0, 8.0, 8.0 ], "axis": "y", "angle": -22.5 },
             "faces": {
-                "north": { "texture": "#logs", "uv": [ 2.0, 3.0, 5.0, 6.0 ] },
-                "east": { "texture": "#logs_end", "uv": [ 5.0, 5.0, 11.0, 11.0 ] },
-                "south": { "texture": "#logs", "uv": [ 4.0, 7.0, 7.0, 10.0 ] },
-                "west": { "texture": "#logs_end", "uv": [ 5.0, 5.0, 11.0, 11.0 ] },
-                "up": { "texture": "#logs", "uv": [ 2.0, 8.0, 5.0, 20.0 ] },
+                "north": { "texture": "#logs_end", "uv": [ 5.0, 5.0, 11.0, 11.0 ] },
+                "east": { "texture": "#logs", "uv": [ 0.0, 0.0, 12.0, 3.0 ] },
+                "south": { "texture": "#logs_end", "uv": [ 5.0, 5.0, 11.0, 11.0 ] },
+                "west": { "texture": "#logs", "uv": [ 0.0, 0.0, 12.0, 3.0 ] },
+                "up": { "texture": "#logs", "uv": [ 3.0, 0.0, 6.0, 16.0 ] },
                 "down": { "texture": "#logs", "uv": [ 2.0, 2.0, 5.0, 14.0 ] }
             }
         }

@@ -1,0 +1,9 @@
+{
+    "parent": "expanded:block/campfire",
+    "textures": {
+      "ring": "blocks/planks_acacia",
+      "logs": "blocks/log_acacia",
+      "logs_end": "blocks/log_acacia_top",
+      "particle": "blocks/log_acacia"
+    }
+}
