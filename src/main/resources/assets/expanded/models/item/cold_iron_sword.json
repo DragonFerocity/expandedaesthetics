@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "expanded:items/swords/cold_iron_sword"
+    }
+}

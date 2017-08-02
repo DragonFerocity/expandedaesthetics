@@ -108,7 +108,14 @@ public class ModAlloyFurnaceRecipes {
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.BLACK.getMetadata()), new ItemStack(Blocks.AIR, 1), new ItemStack(Blocks.BLACK_GLAZED_TERRACOTTA), 0.1F);
       
       this.addSmeltingRecipe(BlockHandler.ibMithrilOre, Items.AIR, new ItemStack(BlockHandler.iMithrilIngot), 1.3F);
-      this.addSmeltingRecipe(Items.IRON_INGOT, Items.QUARTZ, new ItemStack(BlockHandler.iSteelIngot), 0.5F);
+      this.addSmeltingRecipe(Items.IRON_INGOT, Items.IRON_INGOT, new ItemStack(BlockHandler.iSteelIngot), 0.5F);
+      this.addSmeltingRecipe(BlockHandler.iCelestialBronzeNuggets, Items.AIR, new ItemStack(BlockHandler.iCelestialBronzeIngot), 0.5F);
+      this.addSmeltingRecipe(BlockHandler.iImperialGoldNuggets, Items.AIR, new ItemStack(BlockHandler.iImperialGoldIngot), 0.5F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_SWORD, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronSword, 1), 0.5F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_HELMET, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronHelmet, 1), 0.5F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_CHESTPLATE, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronChest, 1), 0.5F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_LEGGINGS, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronLegs, 1), 0.5F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_BOOTS, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronBoots, 1), 0.5F);
   }
 
   /**

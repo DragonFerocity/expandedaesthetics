@@ -1,5 +1,6 @@
 package com.DragonFerocity.expanded.handlers;
 
+import com.DragonFerocity.expanded.Ref;
 //import com.DragonFerocity.expanded.blocks.CobblestoneChest;
 //import com.DragonFerocity.expanded.blocks.ModChest;
 import com.DragonFerocity.expanded.blocks.*;
@@ -9,7 +10,10 @@ import com.DragonFerocity.expanded.entities.ModTileEntityChest;
 import com.DragonFerocity.expanded.items.*;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemMultiTexture;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.block.Block;
@@ -17,7 +21,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistryModifiable;
@@ -349,8 +356,6 @@ public class BlockHandler {
   // Titanium will be used to reinforce items increasing their durability
   public static ModOre copperOre;
   public static ItemBlock ibCopperOre;
-  public static Item iCopperIngot;
-  public static Item iCopperNuggets;
   public static ModOre tinOre;
   public static ItemBlock ibTinOre;
   public static Item iTinIngot;
@@ -368,6 +373,8 @@ public class BlockHandler {
   public static Item iTitaniumIngot;
 
   // Special Ores
+  public static Item iCopperIngot;
+  public static Item iCopperNuggets;
   public static Item iSteelIngot;
   public static Item iBronzeNuggets;
   public static Item iBronzeIngot;
@@ -402,6 +409,7 @@ public class BlockHandler {
   public static ItemBlock ibColdIronBlock;
 
   // Pickaxes
+  public static ModPickaxe iCopperHammer;
   public static ModPickaxe iBronzePickaxe;
   public static ModPickaxe iSteelPickaxe;
   public static ModPickaxe iMithrilPickaxe;
@@ -410,6 +418,7 @@ public class BlockHandler {
   public static ModPickaxe iObsidianPickaxe;
 
   // Axe
+  public static ModAxe iCopperAxe;
   public static ModAxe iBronzeAxe;
   public static ModAxe iSteelAxe;
   public static ModAxe iMithrilAxe;
@@ -418,6 +427,7 @@ public class BlockHandler {
   public static ModAxe iObsidianAxe;
 
   // Shovel
+  public static ModSpade iCopperShovel;
   public static ModSpade iBronzeShovel;
   public static ModSpade iSteelShovel;
   public static ModSpade iMithrilShovel;
@@ -426,6 +436,7 @@ public class BlockHandler {
   public static ModSpade iObsidianShovel;
 
   // Hoe
+  public static ModHoe iCopperHoe;
   public static ModHoe iBronzeHoe;
   public static ModHoe iSteelHoe;
   public static ModHoe iMithrilHoe;
@@ -436,11 +447,53 @@ public class BlockHandler {
   // Sword
   public static ModSword iBronzeSword;
   public static ModSword iSilverSword;
+  public static ModSword iColdIronSword;
   public static ModSword iSteelSword;
   public static ModSword iMithrilSword;
   public static ModSword iCelestialBronzeSword;
   public static ModSword iImperialGoldSword;
   public static ModSword iObsidianSword;
+  
+  //Armor
+  public static ItemArmor.ArmorMaterial copperMaterial = EnumHelper.addArmorMaterial("copper", Ref.MODID + ":copper", 10, new int[]{1, 3, 4, 2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F);
+  public static ItemArmor.ArmorMaterial bronzeMaterial = EnumHelper.addArmorMaterial("bronze", Ref.MODID + ":bronze", 15, new int[]{2, 5, 5, 3}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+  public static ItemArmor.ArmorMaterial steelMaterial = EnumHelper.addArmorMaterial("steel", Ref.MODID + ":steel", 18, new int[]{2, 5, 7, 3}, 11, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+  public static ItemArmor.ArmorMaterial mithrilMaterial = EnumHelper.addArmorMaterial("mithril", Ref.MODID + ":mithril", 20, new int[]{3, 5, 7, 4}, 17, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F);
+  public static ItemArmor.ArmorMaterial coldIronMaterial = EnumHelper.addArmorMaterial("cold_iron", Ref.MODID + ":cold_iron", 14, new int[]{2, 5, 6, 3}, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+  public static ItemArmor.ArmorMaterial celestialBronzeMaterial = EnumHelper.addArmorMaterial("celestial_bronze", Ref.MODID + ":celestial_bronze", 36, new int[]{4, 6, 9, 3}, 17, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 3.0F);
+  public static ItemArmor.ArmorMaterial imperialGoldMaterial = EnumHelper.addArmorMaterial("imperial_gold", Ref.MODID + ":imperial_gold", 34, new int[]{4, 6, 9, 3}, 22, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 3.0F);
+  public static ItemArmor iCopperHelmet;
+  public static ItemArmor iCopperChest;
+  public static ItemArmor iCopperLegs;
+  public static ItemArmor iCopperBoots;
+  public static ItemArmor iBronzeHelmet;
+  public static ItemArmor iBronzeChest;
+  public static ItemArmor iBronzeLegs;
+  public static ItemArmor iBronzeBoots;
+  public static ItemArmor iSteelHelmet;
+  public static ItemArmor iSteelChest;
+  public static ItemArmor iSteelLegs;
+  public static ItemArmor iSteelBoots;
+  public static ItemArmor iMithrilHelmet;
+  public static ItemArmor iMithrilChest;
+  public static ItemArmor iMithrilLegs;
+  public static ItemArmor iMithrilBoots;
+  public static ItemArmor iCelestialBronzeHelmet;
+  public static ItemArmor iCelestialBronzeChest;
+  public static ItemArmor iCelestialBronzeLegs;
+  public static ItemArmor iCelestialBronzeBoots;
+  public static ItemArmor iImperialGoldHelmet;
+  public static ItemArmor iImperialGoldChest;
+  public static ItemArmor iImperialGoldLegs;
+  public static ItemArmor iImperialGoldBoots;
+  public static ItemArmor iColdIronHelmet;
+  public static ItemArmor iColdIronChest;
+  public static ItemArmor iColdIronLegs;
+  public static ItemArmor iColdIronBoots;
+  public static ItemArmor iColdIronHelmetBlue;
+  public static ItemArmor iColdIronChestBlue;
+  public static ItemArmor iColdIronLegsBlue;
+  public static ItemArmor iColdIronBootsBlue;
 
   // Alloy Furnace
   public static ModAlloyFurnace alloyFurnace;
@@ -454,19 +507,10 @@ public class BlockHandler {
   public static ModCampfire litCampfire;
   public static ItemBlock ibLitCampfire;
   
-  /*public static ModCampfire oakCampfire;
-  public static ItemBlock ibOakCampfire;
-  public static ModCampfire litOakCampfire;
-  public static ItemBlock ibOakLitCampfire;
-  
-  public static ModCampfire acaciaCampfire;
-  public static ItemBlock ibAcaciaCampfire;
-  public static ModCampfire litAcaciaCampfire;
-  public static ItemBlock ibAcaciaLitCampfire;*/
-  
   // Other Vars
   public static ArrayList<ItemBlock> itemBlockList = new ArrayList<>();
   public static ArrayList<Block> blockList = new ArrayList<>();
+  public static ArrayList<Item> itemList = new ArrayList<>();
 
   // public static void init(RegistryEvent.Register event) {
   // initBlocks(event);
@@ -496,9 +540,9 @@ public class BlockHandler {
     // Campfire
     // Oak
     blockList.add(campfire = new ModCampfire(false, "campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0));
-    ibCampfire = createItemBlockWithoutAddingToList(new ItemBlock(campfire), campfire);
+    ibCampfire = createItemMultiTexture(new ItemMultiTexture(campfire, campfire, ModCampfire.types), campfire);
     blockList.add(litCampfire = new ModCampfire(true, "lit_campfire", CreativeTabs.DECORATIONS, 1F, 1F, "pickaxe", 0));
-    ibLitCampfire = createItemBlockWithoutAddingToList(new ItemBlock(litCampfire), litCampfire);
+    ibLitCampfire = createItemMultiTexture(new ItemMultiTexture(campfire, campfire, ModCampfire.types), litCampfire);
     
     GameRegistry.registerTileEntity(ModTileEntityCampfire.class, "campfire_tile_entity");
     
@@ -846,7 +890,7 @@ public class BlockHandler {
     // advancedWorkbench = new ModAdvancedWorkbench(Material.WOOD);
 
     // Ores
-    blockList.add(copperOre = new ModOre("copper_ore", 2F, 12F, 0));
+    blockList.add(copperOre = new ModOre("copper_ore", 1F, 6F, -1));
     ibCopperOre = createItemBlock(new ItemBlock(copperOre), copperOre);
 
     blockList.add(tinOre = new ModOre("tin_ore", 2.1F, 13F, 1));
@@ -947,7 +991,7 @@ public class BlockHandler {
     return iBlock;
   }
 
-  private static ItemBlock createItemBlockWithoutAddingToList(ItemBlock iBlock, Block block) {
+  private static ItemBlock createItemMultiTexture(ItemMultiTexture iBlock, Block block) {
     iBlock.setRegistryName(block.getRegistryName()).setUnlocalizedName(block.getUnlocalizedName());
     itemBlockList.add(iBlock);
 
@@ -958,157 +1002,147 @@ public class BlockHandler {
   public static void initItems(RegistryEvent.Register<Item> event) {
     // iTutItem = new ItemTutItem("tut_item", CreativeTabs.MATERIALS);
     // Andesite
-    iAndesitePolishedDoor = createItem(new ModItemDoor(andesitePolishedDoor, "andesite_polished_door", 64), event);
+    itemList.add(iAndesitePolishedDoor = new ModItemDoor(andesitePolishedDoor, "andesite_polished_door", 64));
 
     // Birch
-    iBirchStableDoor = createItem(new ModItemDoor(birchStableDoor, "birch_stable_door", 64), event);
+    itemList.add(iBirchStableDoor = new ModItemDoor(birchStableDoor, "birch_stable_door", 64));
 
     // Brick
-    iBrickDoor = createItem(new ModItemDoor(brickDoor, "brick_door", 64), event);
+    itemList.add(iBrickDoor = new ModItemDoor(brickDoor, "brick_door", 64));
 
     // Cobblestone
-    iCobblestoneDoor = createItem(new ModItemDoor(cobblestoneDoor, "cobblestone_door", 64), event);
+    itemList.add(iCobblestoneDoor = new ModItemDoor(cobblestoneDoor, "cobblestone_door", 64));
 
     // Dark Oak
-    iDarkOakBed = createItem(new ModItemBed(darkOakBed, "dark_oak_bed", 64), event);
+    itemList.add(iDarkOakBed = new ModItemBed(darkOakBed, "dark_oak_bed", 64));
 
     // Diorite
-    iDioritePolishedDoor = createItem(new ModItemDoor(dioritePolishedDoor, "diorite_polished_door", 64), event);
-    iDioritePolishedBed = createItem(new ModItemBed(dioritePolishedBed, "diorite_polished_bed", 64), event);
+    itemList.add(iDioritePolishedDoor = new ModItemDoor(dioritePolishedDoor, "diorite_polished_door", 64));
+    itemList.add(iDioritePolishedBed = new ModItemBed(dioritePolishedBed, "diorite_polished_bed", 64));
 
     // Glass
     // Regular
-    iGlassDoor = createItem(new ModItemDoor(glassDoor, "glass_door", 64), event);
+    itemList.add(iGlassDoor = new ModItemDoor(glassDoor, "glass_door", 64));
 
     // Granite
-    iGranitePolishedDoor = createItem(new ModItemDoor(granitePolishedDoor, "granite_polished_door", 64), event);
+    itemList.add(iGranitePolishedDoor = new ModItemDoor(granitePolishedDoor, "granite_polished_door", 64));
 
     // Hardened Clay
     // Regular
-    iHardenedClayDoor = createItem(new ModItemDoor(hardenedClayDoor, "hardened_clay_door", 64), event);
+    itemList.add(iHardenedClayDoor = new ModItemDoor(hardenedClayDoor, "hardened_clay_door", 64));
 
     // Oak
-    iOakStableDoor = createItem(new ModItemDoor(oakStableDoor, "oak_stable_door", 64), event);
+    itemList.add(iOakStableDoor = new ModItemDoor(oakStableDoor, "oak_stable_door", 64));
 
     // Obsidian
-    iPolishedObsidianDoor = createItem(new ModItemDoor(polishedObsidianDoor, "polished_obsidian_door", 64), event);
+    itemList.add(iPolishedObsidianDoor = new ModItemDoor(polishedObsidianDoor, "polished_obsidian_door", 64));
 
     // Ingots
-    iCopperIngot = createItem(new ModItem("copper_ingot", CreativeTabs.MATERIALS), event);
-    iTinIngot = createItem(new ModItem("tin_ingot", CreativeTabs.MATERIALS), event);
-    iBronzeIngot = createItem(new ModItem("bronze_ingot", CreativeTabs.MATERIALS), event);
-    iPlatinumIngot = createItem(new ModItem("platinum_ingot", CreativeTabs.MATERIALS), event);
-    iSilverIngot = createItem(new ModItem("silver_ingot", CreativeTabs.MATERIALS), event);
-    iTitaniumIngot = createItem(new ModItem("titanium_ingot", CreativeTabs.MATERIALS), event);
-    iSteelIngot = createItem(new ModItem("steel_ingot", CreativeTabs.MATERIALS), event);
-    iMithrilIngot = createItem(new ModItem("mithril_ingot", CreativeTabs.MATERIALS), event);
-    iCelestialBronzeIngot = createItem(new ModItem("celestial_bronze_ingot", CreativeTabs.MATERIALS), event);
-    iImperialGoldIngot = createItem(new ModItem("imperial_gold_ingot", CreativeTabs.MATERIALS), event);
+    itemList.add(iCopperIngot = new ModItem("copper_ingot", CreativeTabs.MATERIALS));
+    itemList.add(iTinIngot = new ModItem("tin_ingot", CreativeTabs.MATERIALS));
+    itemList.add(iBronzeIngot = new ModItem("bronze_ingot", CreativeTabs.MATERIALS));
+    itemList.add(iPlatinumIngot = new ModItem("platinum_ingot", CreativeTabs.MATERIALS));
+    itemList.add(iSilverIngot = new ModItem("silver_ingot", CreativeTabs.MATERIALS));
+    itemList.add(iTitaniumIngot = new ModItem("titanium_ingot", CreativeTabs.MATERIALS));
+    itemList.add(iSteelIngot = new ModItem("steel_ingot", CreativeTabs.MATERIALS));
+    itemList.add(iMithrilIngot = new ModItem("mithril_ingot", CreativeTabs.MATERIALS));
+    itemList.add(iCelestialBronzeIngot = new ModItem("celestial_bronze_ingot", CreativeTabs.MATERIALS));
+    itemList.add(iImperialGoldIngot = new ModItem("imperial_gold_ingot", CreativeTabs.MATERIALS));
 
     // Ore Nuggets
-    iBronzeNuggets = createItem(new ModItem("bronze_nuggets", CreativeTabs.MATERIALS), event);
-    iCelestialBronzeNuggets = createItem(new ModItem("celestial_bronze_nuggets", CreativeTabs.MATERIALS), event);
-    iImperialGoldNuggets = createItem(new ModItem("imperial_gold_nuggets", CreativeTabs.MATERIALS), event);
+    itemList.add(iCopperNuggets = new ModItem("copper_nuggets", CreativeTabs.MATERIALS));
+    itemList.add(iBronzeNuggets = new ModItem("bronze_nuggets", CreativeTabs.MATERIALS));
+    itemList.add(iCelestialBronzeNuggets = new ModItem("celestial_bronze_nuggets", CreativeTabs.MATERIALS));
+    itemList.add(iImperialGoldNuggets = new ModItem("imperial_gold_nuggets", CreativeTabs.MATERIALS));
 
     // Pickaxes
-    iBronzePickaxe = createItem(new ModPickaxe("bronze_pickaxe", ModTool.ToolMaterial.BRONZE, 1.0F, -2.4F), event);
-    iSteelPickaxe = createItem(new ModPickaxe("steel_pickaxe", ModTool.ToolMaterial.STEEL, 1.0F, -2.4F), event);
-    iMithrilPickaxe = createItem(new ModPickaxe("mithril_pickaxe", ModTool.ToolMaterial.MITHRIL, 0.7F, -2.6F), event);
-    iCelestialBronzePickaxe = createItem(
-        new ModPickaxe("celestial_bronze_pickaxe", ModTool.ToolMaterial.CELESTIAL_BRONZE, 1.0F, -2.4F), event);
-    iImperialGoldPickaxe = createItem(
-        new ModPickaxe("imperial_gold_pickaxe", ModTool.ToolMaterial.IMPERIAL_GOLD, 1.0F, -2.4F), event);
-    iObsidianPickaxe = createItem(new ModPickaxe("obsidian_pickaxe", ModTool.ToolMaterial.OBSIDIAN, 2.0F, -1.0F),
-        event);
+    itemList.add(iCopperHammer = new ModPickaxe("copper_hammer", ModTool.ToolMaterial.COPPER, 0.8F, -2.2F));
+    itemList.add(iBronzePickaxe = new ModPickaxe("bronze_pickaxe", ModTool.ToolMaterial.BRONZE, 1.0F, -2.4F));
+    itemList.add(iSteelPickaxe = new ModPickaxe("steel_pickaxe", ModTool.ToolMaterial.STEEL, 1.0F, -2.4F));
+    itemList.add(iMithrilPickaxe = new ModPickaxe("mithril_pickaxe", ModTool.ToolMaterial.MITHRIL, 0.7F, -2.6F));
+    itemList.add(iCelestialBronzePickaxe = new ModPickaxe("celestial_bronze_pickaxe", ModTool.ToolMaterial.CELESTIAL_BRONZE, 1.0F, -2.4F));
+    itemList.add(iImperialGoldPickaxe = new ModPickaxe("imperial_gold_pickaxe", ModTool.ToolMaterial.IMPERIAL_GOLD, 1.0F, -2.4F));
+    itemList.add(iObsidianPickaxe = new ModPickaxe("obsidian_pickaxe", ModTool.ToolMaterial.OBSIDIAN, 2.0F, -1.0F));
 
     // Axes
-    iBronzeAxe = createItem(new ModAxe("bronze_axe", ModTool.ToolMaterial.BRONZE, 7.0F, -3.15F), event);
-    iSteelAxe = createItem(new ModAxe("steel_axe", ModTool.ToolMaterial.STEEL, 8.3F, -3.0F), event);
-    iMithrilAxe = createItem(new ModAxe("mithril_axe", ModTool.ToolMaterial.MITHRIL, 7.0F, -2.5F), event);
-    iCelestialBronzeAxe = createItem(
-        new ModAxe("celestial_bronze_axe", ModTool.ToolMaterial.CELESTIAL_BRONZE, 11F, -3.8F), event);
-    iImperialGoldAxe = createItem(new ModAxe("imperial_gold_axe", ModTool.ToolMaterial.IMPERIAL_GOLD, 8.0F, -2.6F),
-        event);
-    iObsidianAxe = createItem(new ModAxe("obsidian_axe", ModTool.ToolMaterial.OBSIDIAN, 16F, -1.5F), event);
+    itemList.add(iCopperAxe = new ModAxe("copper_axe", ModTool.ToolMaterial.COPPER, 7.0F, -3.15F));
+    itemList.add(iBronzeAxe = new ModAxe("bronze_axe", ModTool.ToolMaterial.BRONZE, 7.0F, -3.15F));
+    itemList.add(iSteelAxe = new ModAxe("steel_axe", ModTool.ToolMaterial.STEEL, 8.3F, -3.0F));
+    itemList.add(iMithrilAxe = new ModAxe("mithril_axe", ModTool.ToolMaterial.MITHRIL, 7.0F, -2.5F));
+    itemList.add(iCelestialBronzeAxe = new ModAxe("celestial_bronze_axe", ModTool.ToolMaterial.CELESTIAL_BRONZE, 11F, -3.8F));
+    itemList.add(iImperialGoldAxe = new ModAxe("imperial_gold_axe", ModTool.ToolMaterial.IMPERIAL_GOLD, 8.0F, -2.6F));
+    itemList.add(iObsidianAxe = new ModAxe("obsidian_axe", ModTool.ToolMaterial.OBSIDIAN, 16F, -1.5F));
 
     // Shovels
-    iBronzeShovel = createItem(new ModSpade("bronze_shovel", ModTool.ToolMaterial.BRONZE), event);
-    iSteelShovel = createItem(new ModSpade("steel_shovel", ModTool.ToolMaterial.STEEL), event);
-    iMithrilShovel = createItem(new ModSpade("mithril_shovel", ModTool.ToolMaterial.MITHRIL), event);
-    iCelestialBronzeShovel = createItem(new ModSpade("celestial_bronze_shovel", ModTool.ToolMaterial.CELESTIAL_BRONZE),
-        event);
-    iImperialGoldShovel = createItem(new ModSpade("imperial_gold_shovel", ModTool.ToolMaterial.IMPERIAL_GOLD), event);
-    iObsidianShovel = createItem(new ModSpade("obsidian_shovel", ModTool.ToolMaterial.OBSIDIAN), event);
+    itemList.add(iCopperShovel = new ModSpade("copper_shovel", ModTool.ToolMaterial.COPPER));
+    itemList.add(iBronzeShovel = new ModSpade("bronze_shovel", ModTool.ToolMaterial.BRONZE));
+    itemList.add(iSteelShovel = new ModSpade("steel_shovel", ModTool.ToolMaterial.STEEL));
+    itemList.add(iMithrilShovel = new ModSpade("mithril_shovel", ModTool.ToolMaterial.MITHRIL));
+    itemList.add(iCelestialBronzeShovel = new ModSpade("celestial_bronze_shovel", ModTool.ToolMaterial.CELESTIAL_BRONZE));
+    itemList.add(iImperialGoldShovel = new ModSpade("imperial_gold_shovel", ModTool.ToolMaterial.IMPERIAL_GOLD));
+    itemList.add(iObsidianShovel = new ModSpade("obsidian_shovel", ModTool.ToolMaterial.OBSIDIAN));
 
     // Hoes
-    iBronzeHoe = createItem(new ModHoe("bronze_hoe", ModTool.ToolMaterial.BRONZE), event);
-    iSteelHoe = createItem(new ModHoe("steel_hoe", ModTool.ToolMaterial.STEEL), event);
-    iMithrilHoe = createItem(new ModHoe("mithril_hoe", ModTool.ToolMaterial.MITHRIL), event);
-    iCelestialBronzeHoe = createItem(new ModHoe("celestial_bronze_hoe", ModTool.ToolMaterial.CELESTIAL_BRONZE), event);
-    iImperialGoldHoe = createItem(new ModHoe("imperial_gold_hoe", ModTool.ToolMaterial.IMPERIAL_GOLD), event);
-    iObsidianHoe = createItem(new ModHoe("obsidian_hoe", ModTool.ToolMaterial.OBSIDIAN), event);
+    itemList.add(iCopperHoe = new ModHoe("copper_hoe", ModTool.ToolMaterial.COPPER));
+    itemList.add(iBronzeHoe = new ModHoe("bronze_hoe", ModTool.ToolMaterial.BRONZE));
+    itemList.add(iSteelHoe = new ModHoe("steel_hoe", ModTool.ToolMaterial.STEEL));
+    itemList.add(iMithrilHoe = new ModHoe("mithril_hoe", ModTool.ToolMaterial.MITHRIL));
+    itemList.add(iCelestialBronzeHoe = new ModHoe("celestial_bronze_hoe", ModTool.ToolMaterial.CELESTIAL_BRONZE));
+    itemList.add(iImperialGoldHoe = new ModHoe("imperial_gold_hoe", ModTool.ToolMaterial.IMPERIAL_GOLD));
+    itemList.add(iObsidianHoe = new ModHoe("obsidian_hoe", ModTool.ToolMaterial.OBSIDIAN));
 
     // Swords
-    iBronzeSword = createItem(new ModSword("bronze_sword", ModTool.ToolMaterial.BRONZE), event);
-    iSilverSword = createItem(new ModSword("silver_sword", ModTool.ToolMaterial.SILVER), event);
-    iSteelSword = createItem(new ModSword("steel_sword", ModTool.ToolMaterial.STEEL), event);
-    iMithrilSword = createItem(new ModSword("mithril_sword", ModTool.ToolMaterial.MITHRIL), event);
-    iCelestialBronzeSword = createItem(new ModSword("celestial_bronze_sword", ModTool.ToolMaterial.CELESTIAL_BRONZE),
-        event);
-    iImperialGoldSword = createItem(new ModSword("imperial_gold_sword", ModTool.ToolMaterial.IMPERIAL_GOLD), event);
-    iObsidianSword = createItem(new ModSword("obsidian_sword", ModTool.ToolMaterial.OBSIDIAN), event);
+    itemList.add(iBronzeSword = new ModSword("bronze_sword", ModTool.ToolMaterial.BRONZE));
+    itemList.add(iSilverSword = new ModSword("silver_sword", ModTool.ToolMaterial.SILVER));
+    itemList.add(iColdIronSword = new ModSword("cold_iron_sword", ModTool.ToolMaterial.COLD_IRON));
+    itemList.add(iSteelSword = new ModSword("steel_sword", ModTool.ToolMaterial.STEEL));
+    itemList.add(iMithrilSword = new ModSword("mithril_sword", ModTool.ToolMaterial.MITHRIL));
+    itemList.add(iCelestialBronzeSword = new ModSword("celestial_bronze_sword", ModTool.ToolMaterial.CELESTIAL_BRONZE));
+    itemList.add(iImperialGoldSword = new ModSword("imperial_gold_sword", ModTool.ToolMaterial.IMPERIAL_GOLD));
+    itemList.add(iObsidianSword = new ModSword("obsidian_sword", ModTool.ToolMaterial.OBSIDIAN));
+    
+    //Armor
+    //itemList.add(iCopperArmor = new ModArmor("copper", ModArmor.ArmorMaterial.COPPER, EntityEquipmentSlot.CHEST));
+    itemList.add(iColdIronHelmet = new ModArmor("cold_iron", coldIronMaterial, 1, EntityEquipmentSlot.HEAD));
+    itemList.add(iColdIronChest = new ModArmor("cold_iron", coldIronMaterial, 1, EntityEquipmentSlot.CHEST));
+    itemList.add(iColdIronLegs = new ModArmor("cold_iron", coldIronMaterial, 2, EntityEquipmentSlot.LEGS));
+    itemList.add(iColdIronBoots = new ModArmor("cold_iron", coldIronMaterial, 1, EntityEquipmentSlot.FEET));
+    itemList.add(iColdIronHelmetBlue = new ModArmor("cold_iron_nether", coldIronMaterial, 1, EntityEquipmentSlot.HEAD));
+    itemList.add(iColdIronChestBlue = new ModArmor("cold_iron_nether", coldIronMaterial, 1, EntityEquipmentSlot.CHEST));
+    itemList.add(iColdIronLegsBlue = new ModArmor("cold_iron_nether", coldIronMaterial, 2, EntityEquipmentSlot.LEGS));
+    itemList.add(iColdIronBootsBlue = new ModArmor("cold_iron_nether", coldIronMaterial, 1, EntityEquipmentSlot.FEET));
 
+    itemList.add(iCopperHelmet = new ModArmor("copper", copperMaterial, 1, EntityEquipmentSlot.HEAD));
+    itemList.add(iCopperChest = new ModArmor("copper", copperMaterial, 1, EntityEquipmentSlot.CHEST));
+    itemList.add(iCopperLegs = new ModArmor("copper", copperMaterial, 2, EntityEquipmentSlot.LEGS));
+    itemList.add(iCopperBoots = new ModArmor("copper", copperMaterial, 1, EntityEquipmentSlot.FEET));
+
+    itemList.add(iBronzeHelmet = new ModArmor("bronze", bronzeMaterial, 1, EntityEquipmentSlot.HEAD));
+    itemList.add(iBronzeChest = new ModArmor("bronze", bronzeMaterial, 1, EntityEquipmentSlot.CHEST));
+    itemList.add(iBronzeLegs = new ModArmor("bronze", bronzeMaterial, 2, EntityEquipmentSlot.LEGS));
+    itemList.add(iBronzeBoots = new ModArmor("bronze", bronzeMaterial, 1, EntityEquipmentSlot.FEET));
+
+    itemList.add(iSteelHelmet = new ModArmor("steel", steelMaterial, 1, EntityEquipmentSlot.HEAD));
+    itemList.add(iSteelChest = new ModArmor("steel", steelMaterial, 1, EntityEquipmentSlot.CHEST));
+    itemList.add(iSteelLegs = new ModArmor("steel", steelMaterial, 2, EntityEquipmentSlot.LEGS));
+    itemList.add(iSteelBoots = new ModArmor("steel", steelMaterial, 1, EntityEquipmentSlot.FEET));
+
+    itemList.add(iMithrilHelmet = new ModArmor("mithril", mithrilMaterial, 1, EntityEquipmentSlot.HEAD));
+    itemList.add(iMithrilChest = new ModArmor("mithril", mithrilMaterial, 1, EntityEquipmentSlot.CHEST));
+    itemList.add(iMithrilLegs = new ModArmor("mithril", mithrilMaterial, 2, EntityEquipmentSlot.LEGS));
+    itemList.add(iMithrilBoots = new ModArmor("mithril", mithrilMaterial, 1, EntityEquipmentSlot.FEET));
+
+    for (Item item : itemList) {
+      createItem(item, event);
+    }
+    
     for (ItemBlock iBlock : itemBlockList) {
       createItemBlock(iBlock, event);
     }
   }
 
-  private static ModItemDoor createItem(ModItemDoor item, RegistryEvent.Register<Item> event) {
+  private static void createItem(Item item, RegistryEvent.Register<Item> event) {
     event.getRegistry().register(item);
-
-    return item;
-  }
-
-  private static ModItemBed createItem(ModItemBed item, RegistryEvent.Register<Item> event) {
-    event.getRegistry().register(item);
-
-    return item;
-  }
-
-  private static ModItem createItem(ModItem item, RegistryEvent.Register<Item> event) {
-    event.getRegistry().register(item);
-
-    return item;
-  }
-
-  private static ModPickaxe createItem(ModPickaxe item, RegistryEvent.Register<Item> event) {
-    event.getRegistry().register(item);
-
-    return item;
-  }
-
-  private static ModAxe createItem(ModAxe item, RegistryEvent.Register<Item> event) {
-    event.getRegistry().register(item);
-
-    return item;
-  }
-
-  private static ModSpade createItem(ModSpade item, RegistryEvent.Register<Item> event) {
-    event.getRegistry().register(item);
-
-    return item;
-  }
-
-  private static ModSword createItem(ModSword item, RegistryEvent.Register<Item> event) {
-    event.getRegistry().register(item);
-
-    return item;
-  }
-
-  private static ModHoe createItem(ModHoe item, RegistryEvent.Register<Item> event) {
-    event.getRegistry().register(item);
-
-    return item;
   }
 
   private static ItemBlock createItemBlock(ItemBlock block, RegistryEvent.Register<Item> event) {
@@ -1118,111 +1152,28 @@ public class BlockHandler {
   }
 
   public static void registerModels() {
-    // Andesite
-    register(iAndesitePolishedDoor);
-    // Birch
-    register(iBirchStableDoor);
-    // Brick
-    register(iBrickDoor);
-    // Cobblestone
-    register(iCobblestoneDoor);
-    // Dark Oak
-    register(iDarkOakBed);
-    // Diorite
-    register(iDioritePolishedDoor);
-    register(iDioritePolishedBed);
-    // Glass
-    // Regular
-    register(iGlassDoor);
-
-    // Granite
-    register(iGranitePolishedDoor);
-
-    // Hardened Clay
-    // Regular
-    register(iHardenedClayDoor);
-    // Oak
-    register(iOakStableDoor);
-    // Obsidian
-    register(iPolishedObsidianDoor);
-
     ////////////////// Item Block Registration
+    for (Item item : itemList) {
+      register(item);
+    }
     for (ItemBlock iBlock : itemBlockList) {
       register(iBlock);
     }
     //////////////////
     
     //Campfire
-    registerVariant(ibCampfire, 0, "oak");
-    registerVariant(ibLitCampfire, 0, "oak");
-    registerVariant(ibCampfire, 4, "acacia");
-    registerVariant(ibLitCampfire, 4, "acacia");
-    registerVariant(ibCampfire, 1, "spruce");
-    registerVariant(ibLitCampfire, 1, "spruce");
-    registerVariant(ibCampfire, 2, "birch");
-    registerVariant(ibLitCampfire, 2, "birch");
-    registerVariant(ibCampfire, 3, "jungle");
-    registerVariant(ibLitCampfire, 3, "jungle");
-    registerVariant(ibCampfire, 5, "dark_oak");
-    registerVariant(ibLitCampfire, 5, "dark_oak");
-
-    // Ingots
-    register(iCopperIngot);
-    register(iTinIngot);
-    register(iBronzeIngot);
-    register(iPlatinumIngot);
-    register(iSilverIngot);
-    register(iMithrilIngot);
-    register(iTitaniumIngot);
-    register(iSteelIngot);
-    register(iCelestialBronzeIngot);
-    register(iImperialGoldIngot);
-
-    // Ore Nuggets
-    register(iBronzeNuggets);
-    register(iCelestialBronzeNuggets);
-    register(iImperialGoldNuggets);
-
-    // Pickaxe
-    register(iBronzePickaxe);
-    register(iSteelPickaxe);
-    register(iMithrilPickaxe);
-    register(iCelestialBronzePickaxe);
-    register(iImperialGoldPickaxe);
-    register(iObsidianPickaxe);
-
-    // Axe
-    register(iBronzeAxe);
-    register(iSteelAxe);
-    register(iMithrilAxe);
-    register(iCelestialBronzeAxe);
-    register(iImperialGoldAxe);
-    register(iObsidianAxe);
-
-    // Shovel
-    register(iBronzeShovel);
-    register(iSteelShovel);
-    register(iMithrilShovel);
-    register(iCelestialBronzeShovel);
-    register(iImperialGoldShovel);
-    register(iObsidianShovel);
-
-    // Shovel
-    register(iBronzeHoe);
-    register(iSteelHoe);
-    register(iMithrilHoe);
-    register(iCelestialBronzeHoe);
-    register(iImperialGoldHoe);
-    register(iObsidianHoe);
-
-    // Sword
-    register(iBronzeSword);
-    register(iSilverSword);
-    register(iSteelSword);
-    register(iMithrilSword);
-    register(iCelestialBronzeSword);
-    register(iImperialGoldSword);
-    register(iObsidianSword);
+    register(ibCampfire, 0, "expanded:oak_campfire");
+    register(ibLitCampfire, 0, "expanded:oak_campfire");
+    register(ibCampfire, 1, "expanded:spruce_campfire");
+    register(ibLitCampfire, 1, "expanded:spruce_campfire");
+    register(ibCampfire, 2, "expanded:birch_campfire");
+    register(ibLitCampfire, 2, "expanded:birch_campfire");
+    register(ibCampfire, 3, "expanded:jungle_campfire");
+    register(ibLitCampfire, 3, "expanded:jungle_campfire");
+    register(ibCampfire, 4, "expanded:acacia_campfire");
+    register(ibLitCampfire, 4, "expanded:acacia_campfire");
+    register(ibCampfire, 5, "expanded:dark_oak_campfire");
+    register(ibLitCampfire, 5, "expanded:dark_oak_campfire");
   }
 
   private static void register(Item item) {
@@ -1233,9 +1184,9 @@ public class BlockHandler {
     registerVariant(item, meta, "normal");
   }
   private static void registerVariant(Item item, int meta, String metaName) {
-    register(item, meta, metaName, item.getRegistryName().toString());
+    register(item, meta, metaName, item.getRegistryName());
   }
-  private static void register(Item item, int meta, String metaName, String resourceLocation) {
+  private static void register(Item item, int meta, String metaName, ResourceLocation resourceLocation) {
     ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(resourceLocation, metaName));
   }
   private static void register(Item item, int meta, String resourceLocation) {

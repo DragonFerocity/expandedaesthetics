@@ -32,14 +32,66 @@ public class ModOre extends Block
         super(Material.ROCK, color);
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
     }
+    
+    private String[] harvestTool = new String[16];
+    private int[] harvestLevel = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+    /**
+     * Sets or removes the tool and level required to harvest this block.
+     *
+     * @param toolClass Class
+     * @param level Harvest level:
+     *     Wood:    0
+     *     Stone:   1
+     *     Iron:    2
+     *     Diamond: 3
+     *     Gold:    0
+     */
+    @Override
+    public void setHarvestLevel(String toolClass, int level)
+    {
+        java.util.Iterator<IBlockState> itr = getBlockState().getValidStates().iterator();
+        while (itr.hasNext())
+        {
+            setHarvestLevel(toolClass, level, itr.next());
+        }
+    }
+    
+    /**
+     * Sets or removes the tool and level required to harvest this block.
+     *
+     * @param toolClass Class
+     * @param level Harvest level:
+     *     Wood:    0
+     *     Stone:   1
+     *     Iron:    2
+     *     Diamond: 3
+     *     Gold:    0
+     * @param state The specific state.
+     */
+    @Override
+    public void setHarvestLevel(String toolClass, int level, IBlockState state)
+    {
+        int idx = this.getMetaFromState(state);
+        this.harvestTool[idx] = toolClass;
+        this.harvestLevel[idx] = level;
+    }
+    @Override
+    public String getHarvestTool(IBlockState state)
+    {
+      if (this == BlockHandler.copperOre)
+        return null;
+      else
+        return this.harvestTool[getMetaFromState(state)];
+    }
 
     /**
      * Get the Item that this Block should drop when harvested.
      */
+    @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
       if (this == BlockHandler.copperOre)
-        return BlockHandler.ibCopperOre;
+        return BlockHandler.iCopperNuggets;
       else if (this == BlockHandler.tinOre)
         return BlockHandler.ibTinOre;
     	else if (this == BlockHandler.platinumOre)
@@ -50,38 +102,40 @@ public class ModOre extends Block
         	return BlockHandler.ibMithrilOre;
     	else if (this == BlockHandler.titaniumOre)
         	return BlockHandler.ibTitaniumOre;
-        else
-        	return Item.getItemFromBlock(this);
+      else
+      	return Item.getItemFromBlock(this);
     }
 
     /**
      * Returns the quantity of items to drop on block destruction.
      */
+    @Override
     public int quantityDropped(Random random)
     {
+      if (this == BlockHandler.copperOre)
+        return 2;
+      else
         return 1;
     }
 
     /**
      * Get the quantity dropped based on the given fortune level
      */
+    @Override
     public int quantityDroppedWithBonus(int fortune, Random random)
     {
-        if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
-        {
-            int i = random.nextInt(fortune + 2) - 1;
-
-            if (i < 0)
-            {
-                i = 0;
-            }
-
-            return this.quantityDropped(random) * (i + 1);
-        }
-        else
-        {
-            return this.quantityDropped(random);
-        }
+      if (fortune > 0) {
+        int i = random.nextInt(fortune + 2) - 1;
+        
+        if (i < 0)
+          i = 0;
+        
+        return this.quantityDropped(random) * (i + 1);
+      }
+      else
+      {
+          return this.quantityDropped(random);
+      }
     }
 
     /**

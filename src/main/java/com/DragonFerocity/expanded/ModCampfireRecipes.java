@@ -31,7 +31,7 @@ public class ModCampfireRecipes {
 
   private ModCampfireRecipes()
   {
-      this.addSmeltingRecipe(ItemStack.EMPTY, ItemStack.EMPTY, 0); //Allows just fuel to burn to give off light (Think about it)
+      //this.addSmeltingRecipe(ItemStack.EMPTY, ItemStack.EMPTY, 0); //Allows just fuel to burn to give off light (Think about it)
       this.addSmelting(Items.PORKCHOP, new ItemStack(Items.COOKED_PORKCHOP), 0.35F);
       this.addSmelting(Items.BEEF, new ItemStack(Items.COOKED_BEEF), 0.35F);
       this.addSmelting(Items.CHICKEN, new ItemStack(Items.COOKED_CHICKEN), 0.35F);

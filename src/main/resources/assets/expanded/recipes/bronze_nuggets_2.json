@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "expanded:copper_ore"
+    }
+  ],
+  "result": {
+    "item": "expanded:copper_nuggets",
+    "count": 2
+  }
+}

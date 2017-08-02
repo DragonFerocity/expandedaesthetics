@@ -2,28 +2,25 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-        "item": "expanded:copper_ore"
+        "item": "expanded:copper_nuggets"
     },
     {
-        "item": "expanded:copper_ore"
+        "item": "expanded:copper_nuggets"
     },
     {
-        "item": "expanded:copper_ore"
+        "item": "expanded:copper_nuggets"
     },
     {
-        "item": "expanded:copper_ore"
+        "item": "expanded:copper_nuggets"
     },
     {
-        "item": "expanded:copper_ore"
+        "item": "expanded:copper_nuggets"
     },
     {
-        "item": "expanded:copper_ore"
+        "item": "expanded:copper_nuggets"
     },
     {
-        "item": "expanded:copper_ore"
-    },
-    {
-        "item": "expanded:copper_ore"
+        "item": "expanded:copper_nuggets"
     },
     {
         "item": "expanded:tin_ore"

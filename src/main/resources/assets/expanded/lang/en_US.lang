@@ -2,6 +2,14 @@ container.alloy_furnace=Alloy Furnace
 tile.expanded:alloy_furnace=Alloy Furnace
 alloy_furnace.name=Alloy Furnace
 
+container.campfire=Campfire
+tile.expanded:campfire.oak.name=Oak Campfire
+tile.expanded:campfire.spruce.name=Spruce Campfire
+tile.expanded:campfire.birch=Birch Campfire
+tile.expanded:campfire.jungle=Jungle Campfire
+tile.expanded:campfire.acacia=Acacia Campfire
+tile.expanded:campfire.dark_oak=Dark Oak Campfire
+
 tile.expanded:acacia_wood_stairs_alt.name=Acacia Wood Stairs (Alternate)
 tile.expanded:acacia_wood_crafting_table.name=Acacia Wood Crafting Table
 
@@ -174,6 +182,7 @@ tile.expanded:celestial_bronze_block.name=Celestial Bronze Block
 tile.expanded:imperial_gold_block.name=Imperial Gold Block
 tile.expanded:steel_block.name=Steel Block
 
+item.expanded:copper_hammer.name=Copper Hammer
 item.expanded:bronze_pickaxe.name=Bronze Pickaxe
 item.expanded:steel_pickaxe.name=Steel Pickaxe
 item.expanded:mithril_pickaxe.name=Mithril Pickaxe
@@ -181,6 +190,7 @@ item.expanded:celestial_bronze_pickaxe.name=Celestial Bronze Pickaxe
 item.expanded:imperial_gold_pickaxe.name=Imperial Gold Pickaxe
 item.expanded:obsidian_pickaxe.name=Obsidian Pickaxe
 
+item.expanded:copper_axe.name=Copper Axe
 item.expanded:bronze_axe.name=Bronze Axe
 item.expanded:steel_axe.name=Steel Axe
 item.expanded:mithril_axe.name=Mithril Axe
@@ -188,12 +198,21 @@ item.expanded:celestial_bronze_axe.name=Celestial Bronze Axe
 item.expanded:imperial_gold_axe=Imperial Gold Axe
 item.expanded:obsidian_axe=Obsidian Axe
 
+item.expanded:copper_shovel.name=Copper Shovel
 item.expanded:bronze_shovel.name=Bronze Shovel
 item.expanded:steel_shovel.name=Steel Shovel
 item.expanded:mithril_shovel.name=Mithril Shovel
 item.expanded:celestial_bronze_shovel.name=Celestial Bronze Shovel
 item.expanded:imperial_gold_shovel=Imperial Gold Shovel
 item.expanded:obsidian_shovel=Obsidian Shovel
+
+item.expanded:copper_hoe.name=Copper Hoe
+item.expanded:bronze_hoe.name=Bronze Hoe
+item.expanded:steel_hoe.name=Steel Hoe
+item.expanded:mithril_hoe.name=Mithril Hoe
+item.expanded:celestial_bronze_hoe.name=Celestial Bronze Hoe
+item.expanded:imperial_gold_hoe=Imperial Gold Hoe
+item.expanded:obsidian_hoe=Obsidian Hoe
 
 item.expanded:bronze_sword.name=Bronze Sword
 item.expanded:steel_sword.name=Steel Sword
@@ -202,3 +221,29 @@ item.expanded:silver_sword.name=Silver Sword
 item.expanded:celestial_bronze_sword.name=Celestial Bronze Sword
 item.expanded:imperial_gold_sword.name=Imperial Gold Sword
 item.expanded:obsidian_sword.name=Obsidian Sword
+item.expanded:cold_iron_sword.name=Cold Iron Sword
+
+item.expanded:copper_head.name=Copper Helmet
+item.expanded:copper_chest.name=Copper Chestplate
+item.expanded:copper_legs.name=Copper Leggings
+item.expanded:copper_feet.name=Copper Boots
+
+item.expanded:bronze_head.name=Bronze Helmet
+item.expanded:bronze_chest.name=Bronze Chestplate
+item.expanded:bronze_legs.name=Bronze Leggings
+item.expanded:bronze_feet.name=Bronze Boots
+
+item.expanded:steel_head.name=Steel Helmet
+item.expanded:steel_chest.name=Steel Chestplate
+item.expanded:steel_legs.name=Steel Leggings
+item.expanded:steel_feet.name=Steel Boots
+
+item.expanded:mithril_head.name=Mithril Helmet
+item.expanded:mithril_chest.name=Mithril Chestplate
+item.expanded:mithril_legs.name=Mithril Leggings
+item.expanded:mithril_feet.name=Mithril Boots
+
+item.expanded:cold_iron_head.name=Cold Iron Helmet
+item.expanded:cold_iron_chest.name=Cold Iron Chestplate
+item.expanded:cold_iron_legs.name=Cold Iron Leggings
+item.expanded:cold_iron_feet.name=Cold Iron Boots

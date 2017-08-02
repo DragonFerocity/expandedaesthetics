@@ -1,16 +1,21 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-        "item": "minecraft:gold_ore"
-    },
-    {
-        "item": "minecraft:iron_ore"
-    },
-    {
-        "item": "minecraft:blaze_powder"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SGS",
+    "GPG",
+    "SGS"
   ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ore"
+    },
+    "S": {
+      "item": "minecraft:iron_ore"
+    },
+    "P": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
   "result": {
     "item": "expanded:imperial_gold_nuggets"
   }

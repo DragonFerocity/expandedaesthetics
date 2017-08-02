@@ -38,6 +38,7 @@ public class ModCampfire extends Block {
   public static final PropertyEnum<BlockPlanks.EnumType> TYPE = PropertyEnum.<BlockPlanks.EnumType>create("type", BlockPlanks.EnumType.class);
   private final boolean isBurning;
   protected static boolean keepInventory;
+  public static String[] types = {"oak", "spruce", "birch", "jungle", "acacia", "dark_oak"};
 
   public ModCampfire(boolean isBurning, String name, CreativeTabs tab, float hardness, float resistance, String tool, int harvest)
   {
@@ -114,7 +115,7 @@ public class ModCampfire extends Block {
           return true;
       }
   }
-
+  
   public static void setState(boolean active, World worldIn, BlockPos pos)
   {
       IBlockState iblockstate = worldIn.getBlockState(pos);
@@ -159,6 +160,7 @@ public class ModCampfire extends Block {
   /**
    * Called by ItemBlocks after a block is set in the world, to allow post-place logic
    */
+  @Override
   public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack)
   {
     //worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);

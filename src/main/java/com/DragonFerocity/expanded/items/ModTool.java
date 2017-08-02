@@ -173,13 +173,14 @@ public class ModTool extends Item {
       BRONZE(           1, 175,  5.0F,  1.5F, 7),
       SILVER(           2, 40,   4.0F,  2.0F, 20),
       IRON(             2, 250,  6.0F,  2.0F, 14),
+      COLD_IRON(        2, 220,  5.5F,  2.0F, 16),
       STEEL(            2, 550,  7.5F,  3.4F, 12),
       MITHRIL(          3, 850, 12.0F,  2.7F, 6),
       DIAMOND(          3, 1561, 8.0F,  3.0F, 10),
       GOLD(             0, 32,  12.0F,  0.0F, 22),
       CELESTIAL_BRONZE( 3, 620,  7.0F,  3.0F, 19),
       IMPERIAL_GOLD(    3, 260,  9.0F,  2.0F, 25),
-      OBSIDIAN(         3, 1200, 4.0F,  8.0F, 12);
+      OBSIDIAN(         3, 1000, 4.0F,  8.0F, 12);
 
       /** The level of material this tool can harvest (3 = DIAMOND, 2 = IRON, 1 = STONE, 0 = WOOD/GOLD) */
       private final int harvestLevel;

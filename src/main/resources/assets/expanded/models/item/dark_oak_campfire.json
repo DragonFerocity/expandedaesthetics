@@ -1,0 +1,9 @@
+{
+    "parent": "expanded:block/campfire",
+    "textures": {
+      "ring": "blocks/planks_big_oak",
+      "logs": "blocks/log_big_oak",
+      "logs_end": "blocks/log_big_oak_top",
+      "particle": "blocks/log_big_oak"
+    }
+}

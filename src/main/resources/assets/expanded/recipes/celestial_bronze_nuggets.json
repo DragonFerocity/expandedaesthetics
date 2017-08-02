@@ -1,16 +1,18 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-        "item": "expanded:bronze_nuggets"
-    },
-    {
-        "item": "expanded:bronze_nuggets"
-    },
-    {
-        "item": "minecraft:blaze_powder"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BPB",
+    "BBB"
   ],
+  "key": {
+    "B": {
+      "item": "expanded:bronze_nuggets"
+    },
+    "P": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
   "result": {
     "item": "expanded:celestial_bronze_nuggets"
   }

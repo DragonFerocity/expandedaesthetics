@@ -1,0 +1,9 @@
+{
+    "parent": "expanded:block/campfire",
+    "textures": {
+      "ring": "blocks/planks_birch",
+      "logs": "blocks/log_birch",
+      "logs_end": "blocks/log_birch_top",
+      "particle": "blocks/log_birch"
+    }
+}

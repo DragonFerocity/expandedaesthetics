@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "expanded:steel_chest",
+    "count": 1
+  }
+}

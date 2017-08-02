@@ -1,0 +1,9 @@
+{
+    "parent": "expanded:block/campfire",
+    "textures": {
+      "ring": "blocks/planks_jungle",
+      "logs": "blocks/log_jungle",
+      "logs_end": "blocks/log_jungle_top",
+      "particle": "blocks/log_jungle"
+    }
+}

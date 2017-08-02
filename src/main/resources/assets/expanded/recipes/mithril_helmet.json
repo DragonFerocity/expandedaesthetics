@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:mithril_ingot"
+    }
+  },
+  "result": {
+    "item": "expanded:mithril_head",
+    "count": 1
+  }
+}

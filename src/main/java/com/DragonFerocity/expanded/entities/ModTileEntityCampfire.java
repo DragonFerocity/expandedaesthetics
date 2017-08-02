@@ -300,7 +300,7 @@ public class ModTileEntityCampfire extends TileEntityLockable implements ITickab
       }
       else
       {*/
-          ItemStack itemstack = ModCampfireRecipes.instance().getSmeltingResult(this.furnaceItemStacks.get(0));
+          ItemStack itemstack0 = ModCampfireRecipes.instance().getSmeltingResult(this.furnaceItemStacks.get(0));
   
           /*if (itemstack.isEmpty())
           {
@@ -308,23 +308,23 @@ public class ModTileEntityCampfire extends TileEntityLockable implements ITickab
           }
           else
           {*/
-              ItemStack itemstack1 = this.furnaceItemStacks.get(2);
+              ItemStack itemstack2 = this.furnaceItemStacks.get(2);
   
-              if (itemstack1.isEmpty())
+              if (itemstack2.isEmpty() || itemstack0.isEmpty())
               {
                   return true;
               }
-              else if (!itemstack1.isItemEqual(itemstack))
+              else if (!itemstack2.isItemEqual(itemstack0))
               {
                   return false;
               }
-              else if (itemstack1.getCount() + itemstack.getCount() <= this.getInventoryStackLimit() && itemstack1.getCount() + itemstack.getCount() <= itemstack1.getMaxStackSize())  // Forge fix: make furnace respect stack sizes in furnace recipes
+              else if (itemstack2.getCount() + itemstack0.getCount() <= this.getInventoryStackLimit() && itemstack2.getCount() + itemstack0.getCount() <= itemstack2.getMaxStackSize())  // Forge fix: make furnace respect stack sizes in furnace recipes
               {
                   return true;
               }
               else
               {
-                  return itemstack1.getCount() + itemstack.getCount() <= itemstack.getMaxStackSize(); // Forge fix: make furnace respect stack sizes in furnace recipes
+                  return itemstack2.getCount() + itemstack0.getCount() <= itemstack0.getMaxStackSize(); // Forge fix: make furnace respect stack sizes in furnace recipes
               }
           //}
       //}

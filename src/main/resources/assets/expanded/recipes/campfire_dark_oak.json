@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "PP"
+  ],
+  "key": {
+    "S": [
+      {
+        "item": "minecraft:stick"
+      }
+    ],
+    "P": [
+      {
+        "item": "minecraft:log2",
+        "data": 1
+      }
+    ]
+  },
+  "result": {
+    "item": "expanded:campfire",
+    "data": 5
+  }
+}
