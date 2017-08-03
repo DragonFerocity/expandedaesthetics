@@ -8,11 +8,8 @@ import com.DragonFerocity.expanded.gui.ModGuiCampfire;
 import com.DragonFerocity.expanded.inventory.ModContainerAlloyFurnace;
 import com.DragonFerocity.expanded.inventory.ModContainerCampfire;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockWorkbench;
 import net.minecraft.client.gui.inventory.GuiCrafting;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -20,7 +17,6 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@SideOnly(Side.CLIENT)
 public class GuiHandler implements IGuiHandler
 {
 

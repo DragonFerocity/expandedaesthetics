@@ -1,17 +1,18 @@
 container.alloy_furnace=Alloy Furnace
-tile.expanded:alloy_furnace=Alloy Furnace
-alloy_furnace.name=Alloy Furnace
+tile.expanded:alloy_furnace.name=Alloy Furnace
+expanded:alloy_furnace.name=Alloy Furnace
 
 container.campfire=Campfire
 tile.expanded:campfire.oak.name=Oak Campfire
 tile.expanded:campfire.spruce.name=Spruce Campfire
-tile.expanded:campfire.birch=Birch Campfire
-tile.expanded:campfire.jungle=Jungle Campfire
-tile.expanded:campfire.acacia=Acacia Campfire
-tile.expanded:campfire.dark_oak=Dark Oak Campfire
+tile.expanded:campfire.birch.name=Birch Campfire
+tile.expanded:campfire.jungle.name=Jungle Campfire
+tile.expanded:campfire.acacia.name=Acacia Campfire
+tile.expanded:campfire.dark_oak.name=Dark Oak Campfire
 
 tile.expanded:acacia_wood_stairs_alt.name=Acacia Wood Stairs (Alternate)
 tile.expanded:acacia_wood_crafting_table.name=Acacia Wood Crafting Table
+tile.expanded:acacia_stable_door.name=Acacia Stable Door
 
 tile.expanded:andesite_polished_door.name=Polished Andesite Door
 item.expanded:andesite_polished_door.name=Polished Andesite Door

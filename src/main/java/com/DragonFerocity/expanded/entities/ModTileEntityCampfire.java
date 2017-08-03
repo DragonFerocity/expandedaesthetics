@@ -2,6 +2,7 @@ package com.DragonFerocity.expanded.entities;
 
 import com.DragonFerocity.expanded.ModCampfireRecipes;
 import com.DragonFerocity.expanded.blocks.ModCampfire;
+import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.DragonFerocity.expanded.inventory.ModContainerCampfire;
 
 import net.minecraft.block.Block;
@@ -286,7 +287,10 @@ public class ModTileEntityCampfire extends TileEntityLockable implements ITickab
   
   public int getCookTime(ItemStack stack)
   {
-      return 200;
+    if (stack.getItem() == BlockHandler.iCopperNuggets)
+      return 300;
+    else
+      return 220;
   }
   
   /**

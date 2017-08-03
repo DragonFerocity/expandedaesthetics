@@ -188,7 +188,7 @@ public class ModTool extends Item {
       private final int maxUses;
       /** The strength of this tool material against blocks which it is effective against. */
       private final float efficiencyOnProperMaterial;
-      /** Damage versus entities. */
+      /** Damage versus entities. 4 + this variable*/
       private final float damageVsEntity;
       /** Defines the natural enchantability factor of the material. */
       private final int enchantability;

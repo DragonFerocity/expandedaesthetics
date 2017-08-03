@@ -3,6 +3,7 @@ package com.DragonFerocity.expanded.blocks;
 import javax.annotation.Nullable;
 
 import com.DragonFerocity.expanded.Ref;
+import com.DragonFerocity.expanded.entities.ModTileEntityCampfire;
 import com.DragonFerocity.expanded.entities.ModTileEntityChest;
 
 import net.minecraft.block.Block;
@@ -40,7 +41,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ModChest extends BlockContainer
+public class ModChest extends Block
 {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
     protected static final AxisAlignedBB NORTH_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0D, 0.9375D, 0.875D, 0.9375D);
@@ -534,6 +535,21 @@ public class ModChest extends BlockContainer
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
         return new ModTileEntityChest();
+    }
+    
+    /**
+     * Returns a new instance of a block's tile entity class. Called on placing the block.
+     */
+    @Override
+    public TileEntity createTileEntity(World worldIn, IBlockState state)
+    {
+        return new ModTileEntityChest();
+    }
+    
+    @Override
+    public boolean hasTileEntity(IBlockState state)
+    {
+      return true;
     }
 
     /**

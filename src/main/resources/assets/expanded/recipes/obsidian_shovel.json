@@ -3,7 +3,7 @@
   "group": "tools",
   "pattern": [
     " B ",
-    " B ",
+    " S ",
     " S "
   ],
   "key": {
@@ -15,7 +15,7 @@
     }
   },
   "result": {
-    "item": "expanded:obsidian_sword",
+    "item": "expanded:obsidian_shovel",
     "count": 1
   }
 }

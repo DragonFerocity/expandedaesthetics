@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "group": "tools",
   "pattern": [
-    " B ",
-    " B ",
+    "BB ",
+    " S ",
     " S "
   ],
   "key": {
@@ -15,7 +15,7 @@
     }
   },
   "result": {
-    "item": "expanded:obsidian_sword",
+    "item": "expanded:obsidian_hoe",
     "count": 1
   }
 }

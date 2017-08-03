@@ -17,19 +17,24 @@ import com.DragonFerocity.expanded.handlers.BlockHandler;
 
 public class ModOre extends Block
 {
-    public ModOre(String name, float hardness, float resistance, int harvestLevel)
-    {
-        this(Material.ROCK.getMaterialMapColor());
-        setHardness(hardness);
-        setResistance(resistance);
-        setHarvestLevel("pickaxe", harvestLevel);
-        setUnlocalizedName(Ref.MODID + ":" + name);
-        setRegistryName(Ref.MODID + ":" + name);
-    }
+  public ModOre(String name, float hardness, float resistance, int harvestLevel)
+  {
+      this(name, hardness, resistance, harvestLevel, Material.ROCK);
+  }
+  
+  public ModOre(String name, float hardness, float resistance, int harvestLevel, Material materialIn)
+  {
+      this(materialIn);
+      setHardness(hardness);
+      setResistance(resistance);
+      setHarvestLevel("pickaxe", harvestLevel);
+      setUnlocalizedName(Ref.MODID + ":" + name);
+      setRegistryName(Ref.MODID + ":" + name);
+  }
 
-    public ModOre(MapColor color)
+    public ModOre(Material materialIn)
     {
-        super(Material.ROCK, color);
+        super(materialIn, materialIn.getMaterialMapColor());
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
     }
     

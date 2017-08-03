@@ -7,10 +7,10 @@
   ],
   "key": {
     "G": {
-      "item": "minecraft:gold_ore"
+      "item": "minecraft:gold_ingot"
     },
     "S": {
-      "item": "minecraft:iron_ore"
+      "item": "expanded:steel_ingot"
     },
     "P": {
       "item": "minecraft:blaze_powder"

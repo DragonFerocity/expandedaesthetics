@@ -2,7 +2,8 @@
     "parent": "block/cube",
     "ambientocclusion": false,
     "textures": {
-        "transparent": "expanded:blocks/transparent"
+        "transparent": "expanded:blocks/transparent",
+        "particle": "expanded:blocks/transparent"
     },
     "elements": [
         {

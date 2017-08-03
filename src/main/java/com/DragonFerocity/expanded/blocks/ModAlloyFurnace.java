@@ -17,7 +17,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.InventoryHelper;
@@ -112,8 +111,11 @@ public class ModAlloyFurnace extends BlockContainer {
           double xx = (double)pos.getX() + 0.5D;
           double yy = (double)pos.getY() + rand.nextDouble() * 6.0D / 16.0D;
           double zz = (double)pos.getZ() + 0.5D;
-          double d3 = 0.52D;
           double d4 = rand.nextDouble() * 0.6D - 0.3D;
+          double rand1 = rand.nextDouble() * 0.6D - 0.3D;
+          double rand2 = rand.nextDouble() * 0.6D - 0.3D;
+          double rand3 = rand.nextDouble() * 0.6D - 0.3D;
+          double rand4 = rand.nextDouble() * 0.6D - 0.3D;
 
           if (rand.nextDouble() < 0.1D)
           {
@@ -138,6 +140,17 @@ public class ModAlloyFurnace extends BlockContainer {
                   worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xx + d4, yy, zz + 0.52D, 0.0D, 0.0D, 0.0D);
                   worldIn.spawnParticle(EnumParticleTypes.FLAME, xx + d4, yy, zz + 0.52D, 0.0D, 0.0D, 0.0D);
           }
+          worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xx - 0.25D, yy, zz + rand1, 0.0D, 0.0D, 0.0D);
+          worldIn.spawnParticle(EnumParticleTypes.FLAME, xx - 0.25D, yy, zz + rand1, 0.0D, 0.0D, 0.0D);
+          
+          worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xx + 0.25D, yy, zz + rand2, 0.0D, 0.0D, 0.0D);
+          worldIn.spawnParticle(EnumParticleTypes.FLAME, xx + 0.25D, yy, zz + rand2, 0.0D, 0.0D, 0.0D);
+          
+          worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xx + rand3, yy, zz - 0.25D, 0.0D, 0.0D, 0.0D);
+          worldIn.spawnParticle(EnumParticleTypes.FLAME, xx + rand3, yy, zz - 0.25D, 0.0D, 0.0D, 0.0D);
+          
+          worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xx + rand4, yy, zz + 0.25D, 0.0D, 0.0D, 0.0D);
+          worldIn.spawnParticle(EnumParticleTypes.FLAME, xx + rand4, yy, zz + 0.25D, 0.0D, 0.0D, 0.0D);
       }
   }
 

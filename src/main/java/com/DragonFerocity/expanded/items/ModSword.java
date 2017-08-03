@@ -67,12 +67,12 @@ public class ModSword extends ModItem {
       stack.damageItem(1, attacker);
       if (this == BlockHandler.iSilverSword) {
         if (target.isEntityUndead()) {
-          target.attackEntityFrom(DamageSource.GENERIC, this.attackDamage * 2F);
+          target.attackEntityFrom(DamageSource.GENERIC, this.attackDamage + 2F);
         }
       }
       else if (this == BlockHandler.iColdIronSword) {
         if (attacker.dimension == -1) {
-          target.attackEntityFrom(DamageSource.GENERIC, this.attackDamage * 2F);
+          target.attackEntityFrom(DamageSource.GENERIC, this.attackDamage + 3F);
         }
       }
       return true;

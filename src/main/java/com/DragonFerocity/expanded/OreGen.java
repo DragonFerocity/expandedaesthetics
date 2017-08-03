@@ -30,8 +30,8 @@ public class OreGen implements IWorldGenerator {
 	}
 	
 	private void generateSurface(World world, Random random, int x, int z) {
-	  generateOre(BlockHandler.copperOre,    world, random, x, z, 5, 10, 53, 1, 120, Blocks.STONE);
-	  generateOre(BlockHandler.tinOre,       world, random, x, z, 3,  7, 47, 1, 120, Blocks.STONE);
+	  generateOre(BlockHandler.copperOre,    world, random, x, z, 5, 15, 60, 1, 120, Blocks.STONE);
+	  generateOre(BlockHandler.tinOre,       world, random, x, z, 3,  7, 56, 1, 120, Blocks.STONE);
 		generateOre(BlockHandler.platinumOre,  world, random, x, z, 2,  5,  8, 1, 30, Blocks.STONE);
 		generateOre(BlockHandler.silverOre,    world, random, x, z, 3,  7, 30, 1, 50, Blocks.STONE);
 		generateOre(BlockHandler.mithrilOre,   world, random, x, z, 2,  9, 12, 1, 35, Blocks.STONE);

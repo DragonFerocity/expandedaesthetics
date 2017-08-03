@@ -46,6 +46,8 @@ public class BlockHandler {
   public static ItemBlock ibAcaciaWoodStairsAlt;
   public static ModCraftingTable acaciaWoodCraftingTable;
   public static ItemBlock ibAcaciaWoodCraftingTable;
+  public static ModBlockDoor acaciaStableDoor;
+  public static Item iAcaciaStableDoor;
 
   // Andesite Items
   public static ModBlockDoor andesitePolishedDoor;
@@ -551,7 +553,9 @@ public class BlockHandler {
     ibAcaciaCampfire = createItemBlockWithoutAddingToList(new ItemBlock(acaciaCampfire), acaciaCampfire);
     ibAcaciaLitCampfire = createItemBlockWithoutAddingToList(new ItemBlock(litAcaciaCampfire), litAcaciaCampfire);*/
 
- // Acacia Wood
+    // Acacia Wood
+    blockList.add(acaciaStableDoor = new ModBlockDoor(Material.WOOD, "acacia_stable_door", 1.9F, 5F, 0, "pickaxe"));
+    
     blockList.add(acaciaWoodStairsAlt = new ModStairs(Blocks.PLANKS, "acacia_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"));
     ibAcaciaWoodStairsAlt = createItemBlock(new ItemBlock(acaciaWoodStairsAlt), acaciaWoodStairsAlt);
 
@@ -569,7 +573,7 @@ public class BlockHandler {
 
     // Birch
     blockList.add(birchStableDoor = new ModBlockDoor(Material.WOOD, "birch_stable_door", 1.9F, 5F, 0, "pickaxe"));
-
+    
     blockList.add(birchLamp = new ModLamp(Material.WOOD, "birch_lamp", CreativeTabs.DECORATIONS, 1.2F, 4F, 0, "axe", 14 / 15F, 1.8D));
     ibBirchLamp = createItemBlock(new ItemBlock(birchLamp), birchLamp);
 
@@ -645,7 +649,8 @@ public class BlockHandler {
 
     //blockList.add(dioritePolishedChest = new ModChest(ModChest.Type.POLISHED_DIORITE, Material.ROCK, "diorite_polished_chest", 4F, 40F, 1, "pickaxe"));
     //ibDioritePolishedChest = createItemBlock(new ItemBlock(dioritePolishedChest), dioritePolishedChest);
-
+    
+    //GameRegistry.registerTileEntity(ModTileEntityChest.class, "chest_tile_entity");
     // Glass
     // Regular
     blockList.add(glassDoor = new ModBlockDoor(Material.GLASS, "glass_door", 0.3F, 1.5F, 0, "pickaxe"));
@@ -890,7 +895,7 @@ public class BlockHandler {
     // advancedWorkbench = new ModAdvancedWorkbench(Material.WOOD);
 
     // Ores
-    blockList.add(copperOre = new ModOre("copper_ore", 1F, 6F, -1));
+    blockList.add(copperOre = new ModOre("copper_ore", 1F, 6F, 0, Material.WOOD));
     ibCopperOre = createItemBlock(new ItemBlock(copperOre), copperOre);
 
     blockList.add(tinOre = new ModOre("tin_ore", 2.1F, 13F, 1));
@@ -1001,6 +1006,9 @@ public class BlockHandler {
 
   public static void initItems(RegistryEvent.Register<Item> event) {
     // iTutItem = new ItemTutItem("tut_item", CreativeTabs.MATERIALS);
+    // Acacia
+    itemList.add(iAcaciaStableDoor = new ModItemDoor(acaciaStableDoor, "acacia_stable_door", 64));
+    
     // Andesite
     itemList.add(iAndesitePolishedDoor = new ModItemDoor(andesitePolishedDoor, "andesite_polished_door", 64));
 
@@ -1174,6 +1182,9 @@ public class BlockHandler {
     register(ibLitCampfire, 4, "expanded:acacia_campfire");
     register(ibCampfire, 5, "expanded:dark_oak_campfire");
     register(ibLitCampfire, 5, "expanded:dark_oak_campfire");
+    
+    //Chests
+    //register(ibDioritePolishedChest);
   }
 
   private static void register(Item item) {
@@ -1194,7 +1205,7 @@ public class BlockHandler {
   }
 
   public static void registerTileEntities() {
-    GameRegistry.registerTileEntity(ModTileEntityChest.class, "mod_chests");
+    //GameRegistry.registerTileEntity(ModTileEntityChest.class, "mod_chests");
   }
   /////////////////////////////////////////////////////////////////////////////////////////////////////
   public static void removeRegisteredItems(RegistryEvent.Register<IRecipe> event) {

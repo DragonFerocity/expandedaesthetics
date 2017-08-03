@@ -92,6 +92,10 @@ public class ModCampfire extends Block {
           worldIn.spawnParticle(EnumParticleTypes.FLAME, xx, yy + rand5, zz, 0.0D, 0.0D, 0.0D);
       }
   }
+  public int damageDropped(IBlockState state)
+  {
+      return ((BlockPlanks.EnumType)state.getValue(TYPE)).getMetadata();
+  }
 
   /**
    * Called when the block is right clicked by a player.
@@ -206,7 +210,7 @@ public class ModCampfire extends Block {
           }
       }
 
-      super.breakBlock(worldIn, pos, state.withProperty(TYPE, state.getValue(TYPE)));
+      //super.breakBlock(worldIn, pos, state.withProperty(TYPE, state.getValue(TYPE)));
   }
 
   public boolean hasComparatorInputOverride(IBlockState state)

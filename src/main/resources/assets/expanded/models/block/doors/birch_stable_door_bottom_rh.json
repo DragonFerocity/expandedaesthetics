@@ -2,7 +2,8 @@
     "parent": "block/cube",
     "ambientocclusion": false,
     "textures": {
-        "1": "expanded:blocks/doors/birch_stable_door_lower"
+        "1": "expanded:blocks/doors/birch_stable_door_lower",
+        "particle": "expanded:blocks/doors/birch_stable_door_lower"
     },
     "elements": [
         {

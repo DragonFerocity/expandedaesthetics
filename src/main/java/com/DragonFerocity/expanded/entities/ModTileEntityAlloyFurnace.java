@@ -2,6 +2,7 @@ package com.DragonFerocity.expanded.entities;
 
 import com.DragonFerocity.expanded.ModAlloyFurnaceRecipes;
 import com.DragonFerocity.expanded.blocks.ModAlloyFurnace;
+import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.DragonFerocity.expanded.inventory.ModContainerAlloyFurnace;
 
 import net.minecraft.block.Block;
@@ -286,7 +287,18 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
   
   public int getCookTime(ItemStack stack)
   {
+    if (stack.getItem() == BlockHandler.ibCopperOre)
+      return 80;
+    else if(stack.getItem() == BlockHandler.ibMithrilOre)
       return 200;
+    else if (stack.getItem() == Items.IRON_INGOT)
+      return 180;
+    else if (stack.getItem() == BlockHandler.iColdIronBoots || stack.getItem() == BlockHandler.iColdIronHelmet || stack.getItem() == BlockHandler.iColdIronChest || stack.getItem() == BlockHandler.iColdIronLegs)
+      return 300;
+    else if (stack.getItem() == BlockHandler.iCelestialBronzeNuggets || stack.getItem() == BlockHandler.iImperialGoldNuggets)
+      return 600;
+    else
+      return 120;
   }
   
   /**
@@ -376,11 +388,6 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
       else
       {
           Item item = stack.getItem();
-          if (!item.getRegistryName().getResourceDomain().equals("minecraft"))
-          {
-              int burnTime = net.minecraftforge.fml.common.registry.GameRegistry.getFuelValue(stack);
-              if (burnTime != 0) return burnTime;
-          }
   
           if (item == Item.getItemFromBlock(Blocks.WOODEN_SLAB))
           {

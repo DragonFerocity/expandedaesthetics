@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IQI",
+    "QFQ",
+    "IQI"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "Q": {
+      "item": "minecraft:quartz_block",
+      "data": 0
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "result": {
+    "item": "expanded:alloy_furnace",
+    "count": 1
+  }
+}
