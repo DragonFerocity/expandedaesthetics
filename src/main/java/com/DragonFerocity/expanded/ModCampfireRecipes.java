@@ -55,6 +55,8 @@ public class ModCampfireRecipes {
       }
 
       this.addSmelting(BlockHandler.iCopperNuggets, new ItemStack(BlockHandler.iCopperIngot), 0.1F);
+      this.addSmelting(Items.WATER_BUCKET, new ItemStack(BlockHandler.iSalt), 0F);
+      
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.WHITE.getMetadata()), new ItemStack(Blocks.WHITE_GLAZED_TERRACOTTA), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.ORANGE.getMetadata()), new ItemStack(Blocks.ORANGE_GLAZED_TERRACOTTA), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.MAGENTA.getMetadata()), new ItemStack(Blocks.MAGENTA_GLAZED_TERRACOTTA), 0.1F);

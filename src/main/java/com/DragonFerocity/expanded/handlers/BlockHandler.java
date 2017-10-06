@@ -1,35 +1,72 @@
 package com.DragonFerocity.expanded.handlers;
 
+import java.util.ArrayList;
+
+import com.DragonFerocity.expanded.ExpandedAesthetics;
 import com.DragonFerocity.expanded.Ref;
 //import com.DragonFerocity.expanded.blocks.CobblestoneChest;
 //import com.DragonFerocity.expanded.blocks.ModChest;
-import com.DragonFerocity.expanded.blocks.*;
+import com.DragonFerocity.expanded.blocks.ModAdvancedWorkbench;
+import com.DragonFerocity.expanded.blocks.ModAlloyFurnace;
+import com.DragonFerocity.expanded.blocks.ModBlock;
+import com.DragonFerocity.expanded.blocks.ModBlockBed;
+import com.DragonFerocity.expanded.blocks.ModBlockCrops;
+import com.DragonFerocity.expanded.blocks.ModBlockDoor;
+import com.DragonFerocity.expanded.blocks.ModBlockGrandfatherClock;
+import com.DragonFerocity.expanded.blocks.ModBlockPortal;
+import com.DragonFerocity.expanded.blocks.ModBlockPressurePlate;
+import com.DragonFerocity.expanded.blocks.ModBlockSlab;
+import com.DragonFerocity.expanded.blocks.ModBlockSlabDouble;
+import com.DragonFerocity.expanded.blocks.ModBlockSlabHalf;
+import com.DragonFerocity.expanded.blocks.ModCampfire;
+import com.DragonFerocity.expanded.blocks.ModChest;
+import com.DragonFerocity.expanded.blocks.ModCraftingTable;
+import com.DragonFerocity.expanded.blocks.ModLamp;
+import com.DragonFerocity.expanded.blocks.ModLantern;
+import com.DragonFerocity.expanded.blocks.ModOre;
+import com.DragonFerocity.expanded.blocks.ModStairs;
 import com.DragonFerocity.expanded.entities.ModTileEntityAlloyFurnace;
 import com.DragonFerocity.expanded.entities.ModTileEntityCampfire;
-import com.DragonFerocity.expanded.entities.ModTileEntityChest;
-import com.DragonFerocity.expanded.items.*;
+import com.DragonFerocity.expanded.items.ModArmor;
+import com.DragonFerocity.expanded.items.ModAxe;
+import com.DragonFerocity.expanded.items.ModHoe;
+import com.DragonFerocity.expanded.items.ModItem;
+import com.DragonFerocity.expanded.items.ModItemBed;
+import com.DragonFerocity.expanded.items.ModItemDoor;
+import com.DragonFerocity.expanded.items.ModItemFood;
+import com.DragonFerocity.expanded.items.ModItemSeeds;
+import com.DragonFerocity.expanded.items.ModItemSlab;
+import com.DragonFerocity.expanded.items.ModItemSoup;
+import com.DragonFerocity.expanded.items.ModItemTeleporter;
+import com.DragonFerocity.expanded.items.ModPickaxe;
+import com.DragonFerocity.expanded.items.ModSpade;
+import com.DragonFerocity.expanded.items.ModSword;
+import com.DragonFerocity.expanded.items.ModTool;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemMultiTexture;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemMultiTexture;
+import net.minecraft.item.ItemSeeds;
+import net.minecraft.item.ItemSlab;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistryModifiable;
-
-import java.util.ArrayList;
 
 public class BlockHandler {
   // public static Block tutBlock;
@@ -56,6 +93,9 @@ public class BlockHandler {
   public static ItemBlock ibAndesitePolishedStairs;
   public static ModStairs andesitePolishedStairsAlt;
   public static ItemBlock ibAndesitePolishedStairsAlt;
+  public static ModBlockSlabHalf andesitePolishedSlabHalf;
+  public static ModBlockSlabDouble andesitePolishedSlabDouble;
+  public static ItemBlock iAndesitePolishedSlab;
 
   // Birch Items
   public static ModBlockDoor birchStableDoor;
@@ -83,6 +123,9 @@ public class BlockHandler {
   public static ItemBlock ibGoldBrickStairs;
   public static ModStairs goldBrickStairsAlt;
   public static ItemBlock ibGoldBrickStairsAlt;
+  public static ModBlockSlabHalf goldBrickSlabHalf;
+  public static ModBlockSlabDouble goldBrickSlabDouble;
+  public static ItemBlock iGoldBrickSlab;
   // Copper
   public static ModBlock copperBrick;
   public static ItemBlock ibCopperBrick;
@@ -90,6 +133,9 @@ public class BlockHandler {
   public static ItemBlock ibCopperBrickStairs;
   public static ModStairs copperBrickStairsAlt;
   public static ItemBlock ibCopperBrickStairsAlt;
+  public static ModBlockSlabHalf copperBrickSlabHalf;
+  public static ModBlockSlabDouble copperBrickSlabDouble;
+  public static ItemBlock iCopperBrickSlab;
   // Silver
   public static ModBlock silverBrick;
   public static ItemBlock ibSilverBrick;
@@ -97,6 +143,9 @@ public class BlockHandler {
   public static ItemBlock ibSilverBrickStairs;
   public static ModStairs silverBrickStairsAlt;
   public static ItemBlock ibSilverBrickStairsAlt;
+  public static ModBlockSlabHalf silverBrickSlabHalf;
+  public static ModBlockSlabDouble silverBrickSlabDouble;
+  public static ItemBlock iSilverBrickSlab;
   // Obsidian
   public static ModBlock polishedObsidianBrick;
   public static ItemBlock ibPolishedObsidianBrick;
@@ -104,6 +153,12 @@ public class BlockHandler {
   public static ItemBlock ibPolishedObsidianBrickStairs;
   public static ModStairs polishedObsidianBrickStairsAlt;
   public static ItemBlock ibPolishedObsidianBrickStairsAlt;
+  public static ModBlockSlabHalf polishedObsidianSlabHalf;
+  public static ModBlockSlabDouble polishedObsidianSlabDouble;
+  public static ItemBlock iPolishedObsidianSlab;
+  public static ModBlockSlabHalf polishedObsidianBrickSlabHalf;
+  public static ModBlockSlabDouble polishedObsidianBrickSlabDouble;
+  public static ItemBlock iPolishedObsidianBrickSlab;
 
   // Cactus
   public static ModBlock cutCactusBlock;
@@ -116,6 +171,9 @@ public class BlockHandler {
   public static ItemBlock ibCutCactusLamp;
   public static ModLantern cutCactusLantern;
   public static ItemBlock ibCutCactusLantern;
+  public static ModBlockSlabHalf cutCactusSlabHalf;
+  public static ModBlockSlabDouble cutCactusSlabDouble;
+  public static ItemBlock iCutCactusSlab;
 
   // Cobblestone Items
   public static ModBlockDoor cobblestoneDoor;
@@ -152,6 +210,9 @@ public class BlockHandler {
   public static Item iDioritePolishedBed;
   public static ModChest dioritePolishedChest;
   public static ItemBlock ibDioritePolishedChest;
+  public static ModBlockSlabHalf dioritePolishedSlabHalf;
+  public static ModBlockSlabDouble dioritePolishedSlabDouble;
+  public static ItemBlock iDioritePolishedSlab;
 
   // Glass Items
   // Regular Glass
@@ -303,6 +364,9 @@ public class BlockHandler {
   public static ItemBlock ibGranitePolishedStairs;
   public static ModStairs granitePolishedStairsAlt;
   public static ItemBlock ibGranitePolishedStairsAlt;
+  public static ModBlockSlabHalf granitePolishedSlabHalf;
+  public static ModBlockSlabDouble granitePolishedSlabDouble;
+  public static ItemBlock iGranitePolishedSlab;
 
   // Jungle Wood Item
   public static ModStairs jungleWoodStairsAlt;
@@ -344,6 +408,15 @@ public class BlockHandler {
   public static ItemBlock ibPolishedObsidianStairs;
   public static ModStairs polishedObsidianStairsAlt;
   public static ItemBlock ibPolishedObsidianStairsAlt;
+  public static ModBlockSlabHalf obsidianSlabHalf;
+  public static ModBlockSlabDouble obsidianSlabDouble;
+  public static ItemBlock iObsidianSlab;
+  
+  //Snow Stone
+  public static ModBlock snowStone;
+  public static ItemBlock ibSnowStone;
+  public static ModBlock snowStoneBrick;
+  public static ItemBlock ibSnowStoneBrick;
 
   // Spruce Wood Items
   public static ModStairs spruceWoodStairsAlt;
@@ -366,13 +439,10 @@ public class BlockHandler {
   public static Item iPlatinumIngot;
   public static ModOre silverOre;
   public static ItemBlock ibSilverOre;
-  public static Item iSilverIngot;
   public static ModOre mithrilOre;
   public static ItemBlock ibMithrilOre;
-  public static Item iMithrilIngot;
   public static ModOre titaniumOre;
   public static ItemBlock ibTitaniumOre;
-  public static Item iTitaniumIngot;
 
   // Special Ores
   public static Item iCopperIngot;
@@ -380,11 +450,14 @@ public class BlockHandler {
   public static Item iSteelIngot;
   public static Item iBronzeNuggets;
   public static Item iBronzeIngot;
+  public static Item iSilverIngot;
+  public static Item iMithrilIngot;
+  public static Item iTitaniumIngot;
   public static Item iCelestialBronzeNuggets;
   public static Item iCelestialBronzeIngot;
   public static Item iImperialGoldNuggets;
   public static Item iImperialGoldIngot;
-  public static Item iColdIronNuggets;
+  public static Item iStygianIronIngot;
 
   // Ore Blocks
   public static ModBlock copperBlock;
@@ -409,7 +482,22 @@ public class BlockHandler {
   public static ItemBlock ibImperialGoldBlock;
   public static ModBlock coldIronBlock;
   public static ItemBlock ibColdIronBlock;
+  public static ModBlock stygianIronBlock;
+  public static ItemBlock ibStygianIronBlock;
 
+  //Tool Material
+  public static ItemTool.ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("copper", 0, 72, 5.0F, 1.2F, 7).setRepairItem(new ItemStack(iCopperIngot));
+  public static ItemTool.ToolMaterial bronzeToolMaterial = EnumHelper.addToolMaterial("bronze", 1, 175, 5.2F, 1.4F, 7).setRepairItem(new ItemStack(iBronzeIngot));
+  public static ItemTool.ToolMaterial silverToolMaterial = EnumHelper.addToolMaterial("silver", 2, 40, 4.0F, 2.0F, 20).setRepairItem(new ItemStack(iSilverIngot));
+  public static ItemTool.ToolMaterial steelToolMaterial = EnumHelper.addToolMaterial("steel", 2, 550, 7.3F, 3.4F, 12).setRepairItem(new ItemStack(iSteelIngot));
+  public static ItemTool.ToolMaterial coldIronToolMaterial = EnumHelper.addToolMaterial("cold_iron", 2, 220, 5.5F, 2.0F, 16).setRepairItem(new ItemStack(Items.IRON_INGOT));
+  public static ItemTool.ToolMaterial mithrilToolMaterial = EnumHelper.addToolMaterial("mithril", 3, 850, 12.0F, 2.2F, 8).setRepairItem(new ItemStack(iMithrilIngot));
+  
+  public static ItemTool.ToolMaterial obsidianToolMaterial = EnumHelper.addToolMaterial("obsidian", 4, 500, 4.0F, 8.0F, 12).setRepairItem(new ItemStack(Blocks.OBSIDIAN));
+  public static ItemTool.ToolMaterial celestialBronzeToolMaterial = EnumHelper.addToolMaterial("celestial_bronze", 3, 620, 7.0F, 3.0F, 15).setRepairItem(new ItemStack(iCelestialBronzeIngot));
+  public static ItemTool.ToolMaterial imperialGoldToolMaterial = EnumHelper.addToolMaterial("imperial_gold", 3, 260, 10.0F, 1.0F, 25).setRepairItem(new ItemStack(iImperialGoldIngot));
+  public static ItemTool.ToolMaterial stygianIronToolMaterial = EnumHelper.addToolMaterial("obsidian", 4, 450, 6.0F, 3.0F, 18).setRepairItem(new ItemStack(iStygianIronIngot));
+  
   // Pickaxes
   public static ModPickaxe iCopperHammer;
   public static ModPickaxe iBronzePickaxe;
@@ -427,6 +515,7 @@ public class BlockHandler {
   public static ModAxe iCelestialBronzeAxe;
   public static ModAxe iImperialGoldAxe;
   public static ModAxe iObsidianAxe;
+  public static ModAxe iStygianIronAxe;
 
   // Shovel
   public static ModSpade iCopperShovel;
@@ -436,6 +525,7 @@ public class BlockHandler {
   public static ModSpade iCelestialBronzeShovel;
   public static ModSpade iImperialGoldShovel;
   public static ModSpade iObsidianShovel;
+  public static ModSpade iStygianIronShovel;
 
   // Hoe
   public static ModHoe iCopperHoe;
@@ -445,6 +535,7 @@ public class BlockHandler {
   public static ModHoe iCelestialBronzeHoe;
   public static ModHoe iImperialGoldHoe;
   public static ModHoe iObsidianHoe;
+  public static ModHoe iStygianIronHoe;
 
   // Sword
   public static ModSword iBronzeSword;
@@ -455,6 +546,7 @@ public class BlockHandler {
   public static ModSword iCelestialBronzeSword;
   public static ModSword iImperialGoldSword;
   public static ModSword iObsidianSword;
+  public static ModSword iStygianIronSword;
   
   //Armor
   public static ItemArmor.ArmorMaterial copperMaterial = EnumHelper.addArmorMaterial("copper", Ref.MODID + ":copper", 10, new int[]{1, 3, 4, 2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F);
@@ -508,6 +600,100 @@ public class BlockHandler {
   public static ItemBlock ibCampfire;
   public static ModCampfire litCampfire;
   public static ItemBlock ibLitCampfire;
+  
+  //Plants
+  public static ModBlockCrops strawberry;
+  public static ModItem iStrawberry;
+  public static ItemSeeds iStrawberrySeed;
+  public static ModItem iBlueStrawberry;
+  
+  public static ModBlockCrops blueberry;
+  public static ModItem iBlueberry;
+  public static ItemSeeds iBlueberrySeed;
+  public static ModItem iGreenBlueberry;
+  
+  public static ModBlockCrops bellPepper;
+  public static ModItem iBellPepperGreen;
+  public static ModItem iBellPepperYellow;
+  public static ModItem iBellPepperRed;
+  public static ModItem iBellPepperOrange;
+  public static ItemSeeds iBellPepperSeed;
+  public static ModItem iCayennePepper;
+  public static ModItem iJalapenoPepper;
+  public static ModItem iGhostPepper;
+  
+  public static ModBlockCrops corn;
+  public static ModItem iCorn;
+  public static ItemSeeds iCornSeed;
+  public static ModItem iBlueCorn;
+  
+  public static ModBlockCrops tomato;
+  public static ModItem iTomato;
+  public static ItemSeeds iTomatoSeeds;
+  public static ModItem iCherryTomato;
+  
+  //Foodstuffs
+  public static ModItem iHeavyCream;
+  public static ModItem iFlour;
+  public static ModItem iSalt;
+  public static ModItem iButter;
+  //public static ModItem iPowderedSugar;
+  public static ModItemFood iBreadBowl;
+  public static ModItemFood iChickenBroth;
+  public static ModItem iPancakeBatter;
+  public static ModItemFood iTortilla;
+  public static ModItemFood iCornTortilla;
+  //public static ModItem iCornKernals;
+  public static ModItem iGroundBeef;
+  public static ModItem iTomatoSauce;
+  public static ModItem iAlfredoSauce;
+  
+  public static ModItemSoup iPotatoSoup;
+  public static ModItemFood iPotatoSoupInBreadBowl;
+  public static ModItemSoup iChickenSoup;
+  public static ModItemFood iChickenSoupInBreadBowl;
+  public static ModItemSoup iVegetableSoup;
+  public static ModItemFood iVegetableSoupInBreadBowl;
+  public static ModItemFood iPancakes;
+  public static ModItemFood iChocolateChipPancakes;
+  public static ModItemFood iBlueberryPancakes;
+  public static ModItemFood iApplePancakes;
+  public static ModItemFood iScrambledEggs;
+  public static ModItemFood iBreadSlice;
+  public static ModItemFood iToast;
+  //public static ModItemFood iFrenchToast;
+  public static ModItemFood iChickenSandwich;
+  //public static ModItemFood iCornOnTheCob;
+  //public static ModItemFood iPopcorn;
+  public static ModItemFood iBurrito;
+  public static ModItemFood iTaco;
+  public static ModItemFood iCheese;
+  public static ModItemFood iCookedBeef;
+  public static ModItemFood iHamburger;
+  public static ModItemFood iCheeseburger;
+  public static ModItemFood iVanillaIceCream;
+  public static ModItemFood iChocolateIceCream;
+  public static ModItemFood iStrawberryIceCream;
+  public static ModItemFood iNeopolitanIceCream;
+  public static ModItemFood iPasta;
+  public static ModItemFood iFeticciniAlfredo;
+  public static ModItemFood iChickenFeticciniAlfredo;
+  public static ModItemFood iSpaghetti;
+  //public static ModItemFood iMeatball;
+  //public static ModItemFood iSpaghettiAndMeatballs;
+  public static ModItemFood iSalsa;
+  public static ModItemFood iCornChips;
+  public static ModItemFood iChipsAndSalsa;
+  public static ModItemFood iNachos;
+  public static ModItemFood iChickenParmesan;
+  
+  //Pressure Plates
+  public static ModBlockPressurePlate silverPressurePlate;
+  public static ItemBlock ibSilverPressurePlate;
+  
+  //Portals
+  public static ModBlockPortal portalArctic;
+  public static ModItemTeleporter iArcticTeleporter;
   
   // Other Vars
   public static ArrayList<ItemBlock> itemBlockList = new ArrayList<>();
@@ -570,6 +756,10 @@ public class BlockHandler {
 
     blockList.add(andesitePolishedStairsAlt = new ModStairs(Blocks.STONE, "andesite_polished_stairs_alt",CreativeTabs.BUILDING_BLOCKS, 2.0F, 30F, 1, "pickaxe"));
     ibAndesitePolishedStairsAlt = createItemBlock(new ItemBlock(andesitePolishedStairsAlt), andesitePolishedStairsAlt);
+    
+    blockList.add(andesitePolishedSlabHalf = new ModBlockSlabHalf(Material.ROCK, "andesite_polished_slab", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    blockList.add(andesitePolishedSlabDouble = new ModBlockSlabDouble(Material.ROCK, "andesite_polished_slab_double", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    //ibAndesitePolishedSlab = createItemBlock(new ItemBlock(andesitePolishedSlabHalf), andesitePolishedSlabHalf);
 
     // Birch
     blockList.add(birchStableDoor = new ModBlockDoor(Material.WOOD, "birch_stable_door", 1.9F, 5F, 0, "pickaxe"));
@@ -590,6 +780,7 @@ public class BlockHandler {
     blockList.add(brickDoor = new ModBlockDoor(Material.ROCK, "brick_door", 2.5F, 35F, 1, "pickaxe"));
     blockList.add(brickStairsAlt = new ModStairs(Blocks.STONE, "brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 30F, 1, "pickaxe"));
     ibBrickStairsAlt = createItemBlock(new ItemBlock(brickStairsAlt), brickStairsAlt);
+    
     // Cactus
     blockList.add(cutCactusBlock = new ModBlock(Material.WOOD, "cut_cactus_block", CreativeTabs.BUILDING_BLOCKS, 0.4F, 2F, 0, "axe"));
     ibCutCactusBlock = createItemBlock(new ItemBlock(cutCactusBlock), cutCactusBlock);
@@ -605,6 +796,10 @@ public class BlockHandler {
 
     blockList.add(cutCactusLantern = new ModLantern(Material.WOOD, "cut_cactus_lantern", CreativeTabs.DECORATIONS, 0.25F, 1.5F, 1, "axe", 13 / 15F, 5, 20, 0.75D));
     ibCutCactusLantern = createItemBlock(new ItemBlock(cutCactusLantern), cutCactusLantern);
+    
+    blockList.add(cutCactusSlabHalf = new ModBlockSlabHalf(Material.ROCK, "cut_cactus_slab", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1.5F, 1, "pickaxe"));
+    blockList.add(cutCactusSlabDouble = new ModBlockSlabDouble(Material.ROCK, "cut_cactus_slab_double", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1.5F, 1, "pickaxe"));
+    //ibCutCactusSlab = createItemBlock(new ItemBlock(cutCactusSlabHalf), cutCactusSlabHalf);
 
     // Cobblestone
     blockList.add(cobblestoneDoor = new ModBlockDoor(Material.ROCK, "cobblestone_door", 2F, 30F, 1, "pickaxe"));
@@ -646,6 +841,10 @@ public class BlockHandler {
     ibDioritePolishedLamp = createItemBlock(new ItemBlock(dioritePolishedLamp), dioritePolishedLamp);
 
     blockList.add(dioritePolishedBed = new ModBlockBed("diorite_polished_bed", 3F, 40F, 1, "pickaxe"));
+    
+    blockList.add(dioritePolishedSlabHalf = new ModBlockSlabHalf(Material.ROCK, "diorite_polished_slab", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    blockList.add(dioritePolishedSlabDouble = new ModBlockSlabDouble(Material.ROCK, "diorite_polished_slab_double", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    //ibDioritePolishedSlab = createItemBlock(new ItemBlock(dioritePolishedSlabHalf), dioritePolishedSlabHalf);
 
     //blockList.add(dioritePolishedChest = new ModChest(ModChest.Type.POLISHED_DIORITE, Material.ROCK, "diorite_polished_chest", 4F, 40F, 1, "pickaxe"));
     //ibDioritePolishedChest = createItemBlock(new ItemBlock(dioritePolishedChest), dioritePolishedChest);
@@ -836,6 +1035,10 @@ public class BlockHandler {
 
     blockList.add(granitePolishedStairsAlt = new ModStairs(Blocks.STONE, "granite_polished_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.7F, 26F, 1, "pickaxe"));
     ibGranitePolishedStairsAlt = createItemBlock(new ItemBlock(granitePolishedStairsAlt), granitePolishedStairsAlt);
+    
+    blockList.add(granitePolishedSlabHalf = new ModBlockSlabHalf(Material.ROCK, "granite_polished_slab", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    blockList.add(granitePolishedSlabDouble = new ModBlockSlabDouble(Material.ROCK, "granite_polished_slab_double", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    //ibGranitePolishedSlab = createItemBlock(new ItemBlock(granitePolishedSlabHalf), granitePolishedSlabHalf);
 
     // Hardened Clay
     // Regular
@@ -883,6 +1086,14 @@ public class BlockHandler {
 
     blockList.add(polishedObsidianStairsAlt = new ModStairs(Blocks.OBSIDIAN, "polished_obsidian_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 40F, 5000F, 3, "pickaxe"));
     ibPolishedObsidianStairsAlt = createItemBlock(new ItemBlock(polishedObsidianStairsAlt), polishedObsidianStairsAlt);
+    
+    blockList.add(polishedObsidianSlabHalf = new ModBlockSlabHalf(Material.ROCK, "polished_obsidian_slab", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    blockList.add(polishedObsidianSlabDouble = new ModBlockSlabDouble(Material.ROCK, "polished_obsidian_slab_double", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    //ibPolishedObsidianSlab = createItemBlock(new ItemBlock(polishedObsidianSlabHalf), polishedObsidianSlabHalf);
+    
+    blockList.add(obsidianSlabHalf = new ModBlockSlabHalf(Material.ROCK, "obsidian_slab", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    blockList.add(obsidianSlabDouble = new ModBlockSlabDouble(Material.ROCK, "obsidian_slab_double", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    //ibObsidianSlab = createItemBlock(new ItemBlock(obsidianSlabHalf), obsidianSlabHalf);
 
     // Spruce Wood
     blockList.add(spruceWoodStairsAlt = new ModStairs(Blocks.PLANKS, "spruce_wood_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 1.5F, 3F, 0, "axe"));
@@ -891,6 +1102,12 @@ public class BlockHandler {
     blockList.add(spruceWoodCraftingTable = new ModCraftingTable("spruce_wood_crafting_table", CreativeTabs.DECORATIONS, 2F, 3F, 0, "axe"));
     ibSpruceWoodCraftingTable = createItemBlock(new ItemBlock(spruceWoodCraftingTable), spruceWoodCraftingTable);
 
+    // Snow Stone
+    blockList.add(snowStone = new ModBlock(Material.ROCK, "snow_stone", CreativeTabs.BUILDING_BLOCKS, 0.2F, 1F, 0, "pickaxe"));
+    ibSnowStone = createItemBlock(new ItemBlock(snowStone), snowStone);
+    
+    blockList.add(snowStoneBrick = new ModBlock(Material.ROCK, "snow_stone_brick", CreativeTabs.BUILDING_BLOCKS, 0.4F, 1.5F, 0, "pickaxe"));
+    ibSnowStoneBrick = createItemBlock(new ItemBlock(snowStoneBrick), snowStoneBrick);
     // Advanced Workbench
     // advancedWorkbench = new ModAdvancedWorkbench(Material.WOOD);
 
@@ -954,6 +1171,10 @@ public class BlockHandler {
 
     blockList.add(goldBrickStairsAlt = new ModStairs(Blocks.GOLD_BLOCK, "gold_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"));
     ibGoldBrickStairsAlt = createItemBlock(new ItemBlock(goldBrickStairsAlt), goldBrickStairsAlt);
+    
+    blockList.add(goldBrickSlabHalf = new ModBlockSlabHalf(Material.ROCK, "gold_brick_slab", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    blockList.add(goldBrickSlabDouble = new ModBlockSlabDouble(Material.ROCK, "gold_brick_slab_double", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    //ibGoldBrickSlab = createItemBlock(new ItemBlock(goldBrickSlabHalf), goldBrickSlabHalf);
     // Copper
     blockList.add(copperBrick = new ModBlock(Material.ROCK, "copper_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibCopperBrick = createItemBlock(new ItemBlock(copperBrick), copperBrick);
@@ -963,6 +1184,10 @@ public class BlockHandler {
 
     blockList.add(copperBrickStairsAlt = new ModStairs(copperBlock, "copper_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"));
     ibCopperBrickStairsAlt = createItemBlock(new ItemBlock(copperBrickStairsAlt), copperBrickStairsAlt);
+    
+    blockList.add(copperBrickSlabHalf = new ModBlockSlabHalf(Material.ROCK, "copper_brick_slab", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    blockList.add(copperBrickSlabDouble = new ModBlockSlabDouble(Material.ROCK, "copper_brick_slab_double", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    //ibCopperBrickSlab = createItemBlock(new ItemBlock(copperBrickSlabHalf), copperBrickSlabHalf);
     // Silver
     blockList.add(silverBrick = new ModBlock(Material.ROCK, "silver_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibSilverBrick = createItemBlock(new ItemBlock(silverBrick), silverBrick);
@@ -972,18 +1197,43 @@ public class BlockHandler {
 
     blockList.add(silverBrickStairsAlt = new ModStairs(silverBlock, "silver_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"));
     ibSilverBrickStairsAlt = createItemBlock(new ItemBlock(silverBrickStairsAlt), silverBrickStairsAlt);
+    
+    blockList.add(silverBrickSlabHalf = new ModBlockSlabHalf(Material.ROCK, "silver_brick_slab", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    blockList.add(silverBrickSlabDouble = new ModBlockSlabDouble(Material.ROCK, "silver_brick_slab_double", CreativeTabs.BUILDING_BLOCKS, 1.5F, 30F, 1, "pickaxe"));
+    //ibSilverBrickSlab = createItemBlock(new ItemBlock(silverBrickSlabHalf), silverBrickSlabHalf);
     // Obsidian
+    blockList.add(obsidianSlabHalf = new ModBlockSlabHalf(Material.ROCK, "obsidian_slab", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
+    blockList.add(obsidianSlabDouble = new ModBlockSlabDouble(Material.ROCK, "obsidian_slab_double", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
+    
     blockList.add(polishedObsidianBrick = new ModBlock(Material.ROCK, "polished_obsidian_brick", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibPolishedObsidianBrick = createItemBlock(new ItemBlock(polishedObsidianBrick), polishedObsidianBrick);
 
-    blockList.add(polishedObsidianBrickStairs = new ModStairs(polishedObsidianBlock, "polished_obsidian_brick_stairs", CreativeTabs.BUILDING_BLOCKS, 2.8F, 27F, 1, "pickaxe"));
+    blockList.add(polishedObsidianBrickStairs = new ModStairs(polishedObsidianBlock, "polished_obsidian_brick_stairs", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibPolishedObsidianBrickStairs = createItemBlock(new ItemBlock(polishedObsidianBrickStairs), polishedObsidianBrickStairs);
 
-    blockList.add(polishedObsidianBrickStairsAlt = new ModStairs(polishedObsidianBlock, "polished_obsidian_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 2.0F, 20F, 1, "pickaxe"));
+    blockList.add(polishedObsidianBrickStairsAlt = new ModStairs(polishedObsidianBlock, "polished_obsidian_brick_stairs_alt", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
     ibPolishedObsidianBrickStairsAlt = createItemBlock(new ItemBlock(polishedObsidianBrickStairsAlt), polishedObsidianBrickStairsAlt);
     
+    blockList.add(polishedObsidianBrickSlabHalf = new ModBlockSlabHalf(Material.ROCK, "polished_obsidian_brick_slab", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
+    blockList.add(polishedObsidianBrickSlabDouble = new ModBlockSlabDouble(Material.ROCK, "polished_obsidian_brick_slab_double", CreativeTabs.BUILDING_BLOCKS, 50F, 5500F, 3, "pickaxe"));
+    //PressurePlates
+    blockList.add(silverPressurePlate = new ModBlockPressurePlate("silver_pressure_plate", Material.IRON, ModBlockPressurePlate.Sensitivity.PLAYER, 0.5F, 2.5F, 1, "pickaxe"));
+    ibSilverPressurePlate = createItemBlock(new ItemBlock(silverPressurePlate), silverPressurePlate);
+    
+    // Portal
+    blockList.add(portalArctic = new ModBlockPortal("portal_arctic", CreativeTabs.MISC, 0.5F, 2.5F, 1, "axe", Blocks.SNOW));
+    
+    //Plants
+    blockList.add(strawberry = new ModBlockCrops("strawberries"));
+    blockList.add(blueberry = new ModBlockCrops("blueberries"));
+    blockList.add(bellPepper = new ModBlockCrops("bell_pepper"));
+    
+    //Foodstuffs
     ///////////////////////////////////////////
     //Register Blocks
+    for(Block block : blockList) {
+      event.getRegistry().register(block);
+    }
     for(Block block : blockList) {
       event.getRegistry().register(block);
     }
@@ -1011,13 +1261,17 @@ public class BlockHandler {
     
     // Andesite
     itemList.add(iAndesitePolishedDoor = new ModItemDoor(andesitePolishedDoor, "andesite_polished_door", 64));
-
+    itemList.add(iAndesitePolishedSlab = new ModItemSlab(andesitePolishedSlabHalf, andesitePolishedSlabHalf, andesitePolishedSlabDouble, "andesite_polished_slab"));
+    
     // Birch
     itemList.add(iBirchStableDoor = new ModItemDoor(birchStableDoor, "birch_stable_door", 64));
 
     // Brick
     itemList.add(iBrickDoor = new ModItemDoor(brickDoor, "brick_door", 64));
-
+    
+    // Cactus
+    itemList.add(iCutCactusSlab = new ModItemSlab(cutCactusSlabHalf, cutCactusSlabHalf, cutCactusSlabDouble, "cut_cactus_slab"));
+    
     // Cobblestone
     itemList.add(iCobblestoneDoor = new ModItemDoor(cobblestoneDoor, "cobblestone_door", 64));
 
@@ -1027,14 +1281,16 @@ public class BlockHandler {
     // Diorite
     itemList.add(iDioritePolishedDoor = new ModItemDoor(dioritePolishedDoor, "diorite_polished_door", 64));
     itemList.add(iDioritePolishedBed = new ModItemBed(dioritePolishedBed, "diorite_polished_bed", 64));
-
+    itemList.add(iDioritePolishedSlab = new ModItemSlab(dioritePolishedSlabHalf, dioritePolishedSlabHalf, dioritePolishedSlabDouble, "diorite_polished_slab"));
+    
     // Glass
     // Regular
     itemList.add(iGlassDoor = new ModItemDoor(glassDoor, "glass_door", 64));
 
     // Granite
     itemList.add(iGranitePolishedDoor = new ModItemDoor(granitePolishedDoor, "granite_polished_door", 64));
-
+    itemList.add(iGranitePolishedSlab = new ModItemSlab(granitePolishedSlabHalf, granitePolishedSlabHalf, granitePolishedSlabDouble, "granite_polished_slab"));
+    
     // Hardened Clay
     // Regular
     itemList.add(iHardenedClayDoor = new ModItemDoor(hardenedClayDoor, "hardened_clay_door", 64));
@@ -1044,7 +1300,19 @@ public class BlockHandler {
 
     // Obsidian
     itemList.add(iPolishedObsidianDoor = new ModItemDoor(polishedObsidianDoor, "polished_obsidian_door", 64));
-
+    itemList.add(iPolishedObsidianSlab = new ModItemSlab(polishedObsidianSlabHalf, polishedObsidianSlabHalf, polishedObsidianSlabDouble, "polished_obsidian_slab"));
+    itemList.add(iObsidianSlab = new ModItemSlab(obsidianSlabHalf, obsidianSlabHalf, obsidianSlabDouble, "obsidian_slab"));
+    itemList.add(iPolishedObsidianBrickSlab = new ModItemSlab(polishedObsidianBrickSlabHalf, polishedObsidianBrickSlabHalf, polishedObsidianBrickSlabDouble, "polished_obsidian_brick_slab"));
+    
+    // Gold Brick
+    itemList.add(iGoldBrickSlab = new ModItemSlab(goldBrickSlabHalf, goldBrickSlabHalf, goldBrickSlabDouble, "gold_brick_slab"));
+    
+    // Silver Brick
+    itemList.add(iSilverBrickSlab = new ModItemSlab(silverBrickSlabHalf, silverBrickSlabHalf, silverBrickSlabDouble, "silver_brick_slab"));
+    
+    // Copper Brick
+    itemList.add(iCopperBrickSlab = new ModItemSlab(copperBrickSlabHalf, copperBrickSlabHalf, copperBrickSlabDouble, "copper_brick_slab"));
+    
     // Ingots
     itemList.add(iCopperIngot = new ModItem("copper_ingot", CreativeTabs.MATERIALS));
     itemList.add(iTinIngot = new ModItem("tin_ingot", CreativeTabs.MATERIALS));
@@ -1064,50 +1332,50 @@ public class BlockHandler {
     itemList.add(iImperialGoldNuggets = new ModItem("imperial_gold_nuggets", CreativeTabs.MATERIALS));
 
     // Pickaxes
-    itemList.add(iCopperHammer = new ModPickaxe("copper_hammer", ModTool.ToolMaterial.COPPER, 0.8F, -2.2F));
-    itemList.add(iBronzePickaxe = new ModPickaxe("bronze_pickaxe", ModTool.ToolMaterial.BRONZE, 1.0F, -2.4F));
-    itemList.add(iSteelPickaxe = new ModPickaxe("steel_pickaxe", ModTool.ToolMaterial.STEEL, 1.0F, -2.4F));
-    itemList.add(iMithrilPickaxe = new ModPickaxe("mithril_pickaxe", ModTool.ToolMaterial.MITHRIL, 0.7F, -2.6F));
-    itemList.add(iCelestialBronzePickaxe = new ModPickaxe("celestial_bronze_pickaxe", ModTool.ToolMaterial.CELESTIAL_BRONZE, 1.0F, -2.4F));
-    itemList.add(iImperialGoldPickaxe = new ModPickaxe("imperial_gold_pickaxe", ModTool.ToolMaterial.IMPERIAL_GOLD, 1.0F, -2.4F));
-    itemList.add(iObsidianPickaxe = new ModPickaxe("obsidian_pickaxe", ModTool.ToolMaterial.OBSIDIAN, 2.0F, -1.0F));
+    itemList.add(iCopperHammer = new ModPickaxe("copper_hammer", copperToolMaterial, 0.8F, -2.2F));
+    itemList.add(iBronzePickaxe = new ModPickaxe("bronze_pickaxe", bronzeToolMaterial, 1.0F, -2.4F));
+    itemList.add(iSteelPickaxe = new ModPickaxe("steel_pickaxe", steelToolMaterial, 1.0F, -2.4F));
+    itemList.add(iMithrilPickaxe = new ModPickaxe("mithril_pickaxe", mithrilToolMaterial, 0.7F, -2.6F));
+    itemList.add(iCelestialBronzePickaxe = new ModPickaxe("celestial_bronze_pickaxe", celestialBronzeToolMaterial, 1.0F, -2.4F));
+    itemList.add(iImperialGoldPickaxe = new ModPickaxe("imperial_gold_pickaxe", imperialGoldToolMaterial, 1.0F, -2.4F));
+    itemList.add(iObsidianPickaxe = new ModPickaxe("obsidian_pickaxe", obsidianToolMaterial, 2.0F, -1.0F));
 
     // Axes
-    itemList.add(iCopperAxe = new ModAxe("copper_axe", ModTool.ToolMaterial.COPPER, 7.0F, -3.15F));
-    itemList.add(iBronzeAxe = new ModAxe("bronze_axe", ModTool.ToolMaterial.BRONZE, 7.0F, -3.15F));
-    itemList.add(iSteelAxe = new ModAxe("steel_axe", ModTool.ToolMaterial.STEEL, 8.3F, -3.0F));
-    itemList.add(iMithrilAxe = new ModAxe("mithril_axe", ModTool.ToolMaterial.MITHRIL, 7.0F, -2.5F));
-    itemList.add(iCelestialBronzeAxe = new ModAxe("celestial_bronze_axe", ModTool.ToolMaterial.CELESTIAL_BRONZE, 11F, -3.8F));
-    itemList.add(iImperialGoldAxe = new ModAxe("imperial_gold_axe", ModTool.ToolMaterial.IMPERIAL_GOLD, 8.0F, -2.6F));
-    itemList.add(iObsidianAxe = new ModAxe("obsidian_axe", ModTool.ToolMaterial.OBSIDIAN, 16F, -1.5F));
+    itemList.add(iCopperAxe = new ModAxe("copper_axe", copperToolMaterial, 7.0F, -3.15F));
+    itemList.add(iBronzeAxe = new ModAxe("bronze_axe", bronzeToolMaterial, 7.0F, -3.15F));
+    itemList.add(iSteelAxe = new ModAxe("steel_axe", steelToolMaterial, 8.3F, -3.0F));
+    itemList.add(iMithrilAxe = new ModAxe("mithril_axe", mithrilToolMaterial, 7.0F, -2.5F));
+    itemList.add(iCelestialBronzeAxe = new ModAxe("celestial_bronze_axe", celestialBronzeToolMaterial, 11F, -3.8F));
+    itemList.add(iImperialGoldAxe = new ModAxe("imperial_gold_axe", imperialGoldToolMaterial, 8.0F, -2.6F));
+    itemList.add(iObsidianAxe = new ModAxe("obsidian_axe", obsidianToolMaterial, 16F, -1.5F));
 
     // Shovels
-    itemList.add(iCopperShovel = new ModSpade("copper_shovel", ModTool.ToolMaterial.COPPER));
-    itemList.add(iBronzeShovel = new ModSpade("bronze_shovel", ModTool.ToolMaterial.BRONZE));
-    itemList.add(iSteelShovel = new ModSpade("steel_shovel", ModTool.ToolMaterial.STEEL));
-    itemList.add(iMithrilShovel = new ModSpade("mithril_shovel", ModTool.ToolMaterial.MITHRIL));
-    itemList.add(iCelestialBronzeShovel = new ModSpade("celestial_bronze_shovel", ModTool.ToolMaterial.CELESTIAL_BRONZE));
-    itemList.add(iImperialGoldShovel = new ModSpade("imperial_gold_shovel", ModTool.ToolMaterial.IMPERIAL_GOLD));
-    itemList.add(iObsidianShovel = new ModSpade("obsidian_shovel", ModTool.ToolMaterial.OBSIDIAN));
+    itemList.add(iCopperShovel = new ModSpade("copper_shovel", copperToolMaterial));
+    itemList.add(iBronzeShovel = new ModSpade("bronze_shovel", bronzeToolMaterial));
+    itemList.add(iSteelShovel = new ModSpade("steel_shovel", steelToolMaterial));
+    itemList.add(iMithrilShovel = new ModSpade("mithril_shovel", mithrilToolMaterial));
+    itemList.add(iCelestialBronzeShovel = new ModSpade("celestial_bronze_shovel", celestialBronzeToolMaterial));
+    itemList.add(iImperialGoldShovel = new ModSpade("imperial_gold_shovel", imperialGoldToolMaterial));
+    itemList.add(iObsidianShovel = new ModSpade("obsidian_shovel", obsidianToolMaterial));
 
     // Hoes
-    itemList.add(iCopperHoe = new ModHoe("copper_hoe", ModTool.ToolMaterial.COPPER));
-    itemList.add(iBronzeHoe = new ModHoe("bronze_hoe", ModTool.ToolMaterial.BRONZE));
-    itemList.add(iSteelHoe = new ModHoe("steel_hoe", ModTool.ToolMaterial.STEEL));
-    itemList.add(iMithrilHoe = new ModHoe("mithril_hoe", ModTool.ToolMaterial.MITHRIL));
-    itemList.add(iCelestialBronzeHoe = new ModHoe("celestial_bronze_hoe", ModTool.ToolMaterial.CELESTIAL_BRONZE));
-    itemList.add(iImperialGoldHoe = new ModHoe("imperial_gold_hoe", ModTool.ToolMaterial.IMPERIAL_GOLD));
-    itemList.add(iObsidianHoe = new ModHoe("obsidian_hoe", ModTool.ToolMaterial.OBSIDIAN));
+    itemList.add(iCopperHoe = new ModHoe("copper_hoe", copperToolMaterial));
+    itemList.add(iBronzeHoe = new ModHoe("bronze_hoe", bronzeToolMaterial));
+    itemList.add(iSteelHoe = new ModHoe("steel_hoe", steelToolMaterial));
+    itemList.add(iMithrilHoe = new ModHoe("mithril_hoe", mithrilToolMaterial));
+    itemList.add(iCelestialBronzeHoe = new ModHoe("celestial_bronze_hoe", celestialBronzeToolMaterial));
+    itemList.add(iImperialGoldHoe = new ModHoe("imperial_gold_hoe", imperialGoldToolMaterial));
+    itemList.add(iObsidianHoe = new ModHoe("obsidian_hoe", obsidianToolMaterial));
 
     // Swords
-    itemList.add(iBronzeSword = new ModSword("bronze_sword", ModTool.ToolMaterial.BRONZE));
-    itemList.add(iSilverSword = new ModSword("silver_sword", ModTool.ToolMaterial.SILVER));
-    itemList.add(iColdIronSword = new ModSword("cold_iron_sword", ModTool.ToolMaterial.COLD_IRON));
-    itemList.add(iSteelSword = new ModSword("steel_sword", ModTool.ToolMaterial.STEEL));
-    itemList.add(iMithrilSword = new ModSword("mithril_sword", ModTool.ToolMaterial.MITHRIL));
-    itemList.add(iCelestialBronzeSword = new ModSword("celestial_bronze_sword", ModTool.ToolMaterial.CELESTIAL_BRONZE));
-    itemList.add(iImperialGoldSword = new ModSword("imperial_gold_sword", ModTool.ToolMaterial.IMPERIAL_GOLD));
-    itemList.add(iObsidianSword = new ModSword("obsidian_sword", ModTool.ToolMaterial.OBSIDIAN));
+    itemList.add(iBronzeSword = new ModSword("bronze_sword", bronzeToolMaterial));
+    itemList.add(iSilverSword = new ModSword("silver_sword", silverToolMaterial));
+    itemList.add(iColdIronSword = new ModSword("cold_iron_sword", coldIronToolMaterial));
+    itemList.add(iSteelSword = new ModSword("steel_sword", steelToolMaterial));
+    itemList.add(iMithrilSword = new ModSword("mithril_sword", mithrilToolMaterial));
+    itemList.add(iCelestialBronzeSword = new ModSword("celestial_bronze_sword", celestialBronzeToolMaterial));
+    itemList.add(iImperialGoldSword = new ModSword("imperial_gold_sword", imperialGoldToolMaterial));
+    itemList.add(iObsidianSword = new ModSword("obsidian_sword", obsidianToolMaterial));
     
     //Armor
     //itemList.add(iCopperArmor = new ModArmor("copper", ModArmor.ArmorMaterial.COPPER, EntityEquipmentSlot.CHEST));
@@ -1139,6 +1407,93 @@ public class BlockHandler {
     itemList.add(iMithrilChest = new ModArmor("mithril", mithrilMaterial, 1, EntityEquipmentSlot.CHEST));
     itemList.add(iMithrilLegs = new ModArmor("mithril", mithrilMaterial, 2, EntityEquipmentSlot.LEGS));
     itemList.add(iMithrilBoots = new ModArmor("mithril", mithrilMaterial, 1, EntityEquipmentSlot.FEET));
+    
+    itemList.add(iArcticTeleporter = new ModItemTeleporter("arctic_teleporter", ExpandedAesthetics.snowDimensionId));
+    
+    //Plants
+    itemList.add(iStrawberry = new ModItem("strawberry", CreativeTabs.FOOD));
+    itemList.add(iBlueStrawberry = new ModItem("strawberry_blue", CreativeTabs.FOOD));
+    itemList.add(iStrawberrySeed = new ModItemSeeds(strawberry, Blocks.FARMLAND, "seeds_strawberry"));
+    
+    itemList.add(iBlueberry = new ModItem("blueberry", CreativeTabs.FOOD));
+    itemList.add(iGreenBlueberry = new ModItem("blueberry_green", CreativeTabs.FOOD));
+    itemList.add(iStrawberrySeed = new ModItemSeeds(blueberry, Blocks.FARMLAND, "seeds_blueberry"));
+    
+    itemList.add(iBellPepperRed = new ModItem("bell_pepper_red", CreativeTabs.FOOD));
+    itemList.add(iBellPepperOrange = new ModItem("bell_pepper_orange", CreativeTabs.FOOD));
+    itemList.add(iBellPepperYellow = new ModItem("bell_pepper_yellow", CreativeTabs.FOOD));
+    itemList.add(iBellPepperGreen = new ModItem("bell_pepper_green", CreativeTabs.FOOD));
+    itemList.add(iCayennePepper = new ModItem("cayenne_pepper", CreativeTabs.FOOD));
+    itemList.add(iJalapenoPepper = new ModItem("jalapeno_pepper", CreativeTabs.FOOD));
+    itemList.add(iGhostPepper = new ModItem("ghost_pepper", CreativeTabs.FOOD));
+    itemList.add(iBellPepperSeed = new ModItemSeeds(bellPepper, Blocks.FARMLAND, "seeds_bell_pepper"));
+    
+    //Foodstuffs
+    itemList.add(iHeavyCream = new ModItem("heavy_cream", CreativeTabs.FOOD));
+    itemList.add(iFlour = new ModItem("flour", CreativeTabs.FOOD));
+    itemList.add(iSalt = new ModItem("salt", CreativeTabs.FOOD));
+    itemList.add(iButter = new ModItem("butter", CreativeTabs.FOOD));
+    //itemList.add(iPowderedSugar = new ModItem("powdered_sugar", CreativeTabs.FOOD));
+    itemList.add(iBreadBowl = new ModItemFood(5, 0.3F, "bread_bowl"));
+    itemList.add(iChickenBroth = new ModItemFood(6, 1.0F, "chicken_broth"));
+    itemList.add(iPancakeBatter = new ModItem("pancake_batter", CreativeTabs.FOOD));
+    itemList.add(iTortilla = new ModItemFood(2, 0.1F, "tortilla"));
+    itemList.add(iCornTortilla = new ModItemFood(2, 0.1F, "corn_tortilla"));
+    itemList.add(iGroundBeef = new ModItem("ground_beef", CreativeTabs.FOOD));
+    //itemList.add(iTomatoSauce = new ModItem("tomato_sauce", CreativeTabs.FOOD));
+    itemList.add(iAlfredoSauce = new ModItem("alfredo_sauce", CreativeTabs.FOOD));
+    
+    itemList.add(iPotatoSoup = new ModItemSoup(8, 1.0F, "potato_soup"));
+    itemList.add(iPotatoSoupInBreadBowl = new ModItemFood(10, 1.2F, "potato_soup_in_bread_bowl"));
+    itemList.add(iChickenSoup = new ModItemSoup(6, 0.8F, "chicken_soup"));
+    itemList.add(iChickenSoupInBreadBowl = new ModItemFood(8, 1.0F, "chicken_soup_in_bread_bowl"));
+    //itemList.add(iVegetableSoup = new ModItemSoup(6, 0.8F, "vegetable_soup"));
+    //itemList.add(iVegetableSoupInBreadBowl = new ModItemFood(8, 1.0F, "vegetable_soup_in_bread_bowl"));
+    itemList.add(iPancakes = new ModItemFood(2, 0.2F, "pancake"));
+    itemList.add(iChocolateChipPancakes = new ModItemFood(2, 0.3F, "chocolate_chip_pancake"));
+    itemList.add(iBlueberryPancakes = new ModItemFood(2, 0.3F, "blueberry_pancake"));
+    itemList.add(iApplePancakes = new ModItemFood(2, 0.3F, "apple_pancake"));
+    itemList.add(iScrambledEggs = new ModItemFood(2, 0.2F, "scrambled_eggs"));
+    itemList.add(iBreadSlice = new ModItemFood(1, 0.12F, "bread_slice"));
+    itemList.add(iToast = new ModItemFood(1, 0.12F, "toast"));
+    itemList.add(iChickenSandwich = new ModItemFood(8, 0.8F, "chicken_sandwich"));
+    itemList.add(iBurrito = new ModItemFood(6, 0.6F, "burrito"));
+    itemList.add(iTaco = new ModItemFood(4, 0.4F, "taco"));
+    itemList.add(iCheese = new ModItemFood(2, 0.3F, "cheese"));
+    itemList.add(iCookedBeef = new ModItemFood(2, 0.3F, "browned_beef"));
+    itemList.add(iHamburger = new ModItemFood(6, 0.7F, "hamburger"));
+    itemList.add(iCheeseburger = new ModItemFood(7, 0.7F, "cheeseburger"));
+    itemList.add(iVanillaIceCream = new ModItemFood(3, 0.3F, "vanilla_ice_cream"));
+    itemList.add(iChocolateIceCream = new ModItemFood(3, 0.4F, "chocolate_ice_cream"));
+    itemList.add(iStrawberryIceCream = new ModItemFood(3, 0.3F, "strawberry_ice_cream"));
+    itemList.add(iNeopolitanIceCream = new ModItemFood(3, 0.5F, "neopolitan_ice_cream"));
+    itemList.add(iPasta = new ModItemFood(2, 0.4F, "pasta"));
+    itemList.add(iFeticciniAlfredo = new ModItemFood(8, 1.0F, "fettuccini_alfredo"));
+    itemList.add(iChickenFeticciniAlfredo = new ModItemFood(10, 1.4F, "chicken_fettuccini_alfredo"));
+    //itemList.add(iSpaghetti = new ModItemFood(6, 0.8F, "spaghetti"));
+    //itemList.add(iMeatball = new ModItemFood(3, 0.4F, "meatball"));
+    //itemList.add(iSpaghettiAndMeatballs = new ModItemFood(10, 1.4F, "spaghetti_and_meatballs"));
+    itemList.add(iSalsa = new ModItemFood(1, 0.2F, "salsa"));
+    itemList.add(iCornChips = new ModItemFood(2, 0.1F, "corn_chips"));
+    //itemList.add(iChipsAndSalsa = new ModItemFood(2, 0.3F, "chips_and_salsa"));
+    //itemList.add(iNachos = new ModItemFood(4, 0.5F, "nachos"));
+    //itemList.add(iChickenParmesan = new ModItemFood(12, 1.6F, "chicken_parmesan"));
+    
+    /*
+     * 
+  
+  public static ModItemFood iPasta;
+  public static ModItemFood iFeticciniAlfredo;
+  public static ModItemFood iChickenFeticciniAlfredo;
+  public static ModItemFood iSpaghetti;
+  public static ModItemFood iMeatball;
+  public static ModItemFood iSpaghettiAndMeatballs;
+  public static ModItemFood iSalsa;
+  public static ModItemFood iCornChips;
+  public static ModItemFood iChipsAndSalsa;
+  public static ModItemFood iNachos;
+  public static ModItemFood iChickenParmesan;
+     */
 
     for (Item item : itemList) {
       createItem(item, event);

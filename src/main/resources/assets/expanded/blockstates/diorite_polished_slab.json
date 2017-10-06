@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "expanded:diorite/diorite_polished_slab" },
+        "half=top": { "model": "expanded:diorite/diorite_polished_slab" }
+    }
+}

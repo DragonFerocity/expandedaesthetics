@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "expanded:andesite/andesite_polished_slab" },
+        "half=top": { "model": "expanded:andesite/andesite_polished_slab" }
+    }
+}

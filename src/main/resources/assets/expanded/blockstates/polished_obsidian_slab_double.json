@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "expanded:obsidian/polished_obsidian" }
+    }
+}

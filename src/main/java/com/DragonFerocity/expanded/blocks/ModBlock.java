@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.block.material.Material;
 //import net.minecraft.block.BlockFire;
+import net.minecraft.block.state.IBlockState;
 
 public class ModBlock extends Block {
   public ModBlock(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool) {
@@ -60,4 +61,5 @@ public class ModBlock extends Block {
     setHardness(hardness);
     setResistance(resistance);
   }
+  
 }

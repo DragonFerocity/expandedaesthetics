@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cactus"
+    }
+  },
+  "result": {
+    "item": "expanded:cut_cactus_block",
+    "count": 4
+  }
+}

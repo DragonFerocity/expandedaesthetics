@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "expanded:cooking/chicken_soup_in_bread_bowl"
+    }
+}

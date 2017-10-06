@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "expanded:bricks/silver_brick_slab" },
+        "half=top": { "model": "expanded:bricks/silver_brick_slab" }
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W W",
+    "CCC",
+    "AAA"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "C": {
+      "item": "minecraft:cooked_chicken"
+    },
+    "A": {
+      "item": "minecraft:carrot"
+    }
+  },
+  "result": {
+    "item": "expanded:chicken_broth",
+    "count": 2
+  }
+}

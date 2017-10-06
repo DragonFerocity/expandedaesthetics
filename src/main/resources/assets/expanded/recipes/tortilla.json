@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blocks",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:flour"
+    }
+  },
+  "result": {
+    "item": "expanded:tortilla",
+    "count": 1
+  }
+}

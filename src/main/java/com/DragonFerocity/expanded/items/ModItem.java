@@ -9,6 +9,8 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 
 public class ModItem extends Item {
+  private float smeltingXp = -1;
+  
   public ModItem(String name, CreativeTabs tab) {
     this(name, tab, 64);
   }
@@ -19,6 +21,12 @@ public class ModItem extends Item {
     //super();
     setCreativeTab(tab);
     setMaxStackSize(stacksize);
+  }
+  
+  @Override
+  public float getSmeltingExperience(ItemStack item)
+  {
+      return smeltingXp; //-1 will default to the old lookups.
   }
   @Override
   public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {

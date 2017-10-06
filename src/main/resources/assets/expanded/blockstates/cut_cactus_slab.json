@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "expanded:cactus/cut_cactus_slab" },
+        "half=top": { "model": "expanded:cactus/cut_cactus_slab" }
+    }
+}

@@ -1,6 +1,9 @@
 package com.DragonFerocity.expanded.items;
 
 import java.util.Set;
+
+import com.DragonFerocity.expanded.Ref;
+import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.google.common.collect.Sets;
 
 import net.minecraft.block.Block;
@@ -8,15 +11,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-
-import com.DragonFerocity.expanded.items.ModTool;
-import com.DragonFerocity.expanded.Ref;
-import com.DragonFerocity.expanded.handlers.BlockHandler;
+import net.minecraft.item.ItemTool;
 
 public class ModPickaxe extends ModTool {
   private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] {Blocks.ACTIVATOR_RAIL, Blocks.COAL_ORE, Blocks.COBBLESTONE, Blocks.DETECTOR_RAIL, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, Blocks.DOUBLE_STONE_SLAB, Blocks.GOLDEN_RAIL, Blocks.GOLD_BLOCK, Blocks.GOLD_ORE, Blocks.ICE, Blocks.IRON_BLOCK, Blocks.IRON_ORE, Blocks.LAPIS_BLOCK, Blocks.LAPIS_ORE, Blocks.LIT_REDSTONE_ORE, Blocks.MOSSY_COBBLESTONE, Blocks.NETHERRACK, Blocks.PACKED_ICE, Blocks.RAIL, Blocks.REDSTONE_ORE, Blocks.SANDSTONE, Blocks.RED_SANDSTONE, Blocks.STONE, Blocks.STONE_SLAB, Blocks.STONE_BUTTON, Blocks.STONE_PRESSURE_PLATE, BlockHandler.copperOre, BlockHandler.tinOre, BlockHandler.platinumOre, BlockHandler.silverOre, BlockHandler.mithrilOre, BlockHandler.titaniumOre, BlockHandler.copperBlock, BlockHandler.tinBlock, BlockHandler.bronzeBlock, BlockHandler.platinumBlock, BlockHandler.silverBlock, BlockHandler.mithrilBlock, BlockHandler.titaniumBlock, BlockHandler.steelBlock, BlockHandler.celestialBronzeBlock, BlockHandler.imperialGoldBlock, BlockHandler.coldIronBlock});
   
-  public ModPickaxe(String name, ModTool.ToolMaterial material, float attackDmg, float attackSpd) {
+  public ModPickaxe(String name, ItemTool.ToolMaterial material, float attackDmg, float attackSpd) {
     super(attackDmg, attackSpd, material, EFFECTIVE_ON);
     setUnlocalizedName(Ref.MODID + ":" + name);
     setRegistryName(Ref.MODID + ":" + name);

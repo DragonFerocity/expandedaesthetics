@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CB"
+  ],
+  "key": {
+    "B": {
+      "item": "expanded:bread_bowl"
+    },
+    "C": {
+      "item": "expanded:chicken_soup"
+    }
+  },
+  "result": {
+    "item": "expanded:chicken_soup",
+    "count": 1
+  }
+}

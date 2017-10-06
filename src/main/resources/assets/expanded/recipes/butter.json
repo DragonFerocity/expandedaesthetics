@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "expanded:heavy_cream"
+    }
+  ],
+  "result": {
+    "item": "expanded:butter",
+    "count": 1
+  }
+}

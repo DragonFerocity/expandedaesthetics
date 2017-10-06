@@ -1,16 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "cactus",
   "pattern": [
-    "#"
+    "###"
   ],
   "key": {
     "#": {
-      "item": "minecraft:cactus"
+      "item": "expanded:cut_cactus_block"
     }
   },
   "result": {
-    "item": "expanded:cut_cactus_block",
-    "count": 4
+    "item": "expanded:cut_cactus_slab",
+    "count": 3
   }
 }

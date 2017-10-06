@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "expanded:bricks/polished_obsidian_brick" }
+    }
+}

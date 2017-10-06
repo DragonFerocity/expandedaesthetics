@@ -95,6 +95,7 @@ public class ModArmor extends ItemArmor
     }
     
     @Override
+    //@SideOnly(Side.CLIENT)
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
       if (player.dimension == -1) {
         /*if (player.inventory.armorItemInSlot(2).getItem() == BlockHandler.iColdIronChest) {
@@ -120,10 +121,10 @@ public class ModArmor extends ItemArmor
       Potion potion = Potion.REGISTRY.getObject(new ResourceLocation("fire_resistance"));
       
       if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1) {
-        ItemStack armorHead = player.inventory.armorItemInSlot(3);
-        ItemStack armorChest = player.inventory.armorItemInSlot(2);
-        ItemStack armorLegs = player.inventory.armorItemInSlot(1);
-        ItemStack armorFeet = player.inventory.armorItemInSlot(0);
+        ItemStack armorHead = player.inventory.armorInventory.get(3);
+        ItemStack armorChest = player.inventory.armorInventory.get(2);
+        ItemStack armorLegs = player.inventory.armorInventory.get(1);
+        ItemStack armorFeet = player.inventory.armorInventory.get(0);
         
         if (armorHead != null && armorHead.getItem() == BlockHandler.iColdIronHelmet &&
             armorChest != null && armorChest.getItem() == BlockHandler.iColdIronChest &&

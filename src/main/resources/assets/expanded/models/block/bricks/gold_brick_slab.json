@@ -1,0 +1,8 @@
+{
+    "parent": "block/half_slab",
+    "textures": {
+        "side": "expanded:blocks/bricks/gold_brick",
+        "bottom": "expanded:blocks/bricks/gold_brick",
+        "top": "expanded:blocks/bricks/gold_brick"
+    }
+}

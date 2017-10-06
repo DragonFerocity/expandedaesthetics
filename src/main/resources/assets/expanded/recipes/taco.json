@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "BCB",
+    " T "
+  ],
+  "key": {
+    "B": {
+      "item": "expanded:browned_beef"
+    },
+    "C": {
+      "item": "expanded:cheese"
+    },
+    "P": {
+      "item": "expanded:bell_pepper_red",
+      "item": "expanded:bell_pepper_orange",
+      "item": "expanded:bell_pepper_yellow",
+      "item": "expanded:bell_pepper_green",
+      "item": "expanded:cayenne_pepper",
+      "item": "expanded:jalapeno_pepper",
+      "item": "expanded:ghost_pepper"
+    },
+    "T": {
+      "item": "expanded:corn_tortilla"
+    }
+  },
+  "result": {
+    "item": "expanded:burrito",
+    "count": 1
+  }
+}

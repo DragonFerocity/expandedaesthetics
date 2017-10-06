@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CWC",
+    "PPP",
+    "SBM"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "C": {
+      "item": "expanded:chicken_broth"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "P": {
+      "item": "minecraft:potato"
+    },
+    "S": {
+      "item": "expanded:salt"
+    },
+    "M": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "expanded:potato_soup",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A S",
+    "BCB",
+    " B "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "B": {
+      "item": "expanded:chicken_broth"
+    },
+    "C": {
+      "item": "minecraft:chicken"
+    },
+    "A": {
+      "item": "minecraft:carrot"
+    },
+    "S": {
+      "item": "expanded:salt"
+    }
+  },
+  "result": {
+    "item": "expanded:chicken_soup",
+    "count": 1
+  }
+}

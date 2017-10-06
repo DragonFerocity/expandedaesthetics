@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blocks",
+  "pattern": [
+    "YT"
+  ],
+  "key": {
+    "T": {
+      "item": "expanded:tortilla"
+    },
+    "Y": {
+      "item": "minecraft:dye",
+      "data": 11
+    }
+  },
+  "result": {
+    "item": "expanded:tortilla",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/crop",
+    "textures": {
+        "crop": "expanded:cooking/bell_pepper_stage_0"
+    }
+}

@@ -8,6 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
 
 import com.DragonFerocity.expanded.Ref;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
@@ -19,7 +20,7 @@ public class ModAxe extends ModTool {
         Blocks.BIRCH_FENCE_GATE, Blocks.DARK_OAK_FENCE, Blocks.DARK_OAK_FENCE_GATE, Blocks.JUNGLE_FENCE, Blocks.JUNGLE_FENCE_GATE, Blocks.OAK_FENCE, Blocks.OAK_FENCE_GATE,
         Blocks.SPRUCE_FENCE, Blocks.SPRUCE_FENCE_GATE, BlockHandler.cutCactusBlock});
 
-    public ModAxe(String name, ModTool.ToolMaterial material, float attackDmg, float attackSpd)
+    public ModAxe(String name, ItemTool.ToolMaterial material, float attackDmg, float attackSpd)
     {
         super(attackDmg, attackSpd, material, EFFECTIVE_ON);
         setUnlocalizedName(Ref.MODID + ":" + name);

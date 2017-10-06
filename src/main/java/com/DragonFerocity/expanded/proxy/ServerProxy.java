@@ -1,17 +1,12 @@
 package com.DragonFerocity.expanded.proxy;
 
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import com.DragonFerocity.expanded.handlers.BlockHandler;
-import com.DragonFerocity.expanded.handlers.CraftingHandler;
-import com.DragonFerocity.expanded.handlers.GuiHandler;
-import com.DragonFerocity.expanded.ExpandedAesthetics;
 import com.DragonFerocity.expanded.OreGen;
+
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ServerProxy implements IProxy {
   public void preInit() {
     GameRegistry.registerWorldGenerator(new OreGen(), 0);
-    NetworkRegistry.INSTANCE.registerGuiHandler(ExpandedAesthetics.instance, new GuiHandler());
     //NetworkRegistry.INSTANCE.registerGuiHandler(ExpandedAesthetics.instance, new GuiHandler());
   }
 

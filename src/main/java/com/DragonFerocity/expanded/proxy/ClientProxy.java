@@ -1,14 +1,11 @@
 package com.DragonFerocity.expanded.proxy;
 
-import com.DragonFerocity.expanded.ExpandedAesthetics;
 import com.DragonFerocity.expanded.entities.ModTileEntityChest;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
-import com.DragonFerocity.expanded.handlers.GuiHandler;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 @Mod.EventBusSubscriber
 public class ClientProxy extends ServerProxy {

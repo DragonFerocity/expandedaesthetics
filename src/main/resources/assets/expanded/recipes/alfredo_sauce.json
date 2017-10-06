@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TST",
+    "HCH",
+    " B "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "T": {
+      "item": "expanded:butter"
+    },
+    "S": {
+      "item": "expanded:salt"
+    },
+    "H": {
+      "item": "expanded:heavy_cream"
+    },
+    "C": {
+      "item": "expanded:cheese"
+    }
+  },
+  "result": {
+    "item": "expanded:alfredo_sauce",
+    "count": 1
+  }
+}

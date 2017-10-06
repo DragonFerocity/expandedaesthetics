@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "expanded:bricks/polished_obsidian_brick_slab" },
+        "half=top": { "model": "expanded:bricks/polished_obsidian_brick_slab" }
+    }
+}

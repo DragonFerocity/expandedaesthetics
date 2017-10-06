@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blocks",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:snow_stone"
+    }
+  },
+  "result": {
+    "item": "expanded:snow_stone_brick",
+    "count": 4
+  }
+}

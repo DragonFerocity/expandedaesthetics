@@ -107,16 +107,32 @@ public class ModAlloyFurnaceRecipes {
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.RED.getMetadata()), ItemStack.EMPTY, new ItemStack(Blocks.RED_GLAZED_TERRACOTTA), 0.1F);
       this.addSmeltingRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, EnumDyeColor.BLACK.getMetadata()), ItemStack.EMPTY, new ItemStack(Blocks.BLACK_GLAZED_TERRACOTTA), 0.1F);
       
-      this.addSmeltingRecipe(BlockHandler.copperOre, Blocks.AIR, new ItemStack(BlockHandler.iCopperIngot), 1.3F);
-      this.addSmeltingRecipe(BlockHandler.mithrilOre, Blocks.AIR, new ItemStack(BlockHandler.iMithrilIngot), 1.3F);
-      this.addSmeltingRecipe(Items.IRON_INGOT, Items.IRON_INGOT, new ItemStack(BlockHandler.iSteelIngot), 0.5F);
+      this.addSmeltingRecipe(BlockHandler.iCopperNuggets, Items.AIR, new ItemStack(BlockHandler.iCopperIngot), 0.1F);
+      this.addSmeltingRecipe(BlockHandler.iBronzeNuggets, Items.AIR, new ItemStack(BlockHandler.iBronzeIngot), 0.3F);
+      this.addSmeltingRecipe(BlockHandler.ibPlatinumOre, Items.AIR, new ItemStack(BlockHandler.iPlatinumIngot), 0.3F);
+      this.addSmeltingRecipe(BlockHandler.mithrilOre, Blocks.AIR, new ItemStack(BlockHandler.iMithrilIngot), 0.3F);
+      this.addSmeltingRecipe(BlockHandler.silverOre, Blocks.AIR, new ItemStack(BlockHandler.iSilverIngot), 0.2F);
+      this.addSmeltingRecipe(Items.IRON_INGOT, Items.IRON_INGOT, new ItemStack(BlockHandler.iSteelIngot), 0.2F);
       this.addSmeltingRecipe(BlockHandler.iCelestialBronzeNuggets, Items.AIR, new ItemStack(BlockHandler.iCelestialBronzeIngot), 0.5F);
       this.addSmeltingRecipe(BlockHandler.iImperialGoldNuggets, Items.AIR, new ItemStack(BlockHandler.iImperialGoldIngot), 0.5F);
-      this.addSmeltingRecipe(new ItemStack(Items.IRON_SWORD, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronSword, 1), 0.5F);
-      this.addSmeltingRecipe(new ItemStack(Items.IRON_HELMET, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronHelmet, 1), 0.5F);
-      this.addSmeltingRecipe(new ItemStack(Items.IRON_CHESTPLATE, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronChest, 1), 0.5F);
-      this.addSmeltingRecipe(new ItemStack(Items.IRON_LEGGINGS, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronLegs, 1), 0.5F);
-      this.addSmeltingRecipe(new ItemStack(Items.IRON_BOOTS, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronBoots, 1), 0.5F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_INGOT), new ItemStack(Blocks.SOUL_SAND), new ItemStack(BlockHandler.iStygianIronIngot), 0.7F);
+      this.addSmeltingRecipe(new ItemStack(Blocks.IRON_ORE), new ItemStack(Blocks.SOUL_SAND), new ItemStack(BlockHandler.iStygianIronIngot), 0.7F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_SWORD, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronSword, 1), 0.3F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_HELMET, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronHelmet, 1), 0.3F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_CHESTPLATE, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronChest, 1), 0.3F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_LEGGINGS, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronLegs, 1), 0.3F);
+      this.addSmeltingRecipe(new ItemStack(Items.IRON_BOOTS, 1), new ItemStack(Blocks.ICE, 1), new ItemStack(BlockHandler.iColdIronBoots, 1), 0.3F);
+      
+      this.addSmeltingRecipe(Items.WATER_BUCKET, Items.AIR, new ItemStack(BlockHandler.iSalt), 0F);
+      this.addSmeltingRecipe(Items.EGG, Items.AIR, new ItemStack(BlockHandler.iScrambledEggs), 0.1F);
+      this.addSmeltingRecipe(new ItemStack(BlockHandler.iPancakeBatter), ItemStack.EMPTY, new ItemStack(BlockHandler.iPancakes), 0.1F);
+      this.addSmeltingRecipe(new ItemStack(BlockHandler.iPancakeBatter), new ItemStack(Items.DYE, 1, EnumDyeColor.BROWN.getMetadata()), new ItemStack(BlockHandler.iChocolateChipPancakes), 0.15F);
+      this.addSmeltingRecipe(new ItemStack(BlockHandler.iPancakeBatter), new ItemStack(BlockHandler.iBlueberry), new ItemStack(BlockHandler.iBlueberryPancakes), 0.15F);
+      this.addSmeltingRecipe(new ItemStack(BlockHandler.iPancakeBatter), new ItemStack(Items.APPLE), new ItemStack(BlockHandler.iApplePancakes), 0.15F);
+      this.addSmeltingRecipe(BlockHandler.iHeavyCream, Items.GOLD_NUGGET, new ItemStack(BlockHandler.iCheese), 0.1F);
+      this.addSmeltingRecipe(BlockHandler.iBreadSlice, Items.AIR, new ItemStack(BlockHandler.iToast), 0.1F);
+      this.addSmeltingRecipe(BlockHandler.iGroundBeef, Items.AIR, new ItemStack(BlockHandler.iCookedBeef), 0.1F);
+      //this.addSmeltingRecipe(Items.COOKED_CHICKEN, BlockHandler.iPancakeBatter, new ItemStack(BlockHandler.iFriedChicken), 0.1F);
   }
 
   /**
@@ -179,20 +195,7 @@ public class ModAlloyFurnaceRecipes {
    */
   private boolean compareItemStacks(ItemStack input1, ItemStack input2, ItemStack[] result)
   {
-    //if (input1.getItem() == input2.getItem())
       return compareItemStacks(input1, result[0]) && compareItemStacks(input2, result[1]);
-    /*if (input1.getItem() != result[0].getItem() && input1.getItem() != result[1].getItem())
-      return false;
-    if (input2.getItem() != result[0].getItem() && input2.getItem() != result[1].getItem())
-      return false;
-    if (result[0].getMetadata() != 32767 || result[1].getMetadata() != 32767) {
-      if (input1.getMetadata() != result[0].getMetadata() && input1.getMetadata() != result[1].getMetadata())
-        return false;
-      if (input2.getMetadata() != result[0].getMetadata() && input2.getMetadata() != result[1].getMetadata())
-        return false;
-    }
-    
-    return true;*/
   }
   private boolean compareItemStacks(ItemStack stack1, ItemStack stack2)
   {

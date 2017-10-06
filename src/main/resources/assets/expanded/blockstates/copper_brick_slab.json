@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "expanded:bricks/copper_brick_slab" },
+        "half=top": { "model": "expanded:bricks/copper_brick_slab" }
+    }
+}

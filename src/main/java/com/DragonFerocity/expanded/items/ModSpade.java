@@ -1,8 +1,10 @@
 package com.DragonFerocity.expanded.items;
 
+import java.util.Set;
+
 import com.DragonFerocity.expanded.Ref;
 import com.google.common.collect.Sets;
-import java.util.Set;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -10,6 +12,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -21,7 +24,7 @@ public class ModSpade extends ModTool
 {
     private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] {Blocks.CLAY, Blocks.DIRT, Blocks.FARMLAND, Blocks.GRASS, Blocks.GRAVEL, Blocks.MYCELIUM, Blocks.SAND, Blocks.SNOW, Blocks.SNOW_LAYER, Blocks.SOUL_SAND, Blocks.GRASS_PATH});
 
-    public ModSpade(String name, ModTool.ToolMaterial material)
+    public ModSpade(String name, ItemTool.ToolMaterial material)
     {
         super(1.5F, -3.0F, material, EFFECTIVE_ON);
         setUnlocalizedName(Ref.MODID + ":" + name);

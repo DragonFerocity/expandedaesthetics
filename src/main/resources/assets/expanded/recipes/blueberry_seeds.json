@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "expanded:blueberry"
+    }
+  ],
+  "result": {
+    "item": "expanded:seeds_blueberry",
+    "count": 2
+  }
+}

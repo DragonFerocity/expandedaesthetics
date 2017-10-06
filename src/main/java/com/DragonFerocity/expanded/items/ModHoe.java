@@ -2,9 +2,9 @@ package com.DragonFerocity.expanded.items;
 
 import com.DragonFerocity.expanded.Ref;
 import com.google.common.collect.Multimap;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -16,6 +16,7 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -28,9 +29,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModHoe extends Item
 {
     private final float speed;
-    protected ModTool.ToolMaterial toolMaterial;
+    protected ItemTool.ToolMaterial toolMaterial;
 
-    public ModHoe(String name, ModTool.ToolMaterial material)
+    public ModHoe(String name, ItemTool.ToolMaterial material)
     {
         this.toolMaterial = material;
         this.maxStackSize = 1;

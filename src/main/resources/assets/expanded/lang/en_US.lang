@@ -18,6 +18,7 @@ tile.expanded:andesite_polished_door.name=Polished Andesite Door
 item.expanded:andesite_polished_door.name=Polished Andesite Door
 tile.expanded:andesite_polished_stairs.name=Polished Andesite Stairs
 tile.expanded:andesite_polished_stairs_alt.name=Polished Andesite Stairs (Alternate)
+tile.expanded:andesite_polished_slab.name=Polished Andesite Slab
 
 tile.expanded:birch_stable_door.name=Birch Stable Door
 item.expanded:birch_stable_door.name=Birch Stable Door
@@ -38,6 +39,7 @@ tile.expanded:cut_cactus_lamp.name=Cactus Lamp
 item.expanded:cut_cactus_lamp.name=Cactus Lamp
 tile.expanded:cut_cactus_lantern.name=Cactus Lantern
 item.expanded:cut_cactus_lantern.name=Cactus Lantern
+tile.expanded:cut_cactus_slab.name=Cut Cactus Slab
 
 tile.expanded:cobblestone_door.name=Cobblestone Door
 item.expanded:cobblestone_door.name=Cobblestone Door
@@ -60,6 +62,7 @@ tile.expanded:diorite_polished_lamp.name=Polished Diorite Lamp
 tile.expanded:diorite_polished_bed.name=Polished Diorite Bed
 item.expanded:diorite_polished_bed.name=Polished Diorite Bed
 tile.expanded:diorite_polished_chest.name=Polished Diorite Chest
+tile.expanded:diorite_polished_slab.name=Polished Diorite Slab
 
 tile.expanded:glass_door.name=Glass Door
 item.expanded:glass_door.name=Glass Door
@@ -98,26 +101,33 @@ tile.expanded:red_glass_stairs_alt.name=Red Glass Stairs (Alternate)
 tile.expanded:black_glass_stairs.name=Black Glass Stairs
 tile.expanded:black_glass_stairs_alt.name=Black Glass Stairs (Alternate)
 
-tile.expanded:gold_brick.name=Gold Brick
-tile.expanded:gold_brick_stairs.name=Gold Brick Stairs
-tile.expanded:gold_brick_stairs_alt.name=Gold Brick Stairs (Alternate)
-
-tile.expanded:copper_brick.name=Copper Brick
-tile.expanded:copper_brick_stairs.name=Copper Brick Stairs
-tile.expanded:copper_brick_stairs_alt.name=Copper Brick Stairs (Alternate)
-
-tile.expanded:silver_brick.name=Silver Brick
-tile.expanded:silver_brick_stairs.name=Silver Brick Stairs
-tile.expanded:silver_brick_stairs_alt.name=Silver Brick Stairs (Alternate)
-
-tile.expanded:polished_obsidian_brick.name=Polished Obsidian Brick
-tile.expanded:polished_obsidian_brick_stairs.name=Polished Obsidian Brick Stairs
-tile.expanded:polished_obsidian_brick_stairs_alt.name=Polished Obsidian Brick Stairs (Alternate)
-
+tile.expanded:granite_polished_lamp.name=Polished Granite Lamp
+tile.expanded:granite_polished_lanter.name=Polished Granite Lantern
 tile.expanded:granite_polished_door.name=Polished Granite Door
 item.expanded:granite_polished_door.name=Polished Granite Door
 tile.expanded:granite_polished_stairs.name=Polished Granite Stairs
 tile.expanded:granite_polished_stairs_alt.name=Polished Granite Stairs (Alternate)
+tile.expanded:granite_polished_slab.name=Polished Granite Slab
+
+tile.expanded:gold_brick.name=Gold Brick
+tile.expanded:gold_brick_stairs.name=Gold Brick Stairs
+tile.expanded:gold_brick_stairs_alt.name=Gold Brick Stairs (Alternate)
+tile.expanded:gold_brick_slab.name=Gold Brick Slab
+
+tile.expanded:copper_brick.name=Copper Brick
+tile.expanded:copper_brick_stairs.name=Copper Brick Stairs
+tile.expanded:copper_brick_stairs_alt.name=Copper Brick Stairs (Alternate)
+tile.expanded:copper_brick_slab.name=Copper Brick Slab
+
+tile.expanded:silver_brick.name=Silver Brick
+tile.expanded:silver_brick_stairs.name=Silver Brick Stairs
+tile.expanded:silver_brick_stairs_alt.name=Silver Brick Stairs (Alternate)
+tile.expanded:silver_brick_slab.name=Silver Brick Slab
+
+tile.expanded:polished_obsidian_brick.name=Polished Obsidian Brick
+tile.expanded:polished_obsidian_brick_stairs.name=Polished Obsidian Brick Stairs
+tile.expanded:polished_obsidian_brick_stairs_alt.name=Polished Obsidian Brick Stairs (Alternate)
+tile.expanded:polished_obsidian_brick_slab.name=Polished Obsidian Brick Slab
 
 tile.expanded:hardened_clay_door.name=Terracotta Door
 item.expanded:hardened_clay_door.name=Terracotta Door
@@ -140,6 +150,7 @@ item.expanded:polished_obsidian_door.name=Polished Obsidian Door
 tile.expanded:polished_obsidian.name=Polished Obsidian
 tile.expanded:polished_obsidian_stairs.name=Polished Obsidian Stairs
 tile.expanded:polished_obsidian_stairs_alt.name=Polished Obsidian Stairs (Alternate)
+tile.expanded:polished_obsidian_slab.name=Polished Obsidian Slab
 
 tile.expanded:spruce_wood_stairs_alt.name=Spruce Stairs (Alternate)
 tile.expanded:spruce_wood_crafting_table.name=Spruce Crafting Table
@@ -168,6 +179,7 @@ item.expanded:bronze_ingot.name=Bronze Ingot
 item.expanded:celestial_bronze_ingot.name=Celestial Bronze Ingot
 item.expanded:imperial_gold_ingot.name=Imperial Gold Ingot
 
+item.expanded:copper_nuggets.name=Copper Nuggets
 item.expanded:bronze_nuggets.name=Bronze Nuggets
 item.expanded:celestial_bronze_nuggets.name=Celestial Bronze Nuggets
 item.expanded:imperial_gold_nuggets.name=Imperial Gold Nuggets
@@ -248,3 +260,35 @@ item.expanded:cold_iron_head.name=Cold Iron Helmet
 item.expanded:cold_iron_chest.name=Cold Iron Chestplate
 item.expanded:cold_iron_legs.name=Cold Iron Leggings
 item.expanded:cold_iron_feet.name=Cold Iron Boots
+
+tile.expanded:silver_pressure_plate.name=Silver Pressure Plate
+
+tile.expanded:snow_stone.name=Snow Stone
+tile.expanded:snow_stone_brick.name=Stone Stone Brick
+
+tile.expanded:strawberries.name=Strawberries
+item.expanded:strawberry.name=Strawberry
+item.expanded:strawberry_blue.name=Blue Strawberry
+item.expanded:seeds_strawberry.name=Strawberry Seeds
+
+tile.expanded:blueberries.name=Blueberries
+item.expanded:blueberry.name=Blueberry
+item.expanded:blueberry_green.name=Green Blueberry
+item.expanded:seeds_blueberry.name=Blueberry Seeds
+
+item.expanded:bell_pepper_red.name=Red Bell Pepper
+item.expanded:bell_pepper_orange.name=Orange Bell Pepper
+item.expanded:bell_pepper_yellow.name=Yellow Bell Pepper
+item.expanded:bell_pepper_green.name=Green Bell Pepper
+item.expanded:cayenne_pepper.name=Cayenne Pepper
+item.expanded:jalapeno_pepper.name=Jalapeño Pepper
+item.expanded:ghost_pepper.name=Ghost Pepper
+item.expanded:seeds_bell_pepper.name=Bell Pepper Seeds
+
+item.expanded:heavy_cream.name=Heavy Cream
+item.expanded:flour.name=Flour
+item.expanded:salt.name=Salt
+item.expanded:butter.name=Butter
+item.expanded:powdered_sugar.name=Powdered Sugar
+item.expanded:bread_bowl.name=Bread Bowl
+item.expanded:chicken_broth.name=Chicken Broth

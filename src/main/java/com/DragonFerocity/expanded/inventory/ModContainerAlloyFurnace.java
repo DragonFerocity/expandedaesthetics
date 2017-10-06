@@ -10,7 +10,6 @@ import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnaceFuel;
-import net.minecraft.inventory.SlotFurnaceOutput;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -27,7 +26,7 @@ public class ModContainerAlloyFurnace extends Container {
     this.tileAlloyFurnace = alloyFurnaceInventory;
     this.addSlotToContainer(new Slot(alloyFurnaceInventory, 0, 38, 17));
     this.addSlotToContainer(new SlotFurnaceFuel(alloyFurnaceInventory, 1, 56, 53));
-    this.addSlotToContainer(new SlotFurnaceOutput(playerInventory.player, alloyFurnaceInventory, 2, 116, 35));
+    this.addSlotToContainer(new ModSlotFurnaceOutput(playerInventory.player, alloyFurnaceInventory, 2, 116, 35));
     this.addSlotToContainer(new Slot(alloyFurnaceInventory, 3, 74, 17));
 
     for (int i = 0; i < 3; ++i)

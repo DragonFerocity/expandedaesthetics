@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "F",
+    "B"
+  ],
+  "key": {
+    "B": {
+      "item": "expanded:bread_slice"
+    },
+    "F": {
+      "item": "expanded:browned_beef"
+    }
+  },
+  "result": {
+    "item": "expanded:hamburger",
+    "count": 1
+  }
+}

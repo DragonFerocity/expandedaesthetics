@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:copper_brick"
+    }
+  },
+  "result": {
+    "item": "expanded:copper_brick_slab",
+    "count": 3
+  }
+}

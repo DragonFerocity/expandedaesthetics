@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "north": "expanded:blocks/bricks/snow_stone_brick",
+        "east": "expanded:blocks/bricks/snow_stone_brick",
+        "south": "expanded:blocks/bricks/snow_stone_brick",
+        "west": "expanded:blocks/bricks/snow_stone_brick",
+        "down": "expanded:blocks/bricks/snow_stone_brick",
+        "up": "expanded:blocks/bricks/snow_stone_brick",
+        "particle": "expanded:blocks/bricks/snow_stone_brick"
+    }
+}

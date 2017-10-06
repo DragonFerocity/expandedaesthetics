@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cactus",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:polished_obsidian",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "expanded:polished_obsidian_slab",
+    "count": 3
+  }
+}

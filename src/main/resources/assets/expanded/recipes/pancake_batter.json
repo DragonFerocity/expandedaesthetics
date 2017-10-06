@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "minecraft:sugar"
+    },
+    {
+        "item": "expanded:salt"
+    },
+    {
+        "item": "expanded:flour"
+    },
+    {
+        "item": "expanded:flour"
+    },
+    {
+        "item": "minecraft:egg"
+    },
+    {
+        "item": "expanded:butter"
+    },
+    {
+        "item": "minecraft:milk_bucket"
+    }
+  ],
+  "result": {
+    "item": "expanded:pancake_batter",
+    "count": 3
+  }
+}

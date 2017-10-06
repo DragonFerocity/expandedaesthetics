@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cactus",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "expanded:gold_brick",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "expanded:gold_brick_slab",
+    "count": 3
+  }
+}

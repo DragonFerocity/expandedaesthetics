@@ -4,6 +4,7 @@ import com.DragonFerocity.expanded.ModAlloyFurnaceRecipes;
 import com.DragonFerocity.expanded.blocks.ModAlloyFurnace;
 import com.DragonFerocity.expanded.handlers.BlockHandler;
 import com.DragonFerocity.expanded.inventory.ModContainerAlloyFurnace;
+import com.DragonFerocity.expanded.items.ModItemFood;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -36,8 +37,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITickable, ISidedInventory {
-  private static final int[] SLOTS_TOP = new int[] {0};
-  private static final int[] SLOTS_BOTTOM = new int[] {3, 1};
+  private static final int[] SLOTS_TOP = new int[] {1};
+  private static final int[] SLOTS_BOTTOM = new int[] {2, 1};
   private static final int[] SLOTS_SIDES = new int[] {1};
   /** The ItemStacks that hold the items currently being used in the furnace */
   private NonNullList<ItemStack> furnaceItemStacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
@@ -287,16 +288,22 @@ public class ModTileEntityAlloyFurnace extends TileEntityLockable implements ITi
   
   public int getCookTime(ItemStack stack)
   {
-    if (stack.getItem() == BlockHandler.ibCopperOre)
+    Item stackItem = stack.getItem();
+    
+    if (stackItem == BlockHandler.ibCopperOre)
       return 80;
-    else if(stack.getItem() == BlockHandler.ibMithrilOre)
+    if (stackItem instanceof ModItemFood)
+      return 50;
+    else if(stackItem == BlockHandler.ibMithrilOre)
       return 200;
-    else if (stack.getItem() == Items.IRON_INGOT)
+    else if (stackItem == Items.IRON_INGOT)
       return 180;
-    else if (stack.getItem() == BlockHandler.iColdIronBoots || stack.getItem() == BlockHandler.iColdIronHelmet || stack.getItem() == BlockHandler.iColdIronChest || stack.getItem() == BlockHandler.iColdIronLegs)
+    else if (stackItem == BlockHandler.iColdIronBoots || stack.getItem() == BlockHandler.iColdIronHelmet || stack.getItem() == BlockHandler.iColdIronChest || stack.getItem() == BlockHandler.iColdIronLegs)
       return 300;
-    else if (stack.getItem() == BlockHandler.iCelestialBronzeNuggets || stack.getItem() == BlockHandler.iImperialGoldNuggets)
+    else if (stackItem == BlockHandler.iCelestialBronzeNuggets || stack.getItem() == BlockHandler.iImperialGoldNuggets)
       return 600;
+    else if (stackItem == BlockHandler.iCelestialBronzeNuggets || stack.getItem() == BlockHandler.iImperialGoldNuggets)
+      return 660;
     else
       return 120;
   }
